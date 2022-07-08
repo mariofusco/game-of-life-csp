@@ -10,18 +10,13 @@ public class WindowOutput implements Consumer<boolean[][]> {
 
     private final int width;
     private final int height;
-    private final boolean logRate;
     private final Canvas canvas;
-    private final RateLogger rateLogger;
-
     private volatile boolean[][] cells;
 
-    public WindowOutput(int width, int height, boolean logRate) {
+    public WindowOutput(int width, int height) {
         this.width = width;
         this.height = height;
-        this.logRate = logRate;
         canvas = new Canvas();
-        this.rateLogger = new RateLogger();
         JFrame frame = new JFrame("Conway's Game of Life");
         frame.add(canvas);
         frame.setSize(width, height);
@@ -33,9 +28,6 @@ public class WindowOutput implements Consumer<boolean[][]> {
     public void accept(boolean[][] cells) {
         this.cells = cells;
         canvas.repaint();
-        if (logRate) {
-            rateLogger.tick();
-        }
     }
 
     class Canvas extends JPanel {
@@ -65,21 +57,4 @@ public class WindowOutput implements Consumer<boolean[][]> {
             }
         }
     }
-
-    static class RateLogger {
-        long timeSeconds;
-        int counter;
-
-        void tick() {
-            long now = System.currentTimeMillis() / 1_000;
-            if (now != timeSeconds) {
-                System.out.println(counter);
-                timeSeconds = now;
-                counter = 1;
-            } else {
-                counter++;
-            }
-        }
-    }
-
 }

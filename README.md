@@ -1,7 +1,11 @@
-## Game of Life CSP
+# Game of Life CSP
 
 Game of Life CSP is a Java implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 using [communicating sequential processes (CSP)](https://en.wikipedia.org/wiki/Communicating_sequential_processes). 
+
+This project adds to the [original virtual threads based implementation](https://github.com/ebarlas/game-of-life-csp), from which it has been forked, the possibility to also run it on native threads, mostly with the purpose of measuring the scheduling overhead introduced by the management of a large number of virtual threads.
+
+## Virtual Threads implementation
 
 Each grid cell is an independent process and all cell communication occurs via channels.
 
@@ -9,11 +13,17 @@ It's built atop virtual threads, defined in [JDK Enhancement Proposal (JEP) 425]
 
 The virtual threads feature is part of [Project Loom](https://openjdk.java.net/projects/loom/).
 
-Prior to Project Loom and virtual threads, CSP style programming in this manner simply wasn't available in Java.
+Prior to Project Loom and virtual threads, CSP style programming with a so large number of threads simply wasn't available in Java.
+
+## Native Threads implementation
+
+In this second version it uses an executors with a fixed number of native threads equal to the number of available cores of the running machine.
+
+The CSP style of the implementation is left unchanged, but the cells (and the computation of their state) are simply splitted equally on n-1 threads, while the n-th thread is dedicated to the coordination of other threads and to publish the result on the user interface.
 
 ![Channels](images/game-of-life-channels.png)
 
-# Build
+## Build
 
 A [Project Loom](https://jdk.java.net/loom/) or [OpenJDK 19](https://jdk.java.net/19/) early access build is required at the time of writing.
 
@@ -60,6 +70,7 @@ java --enable-preview -cp target/classes/ gameoflife.Main patterns/spaceship.txt
 8. Bottom padding rows, ex. `5`
 9. Rotate boolean flag, ex. `false`
 10. Log rate boolean flag, ex. `true`
+11. Use virtual threads, ex. `true`
 
 ## Patterns
 

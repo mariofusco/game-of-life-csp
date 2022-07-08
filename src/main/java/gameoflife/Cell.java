@@ -24,18 +24,27 @@ public class Cell {
 
     private void run() {
         while (true) {
-            tickChannel.take(); // wait for tick stimulus
-            outChannels.forEach(ch -> ch.put(alive)); // announce liveness to neighbors
-            int neighbors = inChannels.stream().map(Channel::take).mapToInt(b -> b ? 1 : 0).sum(); // receive liveness from neighbors
-            alive = nextState(alive, neighbors); // calculate next state based on game of life rules
-            resultChannel.put(alive); // announce resulting next state
+            evaluateCell();
         }
     }
 
+    void evaluateCell() {
+        notifyLiveness();
+        calculateNextState();
+    }
+
+    void notifyLiveness() {
+        tickChannel.take(); // wait for tick stimulus
+        outChannels.forEach(ch -> ch.put(alive)); // announce liveness to neighbors
+    }
+
+    void calculateNextState() {
+        int neighbors = inChannels.stream().map(Channel::take).mapToInt(b -> b ? 1 : 0).sum(); // receive liveness from neighbors
+        alive = nextState(alive, neighbors); // calculate next state based on game of life rules
+        resultChannel.put(alive); // announce resulting next state
+    }
+
     private static boolean nextState(boolean alive, int neighbors) {
-        if (alive) {
-            return neighbors == 2 || neighbors == 3;
-        }
-        return neighbors == 3;
+        return neighbors == 3 || (alive && neighbors == 2);
     }
 }
