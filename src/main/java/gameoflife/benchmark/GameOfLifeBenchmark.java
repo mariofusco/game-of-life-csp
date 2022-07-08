@@ -29,7 +29,7 @@ public class GameOfLifeBenchmark {
     @Param({"true", "false"})
     private boolean useVirtualThreads;
 
-    @Param({"5", "25", "100"}) // 874, 5074, 49324
+    @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
 
     private ExecutorService executor;
