@@ -1,5 +1,6 @@
 package gameoflife;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
@@ -7,7 +8,7 @@ import java.util.stream.IntStream;
 
 public abstract class GameOfLife {
 
-    private final Dimensions dims;
+    private final Dimensions dimensions;
     private final int period;
     private final boolean logRate;
     private final Channel<boolean[][]> gridChannel;
@@ -19,7 +20,7 @@ public abstract class GameOfLife {
     private long framesCount = 0;
 
     GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel, boolean logRate) {
-        this.dims = dimensions;
+        this.dimensions = dimensions;
         this.gridChannel = gridChannel;
         this.period = period;
         this.logRate = logRate;
@@ -51,22 +52,56 @@ public abstract class GameOfLife {
         dimensions.forEachRowCol((r, c) -> cells.add(new Cell(grid[r][c])));
     }
 
+    public static GameOfLife create(ExecutionArgs a) {
+        boolean[][] original = null;
+        try {
+            original = PatternParser.parseFile(a.patternFile());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        boolean[][] rotated = a.rotate() ? PatternParser.rotate(original) : original;
+        boolean[][] pattern = PatternParser.pad(rotated, a.leftPadding(), a.topPadding(), a.rightPadding(), a.bottomPadding());
+
+        Channel<boolean[][]> gridChannel = new Channel<>(); // channel carries aggregated liveness matrices
+        Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length);
+        return GameOfLife.create(a.useVirtualThreads(), dimensions, pattern, a.periodMilliseconds(), gridChannel, a.logRate());
+    }
+
     static GameOfLife create(boolean virtual, Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel, boolean logRate) {
         return virtual ?
                 new VirtualGameOfLife(dimensions, seed, period, gridChannel, logRate) :
                 new NativeGameOfLife(dimensions, seed, period, gridChannel, logRate);
     }
 
-    public abstract void start();
+    Channel<boolean[][]> getGridChannel() {
+        return gridChannel;
+    }
+
+    Dimensions getDimensions() {
+        return dimensions;
+    }
+
+    public void start() {
+        startCells();
+        startGame();
+    }
+
+    public abstract void startCells();
+    public abstract void startGame();
 
     protected void run() {
         while (true) {
-            dims.forEachRowCol((r, c) -> tickChannels.get(r).get(c).put(true)); // emit tick event for every cell
-            boolean[][] grid = new boolean[dims.rows()][dims.cols()]; // prepare result boolean matrix
-            dims.forEachRowCol((r, c) -> grid[r][c] = resultChannels.get(r).get(c).take()); // populate matrix with results
-            gridChannel.put(grid); // emit aggregated liveness matrix
-            endOfFrame();
+            calculateFrame();
         }
+    }
+
+    public boolean[][] calculateFrame() {
+        dimensions.forEachRowCol((r, c) -> tickChannels.get(r).get(c).put(true)); // emit tick event for every cell
+        boolean[][] grid = new boolean[dimensions.rows()][dimensions.cols()]; // prepare result boolean matrix
+        dimensions.forEachRowCol((r, c) -> grid[r][c] = resultChannels.get(r).get(c).take()); // populate matrix with results
+        gridChannel.put(grid); // emit aggregated liveness matrix
+        endOfFrame();
+        return grid;
     }
 
     private void endOfFrame() {

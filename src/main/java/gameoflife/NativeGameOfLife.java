@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
 public class NativeGameOfLife extends GameOfLife {
 
     private final int nThread = Runtime.getRuntime().availableProcessors();
 
-    private final ExecutorService executor = Executors.newFixedThreadPool(nThread);
+    private final ExecutorService executor = Executors.newFixedThreadPool(nThread, r -> {
+        Thread t = new Thread(r);
+        t.setDaemon(true);
+        return t;
+    });
 
     private final List<CellsGroup> cellsGroups = new ArrayList<>();
 
@@ -26,8 +31,12 @@ public class NativeGameOfLife extends GameOfLife {
     }
 
     @Override
-    public void start() {
+    public void startCells() {
         cellsGroups.forEach( cg -> executor.submit(cg::run) );
+    }
+
+    @Override
+    public void startGame() {
         executor.submit(this::run);
     }
 }

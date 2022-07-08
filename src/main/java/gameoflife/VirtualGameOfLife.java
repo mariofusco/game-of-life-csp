@@ -6,8 +6,12 @@ public class VirtualGameOfLife extends GameOfLife {
     }
 
     @Override
-    public void start() {
+    public void startCells() {
         cells.forEach(Cell::start);
+    }
+
+    @Override
+    public void startGame() {
         Thread.startVirtualThread(this::run);
     }
 }

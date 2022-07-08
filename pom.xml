@@ -8,6 +8,23 @@
     <name>CSP Game of Life</name>
     <version>1.0.0-SNAPSHOT</version>
 
+    <properties>
+        <version.jmh>1.35</version.jmh>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>${version.jmh}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>${version.jmh}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

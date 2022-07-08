@@ -4,7 +4,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Channel<T> {
-    private final BlockingQueue<T> queue = new LinkedBlockingQueue<>();
+    private final BlockingQueue<T> queue = new LinkedBlockingQueue<>(); // LinkedTransferQueue
 
     T take() {
         try {
