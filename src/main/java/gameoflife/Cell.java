@@ -18,11 +18,7 @@ public class Cell {
         this.outChannels = options.outChannels();
     }
 
-    void start() {
-        Thread.startVirtualThread(this::run);
-    }
-
-    private void run() {
+    void run() {
         while (true) {
             evaluateCell();
         }

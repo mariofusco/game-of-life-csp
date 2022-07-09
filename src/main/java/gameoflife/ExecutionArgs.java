@@ -3,14 +3,16 @@ package gameoflife;
 public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindowHeight,
                      int periodMilliseconds,
                      int leftPadding, int topPadding, int rightPadding, int bottomPadding,
-                     boolean rotate, boolean logRate, boolean useVirtualThreads) {
+                     boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads) {
 
-    private static final boolean USE_VIRTUAL_THREADS = true;
+    private static final boolean USE_VIRTUAL_THREADS = false;
 
     private static final String DEFAULT_PATTERN = "patterns/gosper_glider_gun.txt";
     private static final int DEFAULT_MAX_WINDOW_WIDTH = 1280;
     private static final int DEFAULT_MAX_WINDOW_HEIGHT = 960;
     private static final int DEFAULT_PERIOD_MILLISECONDS = 0;
+    private static final boolean DEFAULT_ROTATE = false;
+    private static final boolean DEFAULT_TOROIDAL = false;
     private static final boolean DEFAULT_LOG_RATE = true;
     private static final int DEFAULT_PADDING = 25;
 
@@ -24,9 +26,10 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 args.length > 5 ? Integer.parseInt(args[5]) : DEFAULT_PADDING,
                 args.length > 6 ? Integer.parseInt(args[6]) : DEFAULT_PADDING,
                 args.length > 7 ? Integer.parseInt(args[7]) : DEFAULT_PADDING,
-                args.length > 8 ? Boolean.parseBoolean(args[8]) : false,
-                args.length > 9 ? Boolean.parseBoolean(args[9]) : DEFAULT_LOG_RATE,
-                args.length > 9 ? Boolean.parseBoolean(args[10]) : USE_VIRTUAL_THREADS);
+                args.length > 8 ? Boolean.parseBoolean(args[8]) : DEFAULT_ROTATE,
+                args.length > 8 ? Boolean.parseBoolean(args[9]) : DEFAULT_TOROIDAL,
+                args.length > 9 ? Boolean.parseBoolean(args[10]) : DEFAULT_LOG_RATE,
+                args.length > 9 ? Boolean.parseBoolean(args[11]) : USE_VIRTUAL_THREADS);
     }
 
     public static ExecutionArgs create(boolean useVirtualThreads) {
@@ -43,7 +46,8 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 padding,
                 padding,
                 padding,
-                false,
+                DEFAULT_ROTATE,
+                DEFAULT_TOROIDAL,
                 DEFAULT_LOG_RATE,
                 useVirtualThreads);
     }

@@ -63,7 +63,7 @@ public abstract class GameOfLife {
         boolean[][] pattern = PatternParser.pad(rotated, a.leftPadding(), a.topPadding(), a.rightPadding(), a.bottomPadding());
 
         Channel<boolean[][]> gridChannel = new Channel<>(); // channel carries aggregated liveness matrices
-        Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length);
+        Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, a.toroidal());
         return GameOfLife.create(a.useVirtualThreads(), dimensions, pattern, a.periodMilliseconds(), gridChannel, a.logRate());
     }
 

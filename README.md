@@ -69,8 +69,9 @@ java --enable-preview -cp target/classes/ gameoflife.Main patterns/spaceship.txt
 7. Right padding columns, ex. `5`
 8. Bottom padding rows, ex. `5`
 9. Rotate boolean flag, ex. `false`
-10. Log rate boolean flag, ex. `true`
-11. Use virtual threads, ex. `true`
+10. Toroidal boolean flag, ex. `false`
+11. Log rate boolean flag, ex. `true`
+12. Use virtual threads, ex. `true`
 
 ## Patterns
 
