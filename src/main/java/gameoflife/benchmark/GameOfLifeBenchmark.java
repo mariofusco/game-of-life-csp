@@ -41,6 +41,11 @@ public class GameOfLifeBenchmark {
 
     @Setup
     public void setup() {
+        if (!useVirtualThreads && threadPerCell && padding > 50) {
+            // This condition causes a OOM, skip it
+            return;
+        }
+
         executor = useVirtualThreads ?
                 Executors.newVirtualThreadPerTaskExecutor() :
                 Executors.newSingleThreadExecutor(r -> {
@@ -56,6 +61,10 @@ public class GameOfLifeBenchmark {
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     public boolean[][] benchmark() {
+        if (executor == null) {
+            return null;
+        }
+
         try {
             return executor.submit( () -> gameOfLife.calculateFrame() ).get();
         } catch (InterruptedException | ExecutionException e) {
