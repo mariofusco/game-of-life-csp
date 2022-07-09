@@ -1,4 +1,4 @@
-package gameoflife;
+package gameoflife.domain;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class CellsGroup {
         this.cells = cells;
     }
 
-    void run() {
+    public void run() {
         while (true) {
             cells.forEach( Cell::notifyLiveness );
             cells.forEach( Cell::calculateNextState );

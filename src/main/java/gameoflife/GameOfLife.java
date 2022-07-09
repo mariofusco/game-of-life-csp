@@ -3,8 +3,16 @@ package gameoflife;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
+
+import gameoflife.domain.Cell;
+import gameoflife.domain.CellOptions;
+import gameoflife.domain.Channel;
+import gameoflife.domain.Dimensions;
+import gameoflife.ui.PatternParser;
 
 public abstract class GameOfLife {
 
@@ -12,6 +20,7 @@ public abstract class GameOfLife {
     private final int period;
     private final boolean logRate;
     private final Channel<boolean[][]> gridChannel;
+    private final boolean[][] grid;
     protected final List<Cell> cells;
     private final List<List<Channel<Boolean>>> tickChannels;
     private final List<List<Channel<Boolean>>> resultChannels;
@@ -19,8 +28,12 @@ public abstract class GameOfLife {
     private long lastStatsDump = System.nanoTime();
     private long framesCount = 0;
 
-    GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel, boolean logRate) {
+    protected final Consumer<Runnable> runner;
+
+    public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
+                      boolean logRate, boolean useNativeThreads) {
         this.dimensions = dimensions;
+        this.grid = new boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;
         this.period = period;
         this.logRate = logRate;
@@ -50,27 +63,37 @@ public abstract class GameOfLife {
         });
 
         dimensions.forEachRowCol((r, c) -> cells.add(new Cell(grid[r][c])));
+
+        if (useNativeThreads) {
+            this.runner = Thread::startVirtualThread;
+        } else {
+            this.runner = Executors.newFixedThreadPool(getThreadPoolSize(), r -> {
+                Thread t = new Thread(r);
+                t.setDaemon(true);
+                return t;
+            })::submit;
+        }
     }
 
-    public static GameOfLife create(ExecutionArgs a) {
-        boolean[][] original = null;
+    public static GameOfLife create(ExecutionArgs args) {
+        boolean[][] original;
         try {
-            original = PatternParser.parseFile(a.patternFile());
+            original = PatternParser.parseFile(args.patternFile());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        boolean[][] rotated = a.rotate() ? PatternParser.rotate(original) : original;
-        boolean[][] pattern = PatternParser.pad(rotated, a.leftPadding(), a.topPadding(), a.rightPadding(), a.bottomPadding());
+        boolean[][] rotated = args.rotate() ? PatternParser.rotate(original) : original;
+        boolean[][] pattern = PatternParser.pad(rotated, args.leftPadding(), args.topPadding(), args.rightPadding(), args.bottomPadding());
 
         Channel<boolean[][]> gridChannel = new Channel<>(); // channel carries aggregated liveness matrices
-        Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, a.toroidal());
-        return GameOfLife.create(a.useVirtualThreads(), dimensions, pattern, a.periodMilliseconds(), gridChannel, a.logRate());
+        Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, args.toroidal());
+        return GameOfLife.create(args, dimensions, pattern, gridChannel);
     }
 
-    static GameOfLife create(boolean virtual, Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel, boolean logRate) {
-        return virtual ?
-                new VirtualGameOfLife(dimensions, seed, period, gridChannel, logRate) :
-                new NativeGameOfLife(dimensions, seed, period, gridChannel, logRate);
+    private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<boolean[][]> gridChannel) {
+        return args.threadPerCell() ?
+                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads()) :
+                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads());
     }
 
     Channel<boolean[][]> getGridChannel() {
@@ -86,10 +109,15 @@ public abstract class GameOfLife {
         startGame();
     }
 
-    public abstract void startCells();
-    public abstract void startGame();
+    protected abstract int getThreadPoolSize();
 
-    protected void run() {
+    public abstract void startCells();
+
+    public void startGame() {
+        runner.accept(this::run);
+    }
+
+    private void run() {
         while (true) {
             calculateFrame();
         }
@@ -97,7 +125,6 @@ public abstract class GameOfLife {
 
     public boolean[][] calculateFrame() {
         dimensions.forEachRowCol((r, c) -> tickChannels.get(r).get(c).put(true)); // emit tick event for every cell
-        boolean[][] grid = new boolean[dimensions.rows()][dimensions.cols()]; // prepare result boolean matrix
         dimensions.forEachRowCol((r, c) -> grid[r][c] = resultChannels.get(r).get(c).take()); // populate matrix with results
         gridChannel.put(grid); // emit aggregated liveness matrix
         endOfFrame();

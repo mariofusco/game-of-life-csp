@@ -1,4 +1,4 @@
-package gameoflife;
+package gameoflife.domain;
 
 import java.util.List;
 

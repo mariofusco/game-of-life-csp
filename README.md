@@ -72,6 +72,7 @@ java --enable-preview -cp target/classes/ gameoflife.Main patterns/spaceship.txt
 10. Toroidal boolean flag, ex. `false`
 11. Log rate boolean flag, ex. `true`
 12. Use virtual threads, ex. `true`
+13. Use a thread per cell (otherwise a thread per core), ex. `true`
 
 ## Patterns
 

@@ -23,11 +23,14 @@ import org.openjdk.jmh.annotations.Warmup;
 @Warmup(iterations = 5)
 @Measurement(iterations = 10)
 @OutputTimeUnit(TimeUnit.SECONDS)
-@Fork(2)
+@Fork(3)
 public class GameOfLifeBenchmark {
 
     @Param({"true", "false"})
     private boolean useVirtualThreads;
+
+    @Param({"true", "false"})
+    private boolean threadPerCell;
 
     @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
@@ -45,7 +48,7 @@ public class GameOfLifeBenchmark {
                     t.setDaemon(true);
                     return t;
                 });
-        ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads);
+        ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell);
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
     }

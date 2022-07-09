@@ -1,9 +1,9 @@
-package gameoflife;
+package gameoflife.domain;
 
 import java.util.function.BiConsumer;
 
 public record Dimensions(int rows, int cols, boolean toroidal) {
-    void forEachRowCol(BiConsumer<Integer, Integer> consumer) {
+    public void forEachRowCol(BiConsumer<Integer, Integer> consumer) {
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 consumer.accept(r, c);
@@ -11,7 +11,7 @@ public record Dimensions(int rows, int cols, boolean toroidal) {
         }
     }
 
-    void forEachNeighbor(int row, int col, BiConsumer<Integer, Integer> consumer) {
+    public void forEachNeighbor(int row, int col, BiConsumer<Integer, Integer> consumer) {
         for (int r = row - 1; r <= row + 1; r++) { // [row-1, row+1]
             for (int c = col - 1; c <= col + 1; c++) { // [col-1, col+1]
                 if (toroidal) {

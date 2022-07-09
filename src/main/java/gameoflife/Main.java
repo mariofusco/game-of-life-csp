@@ -3,6 +3,9 @@ package gameoflife;
 import java.io.IOException;
 import java.util.function.Consumer;
 
+import gameoflife.domain.Dimensions;
+import gameoflife.ui.WindowOutput;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -12,7 +15,10 @@ public class Main {
     public static void execute(ExecutionArgs a) throws IOException {
         GameOfLife gameOfLife = GameOfLife.create(a);
         gameOfLife.start();
+        runUI(a, gameOfLife);
+    }
 
+    private static void runUI(ExecutionArgs a, GameOfLife gameOfLife) {
         Dimensions dimensions = gameOfLife.getDimensions();
         double scale = calculateScale(dimensions.rows(), dimensions.cols(), a.maxWindowWidth(), a.maxWindowHeight());
         var width = (int) (scale * dimensions.cols());

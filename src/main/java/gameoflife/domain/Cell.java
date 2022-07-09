@@ -1,4 +1,4 @@
-package gameoflife;
+package gameoflife.domain;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class Cell {
     private final List<Channel<Boolean>> inChannels;
     private final List<Channel<Boolean>> outChannels;
 
-    Cell(CellOptions options) {
+    public Cell(CellOptions options) {
         this.alive = options.alive();
         this.tickChannel = options.tickChannel();
         this.resultChannel = options.resultChannel();
@@ -18,15 +18,11 @@ public class Cell {
         this.outChannels = options.outChannels();
     }
 
-    void run() {
+    public void run() {
         while (true) {
-            evaluateCell();
+            notifyLiveness();
+            calculateNextState();
         }
-    }
-
-    void evaluateCell() {
-        notifyLiveness();
-        calculateNextState();
     }
 
     void notifyLiveness() {

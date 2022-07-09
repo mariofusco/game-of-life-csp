@@ -1,4 +1,4 @@
-package gameoflife;
+package gameoflife.ui;
 
 import java.awt.Color;
 import java.awt.Graphics;

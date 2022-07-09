@@ -1,4 +1,4 @@
-package gameoflife;
+package gameoflife.domain;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -6,7 +6,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class Channel<T> {
     private final BlockingQueue<T> queue = new LinkedBlockingQueue<>(); // LinkedTransferQueue
 
-    T take() {
+    public T take() {
         try {
             return queue.take();
         } catch (InterruptedException e) {
@@ -14,7 +14,7 @@ public class Channel<T> {
         }
     }
 
-    void put(T value) {
+    public void put(T value) {
         try {
             queue.put(value);
         } catch (InterruptedException e) {

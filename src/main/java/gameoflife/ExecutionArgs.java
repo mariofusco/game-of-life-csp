@@ -3,9 +3,10 @@ package gameoflife;
 public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindowHeight,
                      int periodMilliseconds,
                      int leftPadding, int topPadding, int rightPadding, int bottomPadding,
-                     boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads) {
+                     boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads, boolean threadPerCell) {
 
-    private static final boolean USE_VIRTUAL_THREADS = false;
+    private static final boolean USE_VIRTUAL_THREADS = true;
+    private static final boolean THREAD_PER_CELL = USE_VIRTUAL_THREADS;
 
     private static final String DEFAULT_PATTERN = "patterns/gosper_glider_gun.txt";
     private static final int DEFAULT_MAX_WINDOW_WIDTH = 1280;
@@ -29,14 +30,15 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 args.length > 8 ? Boolean.parseBoolean(args[8]) : DEFAULT_ROTATE,
                 args.length > 8 ? Boolean.parseBoolean(args[9]) : DEFAULT_TOROIDAL,
                 args.length > 9 ? Boolean.parseBoolean(args[10]) : DEFAULT_LOG_RATE,
-                args.length > 9 ? Boolean.parseBoolean(args[11]) : USE_VIRTUAL_THREADS);
+                args.length > 9 ? Boolean.parseBoolean(args[11]) : USE_VIRTUAL_THREADS,
+                args.length > 9 ? Boolean.parseBoolean(args[12]) : THREAD_PER_CELL);
     }
 
-    public static ExecutionArgs create(boolean useVirtualThreads) {
-        return create(DEFAULT_PADDING, useVirtualThreads);
+    public static ExecutionArgs create(boolean useVirtualThreads, boolean threadPerCell) {
+        return create(DEFAULT_PADDING, useVirtualThreads, threadPerCell);
     }
 
-    public static ExecutionArgs create(int padding, boolean useVirtualThreads) {
+    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell) {
         return new ExecutionArgs(
                 DEFAULT_PATTERN,
                 DEFAULT_MAX_WINDOW_WIDTH,
@@ -49,6 +51,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 DEFAULT_ROTATE,
                 DEFAULT_TOROIDAL,
                 DEFAULT_LOG_RATE,
-                useVirtualThreads);
+                useVirtualThreads,
+                threadPerCell);
     }
 }
