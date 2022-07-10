@@ -22,7 +22,7 @@ import org.openjdk.jmh.annotations.Warmup;
 @Warmup(iterations = 5)
 @Measurement(iterations = 10)
 @OutputTimeUnit(TimeUnit.SECONDS)
-@Fork(3)
+@Fork(2)
 public class GameOfLifeBenchmark {
 
     @Param({"true", "false"})
