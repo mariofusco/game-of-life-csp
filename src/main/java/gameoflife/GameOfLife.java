@@ -31,7 +31,7 @@ public abstract class GameOfLife {
     protected final Consumer<Runnable> runner;
 
     public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
-                      boolean logRate, boolean useNativeThreads) {
+                      boolean logRate, boolean useVirtualThreads) {
         this.dimensions = dimensions;
         this.grid = new boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;
@@ -64,14 +64,14 @@ public abstract class GameOfLife {
 
         dimensions.forEachRowCol((r, c) -> cells.add(new Cell(grid[r][c])));
 
-        if (useNativeThreads) {
+        if (useVirtualThreads) {
             this.runner = Thread::startVirtualThread;
         } else {
             this.runner = Executors.newFixedThreadPool(getThreadPoolSize(), r -> {
                 Thread t = new Thread(r);
                 t.setDaemon(true);
                 return t;
-            })::submit;
+            })::execute;
         }
     }
 

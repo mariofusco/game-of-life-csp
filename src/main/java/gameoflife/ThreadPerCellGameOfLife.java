@@ -6,8 +6,8 @@ import gameoflife.domain.Dimensions;
 public class ThreadPerCellGameOfLife extends GameOfLife {
 
     public ThreadPerCellGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
-                                   boolean logRate, boolean useNativeThreads) {
-        super(dimensions, seed, period, gridChannel, logRate, useNativeThreads);
+                                   boolean logRate, boolean useVirtualThreads) {
+        super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads);
     }
 
     @Override

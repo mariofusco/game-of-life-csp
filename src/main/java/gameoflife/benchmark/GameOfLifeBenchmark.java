@@ -1,6 +1,5 @@
 package gameoflife.benchmark;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -35,8 +34,6 @@ public class GameOfLifeBenchmark {
     @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
 
-    private ExecutorService executor;
-
     private GameOfLife gameOfLife;
 
     @Setup
@@ -46,13 +43,6 @@ public class GameOfLifeBenchmark {
             return;
         }
 
-        executor = useVirtualThreads ?
-                Executors.newVirtualThreadPerTaskExecutor() :
-                Executors.newSingleThreadExecutor(r -> {
-                    Thread t = new Thread(r);
-                    t.setDaemon(true);
-                    return t;
-                });
         ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell);
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
@@ -61,14 +51,6 @@ public class GameOfLifeBenchmark {
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     public boolean[][] benchmark() {
-        if (executor == null) {
-            return null;
-        }
-
-        try {
-            return executor.submit( () -> gameOfLife.calculateFrame() ).get();
-        } catch (InterruptedException | ExecutionException e) {
-            throw new RuntimeException(e);
-        }
+        return gameOfLife.calculateFrame();
     }
 }

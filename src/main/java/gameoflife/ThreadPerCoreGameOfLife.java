@@ -12,8 +12,8 @@ public class ThreadPerCoreGameOfLife extends GameOfLife {
     private final List<CellsGroup> cellsGroups = new ArrayList<>();
 
     public ThreadPerCoreGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
-                                   boolean logRate, boolean useNativeThreads) {
-        super(dimensions, seed, period, gridChannel, logRate, useNativeThreads);
+                                   boolean logRate, boolean useVirtualThreads) {
+        super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads);
 
         int nThread = Runtime.getRuntime().availableProcessors();
         int cellsPerGroup = (int) Math.round( (double) cells.size() / (double) (nThread-1) );
