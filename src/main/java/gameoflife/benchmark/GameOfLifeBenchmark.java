@@ -51,6 +51,6 @@ public class GameOfLifeBenchmark {
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     public boolean[][] benchmark() {
-        return gameOfLife.calculateFrame();
+        return gameOfLife != null ? gameOfLife.calculateFrame() : null;
     }
 }
