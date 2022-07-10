@@ -131,6 +131,11 @@ public abstract class GameOfLife {
         return grid;
     }
 
+    public boolean[][] calculateFrameBlocking() {
+        runner.accept(() -> calculateFrame());
+        return gridChannel.take();
+    }
+
     private void endOfFrame() {
         if (period > 0) {
             try {
