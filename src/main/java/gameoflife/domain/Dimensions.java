@@ -32,4 +32,13 @@ public record Dimensions(int rows, int cols, boolean toroidal) {
             consumer.accept(r, c);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Dimensions{" +
+                "rows=" + rows +
+                ", cols=" + cols +
+                ", toroidal=" + toroidal +
+                '}';
+    }
 }

@@ -6,12 +6,12 @@ import java.util.function.Consumer;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class WindowOutput implements Consumer<boolean[][]> {
+public class WindowOutput implements Consumer<Boolean[][]> {
 
     private final int width;
     private final int height;
     private final Canvas canvas;
-    private volatile boolean[][] cells;
+    private volatile Boolean[][] cells;
 
     public WindowOutput(int width, int height) {
         this.width = width;
@@ -25,7 +25,7 @@ public class WindowOutput implements Consumer<boolean[][]> {
     }
 
     @Override
-    public void accept(boolean[][] cells) {
+    public void accept(Boolean[][] cells) {
         this.cells = cells;
         canvas.repaint();
     }

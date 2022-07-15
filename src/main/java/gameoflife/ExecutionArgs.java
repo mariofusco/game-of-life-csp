@@ -54,4 +54,17 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 useVirtualThreads,
                 threadPerCell);
     }
+
+    @Override
+    public String toString() {
+        return "ExecutionArgs{" +
+                "patternFile='" + patternFile + '\'' +
+                ", periodMilliseconds=" + periodMilliseconds +
+                ", rotate=" + rotate +
+                ", toroidal=" + toroidal +
+                ", logRate=" + logRate +
+                ", useVirtualThreads=" + useVirtualThreads +
+                ", threadPerCell=" + threadPerCell +
+                '}';
+    }
 }

@@ -18,13 +18,16 @@ public class Main {
         runUI(a, gameOfLife);
     }
 
-    private static void runUI(ExecutionArgs a, GameOfLife gameOfLife) {
+    private static void runUI(ExecutionArgs args, GameOfLife gameOfLife) {
         Dimensions dimensions = gameOfLife.getDimensions();
-        double scale = calculateScale(dimensions.rows(), dimensions.cols(), a.maxWindowWidth(), a.maxWindowHeight());
+        double scale = calculateScale(dimensions.rows(), dimensions.cols(), args.maxWindowWidth(), args.maxWindowHeight());
         var width = (int) (scale * dimensions.cols());
         var height = (int) (scale * dimensions.rows());
-        System.out.printf("cells=%d, rows=%d, columns=%d, width=%d, height=%d\n", dimensions.rows()*dimensions.cols(), dimensions.rows(), dimensions.cols(), width, height);
-        Consumer<boolean[][]> consumer = new WindowOutput(width, height);
+
+        System.out.println(args);
+        System.out.println(dimensions);
+
+        Consumer<Boolean[][]> consumer = new WindowOutput(width, height);
 
         while (true) {
             consumer.accept(gameOfLife.getGridChannel().take());

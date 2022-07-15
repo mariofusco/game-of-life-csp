@@ -5,64 +5,75 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
-import java.util.stream.IntStream;
 
 import gameoflife.domain.Cell;
-import gameoflife.domain.CellOptions;
 import gameoflife.domain.Channel;
+import gameoflife.domain.ChannelsGrid;
 import gameoflife.domain.Dimensions;
+import gameoflife.domain.Tick;
+import gameoflife.domain.TickPerCell;
 import gameoflife.ui.PatternParser;
 
+import static gameoflife.domain.ChannelsGrid.makeGrid;
+
 public abstract class GameOfLife {
+
+    protected final List<Cell> cells = new ArrayList<>();
 
     private final Dimensions dimensions;
     private final int period;
     private final boolean logRate;
-    private final Channel<boolean[][]> gridChannel;
-    private final boolean[][] grid;
-    protected final List<Cell> cells;
-    private final List<List<Channel<Boolean>>> tickChannels;
-    private final List<List<Channel<Boolean>>> resultChannels;
+    private final Channel<Boolean[][]> gridChannel;
+    private final Boolean[][] grid;
+
+    private final Tick tick;
+    private final ChannelsGrid<Boolean> resultChannels;
 
     private long lastStatsDump = System.nanoTime();
     private long framesCount = 0;
 
     protected final Consumer<Runnable> runner;
 
-    public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
+    public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
                       boolean logRate, boolean useVirtualThreads) {
         this.dimensions = dimensions;
-        this.grid = new boolean[dimensions.rows()][dimensions.cols()];
+        this.grid = new Boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;
         this.period = period;
         this.logRate = logRate;
-        this.cells = new ArrayList<>();
-        this.tickChannels = makeGrid(dimensions.rows(), dimensions.cols(), Channel::new);
-        this.resultChannels = makeGrid(dimensions.rows(), dimensions.cols(), Channel::new);
+        this.resultChannels = makeGrid(dimensions);
 
-        CellOptions[][] grid = new CellOptions[dimensions.rows()][dimensions.cols()];
+// TODO: The tick mechanism is now pluggable but for now I'm keeping the original one sending one tick per cell.
+//       In reality when no delay is required between one frame and the next it is also possible to use a DummyTick
+//       doing absolutely nothing because the communications between cells through the in and out channels are enough
+//       also to keep them in sync.
+//       I tried to implement a GlobalTick that doesn't requires a tick per cell, but I failed and I need to review this.
 
-        dimensions.forEachRowCol((r, c) -> grid[r][c] = new CellOptions(
+//        this.tick = new GlobalTick(dimensions);
+//        this.tick = new DummyTick();
+        this.tick = new TickPerCell(dimensions);
+
+        Cell[][] grid = new Cell[dimensions.rows()][dimensions.cols()];
+
+        dimensions.forEachRowCol((r, c) -> grid[r][c] = new Cell(
                 r,
                 c,
                 seed[r][c],
-                tickChannels.get(r).get(c),
-                resultChannels.get(r).get(c),
+                tick,
+                resultChannels.getChannel(r, c),
                 new ArrayList<>(),
                 new ArrayList<>()));
 
         dimensions.forEachRowCol((r, c) -> {
-            CellOptions cell = grid[r][c];
+            Cell cell = grid[r][c];
+            cells.add(cell);
             dimensions.forEachNeighbor(r, c, (ri, ci) -> {
-                CellOptions other = grid[ri][ci];
+                Cell other = grid[ri][ci];
                 Channel<Boolean> ch = new Channel<>();
-                cell.inChannels().add(ch);
-                other.outChannels().add(ch);
+                cell.addInChannel(ch);
+                other.addOutChannel(ch);
             });
         });
-
-        dimensions.forEachRowCol((r, c) -> cells.add(new Cell(grid[r][c])));
 
         if (useVirtualThreads) {
             this.runner = Thread::startVirtualThread;
@@ -85,18 +96,18 @@ public abstract class GameOfLife {
         boolean[][] rotated = args.rotate() ? PatternParser.rotate(original) : original;
         boolean[][] pattern = PatternParser.pad(rotated, args.leftPadding(), args.topPadding(), args.rightPadding(), args.bottomPadding());
 
-        Channel<boolean[][]> gridChannel = new Channel<>(); // channel carries aggregated liveness matrices
+        Channel<Boolean[][]> gridChannel = new Channel<>(); // channel carries aggregated liveness matrices
         Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, args.toroidal());
         return GameOfLife.create(args, dimensions, pattern, gridChannel);
     }
 
-    private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<boolean[][]> gridChannel) {
+    private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<Boolean[][]> gridChannel) {
         return args.threadPerCell() ?
                 new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads()) :
                 new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads());
     }
 
-    Channel<boolean[][]> getGridChannel() {
+    Channel<Boolean[][]> getGridChannel() {
         return gridChannel;
     }
 
@@ -123,15 +134,15 @@ public abstract class GameOfLife {
         }
     }
 
-    public boolean[][] calculateFrame() {
-        dimensions.forEachRowCol((r, c) -> tickChannels.get(r).get(c).put(true)); // emit tick event for every cell
-        dimensions.forEachRowCol((r, c) -> grid[r][c] = resultChannels.get(r).get(c).take()); // populate matrix with results
+    public Boolean[][] calculateFrame() {
+        tick.tick();
+        resultChannels.forEachChannel( Channel::take, grid ); // populate matrix with results
         gridChannel.put(grid); // emit aggregated liveness matrix
         endOfFrame();
         return grid;
     }
 
-    public boolean[][] calculateFrameBlocking() {
+    public Boolean[][] calculateFrameBlocking() {
         runner.accept(() -> calculateFrame());
         return gridChannel.take();
     }
@@ -150,11 +161,5 @@ public abstract class GameOfLife {
                 framesCount = 0;
             }
         }
-    }
-
-    private static <T> List<List<T>> makeGrid(int rows, int cols, Supplier<T> supplier) {
-        return IntStream.range(0, rows)
-                .mapToObj(r -> IntStream.range(0, cols).mapToObj(c -> supplier.get()).toList())
-                .toList();
     }
 }
