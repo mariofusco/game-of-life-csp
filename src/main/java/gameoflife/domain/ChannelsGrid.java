@@ -1,5 +1,7 @@
 package gameoflife.domain;
 
+import gameoflife.concurrent.BlockingSingleValue;
+
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -28,9 +30,9 @@ public class ChannelsGrid<T> {
         dimensions.forEachRowCol( (r, c) -> result[r][c] = f.apply( getChannel(r, c) ) );
     }
 
-    public static <T> ChannelsGrid<T> makeGrid(Dimensions dimensions) {
+    public static <T> ChannelsGrid<T> makeGrid(Dimensions dimensions, BlockingSingleValue.Type type) {
         return new ChannelsGrid<>( IntStream.range(0, dimensions.rows())
-                .mapToObj(r -> IntStream.range(0, dimensions.cols()).mapToObj(c -> new Channel<T>()).toArray(Channel[]::new))
+                .mapToObj(r -> IntStream.range(0, dimensions.cols()).mapToObj(c -> new Channel<T>(type)).toArray(Channel[]::new))
                 .toArray(Channel[][]::new), dimensions );
     }
 }

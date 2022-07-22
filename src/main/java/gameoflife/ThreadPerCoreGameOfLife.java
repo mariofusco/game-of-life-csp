@@ -3,6 +3,7 @@ package gameoflife;
 import java.util.ArrayList;
 import java.util.List;
 
+import gameoflife.concurrent.BlockingSingleValue;
 import gameoflife.domain.CellsGroup;
 import gameoflife.domain.Channel;
 import gameoflife.domain.Dimensions;
@@ -12,8 +13,8 @@ public class ThreadPerCoreGameOfLife extends GameOfLife {
     private final List<CellsGroup> cellsGroups = new ArrayList<>();
 
     public ThreadPerCoreGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
-                                   boolean logRate, boolean useVirtualThreads) {
-        super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads);
+                                   boolean logRate, boolean useVirtualThreads, BlockingSingleValue.Type type) {
+        super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads, type);
 
         int nThread = Runtime.getRuntime().availableProcessors();
         int cellsPerGroup = (int) Math.round( (double) cells.size() / (double) (nThread-1) );

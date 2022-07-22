@@ -1,18 +1,18 @@
 package gameoflife.domain;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.LinkedTransferQueue;
+import gameoflife.concurrent.BlockingSingleValue;
 
 public class Channel<T> {
-//    private final BlockingQueue<T> queue = new ArrayBlockingQueue<>(1);
-//    private final BlockingQueue<T> queue = new LinkedTransferQueue<>();
-    private final BlockingSingleValue<T> queue = new BlockingSingleValue<>();
+
+    private final BlockingSingleValue<T> singleValue;
+
+    public Channel(BlockingSingleValue.Type type) {
+        singleValue = BlockingSingleValue.of(type);
+    }
 
     public T take() {
         try {
-            return queue.take();
+            return singleValue.take();
         } catch (InterruptedException e) {
             return null;
         }
@@ -20,7 +20,7 @@ public class Channel<T> {
 
     public void put(T value) {
         try {
-            queue.put(value);
+            singleValue.put(value);
         } catch (InterruptedException e) {
             // abort
         }
