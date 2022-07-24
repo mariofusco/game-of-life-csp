@@ -9,7 +9,7 @@ public sealed interface BlockingRendezVous<T> permits BlockingQueue, BlockingTra
     enum Type {
         OneToOneYielding,
         OneToOneParking,
-        MultiLocked,
+        LockedSingleValue,
         BlockingQueue,
         BlockingTransfer
     }
@@ -19,7 +19,7 @@ public sealed interface BlockingRendezVous<T> permits BlockingQueue, BlockingTra
         return switch (type) {
             case BlockingQueue -> new BlockingQueue<>();
             case BlockingTransfer -> new BlockingTransfer<>();
-            case MultiLocked -> new LockedSingleValue<>();
+            case LockedSingleValue -> new LockedSingleValue<>();
             case OneToOneParking -> new OneToOneParkingSingleValue<>();
             case OneToOneYielding -> new OneToOneYieldingSingleValue<>();
             default -> throw new AssertionError("unknown type: " + type);

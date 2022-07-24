@@ -33,7 +33,7 @@ public class GameOfLifeBenchmark {
     @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
 
-    @Param({"BlockingQueue", "BlockingTransfer", "MultiLocked", "OneToOneParking"})
+    @Param({"BlockingQueue", "BlockingTransfer", "LockedSingleValue", "OneToOneParking"})
     private String channelType;
 
     private GameOfLife gameOfLife;

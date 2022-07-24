@@ -20,7 +20,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
     private static final boolean DEFAULT_LOG_RATE = true;
     private static final int DEFAULT_PADDING = 25;
 
-    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.MultiLocked;
+    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.LockedSingleValue;
 
     public static ExecutionArgs parse(String[] args) {
         // TODO not interested yet into type setting for the main execution use case
