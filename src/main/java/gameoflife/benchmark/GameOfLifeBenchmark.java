@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
+import gameoflife.concurrent.BlockingSingleValue;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -34,6 +35,9 @@ public class GameOfLifeBenchmark {
     @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
 
+    @Param({"MultiLocked", "OneToOneParking", "OneToOneYielding"})
+    private String channelType;
+
     private GameOfLife gameOfLife;
 
     @Setup
@@ -43,7 +47,8 @@ public class GameOfLifeBenchmark {
             return;
         }
 
-        ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell);
+        ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell,
+                BlockingSingleValue.Type.valueOf(channelType));
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
     }

@@ -1,10 +1,10 @@
-package gameoflife.domain;
+package gameoflife.concurrent;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class BlockingSingleValue<T> {
+final class LockedSingleValue<T> implements BlockingSingleValue<T> {
 
     private final Lock lock = new ReentrantLock();
     private final Condition notFull  = lock.newCondition();
@@ -12,6 +12,7 @@ public class BlockingSingleValue<T> {
 
     private T value;
 
+    @Override
     public void put(T x) throws InterruptedException {
         lock.lock();
         try {
@@ -25,6 +26,7 @@ public class BlockingSingleValue<T> {
         }
     }
 
+    @Override
     public T take() throws InterruptedException {
         lock.lock();
         try {
