@@ -4,7 +4,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 final class BlockingTransfer<T> implements BlockingRendezVous<T> {
 
-    private BlockingTransfer<T> queue = new BlockingTransfer<>();
+    private final BlockingTransfer<T> queue = new BlockingTransfer<>();
 
     @Override
     public void put(T x) throws InterruptedException {
