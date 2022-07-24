@@ -3,7 +3,7 @@ package gameoflife.concurrent;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
-final class OneToOneYieldingSingleValue<T> extends AtomicReference<T> implements BlockingSingleValue<T> {
+final class OneToOneYieldingSingleValue<T> extends AtomicReference<T> implements BlockingRendezVous<T> {
     private static final int INTERRUPT_CHECKS = 100;
 
     @Override

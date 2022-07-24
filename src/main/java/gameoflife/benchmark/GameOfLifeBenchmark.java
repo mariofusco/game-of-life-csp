@@ -1,12 +1,10 @@
 package gameoflife.benchmark;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -35,7 +33,7 @@ public class GameOfLifeBenchmark {
     @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
     private int padding;
 
-    @Param({"MultiLocked", "OneToOneParking", "OneToOneYielding"})
+    @Param({"BlockingQueue", "BlockingTransfer", "MultiLocked", "OneToOneParking"})
     private String channelType;
 
     private GameOfLife gameOfLife;
@@ -48,7 +46,7 @@ public class GameOfLifeBenchmark {
         }
 
         ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell,
-                BlockingSingleValue.Type.valueOf(channelType));
+                BlockingRendezVous.Type.valueOf(channelType));
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
     }

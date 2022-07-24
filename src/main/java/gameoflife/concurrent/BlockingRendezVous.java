@@ -1,6 +1,6 @@
 package gameoflife.concurrent;
 
-public sealed interface BlockingSingleValue<T> permits LockedSingleValue, OneToOneParkingSingleValue, OneToOneYieldingSingleValue {
+public sealed interface BlockingRendezVous<T> permits BlockingQueue, BlockingTransfer, LockedSingleValue, OneToOneParkingSingleValue, OneToOneYieldingSingleValue {
 
     void put(T x) throws InterruptedException;
 
@@ -9,12 +9,16 @@ public sealed interface BlockingSingleValue<T> permits LockedSingleValue, OneToO
     enum Type {
         OneToOneYielding,
         OneToOneParking,
-        MultiLocked
+        MultiLocked,
+        BlockingQueue,
+        BlockingTransfer
     }
 
 
-    static <T> BlockingSingleValue<T> of(Type type) {
+    static <T> BlockingRendezVous<T> of(Type type) {
         return switch (type) {
+            case BlockingQueue -> new BlockingQueue<>();
+            case BlockingTransfer -> new BlockingTransfer<>();
             case MultiLocked -> new LockedSingleValue<>();
             case OneToOneParking -> new OneToOneParkingSingleValue<>();
             case OneToOneYielding -> new OneToOneYieldingSingleValue<>();

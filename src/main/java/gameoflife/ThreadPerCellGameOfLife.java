@@ -1,13 +1,13 @@
 package gameoflife;
 
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 import gameoflife.domain.Channel;
 import gameoflife.domain.Dimensions;
 
 public class ThreadPerCellGameOfLife extends GameOfLife {
 
     public ThreadPerCellGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
-                                   boolean logRate, boolean useVirtualThreads, BlockingSingleValue.Type type) {
+                                   boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type type) {
         super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads, type);
     }
 

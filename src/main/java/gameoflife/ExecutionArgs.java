@@ -1,11 +1,12 @@
 package gameoflife;
 
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 
 public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindowHeight,
                             int periodMilliseconds,
                             int leftPadding, int topPadding, int rightPadding, int bottomPadding,
-                            boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads, boolean threadPerCell, BlockingSingleValue.Type type) {
+                            boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads, boolean threadPerCell,
+                            BlockingRendezVous.Type type) {
 
     private static final boolean USE_VIRTUAL_THREADS = true;
     private static final boolean THREAD_PER_CELL = USE_VIRTUAL_THREADS;
@@ -19,7 +20,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
     private static final boolean DEFAULT_LOG_RATE = true;
     private static final int DEFAULT_PADDING = 25;
 
-    private static final BlockingSingleValue.Type DEFAULT_TYPE = BlockingSingleValue.Type.MultiLocked;
+    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.MultiLocked;
 
     public static ExecutionArgs parse(String[] args) {
         // TODO not interested yet into type setting for the main execution use case
@@ -40,7 +41,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 DEFAULT_TYPE);
     }
 
-    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell, BlockingSingleValue.Type type) {
+    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell, BlockingRendezVous.Type type) {
         return new ExecutionArgs(
                 DEFAULT_PATTERN,
                 DEFAULT_MAX_WINDOW_WIDTH,
@@ -54,7 +55,8 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 DEFAULT_TOROIDAL,
                 DEFAULT_LOG_RATE,
                 useVirtualThreads,
-                threadPerCell, type);
+                threadPerCell,
+                type);
     }
 
     @Override

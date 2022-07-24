@@ -1,18 +1,18 @@
 package gameoflife.domain;
 
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 
 public class Channel<T> {
 
-    private final BlockingSingleValue<T> singleValue;
+    private final BlockingRendezVous<T> rendezVous;
 
-    public Channel(BlockingSingleValue.Type type) {
-        singleValue = BlockingSingleValue.of(type);
+    public Channel(BlockingRendezVous.Type type) {
+        rendezVous = BlockingRendezVous.of(type);
     }
 
     public T take() {
         try {
-            return singleValue.take();
+            return rendezVous.take();
         } catch (InterruptedException e) {
             return null;
         }
@@ -20,7 +20,7 @@ public class Channel<T> {
 
     public void put(T value) {
         try {
-            singleValue.put(value);
+            rendezVous.put(value);
         } catch (InterruptedException e) {
             // abort
         }

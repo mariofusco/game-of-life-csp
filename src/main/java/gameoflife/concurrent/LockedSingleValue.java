@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-final class LockedSingleValue<T> implements BlockingSingleValue<T> {
+final class LockedSingleValue<T> implements BlockingRendezVous<T> {
 
     private final Lock lock = new ReentrantLock();
     private final Condition notFull  = lock.newCondition();

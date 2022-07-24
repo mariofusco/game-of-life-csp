@@ -1,6 +1,6 @@
 package gameoflife.domain;
 
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 
 import static gameoflife.domain.ChannelsGrid.makeGrid;
 
@@ -8,7 +8,7 @@ public class TickPerCell implements Tick {
 
     private final ChannelsGrid<Boolean> tickChannels;
 
-    public TickPerCell(Dimensions dimensions, BlockingSingleValue.Type type) {
+    public TickPerCell(Dimensions dimensions, BlockingRendezVous.Type type) {
         this.tickChannels = makeGrid(dimensions, type);
     }
 

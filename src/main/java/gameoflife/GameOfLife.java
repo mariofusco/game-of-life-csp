@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
-import gameoflife.concurrent.BlockingSingleValue;
+import gameoflife.concurrent.BlockingRendezVous;
 import gameoflife.domain.Cell;
 import gameoflife.domain.Channel;
 import gameoflife.domain.ChannelsGrid;
@@ -36,7 +36,7 @@ public abstract class GameOfLife {
     protected final Consumer<Runnable> runner;
 
     public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
-                      boolean logRate, boolean useVirtualThreads, BlockingSingleValue.Type channelType) {
+                      boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type channelType) {
         this.dimensions = dimensions;
         this.grid = new Boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;

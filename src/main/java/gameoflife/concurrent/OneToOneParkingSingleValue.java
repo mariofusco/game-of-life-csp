@@ -3,7 +3,7 @@ package gameoflife.concurrent;
 import java.util.Objects;
 import java.util.concurrent.locks.LockSupport;
 
-final class OneToOneParkingSingleValue<T> implements BlockingSingleValue<T> {
+final class OneToOneParkingSingleValue<T> implements BlockingRendezVous<T> {
     private volatile Thread waitSomeValue = null;
     private volatile Thread waitEmpty = null;
     private volatile T value;
