@@ -1,10 +1,10 @@
 package gameoflife.concurrent;
 
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.LinkedTransferQueue;
 
 final class BlockingTransfer<T> implements BlockingRendezVous<T> {
 
-    private final BlockingTransfer<T> queue = new BlockingTransfer<>();
+    private final LinkedTransferQueue<T> queue = new LinkedTransferQueue<>();
 
     @Override
     public void put(T x) throws InterruptedException {
