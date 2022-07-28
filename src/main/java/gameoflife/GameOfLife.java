@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicLongFieldUpdater;
 import java.util.function.Consumer;
 
 import gameoflife.concurrent.BlockingRendezVous;
@@ -19,31 +20,35 @@ import static gameoflife.domain.ChannelsGrid.makeGrid;
 
 public abstract class GameOfLife {
 
+    private static final AtomicLongFieldUpdater<GameOfLife> FRAME_COUNT =
+            AtomicLongFieldUpdater.newUpdater(GameOfLife.class, "framesCount");
     protected final List<Cell> cells = new ArrayList<>();
 
     private final Dimensions dimensions;
     private final int period;
-    private final boolean logRate;
-    private final Channel<Boolean[][]> gridChannel;
-    private final Boolean[][] grid;
+    private final Channel<boolean[][]> gridChannel;
 
+    private final Channel<boolean[][]> frameCompleted;
+    private final boolean[][] grid;
     private final Tick tick;
     private final ChannelsGrid<Boolean> resultChannels;
-
-    private long lastStatsDump = System.nanoTime();
-    private long framesCount = 0;
-
+    private volatile long framesCount = 0;
     protected final Consumer<Runnable> runner;
 
-    public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
-                      boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type channelType) {
+    public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
+                      boolean useVirtualThreads, BlockingRendezVous.Type channelType) {
         this.dimensions = dimensions;
-        this.grid = new Boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;
         this.period = period;
-        this.logRate = logRate;
         this.resultChannels = makeGrid(dimensions, channelType);
-
+        // no UI is involved
+        if (gridChannel == null) {
+            this.grid = new boolean[dimensions.rows()][dimensions.cols()];
+            this.frameCompleted = new Channel<>(BlockingRendezVous.Type.OneToOneParking);
+        } else {
+            this.grid = null;
+            this.frameCompleted = null;
+        }
 // TODO: The tick mechanism is now pluggable but for now I'm keeping the original one sending one tick per cell.
 //       In reality when no delay is required between one frame and the next it is also possible to use a DummyTick
 //       doing absolutely nothing because the communications between cells through the in and out channels are enough
@@ -96,19 +101,19 @@ public abstract class GameOfLife {
         }
         boolean[][] rotated = args.rotate() ? PatternParser.rotate(original) : original;
         boolean[][] pattern = PatternParser.pad(rotated, args.leftPadding(), args.topPadding(), args.rightPadding(), args.bottomPadding());
-
-        Channel<Boolean[][]> gridChannel = new Channel<>(args.type()); // channel carries aggregated liveness matrices
+        // channel carries aggregated liveness matrices
+        Channel<boolean[][]> gridChannel = args.emitGrid() ? new Channel<>(BlockingRendezVous.Type.BlockingTransfer) : null;
         Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, args.toroidal());
         return GameOfLife.create(args, dimensions, pattern, gridChannel);
     }
 
-    private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<Boolean[][]> gridChannel) {
+    private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<boolean[][]> gridChannel) {
         return args.threadPerCell() ?
-                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.type()) :
-                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.type());
+                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.useVirtualThreads(), args.type()) :
+                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.useVirtualThreads(), args.type());
     }
 
-    Channel<Boolean[][]> getGridChannel() {
+    Channel<boolean[][]> getGridChannel() {
         return gridChannel;
     }
 
@@ -126,41 +131,52 @@ public abstract class GameOfLife {
     public abstract void startCells();
 
     public void startGame() {
+        if (gridChannel == null) {
+            throw new IllegalStateException("startGame is supported only with an emitting gridChannel");
+        }
+        assert grid == null;
         runner.accept(this::run);
     }
 
     private void run() {
+        final int rows = dimensions.rows();
+        final int cols = dimensions.cols();
         while (true) {
-            calculateFrame();
+            calculateFrame(gridChannel, new boolean[rows][cols]);
         }
     }
 
-    public Boolean[][] calculateFrame() {
+    public boolean[][] calculateFrame(Channel<boolean[][]> result, boolean[][] grid) {
         tick.tick();
-        resultChannels.forEachChannel( Channel::take, grid ); // populate matrix with results
-        gridChannel.put(grid); // emit aggregated liveness matrix
+        resultChannels.forEachChannel(Channel::take, grid); // populate matrix with results
+        result.put(grid);
         endOfFrame();
         return grid;
     }
 
-    public Boolean[][] calculateFrameBlocking() {
-        runner.accept(() -> calculateFrame());
-        return gridChannel.take();
+    public boolean[][] calculateFrameBlocking() {
+        if (gridChannel != null) {
+            throw new IllegalStateException("calculateFrameBlocking is supported only without a gridChannel");
+        }
+        assert grid != null;
+        runner.accept(() -> calculateFrame(frameCompleted, grid));
+        final boolean[][] result = frameCompleted.take();
+        assert result == grid;
+        return result;
     }
 
     private void endOfFrame() {
         if (period > 0) {
             try {
                 Thread.sleep(period);
-            } catch (InterruptedException ignore) { }
-        }
-        if (logRate) {
-            framesCount++;
-            if (System.nanoTime() - lastStatsDump >= 1_000_000_000) {
-                System.out.printf("Frames per second: %d\n", framesCount);
-                lastStatsDump = System.nanoTime();
-                framesCount = 0;
+            } catch (InterruptedException ignore) {
             }
         }
+        // lightweight metric
+        FRAME_COUNT.lazySet(this, framesCount + 1);
+    }
+
+    public long frameCount() {
+        return framesCount;
     }
 }

@@ -36,24 +36,34 @@ public class GameOfLifeBenchmark {
     @Param({"BlockingQueue", "BlockingTransfer", "LockedSingleValue", "OneToOneParking"})
     private String channelType;
 
+    // see https://github.com/openjdk/loom/blob/0ec74059f13c00e79e579fbafda0ad855170ea76/src/java.base/share/classes/java/lang/VirtualThread.java#L1024
+    @Param({"0", "2", "4"})
+    private int parallelism;
+
     private GameOfLife gameOfLife;
 
     @Setup
     public void setup() {
+        if (!useVirtualThreads && threadPerCell && parallelism != 0) {
+            throw new IllegalStateException("parallelism has no effects for this benchmark");
+        }
         if (!useVirtualThreads && threadPerCell && padding > 50) {
             // This condition causes a OOM, skip it
             return;
         }
-
+        if (parallelism > 0) {
+            System.setProperty("jdk.virtualThreadScheduler.parallelism", Integer.toString(parallelism));
+        }
         ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell,
-                BlockingRendezVous.Type.valueOf(channelType));
+                BlockingRendezVous.Type.valueOf(channelType), false);
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
     }
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    public Boolean[][] benchmark() {
+    public boolean[][] benchmark() {
+        final GameOfLife gameOfLife = this.gameOfLife;
         return gameOfLife != null ? gameOfLife.calculateFrameBlocking() : null;
     }
 }

@@ -1,9 +1,11 @@
 package gameoflife;
 
 import java.io.IOException;
+import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 import gameoflife.domain.Dimensions;
+import gameoflife.reporting.FrameCount;
 import gameoflife.ui.WindowOutput;
 
 public class Main {
@@ -19,6 +21,11 @@ public class Main {
     }
 
     private static void runUI(ExecutionArgs args, GameOfLife gameOfLife) {
+        Thread framePerCount = null;
+        if (args.logRate()) {
+            framePerCount = FrameCount.reportWith(Executors.defaultThreadFactory(), gameOfLife, System.out);
+            framePerCount.setDaemon(true);
+        }
         Dimensions dimensions = gameOfLife.getDimensions();
         double scale = calculateScale(dimensions.rows(), dimensions.cols(), args.maxWindowWidth(), args.maxWindowHeight());
         var width = (int) (scale * dimensions.cols());
@@ -26,8 +33,10 @@ public class Main {
 
         System.out.println(args);
         System.out.println(dimensions);
-
-        Consumer<Boolean[][]> consumer = new WindowOutput(width, height);
+        if (framePerCount != null) {
+            framePerCount.start();
+        }
+        Consumer<boolean[][]> consumer = new WindowOutput(width, height);
 
         while (true) {
             consumer.accept(gameOfLife.getGridChannel().take());

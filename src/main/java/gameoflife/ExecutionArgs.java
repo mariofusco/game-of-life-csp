@@ -6,7 +6,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                             int periodMilliseconds,
                             int leftPadding, int topPadding, int rightPadding, int bottomPadding,
                             boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads, boolean threadPerCell,
-                            BlockingRendezVous.Type type) {
+                            BlockingRendezVous.Type type, boolean emitGrid) {
 
     private static final boolean USE_VIRTUAL_THREADS = true;
     private static final boolean THREAD_PER_CELL = USE_VIRTUAL_THREADS;
@@ -18,9 +18,10 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
     private static final boolean DEFAULT_ROTATE = false;
     private static final boolean DEFAULT_TOROIDAL = false;
     private static final boolean DEFAULT_LOG_RATE = true;
+    private static final boolean DEFAULT_EMIT_GRID = true;
     private static final int DEFAULT_PADDING = 25;
 
-    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.LockedSingleValue;
+    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.OneToOneParking;
 
     public static ExecutionArgs parse(String[] args) {
         // TODO not interested yet into type setting for the main execution use case
@@ -38,10 +39,10 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 args.length > 9 ? Boolean.parseBoolean(args[10]) : DEFAULT_LOG_RATE,
                 args.length > 9 ? Boolean.parseBoolean(args[11]) : USE_VIRTUAL_THREADS,
                 args.length > 9 ? Boolean.parseBoolean(args[12]) : THREAD_PER_CELL,
-                DEFAULT_TYPE);
+                DEFAULT_TYPE, DEFAULT_EMIT_GRID);
     }
 
-    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell, BlockingRendezVous.Type type) {
+    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell, BlockingRendezVous.Type type, final boolean emitGrid) {
         return new ExecutionArgs(
                 DEFAULT_PATTERN,
                 DEFAULT_MAX_WINDOW_WIDTH,
@@ -56,7 +57,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 DEFAULT_LOG_RATE,
                 useVirtualThreads,
                 threadPerCell,
-                type);
+                type, emitGrid);
     }
 
     @Override
