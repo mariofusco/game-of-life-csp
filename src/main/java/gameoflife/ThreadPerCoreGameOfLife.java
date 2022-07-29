@@ -12,7 +12,7 @@ public class ThreadPerCoreGameOfLife extends GameOfLife {
 
     private final List<CellsGroup> cellsGroups = new ArrayList<>();
 
-    public ThreadPerCoreGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<Boolean[][]> gridChannel,
+    public ThreadPerCoreGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
                                    boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type type) {
         super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads, type);
 

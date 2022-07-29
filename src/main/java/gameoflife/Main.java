@@ -27,7 +27,7 @@ public class Main {
         System.out.println(args);
         System.out.println(dimensions);
 
-        Consumer<Boolean[][]> consumer = new WindowOutput(width, height);
+        Consumer<boolean[][]> consumer = new WindowOutput(width, height);
 
         while (true) {
             consumer.accept(gameOfLife.getGridChannel().take());

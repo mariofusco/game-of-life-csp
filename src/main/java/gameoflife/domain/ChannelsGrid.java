@@ -4,6 +4,7 @@ import gameoflife.concurrent.BlockingRendezVous;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
 public class ChannelsGrid<T> {
@@ -25,8 +26,8 @@ public class ChannelsGrid<T> {
         dimensions.forEachRowCol( (r, c) -> consumer.accept( getChannel(r, c) ) );
     }
 
-    public void forEachChannel(Function<Channel<T>, T> f, T[][] result) {
-        dimensions.forEachRowCol( (r, c) -> result[r][c] = f.apply( getChannel(r, c) ) );
+    public void forEachChannel(Predicate<Channel<T>> f, boolean[][] result) {
+        dimensions.forEachRowCol( (r, c) -> result[r][c] = f.test( getChannel(r, c) ) );
     }
 
     public static <T> ChannelsGrid<T> makeGrid(Dimensions dimensions, BlockingRendezVous.Type type) {

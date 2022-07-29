@@ -53,7 +53,7 @@ public class GameOfLifeBenchmark {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    public Boolean[][] benchmark() {
+    public boolean[][] benchmark() {
         return gameOfLife != null ? gameOfLife.calculateFrameBlocking() : null;
     }
 }
