@@ -25,7 +25,6 @@ public abstract class GameOfLife {
     private final int period;
     private final boolean logRate;
     private final Channel<boolean[][]> gridChannel;
-    private final boolean[][] grid;
 
     private final Tick tick;
     private final ChannelsGrid<Boolean> resultChannels;
@@ -38,7 +37,6 @@ public abstract class GameOfLife {
     public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
                       boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type channelType) {
         this.dimensions = dimensions;
-        this.grid = new boolean[dimensions.rows()][dimensions.cols()];
         this.gridChannel = gridChannel;
         this.period = period;
         this.logRate = logRate;
@@ -56,25 +54,17 @@ public abstract class GameOfLife {
 
         Cell[][] grid = new Cell[dimensions.rows()][dimensions.cols()];
 
-        dimensions.forEachRowCol((r, c) -> grid[r][c] = new Cell(
-                r,
-                c,
-                seed[r][c],
-                tick,
-                resultChannels.getChannel(r, c),
-                new ArrayList<>(),
-                new ArrayList<>()));
+        dimensions.forEachRowCol( (r, c) ->
+            cells.add(grid[r][c] = new Cell(r, c, seed[r][c], tick, resultChannels.getChannel(r, c)))
+        );
 
-        dimensions.forEachRowCol((r, c) -> {
-            Cell cell = grid[r][c];
-            cells.add(cell);
+        dimensions.forEachRowCol( (r, c) ->
             dimensions.forEachNeighbor(r, c, (ri, ci) -> {
-                Cell other = grid[ri][ci];
                 Channel<Boolean> ch = new Channel<>(channelType);
-                cell.addInChannel(ch);
-                other.addOutChannel(ch);
-            });
-        });
+                grid[r][c].addInChannel(ch);
+                grid[ri][ci].addOutChannel(ch);
+            })
+        );
 
         if (useVirtualThreads) {
             this.runner = Thread::startVirtualThread;
@@ -137,6 +127,7 @@ public abstract class GameOfLife {
 
     public boolean[][] calculateFrame() {
         tick.tick();
+        boolean[][] grid = new boolean[dimensions.rows()][dimensions.cols()];
         resultChannels.forEachChannel( Channel::take, grid ); // populate matrix with results
         gridChannel.put(grid); // emit aggregated liveness matrix
         endOfFrame();

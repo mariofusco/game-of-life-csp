@@ -1,5 +1,6 @@
 package gameoflife.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cell {
@@ -7,20 +8,16 @@ public class Cell {
     private final int col;
     private final Tick tick;
     private final Channel<Boolean> resultChannel;
-    private final List<Channel<Boolean>> inChannels;
-    private final List<Channel<Boolean>> outChannels;
+    private final List<Channel<Boolean>> inChannels = new ArrayList<>();
+    private final List<Channel<Boolean>> outChannels = new ArrayList<>();
 
     private boolean alive;
 
-    public Cell(int row, int col, boolean alive,
-                Tick tick, Channel<Boolean> resultChannel,
-                List<Channel<Boolean>> inChannels, List<Channel<Boolean>> outChannels) {
+    public Cell(int row, int col, boolean alive, Tick tick, Channel<Boolean> resultChannel) {
         this.row = row;
         this.col = col;
         this.tick = tick;
         this.resultChannel = resultChannel;
-        this.inChannels = inChannels;
-        this.outChannels = outChannels;
         this.alive = alive;
     }
 
