@@ -6,16 +6,24 @@ import java.util.function.Consumer;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class WindowOutput implements Consumer<boolean[][]> {
+import gameoflife.ExecutionArgs;
+import gameoflife.GameOfLife;
+import gameoflife.domain.Dimensions;
 
+public class WindowOutput {
+
+    private final GameOfLife gameOfLife;
     private final int width;
     private final int height;
     private final Canvas canvas;
     private volatile boolean[][] cells;
 
-    public WindowOutput(int width, int height) {
-        this.width = width;
-        this.height = height;
+    private WindowOutput(GameOfLife gameOfLife, ExecutionArgs args) {
+        this.gameOfLife = gameOfLife;
+        Dimensions dimensions = gameOfLife.getDimensions();
+        double scale = calculateScale(dimensions.rows(), dimensions.cols(), args.maxWindowWidth(), args.maxWindowHeight());
+        this.width = (int) (scale * dimensions.cols());
+        this.height = (int) (scale * dimensions.rows());
         canvas = new Canvas();
         JFrame frame = new JFrame("Conway's Game of Life");
         frame.add(canvas);
@@ -24,10 +32,12 @@ public class WindowOutput implements Consumer<boolean[][]> {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    @Override
-    public void accept(boolean[][] cells) {
-        this.cells = cells;
-        canvas.repaint();
+    public static void runUI(ExecutionArgs args, GameOfLife gameOfLife) {
+        WindowOutput windowOutput = new WindowOutput(gameOfLife, args);
+        while (true) {
+            windowOutput.cells = gameOfLife.getGridChannel().take();
+            windowOutput.canvas.repaint();
+        }
     }
 
     class Canvas extends JPanel {
@@ -56,5 +66,13 @@ public class WindowOutput implements Consumer<boolean[][]> {
                 }
             }
         }
+    }
+
+    private static double calculateScale(int rows, int cols, int maxWindowWidth, int maxWindowHeight) {
+        double aspect = (double) maxWindowWidth / maxWindowHeight;
+        double actual = (double) cols / rows;
+        return actual < aspect
+                ? (double) maxWindowHeight / rows
+                : (double) maxWindowWidth / cols;
     }
 }

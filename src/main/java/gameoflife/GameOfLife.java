@@ -98,11 +98,11 @@ public abstract class GameOfLife {
                 new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.type());
     }
 
-    Channel<boolean[][]> getGridChannel() {
+    public Channel<boolean[][]> getGridChannel() {
         return gridChannel;
     }
 
-    Dimensions getDimensions() {
+    public Dimensions getDimensions() {
         return dimensions;
     }
 
