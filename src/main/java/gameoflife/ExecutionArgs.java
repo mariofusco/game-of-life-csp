@@ -9,7 +9,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                             BlockingRendezVous.Type type) {
 
     private static final boolean USE_VIRTUAL_THREADS = true;
-    private static final boolean THREAD_PER_CELL = USE_VIRTUAL_THREADS;
+    private static final boolean THREAD_PER_CELL = true; //USE_VIRTUAL_THREADS;
 
     private static final String DEFAULT_PATTERN = "patterns/gosper_glider_gun.txt";
     private static final int DEFAULT_MAX_WINDOW_WIDTH = 1280;
@@ -20,7 +20,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
     private static final boolean DEFAULT_LOG_RATE = true;
     private static final int DEFAULT_PADDING = 25;
 
-    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.LockedSingleValue;
+    private static final BlockingRendezVous.Type DEFAULT_TYPE = BlockingRendezVous.Type.BlockingQueue; // BlockingRendezVous.Type.OneToOneParking;
 
     public static ExecutionArgs parse(String[] args) {
         // TODO not interested yet into type setting for the main execution use case

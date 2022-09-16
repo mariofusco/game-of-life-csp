@@ -13,11 +13,32 @@ public class Main {
     }
 
     public static void execute(ExecutionArgs args) throws IOException {
+        GameOfLife gameOfLife = createGameOfLife(args);
+        WindowOutput.runUI(args, gameOfLife);
+    }
+
+    public static void executeHeadless(ExecutionArgs args) throws IOException {
+        GameOfLife gameOfLife = createGameOfLife(args);
+
+        while (true) {
+            gameOfLife.calculateFrameBlocking();
+        }
+
+//        Thread.startVirtualThread( () -> {
+//            while (true) {
+//                gameOfLife.calculateFrameBlocking();
+//            }
+//        });
+//
+//        System.in.read();
+    }
+
+    private static GameOfLife createGameOfLife(ExecutionArgs args) {
         GameOfLife gameOfLife = GameOfLife.create(args);
         gameOfLife.start();
 
         System.out.println(args);
         System.out.println(gameOfLife.getDimensions());
-        WindowOutput.runUI(args, gameOfLife);
+        return gameOfLife;
     }
 }
