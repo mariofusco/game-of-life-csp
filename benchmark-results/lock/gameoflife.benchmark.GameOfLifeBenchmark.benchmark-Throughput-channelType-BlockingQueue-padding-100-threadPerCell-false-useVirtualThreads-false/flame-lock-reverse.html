@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<style>
+	body {margin: 0; padding: 10px; background-color: #ffffff}
+	h1 {margin: 5px 0 0 0; font-size: 18px; font-weight: normal; text-align: center}
+	header {margin: -24px 0 5px 0; line-height: 24px}
+	button {font: 12px sans-serif; cursor: pointer}
+	p {margin: 5px 0 5px 0}
+	a {color: #0366d6}
+	#hl {position: absolute; display: none; overflow: hidden; white-space: nowrap; pointer-events: none; background-color: #ffffe0; outline: 1px solid #ffc000; height: 15px}
+	#hl span {padding: 0 3px 0 3px}
+	#status {overflow: hidden; white-space: nowrap}
+	#match {overflow: hidden; white-space: nowrap; display: none; float: right; text-align: right}
+	#reset {cursor: pointer}
+	#canvas {width: 100%; height: 512px}
+</style>
+</head>
+<body style='font: 12px Verdana, sans-serif'>
+<h1>Lock profile</h1>
+<header style='text-align: left'><button id='reverse' title='Reverse'>&#x1f53b;</button>&nbsp;&nbsp;<button id='search' title='Search'>&#x1f50d;</button></header>
+<header style='text-align: right'>Produced by <a href='https://github.com/jvm-profiling-tools/async-profiler'>async-profiler</a></header>
+<canvas id='canvas'></canvas>
+<div id='hl'><span></span></div>
+<p id='match'>Matched: <span id='matchval'></span> <span id='reset' title='Clear'>&#x274c;</span></p>
+<p id='status'>&nbsp;</p>
+<script>
+	// Copyright 2020 Andrei Pangin
+	// Licensed under the Apache License, Version 2.0.
+	'use strict';
+	var root, rootLevel, px, pattern;
+	var reverse = true;
+	const levels = Array(32);
+	for (let h = 0; h < levels.length; h++) {
+		levels[h] = [];
+	}
+
+	const canvas = document.getElementById('canvas');
+	const c = canvas.getContext('2d');
+	const hl = document.getElementById('hl');
+	const status = document.getElementById('status');
+
+	const canvasWidth = canvas.offsetWidth;
+	const canvasHeight = canvas.offsetHeight;
+	canvas.style.width = canvasWidth + 'px';
+	canvas.width = canvasWidth * (devicePixelRatio || 1);
+	canvas.height = canvasHeight * (devicePixelRatio || 1);
+	if (devicePixelRatio) c.scale(devicePixelRatio, devicePixelRatio);
+	c.font = document.body.style.font;
+
+	const palette = [
+		[0xb2e1b2, 20, 20, 20],
+		[0x50e150, 30, 30, 30],
+		[0x50cccc, 30, 30, 30],
+		[0xe15a5a, 30, 40, 40],
+		[0xc8c83c, 30, 30, 10],
+		[0xe17d00, 30, 30,  0],
+		[0xcce880, 20, 20, 20],
+	];
+
+	function getColor(p) {
+		const v = Math.random();
+		return '#' + (p[0] + ((p[1] * v) << 16 | (p[2] * v) << 8 | (p[3] * v))).toString(16);
+	}
+
+	function f(level, left, width, type, title, inln, c1, int) {
+		levels[level].push({left: left, width: width, color: getColor(palette[type]), title: title,
+			details: (int ? ', int=' + int : '') + (c1 ? ', c1=' + c1 : '') + (inln ? ', inln=' + inln : '')
+		});
+	}
+
+	function samples(n) {
+		return n === 1 ? '1 sample' : n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' samples';
+	}
+
+	function pct(a, b) {
+		return a >= b ? '100' : (100 * a / b).toFixed(2);
+	}
+
+	function findFrame(frames, x) {
+		let left = 0;
+		let right = frames.length - 1;
+
+		while (left <= right) {
+			const mid = (left + right) >>> 1;
+			const f = frames[mid];
+
+			if (f.left > x) {
+				right = mid - 1;
+			} else if (f.left + f.width <= x) {
+				left = mid + 1;
+			} else {
+				return f;
+			}
+		}
+
+		if (frames[left] && (frames[left].left - x) * px < 0.5) return frames[left];
+		if (frames[right] && (x - (frames[right].left + frames[right].width)) * px < 0.5) return frames[right];
+
+		return null;
+	}
+
+	function search(r) {
+		if (r === true && (r = prompt('Enter regexp to search:', '')) === null) {
+			return;
+		}
+
+		pattern = r ? RegExp(r) : undefined;
+		const matched = render(root, rootLevel);
+		document.getElementById('matchval').textContent = pct(matched, root.width) + '%';
+		document.getElementById('match').style.display = r ? 'inherit' : 'none';
+	}
+
+	function render(newRoot, newLevel) {
+		if (root) {
+			c.fillStyle = '#ffffff';
+			c.fillRect(0, 0, canvasWidth, canvasHeight);
+		}
+
+		root = newRoot || levels[0][0];
+		rootLevel = newLevel || 0;
+		px = canvasWidth / root.width;
+
+		const x0 = root.left;
+		const x1 = x0 + root.width;
+		const marked = [];
+
+		function mark(f) {
+			return marked[f.left] >= f.width || (marked[f.left] = f.width);
+		}
+
+		function totalMarked() {
+			let total = 0;
+			let left = 0;
+			Object.keys(marked).sort(function(a, b) { return a - b; }).forEach(function(x) {
+				if (+x >= left) {
+					total += marked[x];
+					left = +x + marked[x];
+				}
+			});
+			return total;
+		}
+
+		function drawFrame(f, y, alpha) {
+			if (f.left < x1 && f.left + f.width > x0) {
+				c.fillStyle = pattern && f.title.match(pattern) && mark(f) ? '#ee00ee' : f.color;
+				c.fillRect((f.left - x0) * px, y, f.width * px, 15);
+
+				if (f.width * px >= 21) {
+					const chars = Math.floor(f.width * px / 7);
+					const title = f.title.length <= chars ? f.title : f.title.substring(0, chars - 2) + '..';
+					c.fillStyle = '#000000';
+					c.fillText(title, Math.max(f.left - x0, 0) * px + 3, y + 12, f.width * px - 6);
+				}
+
+				if (alpha) {
+					c.fillStyle = 'rgba(255, 255, 255, 0.5)';
+					c.fillRect((f.left - x0) * px, y, f.width * px, 15);
+				}
+			}
+		}
+
+		for (let h = 0; h < levels.length; h++) {
+			const y = reverse ? h * 16 : canvasHeight - (h + 1) * 16;
+			const frames = levels[h];
+			for (let i = 0; i < frames.length; i++) {
+				drawFrame(frames[i], y, h < rootLevel);
+			}
+		}
+
+		return totalMarked();
+	}
+
+	canvas.onmousemove = function() {
+		const h = Math.floor((reverse ? event.offsetY : (canvasHeight - event.offsetY)) / 16);
+		if (h >= 0 && h < levels.length) {
+			const f = findFrame(levels[h], event.offsetX / px + root.left);
+			if (f) {
+				if (f != root) getSelection().removeAllRanges();
+				hl.style.left = (Math.max(f.left - root.left, 0) * px + canvas.offsetLeft) + 'px';
+				hl.style.width = (Math.min(f.width, root.width) * px) + 'px';
+				hl.style.top = ((reverse ? h * 16 : canvasHeight - (h + 1) * 16) + canvas.offsetTop) + 'px';
+				hl.firstChild.textContent = f.title;
+				hl.style.display = 'block';
+				canvas.title = f.title + '\n(' + samples(f.width) + f.details + ', ' + pct(f.width, levels[0][0].width) + '%)';
+				canvas.style.cursor = 'pointer';
+				canvas.onclick = function() {
+					if (f != root) {
+						render(f, h);
+						canvas.onmousemove();
+					}
+				};
+				status.textContent = 'Function: ' + canvas.title;
+				return;
+			}
+		}
+		canvas.onmouseout();
+	}
+
+	canvas.onmouseout = function() {
+		hl.style.display = 'none';
+		status.textContent = '\xa0';
+		canvas.title = '';
+		canvas.style.cursor = '';
+		canvas.onclick = '';
+	}
+
+	canvas.ondblclick = function() {
+		getSelection().selectAllChildren(hl);
+	}
+
+	document.getElementById('reverse').onclick = function() {
+		reverse = !reverse;
+		render();
+	}
+
+	document.getElementById('search').onclick = function() {
+		search(true);
+	}
+
+	document.getElementById('reset').onclick = function() {
+		search(false);
+	}
+
+	window.onkeydown = function() {
+		if (event.ctrlKey && event.keyCode === 70) {
+			event.preventDefault();
+			search(true);
+		} else if (event.keyCode === 27) {
+			search(false);
+		}
+	}
+
+f(0,0,2582,3,'all')
+f(1,0,4,2,'Object')
+f(2,0,4,1,'BinaryLinkClient.pushFrame')
+f(3,0,4,1,'BinaryLinkClient.access$000')
+f(4,0,2,1,'BinaryLinkClient$1.invoke')
+f(5,0,1,3,'$Proxy0.iteration')
+f(6,0,1,1,'BaseRunner.runBenchmark')
+f(7,0,1,1,'BaseRunner.runBenchmark')
+f(8,0,1,1,'BaseRunner.doSingle')
+f(9,0,1,1,'BaseRunner.runBenchmarksForked')
+f(10,0,1,1,'ForkedRunner.run')
+f(11,0,1,1,'ForkedMain.main')
+f(5,1,1,3,'$Proxy0.iterationResult')
+f(6,1,1,1,'BaseRunner.runBenchmark')
+f(7,1,1,1,'BaseRunner.runBenchmark')
+f(8,1,1,1,'BaseRunner.doSingle')
+f(9,1,1,1,'BaseRunner.runBenchmarksForked')
+f(10,1,1,1,'ForkedRunner.run')
+f(11,1,1,1,'ForkedMain.main')
+f(4,2,2,1,'BinaryLinkClient$ForwardingPrintStream$1.write')
+f(5,2,2,1,'PrintStream.implWrite')
+f(6,2,2,1,'PrintStream.write')
+f(7,2,2,1,'StreamEncoder.writeBytes')
+f(8,2,2,1,'StreamEncoder.implFlushBuffer')
+f(9,2,2,1,'StreamEncoder.lockedFlushBuffer')
+f(10,2,2,1,'StreamEncoder.flushBuffer')
+f(11,2,2,1,'OutputStreamWriter.flushBuffer')
+f(12,2,2,1,'PrintStream.implWrite')
+f(13,2,2,1,'PrintStream.write')
+f(14,2,2,1,'PrintStream.print')
+f(15,2,2,1,'PrintStream.append')
+f(16,2,2,1,'PrintStream.append')
+f(17,2,1,1,'Formatter$FormatSpecifier.appendJustified')
+f(18,2,1,1,'Formatter$FormatSpecifier.print')
+f(19,2,1,1,'Formatter$FormatSpecifier.printInteger')
+f(20,2,1,1,'Formatter$FormatSpecifier.print')
+f(21,2,1,1,'Formatter.format')
+f(22,2,1,1,'PrintStream.implFormat')
+f(23,2,1,1,'PrintStream.format')
+f(24,2,1,1,'PrintStream.printf')
+f(25,2,1,1,'GameOfLife.endOfFrame')
+f(26,2,1,1,'GameOfLife.calculateFrame')
+f(27,2,1,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(28,2,1,1,'GameOfLife$$Lambda$49.0x0000000801035cb0.run')
+f(29,2,1,1,'ThreadPoolExecutor.runWorker')
+f(30,2,1,1,'ThreadPoolExecutor$Worker.run')
+f(31,2,1,1,'Thread.run')
+f(17,3,1,1,'PrintStream.append')
+f(18,3,1,1,'Formatter$FixedString.print')
+f(19,3,1,1,'Formatter.format')
+f(20,3,1,1,'PrintStream.implFormat')
+f(21,3,1,1,'PrintStream.format')
+f(22,3,1,1,'PrintStream.printf')
+f(23,3,1,1,'GameOfLife.endOfFrame')
+f(24,3,1,1,'GameOfLife.calculateFrame')
+f(25,3,1,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(26,3,1,1,'GameOfLife$$Lambda$49.0x0000000801035cb0.run')
+f(27,3,1,1,'ThreadPoolExecutor.runWorker')
+f(28,3,1,1,'ThreadPoolExecutor$Worker.run')
+f(29,3,1,1,'Thread.run')
+f(1,4,2578,2,'ReentrantLock$NonfairSync')
+f(2,4,2578,1,'Unsafe.park')
+f(3,4,2578,1,'LockSupport.park')
+f(4,4,2578,1,'AbstractQueuedSynchronizer.acquire')
+f(5,4,176,1,'AbstractQueuedSynchronizer$ConditionObject.await')
+f(6,4,176,1,'LinkedBlockingQueue.take')
+f(7,4,176,1,'BlockingQueue.take')
+f(8,4,176,1,'Channel.take')
+f(9,4,176,1,'GameOfLife$$Lambda$53.0x0000000801036518.test')
+f(10,4,176,1,'ChannelsGrid.lambda$forEachChannel$1')
+f(11,4,176,1,'ChannelsGrid$$Lambda$54.0x0000000801036750.accept')
+f(12,4,176,1,'Dimensions.forEachRowCol')
+f(13,4,176,1,'ChannelsGrid.forEachChannel')
+f(14,4,176,1,'GameOfLife.calculateFrame')
+f(15,4,176,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(16,4,176,1,'GameOfLife$$Lambda$49.0x0000000801035cb0.run')
+f(17,4,176,1,'ThreadPoolExecutor.runWorker')
+f(18,4,176,1,'ThreadPoolExecutor$Worker.run')
+f(19,4,176,1,'Thread.run')
+f(5,180,2369,1,'AbstractQueuedSynchronizer.acquire')
+f(6,180,2369,1,'ReentrantLock$Sync.lock')
+f(7,180,2369,1,'ReentrantLock.lock')
+f(8,180,2353,1,'LinkedBlockingQueue.signalNotEmpty')
+f(9,180,2353,1,'LinkedBlockingQueue.put')
+f(10,180,2353,1,'BlockingQueue.put')
+f(11,180,2353,1,'Channel.put')
+f(12,180,2351,1,'Cell.calculateNextState')
+f(13,180,2351,1,'CellsGroup$$Lambda$55.0x0000000801036970.accept')
+f(14,180,2351,1,'Iterable.forEach')
+f(15,180,2351,1,'CellsGroup.run')
+f(16,180,2351,1,'ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run')
+f(17,180,2351,1,'ThreadPoolExecutor.runWorker')
+f(18,180,2351,1,'ThreadPoolExecutor$Worker.run')
+f(19,180,2351,1,'Thread.run')
+f(12,2531,2,1,'Cell.lambda$notifyLiveness$0')
+f(13,2531,2,1,'Cell$$Lambda$52.0x00000008010362f8.accept')
+f(14,2531,2,1,'ArrayList.forEach')
+f(15,2531,2,1,'Cell.notifyLiveness')
+f(16,2531,2,1,'CellsGroup$$Lambda$46.0x0000000801035478.accept')
+f(17,2531,2,1,'Iterable.forEach')
+f(18,2531,2,1,'CellsGroup.run')
+f(19,2531,2,1,'ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run')
+f(20,2531,2,1,'ThreadPoolExecutor.runWorker')
+f(21,2531,2,1,'ThreadPoolExecutor$Worker.run')
+f(22,2531,2,1,'Thread.run')
+f(8,2533,16,1,'LinkedBlockingQueue.signalNotFull')
+f(9,2533,16,1,'LinkedBlockingQueue.take')
+f(10,2533,16,1,'BlockingQueue.take')
+f(11,2533,16,1,'Channel.take')
+f(12,2533,11,1,'GameOfLife$$Lambda$53.0x0000000801036518.test')
+f(13,2533,11,1,'ChannelsGrid.lambda$forEachChannel$1')
+f(14,2533,11,1,'ChannelsGrid$$Lambda$54.0x0000000801036750.accept')
+f(15,2533,11,1,'Dimensions.forEachRowCol')
+f(16,2533,11,1,'ChannelsGrid.forEachChannel')
+f(17,2533,11,1,'GameOfLife.calculateFrame')
+f(18,2533,11,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(19,2533,11,1,'GameOfLife$$Lambda$49.0x0000000801035cb0.run')
+f(20,2533,11,1,'ThreadPoolExecutor.runWorker')
+f(21,2533,11,1,'ThreadPoolExecutor$Worker.run')
+f(22,2533,11,1,'Thread.run')
+f(12,2544,5,1,'TickPerCell.waitTick')
+f(13,2544,5,1,'Cell.notifyLiveness')
+f(14,2544,5,1,'CellsGroup$$Lambda$46.0x0000000801035478.accept')
+f(15,2544,5,1,'Iterable.forEach')
+f(16,2544,5,1,'CellsGroup.run')
+f(17,2544,5,1,'ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run')
+f(18,2544,5,1,'ThreadPoolExecutor.runWorker')
+f(19,2544,5,1,'ThreadPoolExecutor$Worker.run')
+f(20,2544,5,1,'Thread.run')
+f(5,2549,33,1,'AbstractQueuedSynchronizer.acquireInterruptibly')
+f(6,2549,33,1,'ReentrantLock$Sync.lockInterruptibly')
+f(7,2549,33,1,'ReentrantLock.lockInterruptibly')
+f(8,2549,33,1,'LinkedBlockingQueue.take')
+f(9,2549,33,1,'BlockingQueue.take')
+f(10,2549,33,1,'Channel.take')
+f(11,2549,22,1,'GameOfLife$$Lambda$53.0x0000000801036518.test')
+f(12,2549,22,1,'ChannelsGrid.lambda$forEachChannel$1')
+f(13,2549,22,1,'ChannelsGrid$$Lambda$54.0x0000000801036750.accept')
+f(14,2549,22,1,'Dimensions.forEachRowCol')
+f(15,2549,22,1,'ChannelsGrid.forEachChannel')
+f(16,2549,22,1,'GameOfLife.calculateFrame')
+f(17,2549,22,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(18,2549,22,1,'GameOfLife$$Lambda$49.0x0000000801035cb0.run')
+f(19,2549,22,1,'ThreadPoolExecutor.runWorker')
+f(20,2549,22,1,'ThreadPoolExecutor$Worker.run')
+f(21,2549,22,1,'Thread.run')
+f(11,2571,11,1,'TickPerCell.waitTick')
+f(12,2571,11,1,'Cell.notifyLiveness')
+f(13,2571,11,1,'CellsGroup$$Lambda$46.0x0000000801035478.accept')
+f(14,2571,11,1,'Iterable.forEach')
+f(15,2571,11,1,'CellsGroup.run')
+f(16,2571,11,1,'ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run')
+f(17,2571,11,1,'ThreadPoolExecutor.runWorker')
+f(18,2571,11,1,'ThreadPoolExecutor$Worker.run')
+f(19,2571,11,1,'Thread.run')
+
+search();
+</script></body></html>

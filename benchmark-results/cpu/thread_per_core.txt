@@ -1,0 +1,11 @@
+Benchmark                                 (channelType)  (padding)  (threadPerCell)  (useVirtualThreads)   Mode  Cnt           Score          Error  Units
+GameOfLifeBenchmark.benchmark             BlockingQueue          5             true                 true  thrpt   20         972.997 ±       51.172  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue          5             true                false  thrpt   20         128.482 ±        5.816  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                 true  thrpt   20         118.315 ±        4.583  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                false  thrpt   20          17.654 ±        0.579  ops/s
+
+Benchmark                                 (channelType)  (padding)  (threadPerCell)  (useVirtualThreads)   Mode  Cnt           Score          Error  Units
+GameOfLifeBenchmark.benchmark             BlockingQueue          5            false                 true  thrpt   20        1569.228 ±       91.740  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue          5            false                false  thrpt   20        1890.566 ±      139.547  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue         25            false                 true  thrpt   20         158.609 ±        2.007  ops/s
+GameOfLifeBenchmark.benchmark             BlockingQueue         25            false                false  thrpt   20         163.086 ±        1.434  ops/s

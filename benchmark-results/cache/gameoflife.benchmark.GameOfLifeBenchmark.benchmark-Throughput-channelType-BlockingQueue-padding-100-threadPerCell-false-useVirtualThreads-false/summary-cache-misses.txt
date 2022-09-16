@@ -1,0 +1,3608 @@
+--- Execution profile ---
+Total samples       : 9531336
+unknown_Java        : 20436 (0.21%)
+not_walkable_Java   : 238 (0.00%)
+skipped             : 743 (0.01%)
+
+--- 1612124211 total (16.92%), 1612907 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 577995792 total (6.06%), 578335 samples
+  [ 0] oopDesc::size()
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 554838915 total (5.82%), 554505 samples
+  [ 0] ReduceOps$5ReducingSink.get
+  [ 1] ReduceOps$5ReducingSink.get
+  [ 2] ReduceOps$ReduceOp.evaluateSequential
+  [ 3] AbstractPipeline.evaluate
+  [ 4] IntPipeline.reduce
+  [ 5] IntPipeline.sum
+  [ 6] Cell.calculateNextState
+  [ 7] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 519320387 total (5.45%), 518805 samples
+  [ 0] Cell.lambda$notifyLiveness$0
+  [ 1] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 2] ArrayList.forEach
+  [ 3] Cell.notifyLiveness
+  [ 4] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 5] Iterable.forEach
+  [ 6] CellsGroup.run
+  [ 7] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 489832817 total (5.14%), 490125 samples
+  [ 0] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 388568074 total (4.08%), 388146 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 363379612 total (3.81%), 363699 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [18] Iterable.forEach
+  [19] CellsGroup.run
+  [20] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 312958415 total (3.28%), 313399 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 283392422 total (2.97%), 283834 samples
+  [ 0] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 1] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 2] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 3] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 5] G1ConcurrentRefineThread::run_service()
+  [ 6] ConcurrentGCThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 267679493 total (2.81%), 267235 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 212016973 total (2.22%), 211549 samples
+  [ 0] oopDesc::size()
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 126615141 total (1.33%), 126911 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 126130797 total (1.32%), 126269 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 117123485 total (1.23%), 117428 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 114192891 total (1.20%), 114362 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [18] Iterable.forEach
+  [19] CellsGroup.run
+  [20] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 114031205 total (1.20%), 114125 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 104820710 total (1.10%), 104686 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<ObjArrayKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 97580666 total (1.02%), 97380 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 95902803 total (1.01%), 96089 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [19] Iterable.forEach
+  [20] CellsGroup.run
+  [21] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 85584675 total (0.90%), 85309 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 85326243 total (0.90%), 85526 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 82338528 total (0.86%), 82418 samples
+  [ 0] LinkedBlockingQueue.enqueue
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 81419164 total (0.85%), 81415 samples
+  [ 0] void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+  [ 1] G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+  [ 2] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 3] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 4] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 5] WorkerThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 80008740 total (0.84%), 80247 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$52.0x00000008010362f8.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [13] Iterable.forEach
+  [14] CellsGroup.run
+  [15] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 78750945 total (0.83%), 78944 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [16] Iterable.forEach
+  [17] CellsGroup.run
+  [18] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 73133609 total (0.77%), 73043 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 68616288 total (0.72%), 68710 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 64732762 total (0.68%), 64729 samples
+  [ 0] G1BlockOffsetTablePart::block_start(void const*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 64468414 total (0.68%), 64520 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$52.0x00000008010362f8.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [13] Iterable.forEach
+  [14] CellsGroup.run
+  [15] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 62085111 total (0.65%), 62256 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [19] Iterable.forEach
+  [20] CellsGroup.run
+  [21] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 58731323 total (0.62%), 58725 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 50822210 total (0.53%), 50976 samples
+  [ 0] G1HotCardCache::insert(unsigned char*)
+  [ 1] G1RemSet::clean_card_before_refine(unsigned char**)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 50787367 total (0.53%), 50871 samples
+  [ 0] G1CardSet::add_to_howl(void*, unsigned int, unsigned int, bool)
+  [ 1] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 2] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 3] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 4] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 5] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 6] G1ConcurrentRefineThread::run_service()
+  [ 7] ConcurrentGCThread::run()
+  [ 8] Thread::call_run()
+  [ 9] thread_native_entry(Thread*)
+  [10] start_thread
+
+--- 46364029 total (0.49%), 46314 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.calculateNextState
+  [ 4] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 5] Iterable.forEach
+  [ 6] CellsGroup.run
+  [ 7] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 45896596 total (0.48%), 45933 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.lambda$notifyLiveness$0
+  [ 7] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 8] ArrayList.forEach
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 45642754 total (0.48%), 45647 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.lambda$notifyLiveness$0
+  [ 7] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 8] ArrayList.forEach
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 45295861 total (0.48%), 45084 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.signalNotEmpty
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 45120075 total (0.47%), 45113 samples
+  [ 0] G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+  [ 1] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 2] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 3] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 4] WorkerThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 43880534 total (0.46%), 43986 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 4] ChannelsGrid.lambda$forEachChannel$1
+  [ 5] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 6] Dimensions.forEachRowCol
+  [ 7] ChannelsGrid.forEachChannel
+  [ 8] GameOfLife.calculateFrame
+  [ 9] GameOfLife.lambda$calculateFrameBlocking$4
+  [10] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 41176007 total (0.43%), 41070 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 32703019 total (0.34%), 32680 samples
+  [ 0] PipelineHelper.<init>
+  [ 1] AbstractPipeline.<init>
+  [ 2] ReferencePipeline.<init>
+  [ 3] ReferencePipeline$Head.<init>
+  [ 4] StreamSupport.stream
+  [ 5] Collection.stream
+  [ 6] Cell.calculateNextState
+  [ 7] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 31426065 total (0.33%), 31441 samples
+  [ 0] StreamSupport.stream
+  [ 1] Collection.stream
+  [ 2] Cell.calculateNextState
+  [ 3] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 4] Iterable.forEach
+  [ 5] CellsGroup.run
+  [ 6] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 31387739 total (0.33%), 31251 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 8] ChannelsGrid.lambda$forEachChannel$1
+  [ 9] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 31262826 total (0.33%), 31254 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 29628152 total (0.31%), 29537 samples
+  [ 0] LinkedBlockingQueue.enqueue
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.calculateNextState
+  [ 5] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 6] Iterable.forEach
+  [ 7] CellsGroup.run
+  [ 8] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 29518636 total (0.31%), 29589 samples
+  [ 0] G1RemSet::clean_card_before_refine(unsigned char**)
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 28259342 total (0.30%), 28256 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 27390089 total (0.29%), 27495 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 25662457 total (0.27%), 25697 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 24495655 total (0.26%), 24478 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] TickPerCell.waitTick
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 23728871 total (0.25%), 23797 samples
+  [ 0] G1ParScanThreadState::trim_queue_to_threshold(unsigned int)
+  [ 1] G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+  [ 2] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 3] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 4] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 5] WorkerThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 23136971 total (0.24%), 23111 samples
+  [ 0] ReentrantLock.lockInterruptibly
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 22599239 total (0.24%), 22586 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 22476744 total (0.24%), 22586 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 21296754 total (0.22%), 21304 samples
+  [ 0] __tls_get_addr
+  [ 1] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 2] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 3] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 5] G1ConcurrentRefineThread::run_service()
+  [ 6] ConcurrentGCThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 20164240 total (0.21%), 20165 samples
+  [ 0] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 1] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 2] G1ConcurrentRefineThread::run_service()
+  [ 3] ConcurrentGCThread::run()
+  [ 4] Thread::call_run()
+  [ 5] thread_native_entry(Thread*)
+  [ 6] start_thread
+
+--- 18776004 total (0.20%), 18787 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 18358545 total (0.19%), 18364 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 17968758 total (0.19%), 18004 samples
+  [ 0] ReentrantLock$Sync.lockInterruptibly
+  [ 1] ReentrantLock.lockInterruptibly
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 17821590 total (0.19%), 17816 samples
+  [ 0] TickPerCell.lambda$tick$0
+  [ 1] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 2] ChannelsGrid.lambda$forEachChannel$0
+  [ 3] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 4] Dimensions.forEachRowCol
+  [ 5] ChannelsGrid.forEachChannel
+  [ 6] TickPerCell.tick
+  [ 7] GameOfLife.calculateFrame
+  [ 8] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 9] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 17655858 total (0.19%), 17671 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 17351437 total (0.18%), 17334 samples
+  [ 0] void OopOopIterateBoundedDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate_bounded<ObjArrayKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*, MemRegion)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 16692705 total (0.18%), 16705 samples
+  [ 0] ReentrantLock$Sync.lockInterruptibly
+  [ 1] ReentrantLock.lockInterruptibly
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [16] Iterable.forEach
+  [17] CellsGroup.run
+  [18] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 16656543 total (0.17%), 16641 samples
+  [ 0] LinkedBlockingQueue.enqueue
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 16615191 total (0.17%), 16636 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 16035640 total (0.17%), 16104 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 15686492 total (0.16%), 15624 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 8] ChannelsGrid.lambda$forEachChannel$1
+  [ 9] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 14923810 total (0.16%), 14948 samples
+  [ 0] AtomicInteger.getAndIncrement
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 14277331 total (0.15%), 14254 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.calculateNextState
+  [ 7] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 13694215 total (0.14%), 13672 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 13564557 total (0.14%), 13550 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] Cell.calculateNextState
+  [ 9] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 13325950 total (0.14%), 13367 samples
+  [ 0] Channel.take
+  [ 1] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 2] ChannelsGrid.lambda$forEachChannel$1
+  [ 3] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 4] Dimensions.forEachRowCol
+  [ 5] ChannelsGrid.forEachChannel
+  [ 6] GameOfLife.calculateFrame
+  [ 7] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 8] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 13039399 total (0.14%), 13007 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 12840924 total (0.13%), 12844 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 12789525 total (0.13%), 12797 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 12557284 total (0.13%), 12565 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 12311167 total (0.13%), 12348 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 12051428 total (0.13%), 12113 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 11775480 total (0.12%), 11787 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 11661988 total (0.12%), 11667 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 11498840 total (0.12%), 11501 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 11070669 total (0.12%), 11019 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] TickPerCell.waitTick
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 10990528 total (0.12%), 11009 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] TickPerCell.waitTick
+  [ 4] Cell.notifyLiveness
+  [ 5] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 6] Iterable.forEach
+  [ 7] CellsGroup.run
+  [ 8] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 10562852 total (0.11%), 10562 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] Cell.calculateNextState
+  [ 9] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 10459207 total (0.11%), 10457 samples
+  [ 0] ReferencePipeline$3.<init>
+  [ 1] ReferencePipeline.map
+  [ 2] Cell.calculateNextState
+  [ 3] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 4] Iterable.forEach
+  [ 5] CellsGroup.run
+  [ 6] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 10336088 total (0.11%), 10352 samples
+  [ 0] G1CardSet::add_to_container(void* volatile*, void*, unsigned int, unsigned int, bool)
+  [ 1] G1CardSet::add_to_howl(void*, unsigned int, unsigned int, bool)
+  [ 2] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 3] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 4] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 5] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 6] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 7] G1ConcurrentRefineThread::run_service()
+  [ 8] ConcurrentGCThread::run()
+  [ 9] Thread::call_run()
+  [10] thread_native_entry(Thread*)
+  [11] start_thread
+
+--- 10325715 total (0.11%), 10304 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.calculateNextState
+  [ 7] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 10224469 total (0.11%), 10238 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 10197233 total (0.11%), 10207 samples
+  [ 0] G1CardSet::add_card(unsigned long)
+  [ 1] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 2] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 3] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 5] G1ConcurrentRefineThread::run_service()
+  [ 6] ConcurrentGCThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 9968729 total (0.10%), 9981 samples
+  [ 0] _dl_update_slotinfo
+  [ 1] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 2] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 3] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 4] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 5] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 6] G1ConcurrentRefineThread::run_service()
+  [ 7] ConcurrentGCThread::run()
+  [ 8] Thread::call_run()
+  [ 9] thread_native_entry(Thread*)
+  [10] start_thread
+
+--- 9792307 total (0.10%), 9812 samples
+  [ 0] G1CardSet::add_to_container(void* volatile*, void*, unsigned int, unsigned int, bool)
+  [ 1] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 2] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 3] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 4] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 5] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 6] G1ConcurrentRefineThread::run_service()
+  [ 7] ConcurrentGCThread::run()
+  [ 8] Thread::call_run()
+  [ 9] thread_native_entry(Thread*)
+  [10] start_thread
+
+--- 9604256 total (0.10%), 9579 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.calculateNextState
+  [ 4] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 5] Iterable.forEach
+  [ 6] CellsGroup.run
+  [ 7] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 9371420 total (0.10%), 9395 samples
+  [ 0] AtomicInteger.getAndDecrement
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 9272886 total (0.10%), 9290 samples
+  [ 0] vtable stub
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 8958488 total (0.09%), 8974 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 8851460 total (0.09%), 8870 samples
+  [ 0] ReentrantLock$Sync.lock
+  [ 1] ReentrantLock.lock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 8805820 total (0.09%), 8801 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] TickPerCell.waitTick
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 8746797 total (0.09%), 8769 samples
+  [ 0] G1CardCounts::add_card_count(unsigned char*)
+  [ 1] G1RemSet::clean_card_before_refine(unsigned char**)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 8624641 total (0.09%), 8598 samples
+  [ 0] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] TickPerCell.waitTick
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 8206443 total (0.09%), 8212 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] TickPerCell.waitTick
+  [ 4] Cell.notifyLiveness
+  [ 5] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 6] Iterable.forEach
+  [ 7] CellsGroup.run
+  [ 8] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 8183181 total (0.09%), 8197 samples
+  [ 0] ReferencePipeline$4.opWrapSink
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 8172033 total (0.09%), 8166 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 8121770 total (0.09%), 8125 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 7818440 total (0.08%), 7842 samples
+  [ 0] ReentrantLock$Sync.lock
+  [ 1] ReentrantLock.lock
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.lambda$notifyLiveness$0
+  [ 7] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 8] ArrayList.forEach
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 7639974 total (0.08%), 7646 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] TickPerCell.waitTick
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 7634884 total (0.08%), 7635 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 7617241 total (0.08%), 7619 samples
+  [ 0] void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 2] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 3] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 4] WorkerThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 7435473 total (0.08%), 7425 samples
+  [ 0] AtomicInteger.getAndIncrement
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.calculateNextState
+  [ 5] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 6] Iterable.forEach
+  [ 7] CellsGroup.run
+  [ 8] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 6837965 total (0.07%), 6837 samples
+  [ 0] StreamOpFlag.fromCharacteristics
+  [ 1] StreamSupport.stream
+  [ 2] Collection.stream
+  [ 3] Cell.calculateNextState
+  [ 4] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 5] Iterable.forEach
+  [ 6] CellsGroup.run
+  [ 7] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 6514781 total (0.07%), 6504 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 6413892 total (0.07%), 6428 samples
+  [ 0] ArrayList.spliterator
+  [ 1] Collection.stream
+  [ 2] Cell.calculateNextState
+  [ 3] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 4] Iterable.forEach
+  [ 5] CellsGroup.run
+  [ 6] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 6326729 total (0.07%), 6340 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 6295543 total (0.07%), 6285 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$Head.<init>
+  [ 3] StreamSupport.stream
+  [ 4] Collection.stream
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 6285253 total (0.07%), 6301 samples
+  [ 0] ReferencePipeline$3.opWrapSink
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 6225921 total (0.07%), 6221 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] [unknown_Java]
+
+--- 6071980 total (0.06%), 6094 samples
+  [ 0] itable stub
+  [ 1] Dimensions.forEachRowCol
+  [ 2] ChannelsGrid.forEachChannel
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 6011160 total (0.06%), 6012 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] [unknown_Java]
+
+--- 5669326 total (0.06%), 5662 samples
+  [ 0] G1BlockOffsetTablePart::block_start(void const*)
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 5412448 total (0.06%), 5428 samples
+  [ 0] AbstractQueuedSynchronizer.setState
+  [ 1] ReentrantLock$Sync.tryRelease
+  [ 2] AbstractQueuedSynchronizer.release
+  [ 3] ReentrantLock.unlock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [19] Iterable.forEach
+  [20] CellsGroup.run
+  [21] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 5362170 total (0.06%), 5365 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 5272843 total (0.06%), 5274 samples
+  [ 0] void G1ScanCardClosure::do_oop_work<narrowOop>(narrowOop*)
+  [ 1] void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<ObjArrayKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+  [ 2] G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+  [ 3] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 4] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 5] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 6] WorkerThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 5267459 total (0.06%), 5261 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 4] ChannelsGrid.lambda$forEachChannel$1
+  [ 5] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 6] Dimensions.forEachRowCol
+  [ 7] ChannelsGrid.forEachChannel
+  [ 8] GameOfLife.calculateFrame
+  [ 9] GameOfLife.lambda$calculateFrameBlocking$4
+  [10] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 4989593 total (0.05%), 4980 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 4931974 total (0.05%), 4937 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 4515751 total (0.05%), 4520 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::handle_completed_buffer(BufferNode*, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::enqueue(G1DirtyCardQueue&, unsigned char volatile*)
+  [ 5] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 6] ReentrantLock$NonfairSync.initialTryLock
+  [ 7] ReentrantLock$Sync.lockInterruptibly
+  [ 8] ReentrantLock.lockInterruptibly
+  [ 9] LinkedBlockingQueue.take
+  [10] BlockingQueue.take
+  [11] Channel.take
+  [12] Cell$$Lambda$56.0x0000000801036b88.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [23] Iterable.forEach
+  [24] CellsGroup.run
+  [25] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 4303286 total (0.05%), 4305 samples
+  [ 0] ReentrantLock.lockInterruptibly
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 4073240 total (0.04%), 4090 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] GameOfLife.calculateFrame
+  [ 3] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 4] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+
+--- 4050352 total (0.04%), 4053 samples
+  [ 0] AbstractQueuedSynchronizer.setState
+  [ 1] ReentrantLock$Sync.tryRelease
+  [ 2] AbstractQueuedSynchronizer.release
+  [ 3] ReentrantLock.unlock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$52.0x00000008010362f8.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [13] Iterable.forEach
+  [14] CellsGroup.run
+  [15] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 4002984 total (0.04%), 4013 samples
+  [ 0] LinkedBlockingQueue.signalNotEmpty
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 3867964 total (0.04%), 3874 samples
+  [ 0] __tls_get_addr
+  [ 1] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 2] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 3] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 4] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 5] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 6] G1ConcurrentRefineThread::run_service()
+  [ 7] ConcurrentGCThread::run()
+  [ 8] Thread::call_run()
+  [ 9] thread_native_entry(Thread*)
+  [10] start_thread
+
+--- 3837910 total (0.04%), 3833 samples
+  [ 0] StreamSupport.stream
+  [ 1] Collection.stream
+  [ 2] Cell.calculateNextState
+  [ 3] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 4] Iterable.forEach
+  [ 5] CellsGroup.run
+  [ 6] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 3828926 total (0.04%), 3815 samples
+  [ 0] GlobalCounter::write_synchronize()
+  [ 1] FreeListAllocator::release(void*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 3687752 total (0.04%), 3695 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 3669413 total (0.04%), 3681 samples
+  [ 0] AbstractQueuedSynchronizer.setState
+  [ 1] ReentrantLock$Sync.tryRelease
+  [ 2] AbstractQueuedSynchronizer.release
+  [ 3] ReentrantLock.unlock
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [18] Iterable.forEach
+  [19] CellsGroup.run
+  [20] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 3668862 total (0.04%), 3665 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.calculateNextState
+  [ 7] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 8] Iterable.forEach
+  [ 9] CellsGroup.run
+  [10] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 3666186 total (0.04%), 3668 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 3637163 total (0.04%), 3635 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<ObjArrayKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 2] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 3] G1ConcurrentRefineThread::run_service()
+  [ 4] ConcurrentGCThread::run()
+  [ 5] Thread::call_run()
+  [ 6] thread_native_entry(Thread*)
+  [ 7] start_thread
+
+--- 3567892 total (0.04%), 3580 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 3505582 total (0.04%), 3500 samples
+  [ 0] LinkedBlockingQueue.signalNotFull
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 3479016 total (0.04%), 3477 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.signalNotEmpty
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 3449603 total (0.04%), 3462 samples
+  [ 0] Sink$ChainedReference.begin
+  [ 1] Sink$ChainedReference.begin
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 3315145 total (0.03%), 3327 samples
+  [ 0] void OopOopIterateBackwardsDispatch<G1ScanEvacuatedObjClosure>::Table::oop_oop_iterate_backwards<InstanceKlass, narrowOop>(G1ScanEvacuatedObjClosure*, oopDesc*, Klass*)
+  [ 1] G1ParScanThreadState::trim_queue_to_threshold(unsigned int)
+  [ 2] G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+  [ 3] G1RemSet::scan_heap_roots(G1ParScanThreadState*, unsigned int, G1GCPhaseTimes::GCParPhases, G1GCPhaseTimes::GCParPhases, bool)
+  [ 4] G1EvacuateRegionsTask::scan_roots(G1ParScanThreadState*, unsigned int)
+  [ 5] G1EvacuateRegionsBaseTask::work(unsigned int)
+  [ 6] WorkerThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 3300094 total (0.03%), 3310 samples
+  [ 0] ReentrantLock.unlock
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 3264808 total (0.03%), 3274 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 3258247 total (0.03%), 3265 samples
+  [ 0] itable stub
+  [ 1] Dimensions.forEachRowCol
+  [ 2] ChannelsGrid.forEachChannel
+  [ 3] TickPerCell.tick
+  [ 4] GameOfLife.calculateFrame
+  [ 5] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 6] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 3237166 total (0.03%), 3240 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 3201360 total (0.03%), 3196 samples
+  [ 0] ArrayList$SubList$1.next
+  [ 1] Iterable.forEach
+  [ 2] CellsGroup.run
+  [ 3] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 4] ThreadPoolExecutor.runWorker
+  [ 5] ThreadPoolExecutor$Worker.run
+  [ 6] Thread.run
+
+--- 3179989 total (0.03%), 3185 samples
+  [ 0] update_get_addr
+  [ 1] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 2] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 3] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 4] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 5] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 6] G1ConcurrentRefineThread::run_service()
+  [ 7] ConcurrentGCThread::run()
+  [ 8] Thread::call_run()
+  [ 9] thread_native_entry(Thread*)
+  [10] start_thread
+
+--- 3103267 total (0.03%), 3106 samples
+  [ 0] G1CardSet::add_card(unsigned long)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 3097519 total (0.03%), 3100 samples
+  [ 0] Channel.put
+  [ 1] Cell.lambda$notifyLiveness$0
+  [ 2] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 3] ArrayList.forEach
+  [ 4] Cell.notifyLiveness
+  [ 5] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 6] Iterable.forEach
+  [ 7] CellsGroup.run
+  [ 8] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 3075621 total (0.03%), 3081 samples
+  [ 0] ChannelsGrid.getChannel
+  [ 1] ChannelsGrid.lambda$forEachChannel$1
+  [ 2] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 3] Dimensions.forEachRowCol
+  [ 4] ChannelsGrid.forEachChannel
+  [ 5] GameOfLife.calculateFrame
+  [ 6] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 7] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 3043544 total (0.03%), 3053 samples
+  [ 0] Sink$ChainedReference.<init>
+  [ 1] ReferencePipeline$3$1.<init>
+  [ 2] ReferencePipeline$3.opWrapSink
+  [ 3] AbstractPipeline.wrapSink
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 3032691 total (0.03%), 3040 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 4] ReferencePipeline$3$1.accept
+  [ 5] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 6] AbstractPipeline.copyInto
+  [ 7] AbstractPipeline.wrapAndCopyInto
+  [ 8] ReduceOps$ReduceOp.evaluateSequential
+  [ 9] AbstractPipeline.evaluate
+  [10] IntPipeline.reduce
+  [11] IntPipeline.sum
+  [12] Cell.calculateNextState
+  [13] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 2947458 total (0.03%), 2935 samples
+  [ 0] ArrayList.forEach
+  [ 1] Cell.notifyLiveness
+  [ 2] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 3] Iterable.forEach
+  [ 4] CellsGroup.run
+  [ 5] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 2927211 total (0.03%), 2937 samples
+  [ 0] Objects.requireNonNull
+  [ 1] ReferencePipeline.map
+  [ 2] Cell.calculateNextState
+  [ 3] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 4] Iterable.forEach
+  [ 5] CellsGroup.run
+  [ 6] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 7] ThreadPoolExecutor.runWorker
+  [ 8] ThreadPoolExecutor$Worker.run
+  [ 9] Thread.run
+
+--- 2926139 total (0.03%), 2933 samples
+  [ 0] LinkedBlockingQueue.signalNotFull
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 2917709 total (0.03%), 2923 samples
+  [ 0] AbstractQueuedSynchronizer.getState
+  [ 1] ReentrantLock$Sync.tryRelease
+  [ 2] AbstractQueuedSynchronizer.release
+  [ 3] ReentrantLock.unlock
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 2894652 total (0.03%), 2897 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 2859251 total (0.03%), 2875 samples
+  [ 0] ReentrantLock$Sync.lock
+  [ 1] ReentrantLock.lock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 2819958 total (0.03%), 2826 samples
+  [ 0] G1CardSet::add_to_container(void* volatile*, void*, unsigned int, unsigned int, bool)
+  [ 1] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 2] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 3] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 5] G1ConcurrentRefineThread::run_service()
+  [ 6] ConcurrentGCThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 2774315 total (0.03%), 2765 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] TickPerCell.waitTick
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 2753965 total (0.03%), 2765 samples
+  [ 0] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 1] Dimensions.forEachRowCol
+  [ 2] ChannelsGrid.forEachChannel
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 2696308 total (0.03%), 2701 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.lambda$notifyLiveness$0
+  [ 7] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 8] ArrayList.forEach
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 2660833 total (0.03%), 2661 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 2651034 total (0.03%), 2658 samples
+  [ 0] ReentrantLock$Sync.isHeldExclusively
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 2648805 total (0.03%), 2651 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::handle_completed_buffer(BufferNode*, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::enqueue(G1DirtyCardQueue&, unsigned char volatile*)
+  [ 5] AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  [ 6] ReentrantLock$NonfairSync.initialTryLock
+  [ 7] ReentrantLock$Sync.lockInterruptibly
+  [ 8] ReentrantLock.lockInterruptibly
+  [ 9] LinkedBlockingQueue.put
+  [10] BlockingQueue.put
+  [11] Channel.put
+  [12] Cell.lambda$notifyLiveness$0
+  [13] Cell$$Lambda$52.0x00000008010362f8.accept
+  [14] ArrayList.forEach
+  [15] Cell.notifyLiveness
+  [16] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [17] Iterable.forEach
+  [18] CellsGroup.run
+  [19] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 2615979 total (0.03%), 2606 samples
+  [ 0] ReentrantLock$Sync.lockInterruptibly
+  [ 1] ReentrantLock.lockInterruptibly
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2592136 total (0.03%), 2600 samples
+  [ 0] AtomicInteger.get
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 2571374 total (0.03%), 2566 samples
+  [ 0] G1DirtyCardQueueSet::dequeue_completed_buffer()
+  [ 1] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 2] G1ConcurrentRefineThread::run_service()
+  [ 3] ConcurrentGCThread::run()
+  [ 4] Thread::call_run()
+  [ 5] thread_native_entry(Thread*)
+  [ 6] start_thread
+
+--- 2553498 total (0.03%), 2560 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.signalNotFull
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [18] Iterable.forEach
+  [19] CellsGroup.run
+  [20] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 2543460 total (0.03%), 2546 samples
+  [ 0] Cell.notifyLiveness
+  [ 1] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 2] Iterable.forEach
+  [ 3] CellsGroup.run
+  [ 4] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+
+--- 2531872 total (0.03%), 2537 samples
+  [ 0] AbstractQueuedSynchronizer.setState
+  [ 1] ReentrantLock$Sync.tryRelease
+  [ 2] AbstractQueuedSynchronizer.release
+  [ 3] ReentrantLock.unlock
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 2528289 total (0.03%), 2535 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 1] LinkedBlockingQueue.signalNotFull
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [16] Iterable.forEach
+  [17] CellsGroup.run
+  [18] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 2519578 total (0.03%), 2527 samples
+  [ 0] ReentrantLock.lock
+  [ 1] LinkedBlockingQueue.signalNotEmpty
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2507264 total (0.03%), 2514 samples
+  [ 0] LinkedBlockingQueue.signalNotFull
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [15] Iterable.forEach
+  [16] CellsGroup.run
+  [17] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 2490242 total (0.03%), 2498 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.signalNotFull
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [18] Iterable.forEach
+  [19] CellsGroup.run
+  [20] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 2477270 total (0.03%), 2480 samples
+  [ 0] G1PostEvacuateCollectionSetCleanupTask2::RedirtyLoggedCardsTask::do_work(unsigned int)
+  [ 1] G1BatchedTask::work(unsigned int)
+  [ 2] WorkerThread::run()
+  [ 3] Thread::call_run()
+  [ 4] thread_native_entry(Thread*)
+  [ 5] start_thread
+
+--- 2465912 total (0.03%), 2468 samples
+  [ 0] LinkedBlockingQueue.signalNotEmpty
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 2418396 total (0.03%), 2418 samples
+  [ 0] ReentrantLock.lockInterruptibly
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [ 9] Iterable.forEach
+  [10] CellsGroup.run
+  [11] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 2396346 total (0.03%), 2402 samples
+  [ 0] Sink$ChainedReference.<init>
+  [ 1] ReferencePipeline$4$1.<init>
+  [ 2] ReferencePipeline$4.opWrapSink
+  [ 3] AbstractPipeline.wrapSink
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 2379219 total (0.02%), 2379 samples
+  [ 0] AtomicInteger.getAndIncrement
+  [ 1] LinkedBlockingQueue.put
+  [ 2] BlockingQueue.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 2378889 total (0.02%), 2378 samples
+  [ 0] ReentrantLock$Sync.lockInterruptibly
+  [ 1] ReentrantLock.lockInterruptibly
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.calculateNextState
+  [ 6] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 7] Iterable.forEach
+  [ 8] CellsGroup.run
+  [ 9] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 2339163 total (0.02%), 2339 samples
+  [ 0] ReferencePipeline$Head.<init>
+  [ 1] StreamSupport.stream
+  [ 2] Collection.stream
+  [ 3] Cell.calculateNextState
+  [ 4] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 5] Iterable.forEach
+  [ 6] CellsGroup.run
+  [ 7] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 2324222 total (0.02%), 2331 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 1] LinkedBlockingQueue.signalNotFull
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [16] Iterable.forEach
+  [17] CellsGroup.run
+  [18] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 2310261 total (0.02%), 2317 samples
+  [ 0] ReentrantLock.unlock
+  [ 1] LinkedBlockingQueue.signalNotFull
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$56.0x0000000801036b88.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [16] Iterable.forEach
+  [17] CellsGroup.run
+  [18] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 2300374 total (0.02%), 2304 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 2270710 total (0.02%), 2273 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 1] LinkedBlockingQueue.signalNotEmpty
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2241706 total (0.02%), 2245 samples
+  [ 0] G1CardSet::add_card(unsigned int, unsigned int, bool)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 4] G1ConcurrentRefineThread::run_service()
+  [ 5] ConcurrentGCThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] start_thread
+
+--- 2231234 total (0.02%), 2240 samples
+  [ 0] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 1] Dimensions.forEachRowCol
+  [ 2] ChannelsGrid.forEachChannel
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 2220921 total (0.02%), 2227 samples
+  [ 0] Sink$ChainedReference.end
+  [ 1] Sink$ChainedReference.end
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2212434 total (0.02%), 2213 samples
+  [ 0] Invokers$Holder.linkToTargetMethod
+  [ 1] Cell.calculateNextState
+  [ 2] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [ 3] Iterable.forEach
+  [ 4] CellsGroup.run
+  [ 5] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 2206322 total (0.02%), 2214 samples
+  [ 0] Sink$ChainedReference.begin
+  [ 1] Sink$ChainedReference.begin
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] CellsGroup$$Lambda$55.0x0000000801036970.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2198084 total (0.02%), 2201 samples
+  [ 0] __tls_get_addr@plt
+  [ 1] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 2] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 3] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+  [ 5] G1ConcurrentRefineThread::run_service()
+  [ 6] ConcurrentGCThread::run()
+  [ 7] Thread::call_run()
+  [ 8] thread_native_entry(Thread*)
+  [ 9] start_thread
+
+--- 2196454 total (0.02%), 2203 samples
+  [ 0] Thread.interrupted
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2195377 total (0.02%), 2197 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 1] LinkedBlockingQueue.signalNotEmpty
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [10] Iterable.forEach
+  [11] CellsGroup.run
+  [12] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 2167073 total (0.02%), 2169 samples
+  [ 0] ReentrantLock$Sync.tryRelease
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.signalNotEmpty
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [12] Iterable.forEach
+  [13] CellsGroup.run
+  [14] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 2157991 total (0.02%), 2158 samples
+  [ 0] ReentrantLock$Sync.lockInterruptibly
+  [ 1] ReentrantLock.lockInterruptibly
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$50.0x0000000801035ec0.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 2151187 total (0.02%), 2155 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$53.0x0000000801036518.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$49.0x0000000801035cb0.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 2130553 total (0.02%), 2133 samples
+  [ 0] void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  [ 1] G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+  [ 2] G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+  [ 3] G1DirtyCardQueueSet::handle_completed_buffer(BufferNode*, G1ConcurrentRefineStats*)
+  [ 4] G1DirtyCardQueueSet::enqueue(G1DirtyCardQueue&, unsigned char volatile*)
+  [ 5] LinkedBlockingQueue.enqueue
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$52.0x00000008010362f8.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [14] Iterable.forEach
+  [15] CellsGroup.run
+  [16] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 2124335 total (0.02%), 2127 samples
+  [ 0] ReentrantLock$Sync.isHeldExclusively
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] Cell.lambda$notifyLiveness$0
+  [ 7] Cell$$Lambda$52.0x00000008010362f8.accept
+  [ 8] ArrayList.forEach
+  [ 9] Cell.notifyLiveness
+  [10] CellsGroup$$Lambda$47.0x0000000801035690.accept
+  [11] Iterable.forEach
+  [12] CellsGroup.run
+  [13] ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+       total  percent  samples  top
+  ----------  -------  -------  ---
+  1740054827   18.26%  1740945  void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+  1016691654   10.67%  1017870  AbstractQueuedSynchronizer.compareAndSetState
+   797136213    8.36%   797005  oopDesc::size()
+   565476300    5.93%   564783  Thread.interrupted
+   554863009    5.82%   554529  ReduceOps$5ReducingSink.get
+   519406855    5.45%   518891  Cell.lambda$notifyLiveness$0
+   495245822    5.20%   495542  G1RemSet::refine_card_concurrently(unsigned char*, unsigned int)
+   469342505    4.92%   470030  AbstractOwnableSynchronizer.setExclusiveOwnerThread
+   385992768    4.05%   386502  AbstractQueuedSynchronizer.release
+   324608802    3.41%   324408  LinkedBlockingQueue.put
+   298824452    3.14%   298351  Thread.getAndClearInterrupt
+   292067071    3.06%   292432  LinkedBlockingQueue.take
+   288658111    3.03%   289109  G1CardSet::add_card(unsigned int, unsigned int, bool)
+   190107879    1.99%   190163  LinkedBlockingQueue.dequeue
+   128916601    1.35%   128890  LinkedBlockingQueue.enqueue
+   109340501    1.15%   109203  void OopOopIterateDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate<ObjArrayKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*)
+    89036405    0.93%    89034  void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+    77184556    0.81%    76984  AbstractQueuedSynchronizer.signalNext
+    70925663    0.74%    70915  G1BlockOffsetTablePart::block_start(void const*)
+    52572205    0.55%    52733  G1HotCardCache::insert(unsigned char*)
+    52450825    0.55%    52537  G1CardSet::add_to_howl(void*, unsigned int, unsigned int, bool)
+    45120075    0.47%    45113  G1ScanHRForRegionClosure::scan_heap_roots(HeapRegion*)
+    43764197    0.46%    43800  ReentrantLock$Sync.lockInterruptibly
+    35263975    0.37%    35274  StreamSupport.stream
+    33088691    0.35%    33123  AbstractPipeline.<init>
+    32706005    0.34%    32683  PipelineHelper.<init>
+    31685667    0.33%    31659  ReentrantLock.lockInterruptibly
+    30473161    0.32%    30547  G1RemSet::clean_card_before_refine(unsigned char**)
+    27953813    0.29%    28016  ReentrantLock$Sync.tryRelease
+    26528370    0.28%    26543  __tls_get_addr
+    24747331    0.26%    24761  AtomicInteger.getAndIncrement
+    23857221    0.25%    23925  G1ParScanThreadState::trim_queue_to_threshold(unsigned int)
+    23671459    0.25%    23729  ReentrantLock$Sync.lock
+    23337503    0.24%    23380  G1CardSet::add_to_container(void* volatile*, void*, unsigned int, unsigned int, bool)
+    21463363    0.23%    21507  AbstractQueuedSynchronizer.setState
+    20408104    0.21%    20409  G1DirtyCardQueueSet::refine_buffer(BufferNode*, unsigned int, G1ConcurrentRefineStats*)
+    19247854    0.20%    19232  void OopOopIterateBoundedDispatch<G1ConcurrentRefineOopClosure>::Table::oop_oop_iterate_bounded<ObjArrayKlass, narrowOop>(G1ConcurrentRefineOopClosure*, oopDesc*, Klass*, MemRegion)
+    17821590    0.19%    17816  TickPerCell.lambda$tick$0
+    17811138    0.19%    17859  Channel.take
+    15744009    0.17%    15765  AbstractQueuedSynchronizer$ConditionObject.signal
+    13406379    0.14%    13419  G1CardSet::add_card(unsigned long)
+    12968194    0.14%    12988  LinkedBlockingQueue.signalNotFull
+    11867121    0.12%    11894  AtomicInteger.getAndDecrement
+    11798478    0.12%    11816  _dl_update_slotinfo
+    11093091    0.12%    11117  ReentrantLock.unlock
+    10459207    0.11%    10457  ReferencePipeline$3.<init>
+    10099720    0.11%    10118  ReferencePipeline$4.opWrapSink
+     9419236    0.10%     9447  Dimensions.forEachRowCol
+     9330227    0.10%     9359  itable stub
+     9274856    0.10%     9292  vtable stub
+     8993589    0.09%     8994  StreamOpFlag.fromCharacteristics
+     8992244    0.09%     9006  LinkedBlockingQueue.signalNotEmpty
+     8813493    0.09%     8836  G1CardCounts::add_card_count(unsigned char*)
+     8238483    0.09%     8261  ReferencePipeline$3.opWrapSink
+     8216151    0.09%     8211  ArrayList$SubList$1.next
+     8030583    0.08%     8059  Sink$ChainedReference.begin
+     7785948    0.08%     7807  Sink$ChainedReference.<init>
+     7544884    0.08%     7558  ArrayList.spliterator
+     7306581    0.08%     7330  ChannelsGrid$$Lambda$54.0x0000000801036750.accept
+     7145504    0.07%     7160  ReentrantLock$Sync.isHeldExclusively
+     6849186    0.07%     6699  __update_load_avg_cfs_rq_[k]
+     6711489    0.07%     6572  update_load_avg_[k]
+     6514016    0.07%     6515  void G1ScanCardClosure::do_oop_work<narrowOop>(narrowOop*)
+     5680613    0.06%     5660  GlobalCounter::write_synchronize()
+     5274259    0.06%     5158  __update_load_avg_se_[k]
+     5120793    0.05%     5109  ArrayList.forEach
+     4760848    0.05%     4686  psi_group_change_[k]
+     4507428    0.05%     4510  FreeListAllocator::allocate()
+     4410293    0.05%     4328  update_cfs_group_[k]
+     4356033    0.05%     4362  AbstractQueuedSynchronizer.getState
+     4266668    0.04%     4180  update_curr_[k]
+     4116561    0.04%     4124  ChannelsGrid.getChannel
+     3793134    0.04%     3793  Iterable.forEach
+     3780244    0.04%     3783  Channel.put
+     3701957    0.04%     3715  void OopOopIterateBackwardsDispatch<G1ScanEvacuatedObjClosure>::Table::oop_oop_iterate_backwards<InstanceKlass, narrowOop>(G1ScanEvacuatedObjClosure*, oopDesc*, Klass*)
+     3638409    0.04%     3646  ReentrantLock.lock
+     3621138    0.04%     3627  update_get_addr
+     3573921    0.04%     3584  AbstractOwnableSynchronizer.getExclusiveOwnerThread
+     3545212    0.04%     3553  AtomicInteger.get
+     3467095    0.04%     3472  Cell.notifyLiveness
+     3466815    0.04%     3477  Sink$ChainedReference.end
+     3101350    0.03%     3108  ChannelsGrid$$Lambda$51.0x00000008010360d8.accept
+     3013248    0.03%     2962  __calc_delta_[k]
+     3003372    0.03%     3009  ReferencePipeline.<init>
+     2927211    0.03%     2937  Objects.requireNonNull
+     2622283    0.03%     2617  G1DirtyCardQueueSet::dequeue_completed_buffer()
+     2478266    0.03%     2481  G1PostEvacuateCollectionSetCleanupTask2::RedirtyLoggedCardsTask::do_work(unsigned int)
+     2475674    0.03%     2479  __tls_get_addr@plt
+     2354084    0.02%     2354  CellsGroup$$Lambda$55.0x0000000801036970.accept
+     2349414    0.02%     2349  Invokers$Holder.linkToTargetMethod
+     2342212    0.02%     2342  ReferencePipeline$Head.<init>
+     2155880    0.02%     2159  Cell.calculateNextState
+     2039408    0.02%     2038  ArrayList$SubList$1.checkForComodification
+     2022190    0.02%     1969  rcu_sched_clock_irq_[k]
+     1993438    0.02%     1961  reweight_entity_[k]
+     1988324    0.02%     1990  Integer.intValue
+     1968926    0.02%     1955  G1SegmentedArray::allocate()
+     1933860    0.02%     1935  G1DirtyCardQueueSet::refine_completed_buffer_concurrently(unsigned int, unsigned long, G1ConcurrentRefineStats*)
+     1930325    0.02%     1932  void QuickSort::inner_sort<false, unsigned char*, int (*)(unsigned char const*, unsigned char const*)>(unsigned char**, unsigned long, int (*)(unsigned char const*, unsigned char const*)) [clone .constprop.0]
+     1901431    0.02%     1861  check_preemption_disabled_[k]
+     1868543    0.02%     1871  __tls_get_addr_slow
+     1847025    0.02%     1853  G1CardCounts::is_hot(unsigned int)
+     1813358    0.02%     1814  BlockingQueue.put
+     1795095    0.02%     1772  _int_malloc
+     1761407    0.02%     1761  BlockingQueue.take
+     1735904    0.02%     1742  Unsafe_Park
+     1682459    0.02%     1633  rb_next_[k]
+     1673848    0.02%     1680  G1DirtyCardQueueSet::handle_completed_buffer(BufferNode*, G1ConcurrentRefineStats*)
+     1568116    0.02%     1568  __vdso_clock_gettime
+     1511567    0.02%     1471  __hrtimer_run_queues_[k]
+     1502625    0.02%     1486  __memset_avx2_unaligned_erms
+     1498916    0.02%     1464  update_blocked_averages_[k]
+     1448739    0.02%     1430  select_task_rq_fair_[k]
+     1442837    0.02%     1446  Integer.valueOf
+     1425293    0.01%     1424  FreeListAllocator::release(void*)
+     1410490    0.01%     1391  __malloc
+     1400712    0.01%     1405  [vdso]
+     1398826    0.01%     1401  __clock_gettime
+     1369767    0.01%     1333  _raw_spin_lock_irqsave_[k]
+     1362970    0.01%     1333  asm_sysvec_apic_timer_interrupt_[k]
+     1351864    0.01%     1288  restore_fpregs_from_fpstate_[k]
+     1309941    0.01%     1288  syscall_exit_to_user_mode_[k]
+     1280954    0.01%     1283  ChannelsGrid.lambda$forEachChannel$1
+     1263774    0.01%     1238  task_tick_fair_[k]
+     1219437    0.01%     1192  update_min_vruntime_[k]
+     1219164    0.01%     1222  AbstractPipeline.wrapSink
+     1209101    0.01%     1209  __GI___pthread_mutex_lock
+     1208499    0.01%     1207  ArrayList$SubList$1.hasNext
+     1188979    0.01%     1190  G1MergeHeapRootsTask::work(unsigned int)
+     1183159    0.01%     1191  Unsafe.getAndBitwiseAndInt
+     1177779    0.01%     1178  StreamOpFlag.combineOpFlags
+     1148090    0.01%     1153  GameOfLife$$Lambda$53.0x0000000801036518.test
+     1141252    0.01%     1118  timerqueue_add_[k]
+     1140937    0.01%     1119  _raw_spin_lock_[k]
+     1118203    0.01%     1118  void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<ObjArrayKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+     1054452    0.01%     1058  G1BarrierSetRuntime::write_ref_field_post_entry(unsigned char volatile*, JavaThread*)
+     1043125    0.01%     1021  native_read_msr_[k]
+     1006802    0.01%      998  CellsGroup.run
+     1005131    0.01%      990  psi_task_change_[k]
+      949087    0.01%      930  update_rq_clock_[k]
+      947342    0.01%      934  __entry_text_start_[k]
+      947292    0.01%      919  __cgroup_account_cputime_field_[k]
+      934731    0.01%      917  update_irq_load_avg_[k]
+      896340    0.01%      898  calc_thresholds(unsigned long, unsigned long, unsigned int)
+      889033    0.01%      869  scheduler_tick_[k]
+      886907    0.01%      870  cpuacct_charge_[k]
+      879089    0.01%      864  __schedule_[k]
+      868485    0.01%      853  preempt_count_add_[k]
+      862192    0.01%      842  __accumulate_pelt_segments_[k]
+      856418    0.01%      859  AbstractQueuedSynchronizer.acquire
+      842644    0.01%      847  LockSupport.setCurrentBlocker
+      836131    0.01%      824  update_sd_lb_stats.constprop.0_[k]
+      774397    0.01%      761  native_sched_clock_[k]
+      769347    0.01%      751  update_process_times_[k]
+      760577    0.01%      757  Unsafe_Unpark
+      760304    0.01%      742  hrtimer_interrupt_[k]
+      758210    0.01%      745  iterate_groups_[k]
+      752898    0.01%      751  G1CardSet::coarsen_container(void* volatile*, void*, unsigned int, bool)
+      752848    0.01%      753  StreamOpFlag.getMask
+      743049    0.01%      744  CellsGroup$$Lambda$47.0x0000000801035690.accept
+      733041    0.01%      736  Unsafe.park
+      726493    0.01%      724  NonJavaThread::Iterator::step()
+      719931    0.01%      702  preempt_count_sub_[k]
+      717526    0.01%      718  ___pthread_cond_wait
+      711323    0.01%      693  account_user_time_[k]
+      709820    0.01%      700  MemAllocator::allocate_inside_tlab_slow(MemAllocator::Allocation&) const
+      704548    0.01%      707  PtrQueueSet::exchange_buffer_with_new(PtrQueue&)
+      678577    0.01%      680  __pthread_mutex_unlock_usercnt
+      675912    0.01%      662  try_to_wake_up_[k]
+      674810    0.01%      620  __get_user_8_[k]
+      670611    0.01%      673  G1DirtyCardQueueSet::enqueue(G1DirtyCardQueue&, unsigned char volatile*)
+      643586    0.01%      645  AbstractQueuedSynchronizer$ConditionObject.doSignal
+      631681    0.01%      615  timekeeping_advance_[k]
+      620672    0.01%      621  os::elapsed_counter()
+      619025    0.01%      621  PtrQueueSet::try_enqueue(PtrQueue&, void*)
+      617086    0.01%      604  hrtimer_active_[k]
+      614406    0.01%      565  __rseq_handle_notify_resume_[k]
+      597772    0.01%      595  G1ConcurrentRefine::do_refinement_step(unsigned int, G1ConcurrentRefineStats*)
+      595951    0.01%      598  G1ConcurrentRefineThreadControl::maybe_activate_next(unsigned int)
+      591768    0.01%      578  cpuacct_account_field_[k]
+      587063    0.01%      574  read_tsc_[k]
+      582960    0.01%      580  Parker::park(bool, long)
+      570752    0.01%      521  exit_to_user_mode_prepare_[k]
+      568254    0.01%      556  load_balance_[k]
+      563648    0.01%      520  fpregs_restore_userregs_[k]
+      553104    0.01%      542  __hrtimer_next_event_base_[k]
+      552088    0.01%      544  _find_next_bit_[k]
+      548236    0.01%      542  enqueue_entity_[k]
+      547593    0.01%      535  tick_sched_timer_[k]
+      546415    0.01%      545  DirectMethodHandle$Holder.newInvokeSpecial
+      539457    0.01%      528  sched_slice_[k]
+      531037    0.01%      533  ThreadsListHandle::ThreadsListHandle(Thread*)
+      521858    0.01%      519  G1RebuildFreeListTask::work(unsigned int)
+      519316    0.01%      519  SpinYield::SpinYield(unsigned int, unsigned int, unsigned int)
+      516988    0.01%      507  psi_task_switch_[k]
+      514988    0.01%      517  AbstractQueuedSynchronizer$ConditionObject.enableWait
+      513206    0.01%      506  G1Allocator::unsafe_max_tlab_alloc()
+      509240    0.01%      510  native_write_msr_[k]
+      509055    0.01%      503  enqueue_task_fair_[k]
+      508216    0.01%      510  AbstractQueuedSynchronizer.enqueue

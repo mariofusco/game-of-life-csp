@@ -1,0 +1,4921 @@
+--- Execution profile ---
+Total samples       : 8483478
+unknown_Java        : 49084 (0.58%)
+not_walkable_Java   : 987080 (11.64%)
+deoptimization      : 22 (0.00%)
+skipped             : 5 (0.00%)
+
+--- 685751208 total (8.08%), 676890 samples
+  [ 0] __memmove_sse2_unaligned_erms
+  [ 1] long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+  [ 2] Cont thaw
+  [ 3] [not_walkable_Java]
+
+--- 581186242 total (6.85%), 581948 samples
+  [ 0] Cell.lambda$notifyLiveness$0
+  [ 1] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 2] ArrayList.forEach
+  [ 3] Cell.notifyLiveness
+  [ 4] Cell.run
+  [ 5] Continuation.enterSpecial
+  [ 6] Continuation.run
+  [ 7] VirtualThread.runContinuation
+  [ 8] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 9] ForkJoinTask$RunnableExecuteAction.exec
+  [10] ForkJoinTask.doExec
+  [11] ForkJoinPool$WorkQueue.topLevelExec
+  [12] ForkJoinPool.scan
+  [13] ForkJoinPool.runWorker
+  [14] ForkJoinWorkerThread.run
+
+--- 388216300 total (4.58%), 389183 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.put
+  [ 5] BlockingTransfer.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$RunnableExecuteAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 330204336 total (3.89%), 330902 samples
+  [ 0] ReduceOps$5ReducingSink.get
+  [ 1] ReduceOps$5ReducingSink.get
+  [ 2] ReduceOps$ReduceOp.evaluateSequential
+  [ 3] AbstractPipeline.evaluate
+  [ 4] IntPipeline.reduce
+  [ 5] IntPipeline.sum
+  [ 6] Cell.calculateNextState
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 217526881 total (2.56%), 216962 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 183269938 total (2.16%), 183651 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 180806631 total (2.13%), 181092 samples
+  [ 0] VirtualThread.setCarrierThread
+  [ 1] VirtualThread.mount
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 177345222 total (2.09%), 177023 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [15] VirtualThread.run
+  [16] VirtualThread$VThreadContinuation.lambda$new$0
+  [17] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [18] Continuation.enter0
+  [19] Continuation.enter
+  [20] Continuation.enterSpecial
+  [21] Continuation.run
+  [22] VirtualThread.runContinuation
+  [23] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [24] ForkJoinTask$RunnableExecuteAction.exec
+  [25] ForkJoinTask.doExec
+  [26] ForkJoinPool$WorkQueue.topLevelExec
+  [27] ForkJoinPool.scan
+  [28] ForkJoinPool.runWorker
+  [29] ForkJoinWorkerThread.run
+
+--- 161237046 total (1.90%), 161779 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 154333575 total (1.82%), 154175 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [18] VirtualThread.run
+  [19] VirtualThread$VThreadContinuation.lambda$new$0
+  [20] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [21] Continuation.enter0
+  [22] Continuation.enter
+  [23] Continuation.enterSpecial
+  [24] Continuation.run
+  [25] VirtualThread.runContinuation
+  [26] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [27] ForkJoinTask$RunnableExecuteAction.exec
+  [28] ForkJoinTask.doExec
+  [29] ForkJoinPool$WorkQueue.topLevelExec
+  [30] ForkJoinPool.scan
+  [31] ForkJoinPool.runWorker
+  [32] ForkJoinWorkerThread.run
+
+--- 151071588 total (1.78%), 150542 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [12] VirtualThread.run
+  [13] VirtualThread$VThreadContinuation.lambda$new$0
+  [14] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [15] Continuation.enter0
+  [16] Continuation.enter
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 139772260 total (1.65%), 139620 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [13] VirtualThread.run
+  [14] VirtualThread$VThreadContinuation.lambda$new$0
+  [15] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [16] Continuation.enter0
+  [17] Continuation.enter
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 106776415 total (1.26%), 106945 samples
+  [ 0] VirtualThread.compareAndSetState
+  [ 1] VirtualThread.runContinuation
+  [ 2] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 3] ForkJoinTask$RunnableExecuteAction.exec
+  [ 4] ForkJoinTask.doExec
+  [ 5] ForkJoinPool$WorkQueue.topLevelExec
+  [ 6] ForkJoinPool.scan
+  [ 7] ForkJoinPool.runWorker
+  [ 8] ForkJoinWorkerThread.run
+
+--- 105862660 total (1.25%), 106234 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 104248863 total (1.23%), 104696 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [16] VirtualThread.run
+  [17] VirtualThread$VThreadContinuation.lambda$new$0
+  [18] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [19] Continuation.enter0
+  [20] Continuation.enter
+  [21] Continuation.enterSpecial
+  [22] Continuation.run
+  [23] VirtualThread.runContinuation
+  [24] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [25] ForkJoinTask$RunnableExecuteAction.exec
+  [26] ForkJoinTask.doExec
+  [27] ForkJoinPool$WorkQueue.topLevelExec
+  [28] ForkJoinPool.scan
+  [29] ForkJoinPool.runWorker
+  [30] ForkJoinWorkerThread.run
+
+--- 102755173 total (1.21%), 103033 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [16] VirtualThread.run
+  [17] VirtualThread$VThreadContinuation.lambda$new$0
+  [18] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [19] Continuation.enter0
+  [20] Continuation.enter
+  [21] Continuation.enterSpecial
+  [22] Continuation.run
+  [23] VirtualThread.runContinuation
+  [24] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [25] ForkJoinTask$RunnableExecuteAction.exec
+  [26] ForkJoinTask.doExec
+  [27] ForkJoinPool$WorkQueue.topLevelExec
+  [28] ForkJoinPool.scan
+  [29] ForkJoinPool.runWorker
+  [30] ForkJoinWorkerThread.run
+
+--- 101311713 total (1.19%), 101426 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 98932463 total (1.17%), 99013 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [ 6] VirtualThread.run
+  [ 7] VirtualThread$VThreadContinuation.lambda$new$0
+  [ 8] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [ 9] Continuation.enter0
+  [10] Continuation.enter
+  [11] Continuation.enterSpecial
+  [12] Continuation.run
+  [13] VirtualThread.runContinuation
+  [14] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [15] ForkJoinTask$RunnableExecuteAction.exec
+  [16] ForkJoinTask.doExec
+  [17] ForkJoinPool$WorkQueue.topLevelExec
+  [18] ForkJoinPool.scan
+  [19] ForkJoinPool.runWorker
+  [20] ForkJoinWorkerThread.run
+
+--- 97532650 total (1.15%), 98111 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 89850721 total (1.06%), 89184 samples
+  [ 0] Thaw<Config<(oop_kind)0, G1BarrierSet> >::thaw_fast(stackChunkOopDesc*)
+  [ 1] long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+  [ 2] Cont thaw
+  [ 3] [not_walkable_Java]
+
+--- 85023120 total (1.00%), 85264 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 81066087 total (0.96%), 81278 samples
+  [ 0] VirtualThread.compareAndSetState
+  [ 1] VirtualThread.unpark
+  [ 2] System$2.unparkVirtualThread
+  [ 3] VirtualThreads.unpark
+  [ 4] LockSupport.unpark
+  [ 5] LinkedTransferQueue$Node.tryMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.put
+  [ 8] BlockingTransfer.put
+  [ 9] Channel.put
+  [10] TickPerCell.lambda$tick$0
+  [11] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [12] ChannelsGrid.lambda$forEachChannel$0
+  [13] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] TickPerCell.tick
+  [17] GameOfLife.calculateFrame
+  [18] GameOfLife.lambda$calculateFrameBlocking$4
+  [19] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [20] VirtualThread.run
+  [21] VirtualThread$VThreadContinuation.lambda$new$0
+  [22] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [23] Continuation.enter0
+  [24] Continuation.enter
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$RunnableExecuteAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 74025480 total (0.87%), 74393 samples
+  [ 0] System$2.setExtentLocalCache
+  [ 1] Continuation.run
+  [ 2] VirtualThread.runContinuation
+  [ 3] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 4] ForkJoinTask$RunnableExecuteAction.exec
+  [ 5] ForkJoinTask.doExec
+  [ 6] ForkJoinPool$WorkQueue.topLevelExec
+  [ 7] ForkJoinPool.scan
+  [ 8] ForkJoinPool.runWorker
+  [ 9] ForkJoinWorkerThread.run
+
+--- 73917493 total (0.87%), 74005 samples
+  [ 0] VirtualThread.unpark
+  [ 1] System$2.unparkVirtualThread
+  [ 2] VirtualThreads.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [19] VirtualThread.run
+  [20] VirtualThread$VThreadContinuation.lambda$new$0
+  [21] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [22] Continuation.enter0
+  [23] Continuation.enter
+  [24] Continuation.enterSpecial
+  [25] Continuation.run
+  [26] VirtualThread.runContinuation
+  [27] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [28] ForkJoinTask$RunnableExecuteAction.exec
+  [29] ForkJoinTask.doExec
+  [30] ForkJoinPool$WorkQueue.topLevelExec
+  [31] ForkJoinPool.scan
+  [32] ForkJoinPool.runWorker
+  [33] ForkJoinWorkerThread.run
+
+--- 72641223 total (0.86%), 72563 samples
+  [ 0] VirtualThread.state
+  [ 1] VirtualThread.runContinuation
+  [ 2] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 3] ForkJoinTask$RunnableExecuteAction.exec
+  [ 4] ForkJoinTask.doExec
+  [ 5] ForkJoinPool$WorkQueue.topLevelExec
+  [ 6] ForkJoinPool.scan
+  [ 7] ForkJoinPool.runWorker
+  [ 8] ForkJoinWorkerThread.run
+
+--- 71817852 total (0.85%), 72180 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] Continuation.enterSpecial
+  [17] Continuation.run
+  [18] VirtualThread.runContinuation
+  [19] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [20] ForkJoinTask$RunnableExecuteAction.exec
+  [21] ForkJoinTask.doExec
+  [22] ForkJoinPool$WorkQueue.topLevelExec
+  [23] ForkJoinPool.scan
+  [24] ForkJoinPool.runWorker
+  [25] ForkJoinWorkerThread.run
+
+--- 71557840 total (0.84%), 71892 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] Continuation.enterSpecial
+  [14] Continuation.run
+  [15] VirtualThread.runContinuation
+  [16] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [17] ForkJoinTask$RunnableExecuteAction.exec
+  [18] ForkJoinTask.doExec
+  [19] ForkJoinPool$WorkQueue.topLevelExec
+  [20] ForkJoinPool.scan
+  [21] ForkJoinPool.runWorker
+  [22] ForkJoinWorkerThread.run
+
+--- 70827400 total (0.83%), 70502 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 68941147 total (0.81%), 69146 samples
+  [ 0] VirtualThread.runContinuation
+  [ 1] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 2] ForkJoinTask$RunnableExecuteAction.exec
+  [ 3] ForkJoinTask.doExec
+  [ 4] ForkJoinPool$WorkQueue.topLevelExec
+  [ 5] ForkJoinPool.scan
+  [ 6] ForkJoinPool.runWorker
+  [ 7] ForkJoinWorkerThread.run
+
+--- 67840867 total (0.80%), 67669 samples
+  [ 0] LinkedTransferQueue$Node.tryMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [15] VirtualThread.run
+  [16] VirtualThread$VThreadContinuation.lambda$new$0
+  [17] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [18] Continuation.enter0
+  [19] Continuation.enter
+  [20] Continuation.enterSpecial
+  [21] Continuation.run
+  [22] VirtualThread.runContinuation
+  [23] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [24] ForkJoinTask$RunnableExecuteAction.exec
+  [25] ForkJoinTask.doExec
+  [26] ForkJoinPool$WorkQueue.topLevelExec
+  [27] ForkJoinPool.scan
+  [28] ForkJoinPool.runWorker
+  [29] ForkJoinWorkerThread.run
+
+--- 67161488 total (0.79%), 67273 samples
+  [ 0] Unsafe.getAndSetBoolean
+  [ 1] VirtualThread.getAndSetParkPermit
+  [ 2] VirtualThread.unpark
+  [ 3] System$2.unparkVirtualThread
+  [ 4] VirtualThreads.unpark
+  [ 5] LockSupport.unpark
+  [ 6] LinkedTransferQueue$Node.tryMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.put
+  [ 9] BlockingTransfer.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [21] VirtualThread.run
+  [22] VirtualThread$VThreadContinuation.lambda$new$0
+  [23] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [24] Continuation.enter0
+  [25] Continuation.enter
+  [26] Continuation.enterSpecial
+  [27] Continuation.run
+  [28] VirtualThread.runContinuation
+  [29] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [30] ForkJoinTask$RunnableExecuteAction.exec
+  [31] ForkJoinTask.doExec
+  [32] ForkJoinPool$WorkQueue.topLevelExec
+  [33] ForkJoinPool.scan
+  [34] ForkJoinPool.runWorker
+  [35] ForkJoinWorkerThread.run
+
+--- 63553825 total (0.75%), 63429 samples
+  [ 0] Continuation.yield
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 63162009 total (0.74%), 62986 samples
+  [ 0] LinkedTransferQueue$Node.isReleasable
+  [ 1] LinkedTransferQueue$Node.block
+  [ 2] ForkJoinPool.unmanagedBlock
+  [ 3] ForkJoinPool.managedBlock
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] TickPerCell.waitTick
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$RunnableExecuteAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 61354169 total (0.72%), 61535 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 57793129 total (0.68%), 57967 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casTail
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.put
+  [ 5] BlockingTransfer.put
+  [ 6] Channel.put
+  [ 7] Cell.lambda$notifyLiveness$0
+  [ 8] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 9] ArrayList.forEach
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$RunnableExecuteAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 57716316 total (0.68%), 57865 samples
+  [ 0] Continuation::prepare_thaw(JavaThread*, bool)
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 57184011 total (0.67%), 56850 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 52037773 total (0.61%), 52240 samples
+  [ 0] Unsafe.compareAndSetBoolean
+  [ 1] VarHandleBooleans$FieldInstanceReadWrite.compareAndSet
+  [ 2] VarHandleGuards.guard_LII_Z
+  [ 3] Continuation.compareAndSetMounted
+  [ 4] Continuation.mount
+  [ 5] Continuation.run
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 48492555 total (0.57%), 48451 samples
+  [ 0] long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 48033126 total (0.57%), 47935 samples
+  [ 0] G1CollectedHeap::requires_barriers(stackChunkOopDesc*) const
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 47070877 total (0.55%), 47132 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 44739293 total (0.53%), 44724 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 42043035 total (0.50%), 42048 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$Head.<init>
+  [ 3] StreamSupport.stream
+  [ 4] Collection.stream
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 40304363 total (0.48%), 40495 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 39652474 total (0.47%), 39527 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 38841415 total (0.46%), 39108 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.tryYield
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] Continuation.enterSpecial
+  [21] Continuation.run
+  [22] VirtualThread.runContinuation
+  [23] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [24] ForkJoinTask$RunnableExecuteAction.exec
+  [25] ForkJoinTask.doExec
+  [26] ForkJoinPool$WorkQueue.topLevelExec
+  [27] ForkJoinPool.scan
+  [28] ForkJoinPool.runWorker
+  [29] ForkJoinWorkerThread.run
+
+--- 38126523 total (0.45%), 38369 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 34602289 total (0.41%), 34800 samples
+  [ 0] VirtualThread.tryYield
+  [ 1] Thread.yield
+  [ 2] LinkedTransferQueue.awaitMatch
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 33203965 total (0.39%), 33235 samples
+  [ 0] ReferencePipeline$4.opWrapSink
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 32848765 total (0.39%), 32984 samples
+  [ 0] VirtualThread.setCarrierThread
+  [ 1] VirtualThread.mount
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] Continuation.enterSpecial
+  [27] Continuation.run
+  [28] VirtualThread.runContinuation
+  [29] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [30] ForkJoinTask$RunnableExecuteAction.exec
+  [31] ForkJoinTask.doExec
+  [32] ForkJoinPool$WorkQueue.topLevelExec
+  [33] ForkJoinPool.scan
+  [34] ForkJoinPool.runWorker
+  [35] ForkJoinWorkerThread.run
+
+--- 32522818 total (0.38%), 32661 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.put
+  [ 5] BlockingTransfer.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 32518888 total (0.38%), 32635 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 31421880 total (0.37%), 31559 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 30760258 total (0.36%), 30852 samples
+  [ 0] VirtualThread.mount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 29602584 total (0.35%), 29687 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 28670235 total (0.34%), 28138 samples
+  [ 0] __memcpy_sse2_unaligned
+  [ 1] long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+  [ 2] Cont thaw
+  [ 3] [not_walkable_Java]
+
+--- 26728846 total (0.32%), 26771 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 24635885 total (0.29%), 24750 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [18] VirtualThread.run
+  [19] VirtualThread$VThreadContinuation.lambda$new$0
+  [20] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [21] Continuation.enter0
+  [22] Continuation.enter
+  [23] Continuation.enterSpecial
+  [24] Continuation.run
+  [25] VirtualThread.runContinuation
+  [26] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [27] ForkJoinTask$RunnableExecuteAction.exec
+  [28] ForkJoinTask.doExec
+  [29] ForkJoinPool$WorkQueue.topLevelExec
+  [30] ForkJoinPool.scan
+  [31] ForkJoinPool.runWorker
+  [32] ForkJoinWorkerThread.run
+
+--- 24577336 total (0.29%), 24600 samples
+  [ 0] vtable stub
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 23697177 total (0.28%), 23651 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [12] VirtualThread.run
+  [13] VirtualThread$VThreadContinuation.lambda$new$0
+  [14] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [15] Continuation.enter0
+  [16] Continuation.enter
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 23467641 total (0.28%), 23564 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$RunnableExecuteAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 22314655 total (0.26%), 22288 samples
+  [ 0] StreamSupport.stream
+  [ 1] Collection.stream
+  [ 2] Cell.calculateNextState
+  [ 3] Cell.run
+  [ 4] Continuation.enterSpecial
+  [ 5] Continuation.run
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 21980885 total (0.26%), 22069 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$AdaptedRunnableAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 21940606 total (0.26%), 22050 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 20962806 total (0.25%), 21083 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 20663339 total (0.24%), 20729 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 20555118 total (0.24%), 20629 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 20038534 total (0.24%), 20059 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 19615837 total (0.23%), 19718 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)1, 286822ul>::oop_access_barrier(oopDesc*, long, oopDesc*)
+  [ 1] int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+  [ 2] Continuation.enterSpecial
+  [ 3] Continuation.run
+  [ 4] VirtualThread.runContinuation
+  [ 5] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 6] ForkJoinTask$RunnableExecuteAction.exec
+  [ 7] ForkJoinTask.doExec
+  [ 8] ForkJoinPool$WorkQueue.topLevelExec
+  [ 9] ForkJoinPool.scan
+  [10] ForkJoinPool.runWorker
+  [11] ForkJoinWorkerThread.run
+
+--- 19544416 total (0.23%), 19667 samples
+  [ 0] Unsafe.getAndBitwiseOrInt
+  [ 1] ForkJoinTask.getAndBitwiseOrStatus
+  [ 2] ForkJoinTask.setDone
+  [ 3] ForkJoinTask.doExec
+  [ 4] ForkJoinPool$WorkQueue.topLevelExec
+  [ 5] ForkJoinPool.scan
+  [ 6] ForkJoinPool.runWorker
+  [ 7] ForkJoinWorkerThread.run
+
+--- 17380473 total (0.20%), 17476 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 16826696 total (0.20%), 16874 samples
+  [ 0] ForkJoinTask$AdaptedRunnableAction.<init>
+  [ 1] ForkJoinTask.adapt
+  [ 2] VirtualThread.submitRunContinuation
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.unpark
+  [ 5] System$2.unparkVirtualThread
+  [ 6] VirtualThreads.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [23] VirtualThread.run
+  [24] VirtualThread$VThreadContinuation.lambda$new$0
+  [25] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [26] Continuation.enter0
+  [27] Continuation.enter
+  [28] Continuation.enterSpecial
+  [29] Continuation.run
+  [30] VirtualThread.runContinuation
+  [31] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [32] ForkJoinTask$RunnableExecuteAction.exec
+  [33] ForkJoinTask.doExec
+  [34] ForkJoinPool$WorkQueue.topLevelExec
+  [35] ForkJoinPool.scan
+  [36] ForkJoinPool.runWorker
+  [37] ForkJoinWorkerThread.run
+
+--- 16808855 total (0.20%), 16889 samples
+  [ 0] VirtualThread.unpark
+  [ 1] System$2.unparkVirtualThread
+  [ 2] VirtualThreads.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [19] VirtualThread.run
+  [20] VirtualThread$VThreadContinuation.lambda$new$0
+  [21] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [22] Continuation.enter0
+  [23] Continuation.enter
+  [24] Continuation.enterSpecial
+  [25] Continuation.run
+  [26] VirtualThread.runContinuation
+  [27] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [28] ForkJoinTask$RunnableExecuteAction.exec
+  [29] ForkJoinTask.doExec
+  [30] ForkJoinPool$WorkQueue.topLevelExec
+  [31] ForkJoinPool.scan
+  [32] ForkJoinPool.runWorker
+  [33] ForkJoinWorkerThread.run
+
+--- 16596069 total (0.20%), 16552 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 16412293 total (0.19%), 16399 samples
+  [ 0] VirtualThread.getAndSetParkPermit
+  [ 1] VirtualThread.unpark
+  [ 2] System$2.unparkVirtualThread
+  [ 3] VirtualThreads.unpark
+  [ 4] LockSupport.unpark
+  [ 5] LinkedTransferQueue$Node.tryMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.put
+  [ 8] BlockingTransfer.put
+  [ 9] Channel.put
+  [10] TickPerCell.lambda$tick$0
+  [11] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [12] ChannelsGrid.lambda$forEachChannel$0
+  [13] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] TickPerCell.tick
+  [17] GameOfLife.calculateFrame
+  [18] GameOfLife.lambda$calculateFrameBlocking$4
+  [19] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [20] VirtualThread.run
+  [21] VirtualThread$VThreadContinuation.lambda$new$0
+  [22] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [23] Continuation.enter0
+  [24] Continuation.enter
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$RunnableExecuteAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 16307066 total (0.19%), 16384 samples
+  [ 0] VirtualThread.unpark
+  [ 1] System$2.unparkVirtualThread
+  [ 2] VirtualThreads.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] Continuation.enterSpecial
+  [15] Continuation.run
+  [16] VirtualThread.runContinuation
+  [17] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [18] ForkJoinTask$RunnableExecuteAction.exec
+  [19] ForkJoinTask.doExec
+  [20] ForkJoinPool$WorkQueue.topLevelExec
+  [21] ForkJoinPool.scan
+  [22] ForkJoinPool.runWorker
+  [23] ForkJoinWorkerThread.run
+
+--- 15950467 total (0.19%), 16008 samples
+  [ 0] ReduceOps$5ReducingSink.get
+  [ 1] ReduceOps$5ReducingSink.get
+  [ 2] ReduceOps$ReduceOp.evaluateSequential
+  [ 3] AbstractPipeline.evaluate
+  [ 4] IntPipeline.reduce
+  [ 5] IntPipeline.sum
+  [ 6] Cell.calculateNextState
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$AdaptedRunnableAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 15695671 total (0.19%), 15784 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] Continuation.enterSpecial
+  [17] Continuation.run
+  [18] VirtualThread.runContinuation
+  [19] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [20] ForkJoinTask$RunnableExecuteAction.exec
+  [21] ForkJoinTask.doExec
+  [22] ForkJoinPool$WorkQueue.topLevelExec
+  [23] ForkJoinPool.scan
+  [24] ForkJoinPool.runWorker
+  [25] ForkJoinWorkerThread.run
+
+--- 15641596 total (0.18%), 15699 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 15596431 total (0.18%), 15589 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 15409381 total (0.18%), 15480 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$AdaptedRunnableAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 14943059 total (0.18%), 14993 samples
+  [ 0] LinkedTransferQueue.put
+  [ 1] BlockingTransfer.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 14819432 total (0.17%), 14899 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] Continuation.enterSpecial
+  [14] Continuation.run
+  [15] VirtualThread.runContinuation
+  [16] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [17] ForkJoinTask$RunnableExecuteAction.exec
+  [18] ForkJoinTask.doExec
+  [19] ForkJoinPool$WorkQueue.topLevelExec
+  [20] ForkJoinPool.scan
+  [21] ForkJoinPool.runWorker
+  [22] ForkJoinWorkerThread.run
+
+--- 14730044 total (0.17%), 14759 samples
+  [ 0] ReferencePipeline$3.opWrapSink
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 14721589 total (0.17%), 14730 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] GameOfLife.calculateFrame
+  [ 3] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 4] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [ 5] VirtualThread.run
+  [ 6] VirtualThread$VThreadContinuation.lambda$new$0
+  [ 7] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [ 8] Continuation.enter0
+  [ 9] Continuation.enter
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 14569448 total (0.17%), 14584 samples
+  [ 0] ForkJoinTask$RunnableExecuteAction.exec
+  [ 1] ForkJoinTask.doExec
+  [ 2] ForkJoinPool$WorkQueue.topLevelExec
+  [ 3] ForkJoinPool.scan
+  [ 4] ForkJoinPool.runWorker
+  [ 5] ForkJoinWorkerThread.run
+
+--- 14178380 total (0.17%), 14229 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 14105200 total (0.17%), 14186 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 14093789 total (0.17%), 14151 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 13972791 total (0.16%), 13986 samples
+  [ 0] ChannelsGrid$$Lambda$80.0x0000000801037ca8.<init>
+  [ 1] DirectMethodHandle$Holder.newInvokeSpecial
+  [ 2] Invokers$Holder.linkToTargetMethod
+  [ 3] ChannelsGrid.forEachChannel
+  [ 4] GameOfLife.calculateFrame
+  [ 5] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 6] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [ 7] VirtualThread.run
+  [ 8] VirtualThread$VThreadContinuation.lambda$new$0
+  [ 9] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [10] Continuation.enter0
+  [11] Continuation.enter
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$RunnableExecuteAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 13797997 total (0.16%), 13789 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$79.0x0000000801037a70.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$80.0x0000000801037ca8.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [12] VirtualThread.run
+  [13] VirtualThread$VThreadContinuation.lambda$new$0
+  [14] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [15] Continuation.enter0
+  [16] Continuation.enter
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 13377619 total (0.16%), 13460 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 13259044 total (0.16%), 13336 samples
+  [ 0] ForkJoinPool$WorkQueue.nextLocalTask
+  [ 1] ForkJoinPool$WorkQueue.topLevelExec
+  [ 2] ForkJoinPool.scan
+  [ 3] ForkJoinPool.runWorker
+  [ 4] ForkJoinWorkerThread.run
+
+--- 13139800 total (0.15%), 13212 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casTail
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 12740886 total (0.15%), 12804 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.lazySubmitRunContinuation
+  [ 5] VirtualThread.afterYield
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 12653544 total (0.15%), 12675 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$AdaptedRunnableAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 12388676 total (0.15%), 12441 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.put
+  [ 5] BlockingTransfer.put
+  [ 6] Channel.put
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$AdaptedRunnableAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 12257486 total (0.14%), 12247 samples
+  [ 0] long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+  [ 1] System$2.setExtentLocalCache
+  [ 2] Continuation.run
+  [ 3] VirtualThread.runContinuation
+  [ 4] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 5] ForkJoinTask$RunnableExecuteAction.exec
+  [ 6] ForkJoinTask.doExec
+  [ 7] ForkJoinPool$WorkQueue.topLevelExec
+  [ 8] ForkJoinPool.scan
+  [ 9] ForkJoinPool.runWorker
+  [10] ForkJoinWorkerThread.run
+
+--- 12103449 total (0.14%), 12176 samples
+  [ 0] VirtualThread.afterYield
+  [ 1] VirtualThread.runContinuation
+  [ 2] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 3] ForkJoinTask$RunnableExecuteAction.exec
+  [ 4] ForkJoinTask.doExec
+  [ 5] ForkJoinPool$WorkQueue.topLevelExec
+  [ 6] ForkJoinPool.scan
+  [ 7] ForkJoinPool.runWorker
+  [ 8] ForkJoinWorkerThread.run
+
+--- 11962654 total (0.14%), 11996 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.calculateNextState
+  [ 5] Cell.run
+  [ 6] Continuation.enterSpecial
+  [ 7] Continuation.run
+  [ 8] VirtualThread.runContinuation
+  [ 9] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [10] ForkJoinTask$RunnableExecuteAction.exec
+  [11] ForkJoinTask.doExec
+  [12] ForkJoinPool$WorkQueue.topLevelExec
+  [13] ForkJoinPool.scan
+  [14] ForkJoinPool.runWorker
+  [15] ForkJoinWorkerThread.run
+
+--- 11921014 total (0.14%), 11889 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 11879690 total (0.14%), 11885 samples
+  [ 0] System$2.unparkVirtualThread
+  [ 1] VirtualThreads.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [18] VirtualThread.run
+  [19] VirtualThread$VThreadContinuation.lambda$new$0
+  [20] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [21] Continuation.enter0
+  [22] Continuation.enter
+  [23] Continuation.enterSpecial
+  [24] Continuation.run
+  [25] VirtualThread.runContinuation
+  [26] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [27] ForkJoinTask$RunnableExecuteAction.exec
+  [28] ForkJoinTask.doExec
+  [29] ForkJoinPool$WorkQueue.topLevelExec
+  [30] ForkJoinPool.scan
+  [31] ForkJoinPool.runWorker
+  [32] ForkJoinWorkerThread.run
+
+--- 11851978 total (0.14%), 11934 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.tryYield
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] TickPerCell.waitTick
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$RunnableExecuteAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 11834193 total (0.14%), 11884 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$Head.<init>
+  [ 3] StreamSupport.stream
+  [ 4] Collection.stream
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 11822542 total (0.14%), 11862 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 11783241 total (0.14%), 11851 samples
+  [ 0] G1BarrierSet::write_ref_field_post_slow(unsigned char volatile*)
+  [ 1] Continuation.enterSpecial
+  [ 2] Continuation.run
+  [ 3] VirtualThread.runContinuation
+  [ 4] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 5] ForkJoinTask$RunnableExecuteAction.exec
+  [ 6] ForkJoinTask.doExec
+  [ 7] ForkJoinPool$WorkQueue.topLevelExec
+  [ 8] ForkJoinPool.scan
+  [ 9] ForkJoinPool.runWorker
+  [10] ForkJoinWorkerThread.run
+
+--- 11663043 total (0.14%), 11699 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 11632796 total (0.14%), 11669 samples
+  [ 0] ForkJoinPool.poolSubmit
+  [ 1] ForkJoinPool.lazySubmit
+  [ 2] VirtualThread.submitRunContinuation
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.unpark
+  [ 5] System$2.unparkVirtualThread
+  [ 6] VirtualThreads.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [23] VirtualThread.run
+  [24] VirtualThread$VThreadContinuation.lambda$new$0
+  [25] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [26] Continuation.enter0
+  [27] Continuation.enter
+  [28] Continuation.enterSpecial
+  [29] Continuation.run
+  [30] VirtualThread.runContinuation
+  [31] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [32] ForkJoinTask$RunnableExecuteAction.exec
+  [33] ForkJoinTask.doExec
+  [34] ForkJoinPool$WorkQueue.topLevelExec
+  [35] ForkJoinPool.scan
+  [36] ForkJoinPool.runWorker
+  [37] ForkJoinWorkerThread.run
+
+--- 11507957 total (0.14%), 11567 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 11295757 total (0.13%), 11349 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 11055141 total (0.13%), 11033 samples
+  [ 0] Cont thaw
+  [ 1] [unknown_Java]
+
+--- 11019964 total (0.13%), 11075 samples
+  [ 0] FreezeBase::freeze_fast_copy(stackChunkOopDesc*, int)
+  [ 1] int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+  [ 2] Continuation.enterSpecial
+  [ 3] Continuation.run
+  [ 4] VirtualThread.runContinuation
+  [ 5] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 6] ForkJoinTask$RunnableExecuteAction.exec
+  [ 7] ForkJoinTask.doExec
+  [ 8] ForkJoinPool$WorkQueue.topLevelExec
+  [ 9] ForkJoinPool.scan
+  [10] ForkJoinPool.runWorker
+  [11] ForkJoinWorkerThread.run
+
+--- 10748111 total (0.13%), 10798 samples
+  [ 0] VirtualThread.mount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$RunnableExecuteAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 10722367 total (0.13%), 10772 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 10693465 total (0.13%), 10710 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [ 6] VirtualThread.run
+  [ 7] VirtualThread$VThreadContinuation.lambda$new$0
+  [ 8] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [ 9] Continuation.enter0
+  [10] Continuation.enter
+  [11] Continuation.enterSpecial
+  [12] Continuation.run
+  [13] VirtualThread.runContinuation
+  [14] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [15] ForkJoinTask$RunnableExecuteAction.exec
+  [16] ForkJoinTask.doExec
+  [17] ForkJoinPool$WorkQueue.topLevelExec
+  [18] ForkJoinPool.scan
+  [19] ForkJoinPool.runWorker
+  [20] ForkJoinWorkerThread.run
+
+--- 10507191 total (0.12%), 10540 samples
+  [ 0] VirtualThread.unpark
+  [ 1] System$2.unparkVirtualThread
+  [ 2] VirtualThreads.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [19] VirtualThread.run
+  [20] VirtualThread$VThreadContinuation.lambda$new$0
+  [21] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [22] Continuation.enter0
+  [23] Continuation.enter
+  [24] Continuation.enterSpecial
+  [25] Continuation.run
+  [26] VirtualThread.runContinuation
+  [27] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [28] ForkJoinTask$RunnableExecuteAction.exec
+  [29] ForkJoinTask.doExec
+  [30] ForkJoinPool$WorkQueue.topLevelExec
+  [31] ForkJoinPool.scan
+  [32] ForkJoinPool.runWorker
+  [33] ForkJoinWorkerThread.run
+
+--- 10188306 total (0.12%), 10241 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] Continuation.enterSpecial
+  [17] Continuation.run
+  [18] VirtualThread.runContinuation
+  [19] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [20] ForkJoinTask$RunnableExecuteAction.exec
+  [21] ForkJoinTask.doExec
+  [22] ForkJoinPool$WorkQueue.topLevelExec
+  [23] ForkJoinPool.scan
+  [24] ForkJoinPool.runWorker
+  [25] ForkJoinWorkerThread.run
+
+--- 10030212 total (0.12%), 10095 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.tryYield
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] Continuation.enterSpecial
+  [21] Continuation.run
+  [22] VirtualThread.runContinuation
+  [23] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [24] ForkJoinTask$AdaptedRunnableAction.exec
+  [25] ForkJoinTask.doExec
+  [26] ForkJoinPool$WorkQueue.topLevelExec
+  [27] ForkJoinPool.scan
+  [28] ForkJoinPool.runWorker
+  [29] ForkJoinWorkerThread.run
+
+--- 9497303 total (0.11%), 9492 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 9380571 total (0.11%), 9403 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] TickPerCell.waitTick
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 9377477 total (0.11%), 9404 samples
+  [ 0] LinkedTransferQueue$Node.<init>
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 9120240 total (0.11%), 9135 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 9112012 total (0.11%), 9155 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 8990170 total (0.11%), 9040 samples
+  [ 0] VirtualThread.compareAndSetState
+  [ 1] VirtualThread.runContinuation
+  [ 2] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 3] ForkJoinTask$AdaptedRunnableAction.exec
+  [ 4] ForkJoinTask.doExec
+  [ 5] ForkJoinPool$WorkQueue.topLevelExec
+  [ 6] ForkJoinPool.scan
+  [ 7] ForkJoinPool.runWorker
+  [ 8] ForkJoinWorkerThread.run
+
+--- 8880954 total (0.10%), 8908 samples
+  [ 0] ArrayList.forEach
+  [ 1] Cell.notifyLiveness
+  [ 2] Cell.run
+  [ 3] Continuation.enterSpecial
+  [ 4] Continuation.run
+  [ 5] VirtualThread.runContinuation
+  [ 6] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 7] ForkJoinTask$RunnableExecuteAction.exec
+  [ 8] ForkJoinTask.doExec
+  [ 9] ForkJoinPool$WorkQueue.topLevelExec
+  [10] ForkJoinPool.scan
+  [11] ForkJoinPool.runWorker
+  [12] ForkJoinWorkerThread.run
+
+--- 8746731 total (0.10%), 8803 samples
+  [ 0] System$2.setExtentLocalCache
+  [ 1] Continuation.run
+  [ 2] VirtualThread.runContinuation
+  [ 3] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 4] ForkJoinTask$AdaptedRunnableAction.exec
+  [ 5] ForkJoinTask.doExec
+  [ 6] ForkJoinPool$WorkQueue.topLevelExec
+  [ 7] ForkJoinPool.scan
+  [ 8] ForkJoinPool.runWorker
+  [ 9] ForkJoinWorkerThread.run
+
+--- 8472574 total (0.10%), 8495 samples
+  [ 0] ArrayList.spliterator
+  [ 1] Collection.stream
+  [ 2] Cell.calculateNextState
+  [ 3] Cell.run
+  [ 4] Continuation.enterSpecial
+  [ 5] Continuation.run
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 8391859 total (0.10%), 8419 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 8354332 total (0.10%), 8382 samples
+  [ 0] Continuation.yield
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$RunnableExecuteAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 8293736 total (0.10%), 8328 samples
+  [ 0] LinkedTransferQueue$Node.tryMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] Cell.lambda$notifyLiveness$0
+  [ 6] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 7] ArrayList.forEach
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 8109359 total (0.10%), 8105 samples
+  [ 0] StreamOpFlag.fromCharacteristics
+  [ 1] StreamSupport.stream
+  [ 2] Collection.stream
+  [ 3] Cell.calculateNextState
+  [ 4] Cell.run
+  [ 5] Continuation.enterSpecial
+  [ 6] Continuation.run
+  [ 7] VirtualThread.runContinuation
+  [ 8] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 9] ForkJoinTask$RunnableExecuteAction.exec
+  [10] ForkJoinTask.doExec
+  [11] ForkJoinPool$WorkQueue.topLevelExec
+  [12] ForkJoinPool.scan
+  [13] ForkJoinPool.runWorker
+  [14] ForkJoinWorkerThread.run
+
+--- 8013502 total (0.09%), 8055 samples
+  [ 0] VirtualThread.compareAndSetState
+  [ 1] VirtualThread.unpark
+  [ 2] System$2.unparkVirtualThread
+  [ 3] VirtualThreads.unpark
+  [ 4] LockSupport.unpark
+  [ 5] LinkedTransferQueue$Node.tryMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.put
+  [ 8] BlockingTransfer.put
+  [ 9] Channel.put
+  [10] Cell.lambda$notifyLiveness$0
+  [11] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [12] ArrayList.forEach
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 7682271 total (0.09%), 7719 samples
+  [ 0] ForkJoinPool.poolSubmit
+  [ 1] ForkJoinPool.lazySubmit
+  [ 2] VirtualThread.submitRunContinuation
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.unpark
+  [ 5] System$2.unparkVirtualThread
+  [ 6] VirtualThreads.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [23] VirtualThread.run
+  [24] VirtualThread$VThreadContinuation.lambda$new$0
+  [25] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [26] Continuation.enter0
+  [27] Continuation.enter
+  [28] Continuation.enterSpecial
+  [29] Continuation.run
+  [30] VirtualThread.runContinuation
+  [31] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [32] ForkJoinTask$RunnableExecuteAction.exec
+  [33] ForkJoinTask.doExec
+  [34] ForkJoinPool$WorkQueue.topLevelExec
+  [35] ForkJoinPool.scan
+  [36] ForkJoinPool.runWorker
+  [37] ForkJoinWorkerThread.run
+
+--- 7653622 total (0.09%), 7679 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 7637304 total (0.09%), 7685 samples
+  [ 0] VirtualThread.tryYield
+  [ 1] Thread.yield
+  [ 2] LinkedTransferQueue.awaitMatch
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 7635475 total (0.09%), 7673 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 7635314 total (0.09%), 7617 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 7564422 total (0.09%), 7570 samples
+  [ 0] VirtualThread.setParkPermit
+  [ 1] VirtualThread.runContinuation
+  [ 2] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 3] ForkJoinTask$RunnableExecuteAction.exec
+  [ 4] ForkJoinTask.doExec
+  [ 5] ForkJoinPool$WorkQueue.topLevelExec
+  [ 6] ForkJoinPool.scan
+  [ 7] ForkJoinPool.runWorker
+  [ 8] ForkJoinWorkerThread.run
+
+--- 7520477 total (0.09%), 7542 samples
+  [ 0] Sink$ChainedReference.<init>
+  [ 1] ReferencePipeline$3$1.<init>
+  [ 2] ReferencePipeline$3.opWrapSink
+  [ 3] AbstractPipeline.wrapSink
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] Cell.run
+  [11] Continuation.enterSpecial
+  [12] Continuation.run
+  [13] VirtualThread.runContinuation
+  [14] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [15] ForkJoinTask$RunnableExecuteAction.exec
+  [16] ForkJoinTask.doExec
+  [17] ForkJoinPool$WorkQueue.topLevelExec
+  [18] ForkJoinPool.scan
+  [19] ForkJoinPool.runWorker
+  [20] ForkJoinWorkerThread.run
+
+--- 7379825 total (0.09%), 7403 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] [unknown_Java]
+
+--- 7305050 total (0.09%), 7151 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] post_alloc_hook_[k]
+  [ 2] get_page_from_freelist_[k]
+  [ 3] __alloc_pages_[k]
+  [ 4] alloc_pages_vma_[k]
+  [ 5] __handle_mm_fault_[k]
+  [ 6] handle_mm_fault_[k]
+  [ 7] do_user_addr_fault_[k]
+  [ 8] exc_page_fault_[k]
+  [ 9] asm_exc_page_fault_[k]
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] Cell.lambda$notifyLiveness$0
+  [15] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [16] ArrayList.forEach
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 7184790 total (0.08%), 7226 samples
+  [ 0] __memmove_sse2_unaligned_erms
+  [ 1] int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+  [ 2] Continuation.enterSpecial
+  [ 3] Continuation.run
+  [ 4] VirtualThread.runContinuation
+  [ 5] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 6] ForkJoinTask$RunnableExecuteAction.exec
+  [ 7] ForkJoinTask.doExec
+  [ 8] ForkJoinPool$WorkQueue.topLevelExec
+  [ 9] ForkJoinPool.scan
+  [10] ForkJoinPool.runWorker
+  [11] ForkJoinWorkerThread.run
+
+--- 7069910 total (0.08%), 7102 samples
+  [ 0] ForkJoinTask.doExec
+  [ 1] ForkJoinPool$WorkQueue.topLevelExec
+  [ 2] ForkJoinPool.scan
+  [ 3] ForkJoinPool.runWorker
+  [ 4] ForkJoinWorkerThread.run
+
+--- 6931667 total (0.08%), 6942 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$AdaptedRunnableAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 6883176 total (0.08%), 6932 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.tryYield
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] Continuation.enterSpecial
+  [21] Continuation.run
+  [22] VirtualThread.runContinuation
+  [23] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [24] ForkJoinTask$RunnableExecuteAction.exec
+  [25] ForkJoinTask.doExec
+  [26] ForkJoinPool$WorkQueue.topLevelExec
+  [27] ForkJoinPool.scan
+  [28] ForkJoinPool.runWorker
+  [29] ForkJoinWorkerThread.run
+
+--- 6831912 total (0.08%), 6866 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.lazySubmitRunContinuation
+  [ 5] VirtualThread.afterYield
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 6758864 total (0.08%), 6803 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casTail
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 6681644 total (0.08%), 6700 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] Continuation.enterSpecial
+  [27] Continuation.run
+  [28] VirtualThread.runContinuation
+  [29] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [30] ForkJoinTask$RunnableExecuteAction.exec
+  [31] ForkJoinTask.doExec
+  [32] ForkJoinPool$WorkQueue.topLevelExec
+  [33] ForkJoinPool.scan
+  [34] ForkJoinPool.runWorker
+  [35] ForkJoinWorkerThread.run
+
+--- 6630592 total (0.08%), 6612 samples
+  [ 0] LockSupport.unpark
+  [ 1] LinkedTransferQueue$Node.tryMatch
+  [ 2] LinkedTransferQueue.xfer
+  [ 3] LinkedTransferQueue.put
+  [ 4] BlockingTransfer.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [16] VirtualThread.run
+  [17] VirtualThread$VThreadContinuation.lambda$new$0
+  [18] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [19] Continuation.enter0
+  [20] Continuation.enter
+  [21] Continuation.enterSpecial
+  [22] Continuation.run
+  [23] VirtualThread.runContinuation
+  [24] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [25] ForkJoinTask$RunnableExecuteAction.exec
+  [26] ForkJoinTask.doExec
+  [27] ForkJoinPool$WorkQueue.topLevelExec
+  [28] ForkJoinPool.scan
+  [29] ForkJoinPool.runWorker
+  [30] ForkJoinWorkerThread.run
+
+--- 6426069 total (0.08%), 6464 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 6390509 total (0.08%), 6410 samples
+  [ 0] LinkedTransferQueue.put
+  [ 1] BlockingTransfer.put
+  [ 2] Channel.put
+  [ 3] Cell.lambda$notifyLiveness$0
+  [ 4] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 5] ArrayList.forEach
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 6312032 total (0.07%), 6334 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$RunnableExecuteAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 6250485 total (0.07%), 6290 samples
+  [ 0] int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+  [ 1] Continuation.yield0
+  [ 2] Continuation.yield
+  [ 3] VirtualThread.yieldContinuation
+  [ 4] VirtualThread.tryYield
+  [ 5] Thread.yield
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] Continuation.enterSpecial
+  [23] Continuation.run
+  [24] VirtualThread.runContinuation
+  [25] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [26] ForkJoinTask$RunnableExecuteAction.exec
+  [27] ForkJoinTask.doExec
+  [28] ForkJoinPool$WorkQueue.topLevelExec
+  [29] ForkJoinPool.scan
+  [30] ForkJoinPool.runWorker
+  [31] ForkJoinWorkerThread.run
+
+--- 6210500 total (0.07%), 6244 samples
+  [ 0] Cell.lambda$notifyLiveness$0
+  [ 1] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 2] ArrayList.forEach
+  [ 3] Cell.notifyLiveness
+  [ 4] Cell.run
+  [ 5] Continuation.enterSpecial
+  [ 6] Continuation.run
+  [ 7] VirtualThread.runContinuation
+  [ 8] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 9] ForkJoinTask$AdaptedRunnableAction.exec
+  [10] ForkJoinTask.doExec
+  [11] ForkJoinPool$WorkQueue.topLevelExec
+  [12] ForkJoinPool.scan
+  [13] ForkJoinPool.runWorker
+  [14] ForkJoinWorkerThread.run
+
+--- 6150645 total (0.07%), 6180 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.lazySubmitRunContinuation
+  [ 5] VirtualThread.afterYield
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 6137333 total (0.07%), 6152 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 6069139 total (0.07%), 6073 samples
+  [ 0] LinkedTransferQueue.take
+  [ 1] BlockingTransfer.take
+  [ 2] Channel.take
+  [ 3] TickPerCell.waitTick
+  [ 4] Cell.notifyLiveness
+  [ 5] Cell.run
+  [ 6] Continuation.enterSpecial
+  [ 7] Continuation.run
+  [ 8] VirtualThread.runContinuation
+  [ 9] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [10] ForkJoinTask$RunnableExecuteAction.exec
+  [11] ForkJoinTask.doExec
+  [12] ForkJoinPool$WorkQueue.topLevelExec
+  [13] ForkJoinPool.scan
+  [14] ForkJoinPool.runWorker
+  [15] ForkJoinWorkerThread.run
+
+--- 5999325 total (0.07%), 6004 samples
+  [ 0] VirtualThread.mount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] Continuation.enterSpecial
+  [18] Continuation.run
+  [19] VirtualThread.runContinuation
+  [20] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [21] ForkJoinTask$RunnableExecuteAction.exec
+  [22] ForkJoinTask.doExec
+  [23] ForkJoinPool$WorkQueue.topLevelExec
+  [24] ForkJoinPool.scan
+  [25] ForkJoinPool.runWorker
+  [26] ForkJoinWorkerThread.run
+
+--- 5972525 total (0.07%), 5950 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$RunnableExecuteAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 5967982 total (0.07%), 5994 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 5904877 total (0.07%), 5937 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 5878205 total (0.07%), 5878 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 5770454 total (0.07%), 5792 samples
+  [ 0] LinkedTransferQueue.put
+  [ 1] [unknown_Java]
+
+--- 5697052 total (0.07%), 5733 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] Cell.lambda$notifyLiveness$0
+  [15] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [16] ArrayList.forEach
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 5696889 total (0.07%), 5730 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.calculateNextState
+  [ 5] Cell.run
+  [ 6] Continuation.enterSpecial
+  [ 7] Continuation.run
+  [ 8] VirtualThread.runContinuation
+  [ 9] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [10] ForkJoinTask$RunnableExecuteAction.exec
+  [11] ForkJoinTask.doExec
+  [12] ForkJoinPool$WorkQueue.topLevelExec
+  [13] ForkJoinPool.scan
+  [14] ForkJoinPool.runWorker
+  [15] ForkJoinWorkerThread.run
+
+--- 5671893 total (0.07%), 5703 samples
+  [ 0] ForkJoinPool.poolSubmit
+  [ 1] ForkJoinPool.execute
+  [ 2] VirtualThread.submitRunContinuation
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.unpark
+  [ 5] System$2.unparkVirtualThread
+  [ 6] VirtualThreads.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [23] VirtualThread.run
+  [24] VirtualThread$VThreadContinuation.lambda$new$0
+  [25] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [26] Continuation.enter0
+  [27] Continuation.enter
+  [28] Continuation.enterSpecial
+  [29] Continuation.run
+  [30] VirtualThread.runContinuation
+  [31] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [32] ForkJoinTask$RunnableExecuteAction.exec
+  [33] ForkJoinTask.doExec
+  [34] ForkJoinPool$WorkQueue.topLevelExec
+  [35] ForkJoinPool.scan
+  [36] ForkJoinPool.runWorker
+  [37] ForkJoinWorkerThread.run
+
+--- 5542010 total (0.07%), 5544 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] TickPerCell.waitTick
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 5467083 total (0.06%), 5484 samples
+  [ 0] Continuation.yield0
+  [ 1] Continuation.yield
+  [ 2] VirtualThread.yieldContinuation
+  [ 3] VirtualThread.park
+  [ 4] System$2.parkVirtualThread
+  [ 5] VirtualThreads.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] Continuation.enterSpecial
+  [27] Continuation.run
+  [28] VirtualThread.runContinuation
+  [29] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [30] ForkJoinTask$RunnableExecuteAction.exec
+  [31] ForkJoinTask.doExec
+  [32] ForkJoinPool$WorkQueue.topLevelExec
+  [33] ForkJoinPool.scan
+  [34] ForkJoinPool.runWorker
+  [35] ForkJoinWorkerThread.run
+
+--- 5383292 total (0.06%), 5408 samples
+  [ 0] oopDesc::address_field(int) const
+  [ 1] int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+  [ 2] Continuation.enterSpecial
+  [ 3] Continuation.run
+  [ 4] VirtualThread.runContinuation
+  [ 5] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 6] ForkJoinTask$RunnableExecuteAction.exec
+  [ 7] ForkJoinTask.doExec
+  [ 8] ForkJoinPool$WorkQueue.topLevelExec
+  [ 9] ForkJoinPool.scan
+  [10] ForkJoinPool.runWorker
+  [11] ForkJoinWorkerThread.run
+
+--- 5373214 total (0.06%), 5391 samples
+  [ 0] Sink$ChainedReference.begin
+  [ 1] Sink$ChainedReference.begin
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] Cell.run
+  [10] Continuation.enterSpecial
+  [11] Continuation.run
+  [12] VirtualThread.runContinuation
+  [13] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [14] ForkJoinTask$RunnableExecuteAction.exec
+  [15] ForkJoinTask.doExec
+  [16] ForkJoinPool$WorkQueue.topLevelExec
+  [17] ForkJoinPool.scan
+  [18] ForkJoinPool.runWorker
+  [19] ForkJoinWorkerThread.run
+
+--- 5292343 total (0.06%), 5315 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] Continuation.enterSpecial
+  [10] Continuation.run
+  [11] VirtualThread.runContinuation
+  [12] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [13] ForkJoinTask$RunnableExecuteAction.exec
+  [14] ForkJoinTask.doExec
+  [15] ForkJoinPool$WorkQueue.topLevelExec
+  [16] ForkJoinPool.scan
+  [17] ForkJoinPool.runWorker
+  [18] ForkJoinWorkerThread.run
+
+--- 5165652 total (0.06%), 5205 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.park
+  [ 3] System$2.parkVirtualThread
+  [ 4] VirtualThreads.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] Continuation.enterSpecial
+  [26] Continuation.run
+  [27] VirtualThread.runContinuation
+  [28] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [29] ForkJoinTask$AdaptedRunnableAction.exec
+  [30] ForkJoinTask.doExec
+  [31] ForkJoinPool$WorkQueue.topLevelExec
+  [32] ForkJoinPool.scan
+  [33] ForkJoinPool.runWorker
+  [34] ForkJoinWorkerThread.run
+
+--- 5159269 total (0.06%), 5185 samples
+  [ 0] Unsafe.getAndBitwiseOrInt
+  [ 1] ForkJoinTask.getAndBitwiseOrStatus
+  [ 2] ForkJoinTask.markPoolSubmission
+  [ 3] ForkJoinPool.poolSubmit
+  [ 4] ForkJoinPool.lazySubmit
+  [ 5] VirtualThread.submitRunContinuation
+  [ 6] VirtualThread.submitRunContinuation
+  [ 7] VirtualThread.unpark
+  [ 8] System$2.unparkVirtualThread
+  [ 9] VirtualThreads.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [26] VirtualThread.run
+  [27] VirtualThread$VThreadContinuation.lambda$new$0
+  [28] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [29] Continuation.enter0
+  [30] Continuation.enter
+  [31] Continuation.enterSpecial
+  [32] Continuation.run
+  [33] VirtualThread.runContinuation
+  [34] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [35] ForkJoinTask$RunnableExecuteAction.exec
+  [36] ForkJoinTask.doExec
+  [37] ForkJoinPool$WorkQueue.topLevelExec
+  [38] ForkJoinPool.scan
+  [39] ForkJoinPool.runWorker
+  [40] ForkJoinWorkerThread.run
+
+--- 5156037 total (0.06%), 5188 samples
+  [ 0] ForkJoinPool$WorkQueue.getAndClearSlot
+  [ 1] ForkJoinPool$WorkQueue.nextLocalTask
+  [ 2] ForkJoinPool$WorkQueue.topLevelExec
+  [ 3] ForkJoinPool.scan
+  [ 4] ForkJoinPool.runWorker
+  [ 5] ForkJoinWorkerThread.run
+
+--- 5136521 total (0.06%), 5169 samples
+  [ 0] Unsafe.compareAndSetBoolean
+  [ 1] VarHandleBooleans$FieldInstanceReadWrite.compareAndSet
+  [ 2] VarHandleGuards.guard_LII_Z
+  [ 3] Continuation.compareAndSetMounted
+  [ 4] Continuation.mount
+  [ 5] Continuation.run
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$AdaptedRunnableAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 5063212 total (0.06%), 5080 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 5057952 total (0.06%), 5065 samples
+  [ 0] ArrayList.forEach
+  [ 1] Cell.notifyLiveness
+  [ 2] Cell.run
+  [ 3] Continuation.enterSpecial
+  [ 4] Continuation.run
+  [ 5] VirtualThread.runContinuation
+  [ 6] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 7] ForkJoinTask$RunnableExecuteAction.exec
+  [ 8] ForkJoinTask.doExec
+  [ 9] ForkJoinPool$WorkQueue.topLevelExec
+  [10] ForkJoinPool.scan
+  [11] ForkJoinPool.runWorker
+  [12] ForkJoinWorkerThread.run
+
+--- 4977216 total (0.06%), 5005 samples
+  [ 0] Unsafe.getAndBitwiseOrInt
+  [ 1] ForkJoinTask.getAndBitwiseOrStatus
+  [ 2] ForkJoinTask.setDone
+  [ 3] ForkJoinTask.doExec
+  [ 4] ForkJoinPool$WorkQueue.topLevelExec
+  [ 5] ForkJoinPool.scan
+  [ 6] ForkJoinPool.runWorker
+  [ 7] ForkJoinWorkerThread.run
+
+--- 4949591 total (0.06%), 4926 samples
+  [ 0] Thaw<Config<(oop_kind)0, G1BarrierSet> >::thaw_fast(stackChunkOopDesc*)
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 4863526 total (0.06%), 4868 samples
+  [ 0] StreamOpFlag.fromCharacteristics
+  [ 1] StreamSupport.stream
+  [ 2] Collection.stream
+  [ 3] Cell.calculateNextState
+  [ 4] Cell.run
+  [ 5] Continuation.enterSpecial
+  [ 6] Continuation.run
+  [ 7] VirtualThread.runContinuation
+  [ 8] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 9] ForkJoinTask$RunnableExecuteAction.exec
+  [10] ForkJoinTask.doExec
+  [11] ForkJoinPool$WorkQueue.topLevelExec
+  [12] ForkJoinPool.scan
+  [13] ForkJoinPool.runWorker
+  [14] ForkJoinWorkerThread.run
+
+--- 4784572 total (0.06%), 4813 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] TickPerCell.waitTick
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] Continuation.enterSpecial
+  [ 9] Continuation.run
+  [10] VirtualThread.runContinuation
+  [11] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [12] ForkJoinTask$RunnableExecuteAction.exec
+  [13] ForkJoinTask.doExec
+  [14] ForkJoinPool$WorkQueue.topLevelExec
+  [15] ForkJoinPool.scan
+  [16] ForkJoinPool.runWorker
+  [17] ForkJoinWorkerThread.run
+
+--- 4749170 total (0.06%), 4644 samples
+  [ 0] psi_group_change_[k]
+  [ 1] psi_task_switch_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] futex_wait_queue_[k]
+  [ 5] futex_wait_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] __futex_abstimed_wait_common
+  [11] Unsafe.park
+  [12] LockSupport.park
+  [13] ForkJoinPool.awaitWork
+  [14] ForkJoinPool.runWorker
+  [15] ForkJoinWorkerThread.run
+
+--- 4747939 total (0.06%), 4754 samples
+  [ 0] Sink$ChainedReference.<init>
+  [ 1] ReferencePipeline$4$1.<init>
+  [ 2] ReferencePipeline$4.opWrapSink
+  [ 3] AbstractPipeline.wrapSink
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] Cell.run
+  [11] Continuation.enterSpecial
+  [12] Continuation.run
+  [13] VirtualThread.runContinuation
+  [14] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [15] ForkJoinTask$RunnableExecuteAction.exec
+  [16] ForkJoinTask.doExec
+  [17] ForkJoinPool$WorkQueue.topLevelExec
+  [18] ForkJoinPool.scan
+  [19] ForkJoinPool.runWorker
+  [20] ForkJoinWorkerThread.run
+
+--- 4745177 total (0.06%), 4776 samples
+  [ 0] VirtualThread.unmount
+  [ 1] VirtualThread.yieldContinuation
+  [ 2] VirtualThread.tryYield
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] TickPerCell.waitTick
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] Continuation.enterSpecial
+  [13] Continuation.run
+  [14] VirtualThread.runContinuation
+  [15] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [16] ForkJoinTask$AdaptedRunnableAction.exec
+  [17] ForkJoinTask.doExec
+  [18] ForkJoinPool$WorkQueue.topLevelExec
+  [19] ForkJoinPool.scan
+  [20] ForkJoinPool.runWorker
+  [21] ForkJoinWorkerThread.run
+
+--- 4706821 total (0.06%), 4715 samples
+  [ 0] VirtualThread.unpark
+  [ 1] [unknown_Java]
+
+--- 4700145 total (0.06%), 4724 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] Continuation.enterSpecial
+  [17] Continuation.run
+  [18] VirtualThread.runContinuation
+  [19] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [20] ForkJoinTask$RunnableExecuteAction.exec
+  [21] ForkJoinTask.doExec
+  [22] ForkJoinPool$WorkQueue.topLevelExec
+  [23] ForkJoinPool.scan
+  [24] ForkJoinPool.runWorker
+  [25] ForkJoinWorkerThread.run
+
+--- 4655491 total (0.05%), 4685 samples
+  [ 0] VirtualThread.tryYield
+  [ 1] Thread.yield
+  [ 2] LinkedTransferQueue.awaitMatch
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] Continuation.enterSpecial
+  [19] Continuation.run
+  [20] VirtualThread.runContinuation
+  [21] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [22] ForkJoinTask$AdaptedRunnableAction.exec
+  [23] ForkJoinTask.doExec
+  [24] ForkJoinPool$WorkQueue.topLevelExec
+  [25] ForkJoinPool.scan
+  [26] ForkJoinPool.runWorker
+  [27] ForkJoinWorkerThread.run
+
+--- 4613675 total (0.05%), 4640 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] Continuation.enterSpecial
+  [17] Continuation.run
+  [18] VirtualThread.runContinuation
+  [19] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [20] ForkJoinTask$AdaptedRunnableAction.exec
+  [21] ForkJoinTask.doExec
+  [22] ForkJoinPool$WorkQueue.topLevelExec
+  [23] ForkJoinPool.scan
+  [24] ForkJoinPool.runWorker
+  [25] ForkJoinWorkerThread.run
+
+--- 4590883 total (0.05%), 4604 samples
+  [ 0] Cell$$Lambda$58.0x0000000801035ac0.accept
+  [ 1] ArrayList.forEach
+  [ 2] Cell.notifyLiveness
+  [ 3] Cell.run
+  [ 4] Continuation.enterSpecial
+  [ 5] Continuation.run
+  [ 6] VirtualThread.runContinuation
+  [ 7] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 8] ForkJoinTask$RunnableExecuteAction.exec
+  [ 9] ForkJoinTask.doExec
+  [10] ForkJoinPool$WorkQueue.topLevelExec
+  [11] ForkJoinPool.scan
+  [12] ForkJoinPool.runWorker
+  [13] ForkJoinWorkerThread.run
+
+--- 4559703 total (0.05%), 4591 samples
+  [ 0] VirtualThread.unpark
+  [ 1] System$2.unparkVirtualThread
+  [ 2] VirtualThreads.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [19] VirtualThread.run
+  [20] VirtualThread$VThreadContinuation.lambda$new$0
+  [21] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [22] Continuation.enter0
+  [23] Continuation.enter
+  [24] Continuation.enterSpecial
+  [25] Continuation.run
+  [26] VirtualThread.runContinuation
+  [27] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [28] ForkJoinTask$RunnableExecuteAction.exec
+  [29] ForkJoinTask.doExec
+  [30] ForkJoinPool$WorkQueue.topLevelExec
+  [31] ForkJoinPool.scan
+  [32] ForkJoinPool.runWorker
+  [33] ForkJoinWorkerThread.run
+
+--- 4559255 total (0.05%), 4584 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 4503331 total (0.05%), 4523 samples
+  [ 0] ForkJoinPool$WorkQueue.casSlotToNull
+  [ 1] ForkJoinPool$WorkQueue.tryPoll
+  [ 2] ForkJoinPool$WorkQueue.topLevelExec
+  [ 3] ForkJoinPool.scan
+  [ 4] ForkJoinPool.runWorker
+  [ 5] ForkJoinWorkerThread.run
+
+--- 4477962 total (0.05%), 4501 samples
+  [ 0] ForkJoinPool.submissionQueue
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.lazySubmit
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 4448439 total (0.05%), 4479 samples
+  [ 0] Thread.setContinuation
+  [ 1] System$2.setContinuation
+  [ 2] Continuation.run
+  [ 3] VirtualThread.runContinuation
+  [ 4] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [ 5] ForkJoinTask$RunnableExecuteAction.exec
+  [ 6] ForkJoinTask.doExec
+  [ 7] ForkJoinPool$WorkQueue.topLevelExec
+  [ 8] ForkJoinPool.scan
+  [ 9] ForkJoinPool.runWorker
+  [10] ForkJoinWorkerThread.run
+
+--- 4427523 total (0.05%), 4448 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$65.0x0000000801036bd8.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] Continuation.enterSpecial
+  [16] Continuation.run
+  [17] VirtualThread.runContinuation
+  [18] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [19] ForkJoinTask$RunnableExecuteAction.exec
+  [20] ForkJoinTask.doExec
+  [21] ForkJoinPool$WorkQueue.topLevelExec
+  [22] ForkJoinPool.scan
+  [23] ForkJoinPool.runWorker
+  [24] ForkJoinWorkerThread.run
+
+--- 4422284 total (0.05%), 4419 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [14] VirtualThread.run
+  [15] VirtualThread$VThreadContinuation.lambda$new$0
+  [16] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [17] Continuation.enter0
+  [18] Continuation.enter
+  [19] Continuation.enterSpecial
+  [20] Continuation.run
+  [21] VirtualThread.runContinuation
+  [22] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [23] ForkJoinTask$RunnableExecuteAction.exec
+  [24] ForkJoinTask.doExec
+  [25] ForkJoinPool$WorkQueue.topLevelExec
+  [26] ForkJoinPool.scan
+  [27] ForkJoinPool.runWorker
+  [28] ForkJoinWorkerThread.run
+
+--- 4352425 total (0.05%), 4379 samples
+  [ 0] ForkJoinPool$WorkQueue.push
+  [ 1] ForkJoinPool.poolSubmit
+  [ 2] ForkJoinPool.execute
+  [ 3] VirtualThread.submitRunContinuation
+  [ 4] VirtualThread.submitRunContinuation
+  [ 5] VirtualThread.unpark
+  [ 6] System$2.unparkVirtualThread
+  [ 7] VirtualThreads.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$54.0x0000000801035468.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$53.0x0000000801035258.run
+  [24] VirtualThread.run
+  [25] VirtualThread$VThreadContinuation.lambda$new$0
+  [26] VirtualThread$VThreadContinuation$$Lambda$50.0x000000080103e768.run
+  [27] Continuation.enter0
+  [28] Continuation.enter
+  [29] Continuation.enterSpecial
+  [30] Continuation.run
+  [31] VirtualThread.runContinuation
+  [32] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [33] ForkJoinTask$RunnableExecuteAction.exec
+  [34] ForkJoinTask.doExec
+  [35] ForkJoinPool$WorkQueue.topLevelExec
+  [36] ForkJoinPool.scan
+  [37] ForkJoinPool.runWorker
+  [38] ForkJoinWorkerThread.run
+
+--- 4317937 total (0.05%), 4334 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+  [ 1] Cont thaw
+  [ 2] [not_walkable_Java]
+
+--- 4282085 total (0.05%), 4309 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] Cell.run
+  [ 7] Continuation.enterSpecial
+  [ 8] Continuation.run
+  [ 9] VirtualThread.runContinuation
+  [10] VirtualThread$$Lambda$51.0x000000080103e978.run
+  [11] ForkJoinTask$AdaptedRunnableAction.exec
+  [12] ForkJoinTask.doExec
+  [13] ForkJoinPool$WorkQueue.topLevelExec
+  [14] ForkJoinPool.scan
+  [15] ForkJoinPool.runWorker
+  [16] ForkJoinWorkerThread.run
+
+--- 4277570 total (0.05%), 4295 samples
+  [ 0] ForkJoinTask.doExec
+  [ 1] ForkJoinPool$WorkQueue.topLevelExec
+  [ 2] ForkJoinPool.scan
+  [ 3] ForkJoinPool.runWorker
+  [ 4] ForkJoinWorkerThread.run
+
+       total  percent  samples  top
+  ----------  -------  -------  ---
+  1504942251   17.74%  1506765  LinkedTransferQueue.xfer
+  1321159370   15.57%  1325337  VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+   695771607    8.20%   686957  __memmove_sse2_unaligned_erms
+   589969105    6.95%   590775  Cell.lambda$notifyLiveness$0
+   462232041    5.45%   462334  LinkedTransferQueue.skipDeadNodesNearHead
+   346249979    4.08%   347006  ReduceOps$5ReducingSink.get
+   220591481    2.60%   219821  Continuation.yield0
+   216337251    2.55%   216768  VirtualThread.setCarrierThread
+   212529322    2.51%   213336  VirtualThread.unmount
+   205746606    2.43%   206224  VirtualThread.compareAndSetState
+   168981242    1.99%   169915  ForkJoinPool$WorkQueue.push
+   137926272    1.63%   138302  VirtualThread.unpark
+   127556670    1.50%   127673  Dimensions.forEachRowCol
+    95615081    1.13%    96067  LinkedTransferQueue.awaitMatch
+    95201374    1.12%    94509  Thaw<Config<(oop_kind)0, G1BarrierSet> >::thaw_fast(stackChunkOopDesc*)
+    89924675    1.06%    90029  AbstractPipeline.<init>
+    82778920    0.98%    83203  System$2.setExtentLocalCache
+    80488257    0.95%    80743  VirtualThread.runContinuation
+    79710344    0.94%    79587  LinkedTransferQueue$Node.tryMatch
+    78749056    0.93%    78696  VirtualThread.state
+    73268645    0.86%    73179  Continuation.yield
+    71645621    0.84%    71509  LinkedTransferQueue$Node.isReleasable
+    71398637    0.84%    71532  Unsafe.getAndSetBoolean
+    61491013    0.72%    61442  long* thaw<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, int)
+    58986887    0.70%    59142  Continuation::prepare_thaw(JavaThread*, bool)
+    57174294    0.67%    57409  Unsafe.compareAndSetBoolean
+    54434750    0.64%    54375  G1CollectedHeap::requires_barriers(stackChunkOopDesc*) const
+    53270628    0.63%    53522  ForkJoinPool.poolSubmit
+    52825345    0.62%    52993  VirtualThread.mount
+    49506396    0.58%    49797  VirtualThread.tryYield
+    37512962    0.44%    37550  ReferencePipeline$4.opWrapSink
+    32370823    0.38%    32562  Unsafe.getAndBitwiseOrInt
+    29762867    0.35%    29237  __memcpy_sse2_unaligned
+    29242463    0.34%    29341  LinkedTransferQueue.put
+    28581520    0.34%    27975  clear_page_erms_[k]
+    24583184    0.29%    24606  vtable stub
+    23778813    0.28%    23896  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)1, 286822ul>::oop_access_barrier(oopDesc*, long, oopDesc*)
+    22938025    0.27%    23015  ForkJoinTask$AdaptedRunnableAction.<init>
+    22686877    0.27%    22660  StreamSupport.stream
+    19999585    0.24%    20049  ArrayList.forEach
+    19218001    0.23%    19275  LinkedTransferQueue.take
+    18813346    0.22%    18853  ReferencePipeline$3.opWrapSink
+    18794815    0.22%    18822  System$2.unparkVirtualThread
+    18133710    0.21%    18127  VirtualThread.getAndSetParkPermit
+    17490749    0.21%    17592  VirtualThread.afterYield
+    17034455    0.20%    17071  Sink$ChainedReference.<init>
+    16860843    0.20%    16958  ForkJoinPool$WorkQueue.nextLocalTask
+    15899040    0.19%    15996  int freeze<Config<(oop_kind)0, G1BarrierSet> >(JavaThread*, long*)
+    14923713    0.18%    14940  ChannelsGrid$$Lambda$80.0x0000000801037ca8.<init>
+    14586310    0.17%    14601  ForkJoinTask$RunnableExecuteAction.exec
+    14381433    0.17%    14456  FreezeBase::freeze_fast_copy(stackChunkOopDesc*, int)
+    14173641    0.17%    14181  LockSupport.unpark
+    13972183    0.16%    14048  G1BarrierSet::write_ref_field_post_slow(unsigned char volatile*)
+    13643341    0.16%    13702  ForkJoinTask.doExec
+    13556941    0.16%    13613  VirtualThread.submitRunContinuation
+    13442740    0.16%    13506  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+    13116227    0.15%    13117  StreamOpFlag.fromCharacteristics
+    12942460    0.15%    13008  ForkJoinPool.submissionQueue
+    12708012    0.15%    12684  Cont thaw
+    11172294    0.13%    11211  Sink$ChainedReference.begin
+    11079689    0.13%    11143  ForkJoinPool$WorkQueue.getAndClearSlot
+    10874914    0.13%    10678  update_load_avg_[k]
+    10082597    0.12%    10132  Continuation.run
+    10030870    0.12%    10060  LinkedTransferQueue$Node.<init>
+     9543440    0.11%     9373  __update_load_avg_cfs_rq_[k]
+     8604172    0.10%     8464  psi_group_change_[k]
+     8473575    0.10%     8496  ArrayList.spliterator
+     8462965    0.10%     8309  update_curr_[k]
+     8358907    0.10%     8409  Thread.setContinuation
+     8336462    0.10%     8381  VirtualThread.park
+     8249427    0.10%     8107  __update_load_avg_se_[k]
+     8098022    0.10%     8106  VirtualThread.setParkPermit
+     7388697    0.09%     7425  ForkJoinPool$WorkQueue.casSlotToNull
+     6905612    0.08%     6947  ForkJoinPool.scan
+     6194736    0.07%     6195  ReferencePipeline.<init>
+     6118260    0.07%     6067  get_mem_cgroup_from_mm_[k]
+     6007205    0.07%     6018  Cell.calculateNextState
+     5660086    0.07%     5571  update_cfs_group_[k]
+     5621556    0.07%     5647  oopDesc::address_field(int) const
+     5431280    0.06%     5457  VirtualThread.yieldContinuation
+     5292327    0.06%     5312  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+     5101125    0.06%     5127  SafepointMechanism::update_poll_values(JavaThread*)
+     5023503    0.06%     5041  Cell.notifyLiveness
+     4937424    0.06%     4967  VirtualThread.setState
+     4619916    0.05%     4482  GameOfLifeBenchmark_benchmark_jmhTest.benchmark_thrpt_jmhStub
+     4610778    0.05%     4624  Cell$$Lambda$58.0x0000000801035ac0.accept
+     4588178    0.05%     4482  update_blocked_averages_[k]
+     4256929    0.05%     4285  ForkJoinTask$AdaptedRunnableAction.exec
+     4037166    0.05%     4051  BlockingTransfer.put
+     4008669    0.05%     4026  ForkJoinPool.execute
+     3834137    0.05%     3846  VarHandleReferences$FieldInstanceReadWrite.setRelease
+     3729135    0.04%     3743  Channel.put
+     3683475    0.04%     3686  VarHandleReferences$FieldInstanceReadWrite.set
+     3499226    0.04%     3518  Continuation.enterSpecial
+     3128654    0.04%     3118  __memset_avx2_unaligned_erms
+     3083046    0.04%     3088  Cell.run
+     2973184    0.04%     2981  ReferencePipeline.map
+     2885488    0.03%     2896  DirectMethodHandle$Holder.newInvokeSpecial
+     2847889    0.03%     2853  ThawBase::recurse_thaw_compiled_frame(frame const&, frame&, int, bool)
+     2686419    0.03%     2703  ForkJoinPool$WorkQueue.topLevelExec
+     2656541    0.03%     2655  ReferencePipeline$Head.<init>
+     2590868    0.03%     2559  vframeStream::vframeStream(JavaThread*, bool, bool, bool)
+     2571466    0.03%     2534  check_preemption_disabled_[k]
+     2550610    0.03%     2517  reweight_entity_[k]
+     2508423    0.03%     2438  rb_next_[k]
+     2507783    0.03%     2510  AbstractPipeline.wrapSink
+     2478072    0.03%     2436  __calc_delta_[k]
+     2436077    0.03%     2387  update_sd_lb_stats.constprop.0_[k]
+     2308451    0.03%     2271  InstanceKlass::find_method_index(Array<Method*> const*, Symbol const*, Symbol const*, Klass::OverpassLookupMode, Klass::StaticLookupMode, Klass::PrivateLookupMode) [clone .constprop.0]
+     2298668    0.03%     2258  task_tick_fair_[k]
+     2213155    0.03%     2229  Thread.getContinuation
+     2125129    0.03%     2077  rcu_sched_clock_irq_[k]
+     2121181    0.03%     2087  __schedule_[k]
+     2080854    0.02%     2086  ChannelsGrid$$Lambda$55.0x0000000801035680.accept
+     1962961    0.02%     1921  timerqueue_add_[k]
+     1940162    0.02%     1951  ForkJoinPool$WorkQueue.tryPoll
+     1936915    0.02%     1894  update_min_vruntime_[k]
+     1885307    0.02%     1899  FreezeBase::freeze_fast_existing_chunk()
+     1865362    0.02%     1828  native_read_msr_[k]
+     1850992    0.02%     1858  BlockingTransfer.take
+     1773417    0.02%     1772  PipelineHelper.<init>
+     1752424    0.02%     1741  Unsafe_Park
+     1743125    0.02%     1708  iterate_groups_[k]
+     1727267    0.02%     1736  ReferencePipeline.mapToInt
+     1718130    0.02%     1692  update_rq_clock_[k]
+     1701092    0.02%     1694  G1CardSet::occupied() const
+     1666728    0.02%     1673  void OopOopIterateDispatch<G1ScanCardClosure>::Table::oop_oop_iterate<InstanceKlass, narrowOop>(G1ScanCardClosure*, oopDesc*, Klass*)
+     1664701    0.02%     1637  update_irq_load_avg_[k]
+     1644213    0.02%     1659  ForkJoinPool.signalWork
+     1611000    0.02%     1571  __hrtimer_run_queues_[k]
+     1527480    0.02%     1517  asm_exc_page_fault_[k]
+     1527259    0.02%     1508  __rcu_read_lock_[k]
+     1513485    0.02%     1520  Thread.isInterrupted
+     1509252    0.02%     1484  _raw_spin_lock_[k]
+     1487830    0.02%     1488  ArrayList$ArrayListSpliterator.<init>
+     1473861    0.02%     1483  LockSupport.setCurrentBlocker
+     1463456    0.02%     1428  _raw_spin_lock_irqsave_[k]
+     1414259    0.02%     1420  Invokers$Holder.linkToTargetMethod
+     1376243    0.02%     1384  oopDesc::address_field_put(int, unsigned char*)
+     1354173    0.02%     1363  ContinuationEntry::flush_stack_processing(JavaThread*) const
+     1347438    0.02%     1354  FreezeBase::recurse_freeze_compiled_frame(frame&, frame&, int, bool)
+     1306770    0.02%     1276  __cgroup_account_cputime_field_[k]
+     1294839    0.02%     1297  ArrayList.elementAt
+     1246260    0.01%     1227  select_task_rq_fair_[k]
+     1214715    0.01%     1189  scheduler_tick_[k]
+     1214371    0.01%     1184  preempt_count_sub_[k]
+     1186244    0.01%     1193  Continuation.mount
+     1180371    0.01%     1161  cpuacct_charge_[k]
+     1159178    0.01%     1163  ThawBase::thaw_slow(stackChunkOopDesc*, bool)
+     1155907    0.01%     1150  enqueue_entity_[k]
+     1146318    0.01%     1144  try_charge_memcg_[k]
+     1140287    0.01%     1147  ForkJoinPool$WorkQueue.getAndSetAccess
+     1130056    0.01%     1135  LinkedTransferQueue$Node.block
+     1110744    0.01%     1118  ForkJoinPool.runWorker
+     1090563    0.01%     1096  MemAllocator::allocate() const
+     1087446    0.01%     1063  hrtimer_interrupt_[k]
+     1070241    0.01%     1048  newidle_balance_[k]
+     1053335    0.01%     1043  LinkResolver::resolve_continuation_enter(CallInfo&, JavaThread*)
+     1047490    0.01%     1026  update_process_times_[k]
+     1020612    0.01%      998  asm_sysvec_apic_timer_interrupt_[k]
+     1008561    0.01%      996  preempt_count_add_[k]
+     1002936    0.01%      989  native_sched_clock_[k]
+      996619    0.01%     1000  ChannelsGrid.getChannel
+      990755    0.01%      973  __accumulate_pelt_segments_[k]
+      990044    0.01%      970  load_balance_[k]
+      987282    0.01%      990  void G1ScanCardClosure::do_oop_work<narrowOop>(narrowOop*)
+      984374    0.01%      974  syscall_exit_to_user_mode_[k]
+      977401    0.01%      970  memcpy@plt
+      975429    0.01%      961  psi_task_change_[k]
+      969846    0.01%      974  ForkJoinTask.markPoolSubmission
+      968724    0.01%      963  __entry_text_start_[k]
+      951907    0.01%      939  G1Allocator::unsafe_max_tlab_alloc()
+      950759    0.01%      932  account_user_time_[k]
+      943605    0.01%      947  pthread_mutex_trylock@@GLIBC_2.34
+      927063    0.01%      900  futex_wake_[k]
+      924499    0.01%      928  ChannelsGrid.forEachChannel
+      923541    0.01%      908  get_page_from_freelist_[k]
+      898031    0.01%      900  __tls_get_addr
+      891950    0.01%      886  enqueue_task_fair_[k]
+      887869    0.01%      893  LinkedTransferQueue$Node.isMatched
+      880990    0.01%      880  ForkJoinPool.unmanagedBlock
+      872552    0.01%      855  read_tsc_[k]
+      872113    0.01%      856  cpuacct_account_field_[k]
+      868390    0.01%      848  timekeeping_advance_[k]
+      867441    0.01%      853  hrtimer_active_[k]
+      864054    0.01%      868  G1ParScanThreadState::trim_queue_to_threshold(unsigned int)
+      848359    0.01%      836  futex_q_lock_[k]
+      824600    0.01%      813  dequeue_task_fair_[k]
+      818134    0.01%      803  error_entry_[k]
+      804856    0.01%      809  ForkJoinTask.adapt
+      801833    0.01%      805  ThawBase::finalize_thaw(frame&, int)
+      801431    0.01%      789  dequeue_entity_[k]
+      795352    0.01%      795  Parker::park(bool, long)
+      792778    0.01%      788  G1Analytics::predict_scan_card_num(unsigned long, bool) const
+      791399    0.01%      779  alloc_pages_vma_[k]
+      788879    0.01%      779  G1Policy::preventive_collection_required(unsigned int)
+      772521    0.01%      776  Thread.clearInterrupt
+      769939    0.01%      755  futex_wait_[k]
+      763103    0.01%      767  ReferencePipeline$3.<init>
+      762906    0.01%      746  psi_task_switch_[k]

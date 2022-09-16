@@ -1,0 +1,6046 @@
+--- Execution profile ---
+Total samples       : 50011
+unknown_Java        : 116 (0.23%)
+not_walkable_Java   : 54 (0.11%)
+
+--- 47338429570 ns (9.29%), 4731 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] TickPerCell.lambda$tick$0
+  [19] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [20] ChannelsGrid.lambda$forEachChannel$0
+  [21] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [22] Dimensions.forEachRowCol
+  [23] ChannelsGrid.forEachChannel
+  [24] TickPerCell.tick
+  [25] GameOfLife.calculateFrame
+  [26] GameOfLife.lambda$calculateFrameBlocking$4
+  [27] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+  [31] [Thread-876 tid=30169]
+
+--- 5759873810 ns (1.13%), 576 samples
+  [ 0] ___pthread_cond_signal
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] AbstractQueuedSynchronizer.signalNext
+  [ 4] AbstractQueuedSynchronizer.release
+  [ 5] ReentrantLock.unlock
+  [ 6] LinkedBlockingQueue.signalNotEmpty
+  [ 7] LinkedBlockingQueue.put
+  [ 8] BlockingQueue.put
+  [ 9] Channel.put
+  [10] TickPerCell.lambda$tick$0
+  [11] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [12] ChannelsGrid.lambda$forEachChannel$0
+  [13] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] TickPerCell.tick
+  [17] GameOfLife.calculateFrame
+  [18] GameOfLife.lambda$calculateFrameBlocking$4
+  [19] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+  [23] [Thread-876 tid=30169]
+
+--- 3979888548 ns (0.78%), 398 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] AbstractQueuedSynchronizer.signalNext
+  [ 5] AbstractQueuedSynchronizer.release
+  [ 6] ReentrantLock.unlock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-876 tid=30169]
+
+--- 2081030490 ns (0.41%), 208 samples
+  [ 0] futex_wake_[k]
+  [ 1] do_futex_[k]
+  [ 2] __x64_sys_futex_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] ___pthread_cond_signal
+  [ 6] Unsafe.unpark
+  [ 7] LockSupport.unpark
+  [ 8] AbstractQueuedSynchronizer.signalNext
+  [ 9] AbstractQueuedSynchronizer.release
+  [10] ReentrantLock.unlock
+  [11] LinkedBlockingQueue.signalNotEmpty
+  [12] LinkedBlockingQueue.put
+  [13] BlockingQueue.put
+  [14] Channel.put
+  [15] TickPerCell.lambda$tick$0
+  [16] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [17] ChannelsGrid.lambda$forEachChannel$0
+  [18] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [19] Dimensions.forEachRowCol
+  [20] ChannelsGrid.forEachChannel
+  [21] TickPerCell.tick
+  [22] GameOfLife.calculateFrame
+  [23] GameOfLife.lambda$calculateFrameBlocking$4
+  [24] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+  [28] [Thread-876 tid=30169]
+
+--- 1710035015 ns (0.34%), 171 samples
+  [ 0] __GI___pthread_mutex_lock
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] AbstractQueuedSynchronizer.signalNext
+  [ 5] AbstractQueuedSynchronizer.release
+  [ 6] ReentrantLock.unlock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-876 tid=30169]
+
+--- 1660011118 ns (0.33%), 166 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+  [19] [Thread-876 tid=30169]
+
+--- 1520522682 ns (0.30%), 152 samples
+  [ 0] syscall_enter_from_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] ___pthread_cond_signal
+  [ 4] Unsafe.unpark
+  [ 5] LockSupport.unpark
+  [ 6] AbstractQueuedSynchronizer.signalNext
+  [ 7] AbstractQueuedSynchronizer.release
+  [ 8] ReentrantLock.unlock
+  [ 9] LinkedBlockingQueue.signalNotEmpty
+  [10] LinkedBlockingQueue.put
+  [11] BlockingQueue.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+  [26] [Thread-876 tid=30169]
+
+--- 1270334809 ns (0.25%), 127 samples
+  [ 0] futex_wake_mark_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] AbstractQueuedSynchronizer.signalNext
+  [10] AbstractQueuedSynchronizer.release
+  [11] ReentrantLock.unlock
+  [12] LinkedBlockingQueue.signalNotEmpty
+  [13] LinkedBlockingQueue.put
+  [14] BlockingQueue.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+  [29] [Thread-876 tid=30169]
+
+--- 1190233744 ns (0.23%), 119 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+  [ 9] [Thread-876 tid=30169]
+
+--- 1069708783 ns (0.21%), 107 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$108.0x0000000801084068.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$628.0x00000008010842a0.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+  [17] [Thread-876 tid=30169]
+
+--- 680004931 ns (0.13%), 68 samples
+  [ 0] AbstractQueuedSynchronizer.enqueue
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 2] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 3] LinkedBlockingQueue.signalNotEmpty
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-876 tid=30169]
+
+--- 609945315 ns (0.12%), 61 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-876 tid=30169]
+
+--- 560012066 ns (0.11%), 56 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] GameOfLife.calculateFrame
+  [ 3] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 4] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+  [ 8] [Thread-876 tid=30169]
+
+--- 479970611 ns (0.09%), 48 samples
+  [ 0] AtomicInteger.getAndDecrement
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$108.0x0000000801084068.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$628.0x00000008010842a0.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+  [15] [Thread-876 tid=30169]
+
+--- 479869870 ns (0.09%), 48 samples
+  [ 0] AbstractQueuedSynchronizer.signalNext
+  [ 1] AbstractQueuedSynchronizer.release
+  [ 2] ReentrantLock.unlock
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$108.0x0000000801084068.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$628.0x00000008010842a0.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+  [17] [Thread-876 tid=30169]
+
+--- 440031020 ns (0.09%), 44 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-876 tid=30169]
+
+--- 380118141 ns (0.07%), 38 samples
+  [ 0] _raw_spin_lock_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] AbstractQueuedSynchronizer.signalNext
+  [10] AbstractQueuedSynchronizer.release
+  [11] ReentrantLock.unlock
+  [12] LinkedBlockingQueue.signalNotEmpty
+  [13] LinkedBlockingQueue.put
+  [14] BlockingQueue.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+  [29] [Thread-876 tid=30169]
+
+--- 290056047 ns (0.06%), 29 samples
+  [ 0] ___pthread_cond_signal
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] AbstractQueuedSynchronizer.signalNext
+  [ 4] AbstractQueuedSynchronizer.release
+  [ 5] ReentrantLock.unlock
+  [ 6] LinkedBlockingQueue.signalNotEmpty
+  [ 7] LinkedBlockingQueue.put
+  [ 8] BlockingQueue.put
+  [ 9] Channel.put
+  [10] TickPerCell.lambda$tick$0
+  [11] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [12] ChannelsGrid.lambda$forEachChannel$0
+  [13] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] TickPerCell.tick
+  [17] GameOfLife.calculateFrame
+  [18] GameOfLife.lambda$calculateFrameBlocking$4
+  [19] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+  [23] [Thread-876 tid=30169]
+
+--- 279995284 ns (0.05%), 28 samples
+  [ 0] Unsafe_Unpark
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] AbstractQueuedSynchronizer.signalNext
+  [ 4] AbstractQueuedSynchronizer.release
+  [ 5] ReentrantLock.unlock
+  [ 6] LinkedBlockingQueue.signalNotEmpty
+  [ 7] LinkedBlockingQueue.put
+  [ 8] BlockingQueue.put
+  [ 9] Channel.put
+  [10] TickPerCell.lambda$tick$0
+  [11] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [12] ChannelsGrid.lambda$forEachChannel$0
+  [13] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] TickPerCell.tick
+  [17] GameOfLife.calculateFrame
+  [18] GameOfLife.lambda$calculateFrameBlocking$4
+  [19] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+  [23] [Thread-876 tid=30169]
+
+--- 279981142 ns (0.05%), 28 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-876 tid=30169]
+
+--- 259896099 ns (0.05%), 26 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] GameOfLife$$Lambda$108.0x0000000801084068.test
+  [ 8] ChannelsGrid.lambda$forEachChannel$1
+  [ 9] ChannelsGrid$$Lambda$628.0x00000008010842a0.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-876 tid=30169]
+
+--- 250001442 ns (0.05%), 25 samples
+  [ 0] wake_up_q_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] AbstractQueuedSynchronizer.signalNext
+  [10] AbstractQueuedSynchronizer.release
+  [11] ReentrantLock.unlock
+  [12] LinkedBlockingQueue.signalNotEmpty
+  [13] LinkedBlockingQueue.put
+  [14] BlockingQueue.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+  [29] [Thread-876 tid=30169]
+
+--- 240024942 ns (0.05%), 24 samples
+  [ 0] ThreadsListHandle::ThreadsListHandle(Thread*)
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] AbstractQueuedSynchronizer.signalNext
+  [ 5] AbstractQueuedSynchronizer.release
+  [ 6] ReentrantLock.unlock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-876 tid=30169]
+
+--- 235271141 ns (0.05%), 23 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-101 tid=29387]
+
+--- 230089211 ns (0.05%), 23 samples
+  [ 0] futex_hash_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] AbstractQueuedSynchronizer.signalNext
+  [10] AbstractQueuedSynchronizer.release
+  [11] ReentrantLock.unlock
+  [12] LinkedBlockingQueue.signalNotEmpty
+  [13] LinkedBlockingQueue.put
+  [14] BlockingQueue.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+  [29] [Thread-876 tid=30169]
+
+--- 230077716 ns (0.05%), 23 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] GameOfLife$$Lambda$108.0x0000000801084068.test
+  [ 4] ChannelsGrid.lambda$forEachChannel$1
+  [ 5] ChannelsGrid$$Lambda$628.0x00000008010842a0.accept
+  [ 6] Dimensions.forEachRowCol
+  [ 7] ChannelsGrid.forEachChannel
+  [ 8] GameOfLife.calculateFrame
+  [ 9] GameOfLife.lambda$calculateFrameBlocking$4
+  [10] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+  [14] [Thread-876 tid=30169]
+
+--- 224790388 ns (0.04%), 22 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-82 tid=29368]
+
+--- 224488714 ns (0.04%), 22 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-324 tid=29617]
+
+--- 219935768 ns (0.04%), 22 samples
+  [ 0] Unsafe.getAndBitwiseAndInt
+  [ 1] AbstractQueuedSynchronizer$Node.getAndUnsetStatus
+  [ 2] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 3] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+  [21] [Thread-876 tid=30169]
+
+--- 214308617 ns (0.04%), 21 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-379 tid=29672]
+
+--- 204657832 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-356 tid=29649]
+
+--- 204642044 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-84 tid=29370]
+
+--- 204502822 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-732 tid=30025]
+
+--- 204487112 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-308 tid=29601]
+
+--- 204447728 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-511 tid=29804]
+
+--- 204389748 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-78 tid=29364]
+
+--- 204297438 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-90 tid=29376]
+
+--- 204271395 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-459 tid=29752]
+
+--- 204250620 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-370 tid=29663]
+
+--- 203853343 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-810 tid=30103]
+
+--- 203304544 ns (0.04%), 20 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-841 tid=30134]
+
+--- 200065871 ns (0.04%), 20 samples
+  [ 0] wake_q_add_safe_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] AbstractQueuedSynchronizer.signalNext
+  [10] AbstractQueuedSynchronizer.release
+  [11] ReentrantLock.unlock
+  [12] LinkedBlockingQueue.signalNotEmpty
+  [13] LinkedBlockingQueue.put
+  [14] BlockingQueue.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+  [29] [Thread-876 tid=30169]
+
+--- 194509330 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-237 tid=29523]
+
+--- 194472984 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-145 tid=29431]
+
+--- 194412867 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-108 tid=29394]
+
+--- 194326070 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-668 tid=29961]
+
+--- 194312181 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-98 tid=29384]
+
+--- 194282704 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-71 tid=29357]
+
+--- 194222316 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-700 tid=29993]
+
+--- 194220993 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-77 tid=29363]
+
+--- 194212899 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-396 tid=29689]
+
+--- 194201240 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-499 tid=29792]
+
+--- 194197768 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-148 tid=29434]
+
+--- 194195282 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-325 tid=29618]
+
+--- 194186037 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-159 tid=29445]
+
+--- 194168938 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-527 tid=29820]
+
+--- 194150195 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-587 tid=29880]
+
+--- 194148913 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-73 tid=29359]
+
+--- 194141559 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-689 tid=29982]
+
+--- 194140821 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-80 tid=29366]
+
+--- 194128906 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-825 tid=30118]
+
+--- 194108671 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-51 tid=29337]
+
+--- 194074898 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-245 tid=29531]
+
+--- 193984795 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-92 tid=29378]
+
+--- 193970157 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-647 tid=29940]
+
+--- 193884020 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-322 tid=29615]
+
+--- 193601128 ns (0.04%), 19 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-402 tid=29695]
+
+--- 184505860 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-252 tid=29538]
+
+--- 184393023 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-106 tid=29392]
+
+--- 184318654 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-97 tid=29383]
+
+--- 184297602 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-543 tid=29836]
+
+--- 184296235 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-115 tid=29401]
+
+--- 184189831 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-450 tid=29743]
+
+--- 184167069 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-217 tid=29503]
+
+--- 184127191 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-256 tid=29542]
+
+--- 184068206 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-726 tid=30019]
+
+--- 184034956 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-289 tid=29575]
+
+--- 184029529 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-604 tid=29897]
+
+--- 184027949 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-76 tid=29362]
+
+--- 184024034 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-590 tid=29883]
+
+--- 183983560 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-359 tid=29652]
+
+--- 183940701 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-469 tid=29762]
+
+--- 183936153 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-86 tid=29372]
+
+--- 183928920 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-530 tid=29823]
+
+--- 183928524 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-680 tid=29973]
+
+--- 183896479 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-56 tid=29342]
+
+--- 183882542 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-487 tid=29780]
+
+--- 183863360 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-509 tid=29802]
+
+--- 183853038 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-224 tid=29510]
+
+--- 183834447 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-777 tid=30070]
+
+--- 183806080 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-778 tid=30071]
+
+--- 183758287 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-803 tid=30096]
+
+--- 183754576 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-437 tid=29730]
+
+--- 183754450 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-764 tid=30057]
+
+--- 183570525 ns (0.04%), 18 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-460 tid=29753]
+
+--- 180020933 ns (0.04%), 18 samples
+  [ 0] __futex_unqueue_[k]
+  [ 1] futex_wake_mark_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] ___pthread_cond_signal
+  [ 8] Unsafe.unpark
+  [ 9] LockSupport.unpark
+  [10] AbstractQueuedSynchronizer.signalNext
+  [11] AbstractQueuedSynchronizer.release
+  [12] ReentrantLock.unlock
+  [13] LinkedBlockingQueue.signalNotEmpty
+  [14] LinkedBlockingQueue.put
+  [15] BlockingQueue.put
+  [16] Channel.put
+  [17] TickPerCell.lambda$tick$0
+  [18] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [19] ChannelsGrid.lambda$forEachChannel$0
+  [20] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [21] Dimensions.forEachRowCol
+  [22] ChannelsGrid.forEachChannel
+  [23] TickPerCell.tick
+  [24] GameOfLife.calculateFrame
+  [25] GameOfLife.lambda$calculateFrameBlocking$4
+  [26] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+  [30] [Thread-876 tid=30169]
+
+--- 179989629 ns (0.04%), 18 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-876 tid=30169]
+
+--- 174081894 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-99 tid=29385]
+
+--- 173993550 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-63 tid=29349]
+
+--- 173976925 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-136 tid=29422]
+
+--- 173932020 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-61 tid=29347]
+
+--- 173909658 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-137 tid=29423]
+
+--- 173884346 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-169 tid=29455]
+
+--- 173876719 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-561 tid=29854]
+
+--- 173874913 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-549 tid=29842]
+
+--- 173872755 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-500 tid=29793]
+
+--- 173851846 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-387 tid=29680]
+
+--- 173835962 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-355 tid=29648]
+
+--- 173832842 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-162 tid=29448]
+
+--- 173823501 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-199 tid=29485]
+
+--- 173804991 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-95 tid=29381]
+
+--- 173800008 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-621 tid=29914]
+
+--- 173797148 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-571 tid=29864]
+
+--- 173794753 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-498 tid=29791]
+
+--- 173788633 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-425 tid=29718]
+
+--- 173787103 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-502 tid=29795]
+
+--- 173784549 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-747 tid=30040]
+
+--- 173779242 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-517 tid=29810]
+
+--- 173766526 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-354 tid=29647]
+
+--- 173750432 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-631 tid=29924]
+
+--- 173743660 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-585 tid=29878]
+
+--- 173733581 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-706 tid=29999]
+
+--- 173720057 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-138 tid=29424]
+
+--- 173675476 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-332 tid=29625]
+
+--- 173672495 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-212 tid=29498]
+
+--- 173660416 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-209 tid=29495]
+
+--- 173629106 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-761 tid=30054]
+
+--- 173620457 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-711 tid=30004]
+
+--- 173603247 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-566 tid=29859]
+
+--- 173564352 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-457 tid=29750]
+
+--- 173539660 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-506 tid=29799]
+
+--- 173528175 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-516 tid=29809]
+
+--- 173484729 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-785 tid=30078]
+
+--- 173442916 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-451 tid=29744]
+
+--- 173414470 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-602 tid=29895]
+
+--- 173404024 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-736 tid=30029]
+
+--- 173298302 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-508 tid=29801]
+
+--- 173257155 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-794 tid=30087]
+
+--- 173084948 ns (0.03%), 17 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-847 tid=30140]
+
+--- 170034515 ns (0.03%), 17 samples
+  [ 0] SafeThreadsListPtr::release_stable_list()
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] AbstractQueuedSynchronizer.signalNext
+  [ 5] AbstractQueuedSynchronizer.release
+  [ 6] ReentrantLock.unlock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-876 tid=30169]
+
+--- 169999973 ns (0.03%), 17 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+  [21] [Thread-876 tid=30169]
+
+--- 163932075 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-125 tid=29411]
+
+--- 163810125 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-166 tid=29452]
+
+--- 163727702 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-127 tid=29413]
+
+--- 163710823 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-349 tid=29642]
+
+--- 163695228 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-64 tid=29350]
+
+--- 163692337 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-650 tid=29943]
+
+--- 163676970 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-204 tid=29490]
+
+--- 163657385 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-241 tid=29527]
+
+--- 163641928 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-520 tid=29813]
+
+--- 163641756 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-257 tid=29543]
+
+--- 163628933 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-52 tid=29338]
+
+--- 163616152 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-186 tid=29472]
+
+--- 163611294 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-60 tid=29346]
+
+--- 163608475 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-503 tid=29796]
+
+--- 163604438 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-410 tid=29703]
+
+--- 163593938 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-113 tid=29399]
+
+--- 163593298 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-698 tid=29991]
+
+--- 163553839 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-745 tid=30038]
+
+--- 163552502 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-364 tid=29657]
+
+--- 163552369 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-815 tid=30108]
+
+--- 163532116 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-434 tid=29727]
+
+--- 163524145 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-243 tid=29529]
+
+--- 163516449 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-233 tid=29519]
+
+--- 163513275 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-116 tid=29402]
+
+--- 163503268 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-393 tid=29686]
+
+--- 163497738 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-407 tid=29700]
+
+--- 163492311 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-357 tid=29650]
+
+--- 163487192 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-442 tid=29735]
+
+--- 163479284 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-563 tid=29856]
+
+--- 163478991 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-269 tid=29555]
+
+--- 163474653 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-87 tid=29373]
+
+--- 163455032 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-275 tid=29561]
+
+--- 163454413 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-423 tid=29716]
+
+--- 163451563 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-278 tid=29564]
+
+--- 163450534 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-539 tid=29832]
+
+--- 163434581 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-272 tid=29558]
+
+--- 163421239 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-664 tid=29957]
+
+--- 163405022 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-687 tid=29980]
+
+--- 163404335 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-292 tid=29578]
+
+--- 163396741 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-754 tid=30047]
+
+--- 163374887 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-741 tid=30034]
+
+--- 163373765 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-346 tid=29639]
+
+--- 163361821 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-574 tid=29867]
+
+--- 163357480 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-641 tid=29934]
+
+--- 163320485 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-806 tid=30099]
+
+--- 163293508 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-644 tid=29937]
+
+--- 163285514 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-646 tid=29939]
+
+--- 163271668 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-542 tid=29835]
+
+--- 163038217 ns (0.03%), 16 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-824 tid=30117]
+
+--- 153612258 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-177 tid=29463]
+
+--- 153595314 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-135 tid=29421]
+
+--- 153564144 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-119 tid=29405]
+
+--- 153545962 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-120 tid=29406]
+
+--- 153544954 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-149 tid=29435]
+
+--- 153517202 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-250 tid=29536]
+
+--- 153482925 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-573 tid=29866]
+
+--- 153482827 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-103 tid=29389]
+
+--- 153479765 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-126 tid=29412]
+
+--- 153474282 ns (0.03%), 15 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$53.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-68 tid=29354]
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+154778513316   30.37%    15242  _raw_spin_unlock_irqrestore_[k]
+ 54019160191   10.60%     5282  __futex_abstimed_wait_common
+ 22210851798    4.36%     2186  ___pthread_cond_signal
+ 20208538802    3.97%     1976  __lll_lock_wake
+ 18260487544    3.58%     1789  syscall_enter_from_user_mode_[k]
+ 13239111583    2.60%     1305  ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+ 12200472369    2.39%     1193  __get_user_8_[k]
+ 10927137170    2.14%     1069  AbstractQueuedSynchronizer.signalNext
+  9811613397    1.93%      964  futex_wake_[k]
+  9784838981    1.92%      959  AbstractQueuedSynchronizer.compareAndSetState
+  8269460612    1.62%      809  Unsafe_Park
+  7680086470    1.51%      751  Parker::park(bool, long)
+  6062160287    1.19%      593  ReentrantLock.lockInterruptibly
+  6020801313    1.18%      589  AbstractOwnableSynchronizer.setExclusiveOwnerThread
+  5366199812    1.05%      525  Cell.lambda$notifyLiveness$0
+  5270564313    1.03%      518  Thread.interrupted
+  5236649950    1.03%      514  LinkedBlockingQueue.put
+  4236689499    0.83%      416  Thread.getAndClearInterrupt
+  4123679327    0.81%      404  AbstractQueuedSynchronizer.release
+  4057732672    0.80%      397  Channel.take
+  3916532286    0.77%      383  finish_task_switch.isra.0_[k]
+  3897294940    0.76%      381  AbstractQueuedSynchronizer.acquire
+  3875624732    0.76%      379  __schedule_[k]
+  3856428593    0.76%      377  __condvar_dec_grefs
+  3609605732    0.71%      353  Unsafe.park
+  3528072462    0.69%      345  ___pthread_cond_wait
+  3508370912    0.69%      343  exit_to_user_mode_prepare_[k]
+  3445488436    0.68%      341  __GI___pthread_mutex_lock
+  3313730949    0.65%      324  ReduceOps$5ReducingSink.get
+  3230828410    0.63%      316  __GI___pthread_disable_asynccancel
+  3038435259    0.60%      298  LinkedBlockingQueue.take
+  2690499223    0.53%      263  futex_wait_[k]
+  2684347607    0.53%      263  futex_hash_[k]
+  2658643207    0.52%      260  AbstractQueuedSynchronizer$ConditionObject.enableWait
+  2619449917    0.51%      260  AbstractQueuedSynchronizer$ConditionObject.doSignal
+  2584508902    0.51%      253  __x64_sys_futex_[k]
+  2536190764    0.50%      248  __rseq_handle_notify_resume_[k]
+  2425087787    0.48%      240  futex_wake_mark_[k]
+  2393256471    0.47%      234  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+  2353273691    0.46%      231  _raw_spin_lock_[k]
+  2200496565    0.43%      216  Unsafe_Unpark
+  2162669762    0.42%      212  Cell.calculateNextState
+  2127874408    0.42%      208  futex_q_lock_[k]
+  2082175034    0.41%      204  __pthread_mutex_unlock_usercnt
+  1925292119    0.38%      190  AbstractQueuedSynchronizer.enqueue
+  1780240878    0.35%      178  Dimensions.forEachRowCol
+  1705463350    0.33%      167  __tls_get_addr
+  1666934698    0.33%      163  __get_user_nocheck_4_[k]
+  1583564665    0.31%      155  LinkedBlockingQueue.dequeue
+  1565102347    0.31%      153  plist_add_[k]
+  1533750182    0.30%      150  JavaThread::threadObj() const
+  1419294093    0.28%      139  get_futex_key_[k]
+  1327581667    0.26%      130  do_futex_[k]
+  1278246975    0.25%      125  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+  1270130466    0.25%      125  Unsafe.getAndBitwiseAndInt
+  1257405321    0.25%      123  ReentrantLock$Sync.lockInterruptibly
+  1237543293    0.24%      121  futex_wait_queue_[k]
+  1069436027    0.21%      105  SafeThreadsListPtr::release_stable_list()
+  1046327249    0.21%      103  ThreadsListHandle::ThreadsListHandle(Thread*)
+   991834270    0.19%       97  schedule_[k]
+   981961006    0.19%       96  ReferencePipeline$3$1.accept
+   975505223    0.19%       96  wake_up_q_[k]
+   960504967    0.19%       94  preempt_count_add_[k]
+   939653174    0.18%       93  AtomicInteger.getAndDecrement
+   921089498    0.18%       90  __pthread_mutex_cond_lock
+   839014614    0.16%       82  pthread_mutex_trylock@@GLIBC_2.34
+   777757160    0.15%       76  __GI___pthread_getspecific
+   772616211    0.15%       76  __futex_unqueue_[k]
+   766116302    0.15%       75  update_blocked_averages_[k]
+   756738783    0.15%       74  __put_user_nocheck_8_[k]
+   756699949    0.15%       74  mem_cgroup_handle_over_high_[k]
+   744859181    0.15%       73  AbstractQueuedSynchronizer$ConditionObject.signal
+   736139033    0.14%       72  AbstractQueuedSynchronizer$ConditionObject.await
+   716174477    0.14%       70  AbstractQueuedSynchronizer$ConditionObject.canReacquire
+   712003892    0.14%       70  Unsafe.unpark
+   706245582    0.14%       69  java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+   705581291    0.14%       69  AbstractQueuedSynchronizer$ConditionNode.isReleasable
+   622780557    0.12%       61  preempt_count_sub_[k]
+   541980507    0.11%       53  Channel.put
+   526993383    0.10%       52  wake_q_add_safe_[k]
+   496507086    0.10%       49  Parker::unpark()
+   460214803    0.09%       45  blkcg_maybe_throttle_current_[k]
+   448686590    0.09%       44  I2C/C2I adapters
+   398760421    0.08%       39  ReentrantLock$NonfairSync.initialTryLock
+   386566900    0.08%       38  syscall_exit_to_user_mode_prepare_[k]
+   378240790    0.07%       37  do_syscall_64_[k]
+   378220020    0.07%       37  __condvar_confirm_wakeup
+   376259958    0.07%       37  try_to_wake_up_[k]
+   374872079    0.07%       37  AbstractQueuedSynchronizer.casTail
+   367768364    0.07%       36  ArrayList.forEach
+   357977401    0.07%       35  futex_wait_setup_[k]
+   347285551    0.07%       34  Cell.notifyLiveness
+   336748276    0.07%       33  AbstractOwnableSynchronizer.getExclusiveOwnerThread
+   317248531    0.06%       31  ReentrantLock$Sync.tryRelease
+   317144837    0.06%       31  java_lang_Thread::get_thread_status(oopDesc*)
+   317029203    0.06%       31  ThreadLocalStorage::is_initialized()
+   306936089    0.06%       30  JavaThread::is_interrupted(bool)
+   296724498    0.06%       29  _pthread_cleanup_pop@@GLIBC_2.34
+   296276055    0.06%       29  JavaFrameAnchor::make_walkable()
+   286463997    0.06%       28  ArrayList$ArrayListSpliterator.forEachRemaining
+   286298100    0.06%       28  BlockingQueue.take
+   275732895    0.05%       27  do_user_addr_fault_[k]
+   266247259    0.05%       26  __GI___pthread_mutex_unlock
+   264462321    0.05%       26  ThreadsListHandle::~ThreadsListHandle()
+   235114688    0.05%       23  _raw_spin_unlock_[k]
+   234979270    0.05%       23  Sink$ChainedReference.<init>
+   225053465    0.04%       22  AbstractPipeline.<init>
+   215016764    0.04%       21  StreamSupport.stream
+   214915735    0.04%       21  __futex_queue_[k]
+   214640841    0.04%       21  AtomicInteger.getAndIncrement
+   211950862    0.04%       21  __list_del_entry_valid_[k]
+   204820276    0.04%       20  AbstractQueuedSynchronizer$Node.clearStatus
+   204320838    0.04%       20  vtable stub
+   204291632    0.04%       20  Cell.run
+   193838333    0.04%       19  in_lock_functions_[k]
+   183484983    0.04%       18  AbstractQueuedSynchronizer.setState
+   173666501    0.03%       17  futex_unqueue_[k]
+   173645265    0.03%       17  ReferencePipeline$4.opWrapSink
+   163669795    0.03%       16  Sink$ChainedReference.end
+   163289636    0.03%       16  __handle_mm_fault_[k]
+   162926855    0.03%       16  LinkedBlockingQueue.signalNotEmpty
+   153429860    0.03%       15  StreamOpFlag.fromCharacteristics
+   153294825    0.03%       15  __cgroup_throttle_swaprate_[k]
+   153270912    0.03%       15  futex_get_value_locked_[k]
+   153267446    0.03%       15  ReferencePipeline$3.opWrapSink
+   153143434    0.03%       15  ReferencePipeline.<init>
+   153070590    0.03%       15  CodeCache::find_blob(void*)
+   143156111    0.03%       14  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<544868ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 544868ul>::oop_access_barrier(void*)
+   143122119    0.03%       14  __GI___pthread_enable_asynccancel
+   143054411    0.03%       14  AbstractQueuedSynchronizer$Node.setStatusRelaxed
+   132857316    0.03%       13  get_page_from_freelist_[k]
+   132724436    0.03%       13  ReentrantLock.unlock
+   132629270    0.03%       13  AbstractPipeline.wrapAndCopyInto
+   132610914    0.03%       13  ReferencePipeline.map
+   132504995    0.03%       13  syscall_exit_to_user_mode_[k]
+   132048272    0.03%       13  oopDesc::address_field(int) const
+   122679137    0.02%       12  __x86_indirect_thunk_rax_[k]
+   122644542    0.02%       12  pthread_getspecific@plt
+   122369284    0.02%       12  LambdaForm$MH.0x0000000801002800.invoke
+   122300227    0.02%       12  java_lang_Thread::interrupted(oopDesc*)
+   122272625    0.02%       12  LockSupport.unpark
+   122197280    0.02%       12  clear_page_erms_[k]
+   122150273    0.02%       12  ReentrantLock$Sync.isHeldExclusively
+   112546031    0.02%       11  ThreadLocalStorage::thread()
+   112213908    0.02%       11  CodeHeap::find_blob_unsafe(void*) const
+   112161407    0.02%       11  DirectMethodHandle.allocateInstance
+   112124515    0.02%       11  Method::from_compiled_entry_no_trampoline() const
+   111790684    0.02%       11  plist_del_[k]
+   101948719    0.02%       10  MethodHandle.invokeBasic
+   101895580    0.02%       10  count_memcg_events.constprop.0_[k]
+    91979747    0.02%        9  LockSupport.setCurrentBlocker
+    81815617    0.02%        8  __list_add_valid_[k]
+    81772489    0.02%        8  _pthread_cleanup_push@GLIBC_2.2.5
+    81719630    0.02%        8  ChannelsGrid.getChannel
+    81705749    0.02%        8  Sink$ChainedReference.begin
+    81697666    0.02%        8  check_preemption_disabled_[k]
+    81150515    0.02%        8  Interpreter
+    71613992    0.01%        7  Cell$$Lambda$62.0x0000000801036990.apply
+    71524560    0.01%        7  vmacache_find_[k]
+    71429415    0.01%        7  IntPipeline.reduce
+    71246839    0.01%        7  BlockingQueue.put
+    61240052    0.01%        6  AbstractPipeline.evaluate
+    61167319    0.01%        6  ObjAllocator::initialize(HeapWordImpl**) const
+    60981197    0.01%        6  ReentrantLock$Sync.lock
+    60891449    0.01%        6  _raw_spin_lock_irqsave_[k]
+    60530238    0.01%        6  pthread_mutex_lock@plt
+    51329292    0.01%        5  _raw_spin_unlock_irq_[k]
+    51243672    0.01%        5  AbstractQueuedSynchronizer$ConditionNode.block
+    51144580    0.01%        5  __mod_lruvec_page_state_[k]
+    51078147    0.01%        5  Cell$$Lambda$53.0x0000000801035ab0.accept
+    51047046    0.01%        5  prepare_alloc_pages.constprop.0_[k]
+    51017016    0.01%        5  nmethod::is_zombie() const
+    50901082    0.01%        5  java_lang_Thread::thread(oopDesc*)
+    40905453    0.01%        4  __cond_resched_[k]
+    40892400    0.01%        4  LockSupport.park
+    40835089    0.01%        4  __put_user_8_[k]
+    40814211    0.01%        4  handle_mm_fault_[k]
+    40810922    0.01%        4  __lll_lock_wait
+    40778866    0.01%        4  Collection.stream
+    40768596    0.01%        4  AbstractPipeline.wrapSink
+    40756658    0.01%        4  AbstractQueuedSynchronizer$Node.setPrevRelaxed
+    40472930    0.01%        4  AbstractQueuedSynchronizer.getState
+    30690727    0.01%        3  rebalance_domains_[k]
+    30678222    0.01%        3  __alloc_pages_[k]
+    30667337    0.01%        3  debug_smp_processor_id_[k]
+    30656890    0.01%        3  ReentrantLock.lock
+    30651723    0.01%        3  G1CardTable::is_in_young(oopDesc*) const
+    30647486    0.01%        3  IntPipeline.sum
+    30635341    0.01%        3  pthread_mutex_unlock@plt
+    30594711    0.01%        3  AbstractPipeline.copyInto
+    30443619    0.01%        3  load_balance_[k]
+    30432152    0.01%        3  try_charge_memcg_[k]
+    30071319    0.01%        3  G1CardSet::occupied() const
+    20549503    0.00%        2  __tls_get_addr@plt
+    20525783    0.00%        2  set_pte_[k]
+    20499065    0.00%        2  find_vma_[k]
+    20483335    0.00%        2  __softirqentry_text_start_[k]
+    20465947    0.00%        2  kthread_blkcg_[k]
+    20462680    0.00%        2  page_counter_try_charge_[k]
+    20459846    0.00%        2  folio_add_lru_[k]

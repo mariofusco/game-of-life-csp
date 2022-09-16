@@ -1,0 +1,172 @@
+--- Execution profile ---
+Total samples       : 5343
+
+--- 521669292 ns (85.82%), 4937 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] Cell.lambda$notifyLiveness$0
+  [12] Cell$$Lambda$49.0x0000000801035ab0.accept
+  [13] ArrayList.forEach
+  [14] Cell.notifyLiveness
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 53041583 ns (8.73%), 205 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LinkedBlockingQueue.signalNotFull
+  [ 8] LinkedBlockingQueue.take
+  [ 9] BlockingQueue.take
+  [10] Channel.take
+  [11] Cell$$Lambda$54.0x0000000801035ef0.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 32581005 ns (5.36%), 144 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquireInterruptibly
+  [ 5] ReentrantLock$Sync.lockInterruptibly
+  [ 6] ReentrantLock.lockInterruptibly
+  [ 7] LinkedBlockingQueue.take
+  [ 8] BlockingQueue.take
+  [ 9] Channel.take
+  [10] Cell$$Lambda$54.0x0000000801035ef0.apply
+  [11] ReferencePipeline$3$1.accept
+  [12] ArrayList$ArrayListSpliterator.forEachRemaining
+  [13] AbstractPipeline.copyInto
+  [14] AbstractPipeline.wrapAndCopyInto
+  [15] ReduceOps$ReduceOp.evaluateSequential
+  [16] AbstractPipeline.evaluate
+  [17] IntPipeline.reduce
+  [18] IntPipeline.sum
+  [19] Cell.calculateNextState
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 396581 ns (0.07%), 3 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LinkedBlockingQueue.signalNotFull
+  [ 8] LinkedBlockingQueue.take
+  [ 9] BlockingQueue.take
+  [10] Channel.take
+  [11] GameOfLife$$Lambda$278.0x0000000801087cc8.test
+  [12] ChannelsGrid.lambda$forEachChannel$1
+  [13] ChannelsGrid$$Lambda$288.0x000000080108c880.accept
+  [14] Dimensions.forEachRowCol
+  [15] ChannelsGrid.forEachChannel
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 130816 ns (0.02%), 50 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$54.0x0000000801035ef0.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 22517 ns (0.00%), 2 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.put
+  [ 9] BlockingQueue.put
+  [10] Channel.put
+  [11] Cell.calculateNextState
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 604 ns (0.00%), 2 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$278.0x0000000801087cc8.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$288.0x000000080108c880.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+   607842398  100.00%     5343  ReentrantLock$NonfairSync

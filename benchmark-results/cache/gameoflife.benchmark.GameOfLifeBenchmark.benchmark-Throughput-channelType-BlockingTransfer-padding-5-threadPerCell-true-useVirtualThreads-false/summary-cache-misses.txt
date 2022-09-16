@@ -1,0 +1,5220 @@
+--- Execution profile ---
+Total samples       : 5433444
+GC_active           : 2 (0.00%)
+not_walkable_not_Java: 3 (0.00%)
+unknown_Java        : 16677 (0.31%)
+not_walkable_Java   : 511 (0.01%)
+deoptimization      : 731 (0.01%)
+skipped             : 636 (0.01%)
+
+--- 299799792 total (5.52%), 300508 samples
+  [ 0] Cell.lambda$notifyLiveness$0
+  [ 1] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [ 2] ArrayList.forEach
+  [ 3] Cell.notifyLiveness
+  [ 4] Cell.run
+  [ 5] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 174256224 total (3.21%), 173017 samples
+  [ 0] Unsafe_Park
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 148468527 total (2.73%), 146321 samples
+  [ 0] restore_fpregs_from_fpstate_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] TickPerCell.waitTick
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 128433409 total (2.36%), 128216 samples
+  [ 0] Unsafe_Park
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 113191787 total (2.08%), 112484 samples
+  [ 0] Parker::park(bool, long)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 103893569 total (1.91%), 104283 samples
+  [ 0] ReduceOps$5ReducingSink.get
+  [ 1] ReduceOps$5ReducingSink.get
+  [ 2] ReduceOps$ReduceOp.evaluateSequential
+  [ 3] AbstractPipeline.evaluate
+  [ 4] IntPipeline.reduce
+  [ 5] IntPipeline.sum
+  [ 6] Cell.calculateNextState
+  [ 7] Cell.run
+  [ 8] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 96294689 total (1.77%), 95890 samples
+  [ 0] __condvar_dec_grefs
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 82758893 total (1.52%), 82965 samples
+  [ 0] Parker::park(bool, long)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 78374357 total (1.44%), 77763 samples
+  [ 0] restore_fpregs_from_fpstate_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] Cell$$Lambda$61.0x0000000801037448.apply
+  [18] ReferencePipeline$3$1.accept
+  [19] ArrayList$ArrayListSpliterator.forEachRemaining
+  [20] AbstractPipeline.copyInto
+  [21] AbstractPipeline.wrapAndCopyInto
+  [22] ReduceOps$ReduceOp.evaluateSequential
+  [23] AbstractPipeline.evaluate
+  [24] IntPipeline.reduce
+  [25] IntPipeline.sum
+  [26] Cell.calculateNextState
+  [27] Cell.run
+  [28] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 73176514 total (1.35%), 73165 samples
+  [ 0] Unsafe.park
+  [ 1] LockSupport.park
+  [ 2] LinkedTransferQueue$Node.block
+  [ 3] ForkJoinPool.unmanagedBlock
+  [ 4] ForkJoinPool.managedBlock
+  [ 5] LinkedTransferQueue.awaitMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.take
+  [ 8] BlockingTransfer.take
+  [ 9] Channel.take
+  [10] Cell$$Lambda$61.0x0000000801037448.apply
+  [11] ReferencePipeline$3$1.accept
+  [12] ArrayList$ArrayListSpliterator.forEachRemaining
+  [13] AbstractPipeline.copyInto
+  [14] AbstractPipeline.wrapAndCopyInto
+  [15] ReduceOps$ReduceOp.evaluateSequential
+  [16] AbstractPipeline.evaluate
+  [17] IntPipeline.reduce
+  [18] IntPipeline.sum
+  [19] Cell.calculateNextState
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 72527596 total (1.33%), 71632 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 71360234 total (1.31%), 70982 samples
+  [ 0] __get_user_8_[k]
+  [ 1] __rseq_handle_notify_resume_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] TickPerCell.waitTick
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 71275294 total (1.31%), 70839 samples
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] ___pthread_cond_signal
+  [ 8] Unsafe.unpark
+  [ 9] LockSupport.unpark
+  [10] LinkedTransferQueue$Node.tryMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.put
+  [13] BlockingTransfer.put
+  [14] Channel.put
+  [15] TickPerCell.lambda$tick$0
+  [16] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [17] ChannelsGrid.lambda$forEachChannel$0
+  [18] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [19] Dimensions.forEachRowCol
+  [20] ChannelsGrid.forEachChannel
+  [21] TickPerCell.tick
+  [22] GameOfLife.calculateFrame
+  [23] GameOfLife.lambda$calculateFrameBlocking$4
+  [24] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 67553187 total (1.24%), 67796 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 63764169 total (1.17%), 63553 samples
+  [ 0] futex_wake_mark_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 63258013 total (1.16%), 62838 samples
+  [ 0] Unsafe.park
+  [ 1] LockSupport.park
+  [ 2] LinkedTransferQueue$Node.block
+  [ 3] ForkJoinPool.unmanagedBlock
+  [ 4] ForkJoinPool.managedBlock
+  [ 5] LinkedTransferQueue.awaitMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.take
+  [ 8] BlockingTransfer.take
+  [ 9] Channel.take
+  [10] TickPerCell.waitTick
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 50020356 total (0.92%), 49398 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 46540387 total (0.86%), 46718 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __futex_abstimed_wait_common
+  [ 4] Unsafe.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 42447731 total (0.78%), 42445 samples
+  [ 0] psi_task_change_[k]
+  [ 1] enqueue_task_[k]
+  [ 2] ttwu_do_activate_[k]
+  [ 3] try_to_wake_up_[k]
+  [ 4] wake_up_q_[k]
+  [ 5] futex_wake_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] ___pthread_cond_signal
+  [11] Unsafe.unpark
+  [12] LockSupport.unpark
+  [13] LinkedTransferQueue$Node.tryMatch
+  [14] LinkedTransferQueue.xfer
+  [15] LinkedTransferQueue.put
+  [16] BlockingTransfer.put
+  [17] Channel.put
+  [18] TickPerCell.lambda$tick$0
+  [19] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [20] ChannelsGrid.lambda$forEachChannel$0
+  [21] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [22] Dimensions.forEachRowCol
+  [23] ChannelsGrid.forEachChannel
+  [24] TickPerCell.tick
+  [25] GameOfLife.calculateFrame
+  [26] GameOfLife.lambda$calculateFrameBlocking$4
+  [27] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 42393844 total (0.78%), 42173 samples
+  [ 0] __GI___pthread_disable_asynccancel
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 42084240 total (0.77%), 41842 samples
+  [ 0] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [ 1] ArrayList.forEach
+  [ 2] Cell.notifyLiveness
+  [ 3] Cell.run
+  [ 4] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+
+--- 41717561 total (0.77%), 41609 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$620.0x000000080109f1c0.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$634.0x000000080109fc18.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 41266400 total (0.76%), 41380 samples
+  [ 0] select_task_rq_fair_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 38635214 total (0.71%), 38636 samples
+  [ 0] __condvar_dec_grefs
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 37878341 total (0.70%), 38013 samples
+  [ 0] Unsafe_Unpark
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 37661458 total (0.69%), 37658 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 37235403 total (0.69%), 37484 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] sched_yield
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 36063591 total (0.66%), 36214 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] sched_yield
+  [ 4] Thread.yield0
+  [ 5] Thread.yield
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 35560445 total (0.65%), 35397 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] TickPerCell.lambda$tick$0
+  [ 5] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 6] ChannelsGrid.lambda$forEachChannel$0
+  [ 7] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] TickPerCell.tick
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 35320850 total (0.65%), 35177 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 35248238 total (0.65%), 35373 samples
+  [ 0] __rseq_handle_notify_resume_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] TickPerCell.waitTick
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 34793965 total (0.64%), 34811 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __futex_abstimed_wait_common
+  [ 4] Unsafe.park
+  [ 5] LockSupport.park
+  [ 6] LinkedTransferQueue$Node.block
+  [ 7] ForkJoinPool.unmanagedBlock
+  [ 8] ForkJoinPool.managedBlock
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 34241896 total (0.63%), 34487 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 32503575 total (0.60%), 32537 samples
+  [ 0] ReferencePipeline$4$1.accept
+  [ 1] ReferencePipeline$3$1.accept
+  [ 2] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 3] AbstractPipeline.copyInto
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] Cell.run
+  [11] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 31933636 total (0.59%), 31761 samples
+  [ 0] Cell.notifyLiveness
+  [ 1] Cell.run
+  [ 2] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 3] ThreadPoolExecutor.runWorker
+  [ 4] ThreadPoolExecutor$Worker.run
+  [ 5] Thread.run
+
+--- 31418370 total (0.58%), 31562 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] __lll_lock_wake
+  [ 2] Unsafe_Park
+  [ 3] Thread.yield0
+  [ 4] Thread.yield
+  [ 5] LinkedTransferQueue.awaitMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.take
+  [ 8] BlockingTransfer.take
+  [ 9] Channel.take
+  [10] TickPerCell.waitTick
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 30917217 total (0.57%), 31052 samples
+  [ 0] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 1] ReferencePipeline$3$1.accept
+  [ 2] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 3] AbstractPipeline.copyInto
+  [ 4] AbstractPipeline.wrapAndCopyInto
+  [ 5] ReduceOps$ReduceOp.evaluateSequential
+  [ 6] AbstractPipeline.evaluate
+  [ 7] IntPipeline.reduce
+  [ 8] IntPipeline.sum
+  [ 9] Cell.calculateNextState
+  [10] Cell.run
+  [11] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 30526141 total (0.56%), 30583 samples
+  [ 0] ___pthread_cond_wait
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 30365405 total (0.56%), 30382 samples
+  [ 0] futex_wake_[k]
+  [ 1] do_futex_[k]
+  [ 2] __x64_sys_futex_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] ___pthread_cond_signal
+  [ 6] Unsafe.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] TickPerCell.lambda$tick$0
+  [14] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [15] ChannelsGrid.lambda$forEachChannel$0
+  [16] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [17] Dimensions.forEachRowCol
+  [18] ChannelsGrid.forEachChannel
+  [19] TickPerCell.tick
+  [20] GameOfLife.calculateFrame
+  [21] GameOfLife.lambda$calculateFrameBlocking$4
+  [22] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 29430270 total (0.54%), 29287 samples
+  [ 0] restore_fpregs_from_fpstate_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 27698185 total (0.51%), 27842 samples
+  [ 0] ___pthread_cond_wait
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 26469493 total (0.49%), 26501 samples
+  [ 0] __GI___pthread_mutex_lock
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 26162072 total (0.48%), 26301 samples
+  [ 0] psi_group_change_[k]
+  [ 1] psi_task_change_[k]
+  [ 2] enqueue_task_[k]
+  [ 3] ttwu_do_activate_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] TickPerCell.lambda$tick$0
+  [20] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [21] ChannelsGrid.lambda$forEachChannel$0
+  [22] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [23] Dimensions.forEachRowCol
+  [24] ChannelsGrid.forEachChannel
+  [25] TickPerCell.tick
+  [26] GameOfLife.calculateFrame
+  [27] GameOfLife.lambda$calculateFrameBlocking$4
+  [28] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 25938508 total (0.48%), 25884 samples
+  [ 0] __get_user_8_[k]
+  [ 1] __rseq_handle_notify_resume_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] Cell$$Lambda$61.0x0000000801037448.apply
+  [18] ReferencePipeline$3$1.accept
+  [19] ArrayList$ArrayListSpliterator.forEachRemaining
+  [20] AbstractPipeline.copyInto
+  [21] AbstractPipeline.wrapAndCopyInto
+  [22] ReduceOps$ReduceOp.evaluateSequential
+  [23] AbstractPipeline.evaluate
+  [24] IntPipeline.reduce
+  [25] IntPipeline.sum
+  [26] Cell.calculateNextState
+  [27] Cell.run
+  [28] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 25640225 total (0.47%), 25816 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 24915633 total (0.46%), 25060 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] __lll_lock_wake
+  [ 2] Unsafe_Park
+  [ 3] Thread.yield0
+  [ 4] Thread.yield
+  [ 5] LinkedTransferQueue.awaitMatch
+  [ 6] LinkedTransferQueue.xfer
+  [ 7] LinkedTransferQueue.take
+  [ 8] BlockingTransfer.take
+  [ 9] Channel.take
+  [10] Cell$$Lambda$61.0x0000000801037448.apply
+  [11] ReferencePipeline$3$1.accept
+  [12] ArrayList$ArrayListSpliterator.forEachRemaining
+  [13] AbstractPipeline.copyInto
+  [14] AbstractPipeline.wrapAndCopyInto
+  [15] ReduceOps$ReduceOp.evaluateSequential
+  [16] AbstractPipeline.evaluate
+  [17] IntPipeline.reduce
+  [18] IntPipeline.sum
+  [19] Cell.calculateNextState
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 23009083 total (0.42%), 23044 samples
+  [ 0] fpregs_restore_userregs_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] Cell$$Lambda$61.0x0000000801037448.apply
+  [17] ReferencePipeline$3$1.accept
+  [18] ArrayList$ArrayListSpliterator.forEachRemaining
+  [19] AbstractPipeline.copyInto
+  [20] AbstractPipeline.wrapAndCopyInto
+  [21] ReduceOps$ReduceOp.evaluateSequential
+  [22] AbstractPipeline.evaluate
+  [23] IntPipeline.reduce
+  [24] IntPipeline.sum
+  [25] Cell.calculateNextState
+  [26] Cell.run
+  [27] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 22779060 total (0.42%), 22891 samples
+  [ 0] enqueue_entity_[k]
+  [ 1] enqueue_task_fair_[k]
+  [ 2] enqueue_task_[k]
+  [ 3] ttwu_do_activate_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] TickPerCell.lambda$tick$0
+  [20] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [21] ChannelsGrid.lambda$forEachChannel$0
+  [22] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [23] Dimensions.forEachRowCol
+  [24] ChannelsGrid.forEachChannel
+  [25] TickPerCell.tick
+  [26] GameOfLife.calculateFrame
+  [27] GameOfLife.lambda$calculateFrameBlocking$4
+  [28] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 22392045 total (0.41%), 22155 samples
+  [ 0] JavaThread::threadObj() const
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 21996842 total (0.40%), 22126 samples
+  [ 0] ___pthread_cond_wait
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 21946225 total (0.40%), 22034 samples
+  [ 0] select_task_rq_fair_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] Cell.lambda$notifyLiveness$0
+  [17] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [18] ArrayList.forEach
+  [19] Cell.notifyLiveness
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 21019798 total (0.39%), 21121 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] Cell$$Lambda$61.0x0000000801037448.apply
+  [14] ReferencePipeline$3$1.accept
+  [15] ArrayList$ArrayListSpliterator.forEachRemaining
+  [16] AbstractPipeline.copyInto
+  [17] AbstractPipeline.wrapAndCopyInto
+  [18] ReduceOps$ReduceOp.evaluateSequential
+  [19] AbstractPipeline.evaluate
+  [20] IntPipeline.reduce
+  [21] IntPipeline.sum
+  [22] Cell.calculateNextState
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 20965209 total (0.39%), 20867 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 20535528 total (0.38%), 20634 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 20494777 total (0.38%), 20373 samples
+  [ 0] ArrayList.forEach
+  [ 1] Cell.notifyLiveness
+  [ 2] Cell.run
+  [ 3] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 4] ThreadPoolExecutor.runWorker
+  [ 5] ThreadPoolExecutor$Worker.run
+  [ 6] Thread.run
+
+--- 20490308 total (0.38%), 20621 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] __futex_abstimed_wait_common
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 20095290 total (0.37%), 20052 samples
+  [ 0] fpregs_restore_userregs_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] TickPerCell.waitTick
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 18868656 total (0.35%), 18917 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] sched_yield
+  [ 4] Thread.yield0
+  [ 5] Thread.yield
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 18795846 total (0.35%), 18884 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casNext
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] TickPerCell.waitTick
+  [ 8] Cell.notifyLiveness
+  [ 9] Cell.run
+  [10] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 18739767 total (0.34%), 18789 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] GameOfLife.calculateFrame
+  [ 3] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 4] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+
+--- 18639756 total (0.34%), 18532 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 18327484 total (0.34%), 18344 samples
+  [ 0] __put_user_nocheck_8_[k]
+  [ 1] __rseq_handle_notify_resume_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] TickPerCell.waitTick
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 17631146 total (0.32%), 17603 samples
+  [ 0] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$620.0x000000080109f1c0.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$634.0x000000080109fc18.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 17477772 total (0.32%), 17533 samples
+  [ 0] futex_wake_[k]
+  [ 1] do_futex_[k]
+  [ 2] __x64_sys_futex_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] ___pthread_cond_signal
+  [ 6] Unsafe.unpark
+  [ 7] LockSupport.unpark
+  [ 8] LinkedTransferQueue$Node.tryMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.put
+  [11] BlockingTransfer.put
+  [12] Channel.put
+  [13] Cell.lambda$notifyLiveness$0
+  [14] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [15] ArrayList.forEach
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 17219853 total (0.32%), 17314 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] sched_yield
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 17127532 total (0.32%), 17040 samples
+  [ 0] LinkedTransferQueue$Node.isReleasable
+  [ 1] LinkedTransferQueue$Node.block
+  [ 2] ForkJoinPool.unmanagedBlock
+  [ 3] ForkJoinPool.managedBlock
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] TickPerCell.waitTick
+  [10] Cell.notifyLiveness
+  [11] Cell.run
+  [12] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 17042605 total (0.31%), 17150 samples
+  [ 0] psi_group_change_[k]
+  [ 1] psi_task_switch_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] futex_wait_queue_[k]
+  [ 5] futex_wait_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] __futex_abstimed_wait_common
+  [11] Unsafe.park
+  [12] LockSupport.park
+  [13] LinkedTransferQueue$Node.block
+  [14] ForkJoinPool.unmanagedBlock
+  [15] ForkJoinPool.managedBlock
+  [16] LinkedTransferQueue.awaitMatch
+  [17] LinkedTransferQueue.xfer
+  [18] LinkedTransferQueue.take
+  [19] BlockingTransfer.take
+  [20] Channel.take
+  [21] Cell$$Lambda$61.0x0000000801037448.apply
+  [22] ReferencePipeline$3$1.accept
+  [23] ArrayList$ArrayListSpliterator.forEachRemaining
+  [24] AbstractPipeline.copyInto
+  [25] AbstractPipeline.wrapAndCopyInto
+  [26] ReduceOps$ReduceOp.evaluateSequential
+  [27] AbstractPipeline.evaluate
+  [28] IntPipeline.reduce
+  [29] IntPipeline.sum
+  [30] Cell.calculateNextState
+  [31] Cell.run
+  [32] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [33] ThreadPoolExecutor.runWorker
+  [34] ThreadPoolExecutor$Worker.run
+  [35] Thread.run
+
+--- 16981006 total (0.31%), 17066 samples
+  [ 0] psi_group_change_[k]
+  [ 1] psi_task_change_[k]
+  [ 2] enqueue_task_[k]
+  [ 3] ttwu_do_activate_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] Cell.lambda$notifyLiveness$0
+  [20] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [21] ArrayList.forEach
+  [22] Cell.notifyLiveness
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 16549265 total (0.30%), 16656 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] ___pthread_cond_signal
+  [ 2] Thread.yield0
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$61.0x0000000801037448.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 16155076 total (0.30%), 16259 samples
+  [ 0] ___pthread_cond_signal
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 16115381 total (0.30%), 16191 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] __futex_abstimed_wait_common
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 15757553 total (0.29%), 15697 samples
+  [ 0] psi_flags_change_[k]
+  [ 1] psi_task_change_[k]
+  [ 2] enqueue_task_[k]
+  [ 3] ttwu_do_activate_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] TickPerCell.lambda$tick$0
+  [20] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [21] ChannelsGrid.lambda$forEachChannel$0
+  [22] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [23] Dimensions.forEachRowCol
+  [24] ChannelsGrid.forEachChannel
+  [25] TickPerCell.tick
+  [26] GameOfLife.calculateFrame
+  [27] GameOfLife.lambda$calculateFrameBlocking$4
+  [28] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 15736047 total (0.29%), 15698 samples
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] ___pthread_cond_signal
+  [ 8] Unsafe.unpark
+  [ 9] LockSupport.unpark
+  [10] LinkedTransferQueue$Node.tryMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.put
+  [13] BlockingTransfer.put
+  [14] Channel.put
+  [15] Cell.lambda$notifyLiveness$0
+  [16] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [17] ArrayList.forEach
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 15364568 total (0.28%), 15398 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$620.0x000000080109f1c0.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$634.0x000000080109fc18.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 14772762 total (0.27%), 14803 samples
+  [ 0] ReferencePipeline$3$1.accept
+  [ 1] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] Cell.run
+  [10] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 14705888 total (0.27%), 14783 samples
+  [ 0] Unsafe_Unpark
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 14105168 total (0.26%), 14049 samples
+  [ 0] __futex_abstimed_wait_common
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 14048578 total (0.26%), 13958 samples
+  [ 0] restore_fpregs_from_fpstate_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] TickPerCell.waitTick
+  [15] Cell.notifyLiveness
+  [16] Cell.run
+  [17] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 14022987 total (0.26%), 14028 samples
+  [ 0] ReferencePipeline$3$1.accept
+  [ 1] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 2] AbstractPipeline.copyInto
+  [ 3] AbstractPipeline.wrapAndCopyInto
+  [ 4] ReduceOps$ReduceOp.evaluateSequential
+  [ 5] AbstractPipeline.evaluate
+  [ 6] IntPipeline.reduce
+  [ 7] IntPipeline.sum
+  [ 8] Cell.calculateNextState
+  [ 9] Cell.run
+  [10] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+
+--- 13892892 total (0.26%), 13952 samples
+  [ 0] __futex_unqueue_[k]
+  [ 1] futex_wake_mark_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] ___pthread_cond_signal
+  [ 8] Unsafe.unpark
+  [ 9] LockSupport.unpark
+  [10] LinkedTransferQueue$Node.tryMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.put
+  [13] BlockingTransfer.put
+  [14] Channel.put
+  [15] TickPerCell.lambda$tick$0
+  [16] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [17] ChannelsGrid.lambda$forEachChannel$0
+  [18] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [19] Dimensions.forEachRowCol
+  [20] ChannelsGrid.forEachChannel
+  [21] TickPerCell.tick
+  [22] GameOfLife.calculateFrame
+  [23] GameOfLife.lambda$calculateFrameBlocking$4
+  [24] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 13880636 total (0.26%), 13956 samples
+  [ 0] futex_q_lock_[k]
+  [ 1] futex_wait_setup_[k]
+  [ 2] futex_wait_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __futex_abstimed_wait_common
+  [ 8] Unsafe.park
+  [ 9] LockSupport.park
+  [10] LinkedTransferQueue$Node.block
+  [11] ForkJoinPool.unmanagedBlock
+  [12] ForkJoinPool.managedBlock
+  [13] LinkedTransferQueue.awaitMatch
+  [14] LinkedTransferQueue.xfer
+  [15] LinkedTransferQueue.take
+  [16] BlockingTransfer.take
+  [17] Channel.take
+  [18] Cell$$Lambda$61.0x0000000801037448.apply
+  [19] ReferencePipeline$3$1.accept
+  [20] ArrayList$ArrayListSpliterator.forEachRemaining
+  [21] AbstractPipeline.copyInto
+  [22] AbstractPipeline.wrapAndCopyInto
+  [23] ReduceOps$ReduceOp.evaluateSequential
+  [24] AbstractPipeline.evaluate
+  [25] IntPipeline.reduce
+  [26] IntPipeline.sum
+  [27] Cell.calculateNextState
+  [28] Cell.run
+  [29] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [30] ThreadPoolExecutor.runWorker
+  [31] ThreadPoolExecutor$Worker.run
+  [32] Thread.run
+
+--- 13609821 total (0.25%), 13674 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] futex_wait_queue_[k]
+  [ 3] futex_wait_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __futex_abstimed_wait_common
+  [ 9] Unsafe.park
+  [10] LockSupport.park
+  [11] LinkedTransferQueue$Node.block
+  [12] ForkJoinPool.unmanagedBlock
+  [13] ForkJoinPool.managedBlock
+  [14] LinkedTransferQueue.awaitMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.take
+  [17] BlockingTransfer.take
+  [18] Channel.take
+  [19] Cell$$Lambda$61.0x0000000801037448.apply
+  [20] ReferencePipeline$3$1.accept
+  [21] ArrayList$ArrayListSpliterator.forEachRemaining
+  [22] AbstractPipeline.copyInto
+  [23] AbstractPipeline.wrapAndCopyInto
+  [24] ReduceOps$ReduceOp.evaluateSequential
+  [25] AbstractPipeline.evaluate
+  [26] IntPipeline.reduce
+  [27] IntPipeline.sum
+  [28] Cell.calculateNextState
+  [29] Cell.run
+  [30] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [31] ThreadPoolExecutor.runWorker
+  [32] ThreadPoolExecutor$Worker.run
+  [33] Thread.run
+
+--- 13520073 total (0.25%), 13565 samples
+  [ 0] rcu_note_context_switch_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] __x64_sys_sched_yield_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 13438943 total (0.25%), 13457 samples
+  [ 0] futex_wake_mark_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] Cell.lambda$notifyLiveness$0
+  [15] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [16] ArrayList.forEach
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 12854630 total (0.24%), 12809 samples
+  [ 0] check_preemption_disabled_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] TickPerCell.waitTick
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 12650757 total (0.23%), 12595 samples
+  [ 0] Cell.notifyLiveness
+  [ 1] Cell.run
+  [ 2] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 3] ThreadPoolExecutor.runWorker
+  [ 4] ThreadPoolExecutor$Worker.run
+  [ 5] Thread.run
+
+--- 12436084 total (0.23%), 12471 samples
+  [ 0] __pthread_mutex_cond_lock
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 12331314 total (0.23%), 12233 samples
+  [ 0] ttwu_do_activate_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 12050314 total (0.22%), 12150 samples
+  [ 0] ThreadsListHandle::ThreadsListHandle(Thread*)
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 11857354 total (0.22%), 11916 samples
+  [ 0] psi_group_change_[k]
+  [ 1] psi_task_switch_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] futex_wait_queue_[k]
+  [ 5] futex_wait_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] __futex_abstimed_wait_common
+  [11] Unsafe.park
+  [12] LockSupport.park
+  [13] LinkedTransferQueue$Node.block
+  [14] ForkJoinPool.unmanagedBlock
+  [15] ForkJoinPool.managedBlock
+  [16] LinkedTransferQueue.awaitMatch
+  [17] LinkedTransferQueue.xfer
+  [18] LinkedTransferQueue.take
+  [19] BlockingTransfer.take
+  [20] Channel.take
+  [21] TickPerCell.waitTick
+  [22] Cell.notifyLiveness
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 11813330 total (0.22%), 11842 samples
+  [ 0] __rseq_handle_notify_resume_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] Cell$$Lambda$61.0x0000000801037448.apply
+  [17] ReferencePipeline$3$1.accept
+  [18] ArrayList$ArrayListSpliterator.forEachRemaining
+  [19] AbstractPipeline.copyInto
+  [20] AbstractPipeline.wrapAndCopyInto
+  [21] ReduceOps$ReduceOp.evaluateSequential
+  [22] AbstractPipeline.evaluate
+  [23] IntPipeline.reduce
+  [24] IntPipeline.sum
+  [25] Cell.calculateNextState
+  [26] Cell.run
+  [27] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 11803456 total (0.22%), 11745 samples
+  [ 0] ArrayList.forEach
+  [ 1] Cell.notifyLiveness
+  [ 2] Cell.run
+  [ 3] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 4] ThreadPoolExecutor.runWorker
+  [ 5] ThreadPoolExecutor$Worker.run
+  [ 6] Thread.run
+
+--- 11778034 total (0.22%), 11773 samples
+  [ 0] blkcg_maybe_throttle_current_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] TickPerCell.waitTick
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 11485815 total (0.21%), 11521 samples
+  [ 0] psi_task_change_[k]
+  [ 1] enqueue_task_[k]
+  [ 2] ttwu_do_activate_[k]
+  [ 3] try_to_wake_up_[k]
+  [ 4] wake_up_q_[k]
+  [ 5] futex_wake_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] ___pthread_cond_signal
+  [11] Unsafe.unpark
+  [12] LockSupport.unpark
+  [13] LinkedTransferQueue$Node.tryMatch
+  [14] LinkedTransferQueue.xfer
+  [15] LinkedTransferQueue.put
+  [16] BlockingTransfer.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 11274139 total (0.21%), 11225 samples
+  [ 0] exit_to_user_mode_prepare_[k]
+  [ 1] syscall_exit_to_user_mode_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __futex_abstimed_wait_common
+  [ 5] Unsafe.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 10944643 total (0.20%), 10946 samples
+  [ 0] check_preemption_disabled_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __futex_abstimed_wait_common
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] Cell$$Lambda$61.0x0000000801037448.apply
+  [18] ReferencePipeline$3$1.accept
+  [19] ArrayList$ArrayListSpliterator.forEachRemaining
+  [20] AbstractPipeline.copyInto
+  [21] AbstractPipeline.wrapAndCopyInto
+  [22] ReduceOps$ReduceOp.evaluateSequential
+  [23] AbstractPipeline.evaluate
+  [24] IntPipeline.reduce
+  [25] IntPipeline.sum
+  [26] Cell.calculateNextState
+  [27] Cell.run
+  [28] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 10916553 total (0.20%), 10934 samples
+  [ 0] __GI___pthread_getspecific
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 10772894 total (0.20%), 10751 samples
+  [ 0] mem_cgroup_handle_over_high_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __futex_abstimed_wait_common
+  [ 6] Unsafe.park
+  [ 7] LockSupport.park
+  [ 8] LinkedTransferQueue$Node.block
+  [ 9] ForkJoinPool.unmanagedBlock
+  [10] ForkJoinPool.managedBlock
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] TickPerCell.waitTick
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 10617309 total (0.20%), 10647 samples
+  [ 0] enqueue_task_fair_[k]
+  [ 1] enqueue_task_[k]
+  [ 2] ttwu_do_activate_[k]
+  [ 3] try_to_wake_up_[k]
+  [ 4] wake_up_q_[k]
+  [ 5] futex_wake_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] ___pthread_cond_signal
+  [11] Unsafe.unpark
+  [12] LockSupport.unpark
+  [13] LinkedTransferQueue$Node.tryMatch
+  [14] LinkedTransferQueue.xfer
+  [15] LinkedTransferQueue.put
+  [16] BlockingTransfer.put
+  [17] Channel.put
+  [18] TickPerCell.lambda$tick$0
+  [19] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [20] ChannelsGrid.lambda$forEachChannel$0
+  [21] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [22] Dimensions.forEachRowCol
+  [23] ChannelsGrid.forEachChannel
+  [24] TickPerCell.tick
+  [25] GameOfLife.calculateFrame
+  [26] GameOfLife.lambda$calculateFrameBlocking$4
+  [27] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 10500706 total (0.19%), 10529 samples
+  [ 0] __tls_get_addr
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 10484670 total (0.19%), 10526 samples
+  [ 0] __perf_event_task_sched_out_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] Cell$$Lambda$61.0x0000000801037448.apply
+  [21] ReferencePipeline$3$1.accept
+  [22] ArrayList$ArrayListSpliterator.forEachRemaining
+  [23] AbstractPipeline.copyInto
+  [24] AbstractPipeline.wrapAndCopyInto
+  [25] ReduceOps$ReduceOp.evaluateSequential
+  [26] AbstractPipeline.evaluate
+  [27] IntPipeline.reduce
+  [28] IntPipeline.sum
+  [29] Cell.calculateNextState
+  [30] Cell.run
+  [31] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [32] ThreadPoolExecutor.runWorker
+  [33] ThreadPoolExecutor$Worker.run
+  [34] Thread.run
+
+--- 10298870 total (0.19%), 10325 samples
+  [ 0] LinkedTransferQueue$Node.isReleasable
+  [ 1] LinkedTransferQueue$Node.block
+  [ 2] ForkJoinPool.unmanagedBlock
+  [ 3] ForkJoinPool.managedBlock
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$61.0x0000000801037448.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 10226241 total (0.19%), 10268 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$620.0x000000080109f1c0.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$634.0x000000080109fc18.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 10135865 total (0.19%), 10175 samples
+  [ 0] ___pthread_cond_wait
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 10059680 total (0.19%), 10123 samples
+  [ 0] __calc_delta_[k]
+  [ 1] update_curr_[k]
+  [ 2] pick_next_task_fair_[k]
+  [ 3] __schedule_[k]
+  [ 4] schedule_[k]
+  [ 5] __x64_sys_sched_yield_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] sched_yield
+  [ 9] Thread.yield0
+  [10] Thread.yield
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] Cell$$Lambda$61.0x0000000801037448.apply
+  [17] ReferencePipeline$3$1.accept
+  [18] ArrayList$ArrayListSpliterator.forEachRemaining
+  [19] AbstractPipeline.copyInto
+  [20] AbstractPipeline.wrapAndCopyInto
+  [21] ReduceOps$ReduceOp.evaluateSequential
+  [22] AbstractPipeline.evaluate
+  [23] IntPipeline.reduce
+  [24] IntPipeline.sum
+  [25] Cell.calculateNextState
+  [26] Cell.run
+  [27] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 9995516 total (0.18%), 10026 samples
+  [ 0] __pthread_mutex_unlock_usercnt
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 9993089 total (0.18%), 9953 samples
+  [ 0] update_rq_clock_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 9990950 total (0.18%), 10040 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 9922597 total (0.18%), 9965 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 6] ReferencePipeline$3$1.accept
+  [ 7] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 8] AbstractPipeline.copyInto
+  [ 9] AbstractPipeline.wrapAndCopyInto
+  [10] ReduceOps$ReduceOp.evaluateSequential
+  [11] AbstractPipeline.evaluate
+  [12] IntPipeline.reduce
+  [13] IntPipeline.sum
+  [14] Cell.calculateNextState
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 9757331 total (0.18%), 9821 samples
+  [ 0] __pthread_mutex_unlock_usercnt
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 9686437 total (0.18%), 9653 samples
+  [ 0] JavaThread::threadObj() const
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 9671227 total (0.18%), 9590 samples
+  [ 0] Cell.notifyLiveness
+  [ 1] Cell.run
+  [ 2] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 3] ThreadPoolExecutor.runWorker
+  [ 4] ThreadPoolExecutor$Worker.run
+  [ 5] Thread.run
+
+--- 9657429 total (0.18%), 9568 samples
+  [ 0] java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 9569144 total (0.18%), 9579 samples
+  [ 0] futex_wake_[k]
+  [ 1] do_futex_[k]
+  [ 2] __x64_sys_futex_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __lll_lock_wake
+  [ 6] Unsafe_Park
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] TickPerCell.waitTick
+  [18] Cell.notifyLiveness
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 9567245 total (0.18%), 9607 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] TickPerCell.waitTick
+  [14] Cell.notifyLiveness
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 9403669 total (0.17%), 9481 samples
+  [ 0] schedule_[k]
+  [ 1] __x64_sys_sched_yield_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] sched_yield
+  [ 5] Thread.yield0
+  [ 6] Thread.yield
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 9362824 total (0.17%), 9374 samples
+  [ 0] fpregs_restore_userregs_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] Cell$$Lambda$61.0x0000000801037448.apply
+  [14] ReferencePipeline$3$1.accept
+  [15] ArrayList$ArrayListSpliterator.forEachRemaining
+  [16] AbstractPipeline.copyInto
+  [17] AbstractPipeline.wrapAndCopyInto
+  [18] ReduceOps$ReduceOp.evaluateSequential
+  [19] AbstractPipeline.evaluate
+  [20] IntPipeline.reduce
+  [21] IntPipeline.sum
+  [22] Cell.calculateNextState
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 9335292 total (0.17%), 9368 samples
+  [ 0] task_h_load_[k]
+  [ 1] select_task_rq_fair_[k]
+  [ 2] try_to_wake_up_[k]
+  [ 3] wake_up_q_[k]
+  [ 4] futex_wake_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] ___pthread_cond_signal
+  [10] Unsafe.unpark
+  [11] LockSupport.unpark
+  [12] LinkedTransferQueue$Node.tryMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.put
+  [15] BlockingTransfer.put
+  [16] Channel.put
+  [17] Cell.lambda$notifyLiveness$0
+  [18] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [19] ArrayList.forEach
+  [20] Cell.notifyLiveness
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 9330142 total (0.17%), 9325 samples
+  [ 0] LinkedTransferQueue.awaitMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.take
+  [ 3] BlockingTransfer.take
+  [ 4] Channel.take
+  [ 5] TickPerCell.waitTick
+  [ 6] Cell.notifyLiveness
+  [ 7] Cell.run
+  [ 8] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 9] ThreadPoolExecutor.runWorker
+  [10] ThreadPoolExecutor$Worker.run
+  [11] Thread.run
+
+--- 9246970 total (0.17%), 9229 samples
+  [ 0] __GI___pthread_getspecific
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 9217086 total (0.17%), 9104 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] post_alloc_hook_[k]
+  [ 2] get_page_from_freelist_[k]
+  [ 3] __alloc_pages_[k]
+  [ 4] alloc_pages_vma_[k]
+  [ 5] __handle_mm_fault_[k]
+  [ 6] handle_mm_fault_[k]
+  [ 7] do_user_addr_fault_[k]
+  [ 8] exc_page_fault_[k]
+  [ 9] asm_exc_page_fault_[k]
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] Cell.lambda$notifyLiveness$0
+  [15] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [16] ArrayList.forEach
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 9180394 total (0.17%), 9203 samples
+  [ 0] __list_del_entry_valid_[k]
+  [ 1] plist_del_[k]
+  [ 2] __futex_unqueue_[k]
+  [ 3] futex_wake_mark_[k]
+  [ 4] futex_wake_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] ___pthread_cond_signal
+  [10] Unsafe.unpark
+  [11] LockSupport.unpark
+  [12] LinkedTransferQueue$Node.tryMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.put
+  [15] BlockingTransfer.put
+  [16] Channel.put
+  [17] TickPerCell.lambda$tick$0
+  [18] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [19] ChannelsGrid.lambda$forEachChannel$0
+  [20] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [21] Dimensions.forEachRowCol
+  [22] ChannelsGrid.forEachChannel
+  [23] TickPerCell.tick
+  [24] GameOfLife.calculateFrame
+  [25] GameOfLife.lambda$calculateFrameBlocking$4
+  [26] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 9135431 total (0.17%), 9088 samples
+  [ 0] _pthread_cleanup_pop@@GLIBC_2.34
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 9135340 total (0.17%), 9181 samples
+  [ 0] ReferencePipeline$Head.<init>
+  [ 1] StreamSupport.stream
+  [ 2] Collection.stream
+  [ 3] Cell.calculateNextState
+  [ 4] Cell.run
+  [ 5] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 9113179 total (0.17%), 9094 samples
+  [ 0] native_sched_clock_[k]
+  [ 1] sched_clock_cpu_[k]
+  [ 2] psi_task_change_[k]
+  [ 3] enqueue_task_[k]
+  [ 4] ttwu_do_activate_[k]
+  [ 5] try_to_wake_up_[k]
+  [ 6] wake_up_q_[k]
+  [ 7] futex_wake_[k]
+  [ 8] do_futex_[k]
+  [ 9] __x64_sys_futex_[k]
+  [10] do_syscall_64_[k]
+  [11] entry_SYSCALL_64_after_hwframe_[k]
+  [12] ___pthread_cond_signal
+  [13] Unsafe.unpark
+  [14] LockSupport.unpark
+  [15] LinkedTransferQueue$Node.tryMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.put
+  [18] BlockingTransfer.put
+  [19] Channel.put
+  [20] TickPerCell.lambda$tick$0
+  [21] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [22] ChannelsGrid.lambda$forEachChannel$0
+  [23] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [24] Dimensions.forEachRowCol
+  [25] ChannelsGrid.forEachChannel
+  [26] TickPerCell.tick
+  [27] GameOfLife.calculateFrame
+  [28] GameOfLife.lambda$calculateFrameBlocking$4
+  [29] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [30] ThreadPoolExecutor.runWorker
+  [31] ThreadPoolExecutor$Worker.run
+  [32] Thread.run
+
+--- 9041043 total (0.17%), 9006 samples
+  [ 0] Unsafe.park
+  [ 1] [unknown_Java]
+
+--- 8984700 total (0.17%), 9035 samples
+  [ 0] _raw_spin_lock_[k]
+  [ 1] raw_spin_rq_lock_nested_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] __x64_sys_sched_yield_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] sched_yield
+  [ 8] Thread.yield0
+  [ 9] Thread.yield
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$61.0x0000000801037448.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 8915816 total (0.16%), 8979 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue.casHead
+  [ 3] LinkedTransferQueue.skipDeadNodesNearHead
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 8721745 total (0.16%), 8770 samples
+  [ 0] __pthread_mutex_cond_lock
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 8707334 total (0.16%), 8759 samples
+  [ 0] Channel.take
+  [ 1] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 2] ReferencePipeline$3$1.accept
+  [ 3] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 4] AbstractPipeline.copyInto
+  [ 5] AbstractPipeline.wrapAndCopyInto
+  [ 6] ReduceOps$ReduceOp.evaluateSequential
+  [ 7] AbstractPipeline.evaluate
+  [ 8] IntPipeline.reduce
+  [ 9] IntPipeline.sum
+  [10] Cell.calculateNextState
+  [11] Cell.run
+  [12] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+
+--- 8448341 total (0.16%), 8485 samples
+  [ 0] __perf_event_task_sched_out_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] __x64_sys_sched_yield_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 8292353 total (0.15%), 8332 samples
+  [ 0] pthread_mutex_trylock@@GLIBC_2.34
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 8206447 total (0.15%), 8160 samples
+  [ 0] Thread.yield0
+  [ 1] Thread.yield
+  [ 2] LinkedTransferQueue.awaitMatch
+  [ 3] LinkedTransferQueue.xfer
+  [ 4] LinkedTransferQueue.take
+  [ 5] BlockingTransfer.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 8131962 total (0.15%), 8155 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] futex_wait_queue_[k]
+  [ 3] futex_wait_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __futex_abstimed_wait_common
+  [ 9] Unsafe.park
+  [10] LockSupport.park
+  [11] LinkedTransferQueue$Node.block
+  [12] ForkJoinPool.unmanagedBlock
+  [13] ForkJoinPool.managedBlock
+  [14] LinkedTransferQueue.awaitMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.take
+  [17] BlockingTransfer.take
+  [18] Channel.take
+  [19] TickPerCell.waitTick
+  [20] Cell.notifyLiveness
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 7828110 total (0.14%), 7789 samples
+  [ 0] __GI___pthread_disable_asynccancel
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 7820812 total (0.14%), 7859 samples
+  [ 0] wake_q_add_safe_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 7701605 total (0.14%), 7734 samples
+  [ 0] VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+  [ 1] VarHandleGuards.guard_LLL_Z
+  [ 2] LinkedTransferQueue$Node.casItem
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 7605514 total (0.14%), 7633 samples
+  [ 0] check_preemption_disabled_[k]
+  [ 1] select_task_rq_fair_[k]
+  [ 2] try_to_wake_up_[k]
+  [ 3] wake_up_q_[k]
+  [ 4] futex_wake_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] ___pthread_cond_signal
+  [10] Unsafe.unpark
+  [11] LockSupport.unpark
+  [12] LinkedTransferQueue$Node.tryMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.put
+  [15] BlockingTransfer.put
+  [16] Channel.put
+  [17] TickPerCell.lambda$tick$0
+  [18] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [19] ChannelsGrid.lambda$forEachChannel$0
+  [20] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [21] Dimensions.forEachRowCol
+  [22] ChannelsGrid.forEachChannel
+  [23] TickPerCell.tick
+  [24] GameOfLife.calculateFrame
+  [25] GameOfLife.lambda$calculateFrameBlocking$4
+  [26] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 7584972 total (0.14%), 7651 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 7558737 total (0.14%), 7559 samples
+  [ 0] java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 7482561 total (0.14%), 7527 samples
+  [ 0] JVM_Yield
+  [ 1] Thread.yield0
+  [ 2] Thread.yield
+  [ 3] LinkedTransferQueue.awaitMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 7452568 total (0.14%), 7521 samples
+  [ 0] ___pthread_cond_signal
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] Cell.lambda$notifyLiveness$0
+  [ 9] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [10] ArrayList.forEach
+  [11] Cell.notifyLiveness
+  [12] Cell.run
+  [13] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+
+--- 7437943 total (0.14%), 7460 samples
+  [ 0] psi_task_switch_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] Cell$$Lambda$61.0x0000000801037448.apply
+  [21] ReferencePipeline$3$1.accept
+  [22] ArrayList$ArrayListSpliterator.forEachRemaining
+  [23] AbstractPipeline.copyInto
+  [24] AbstractPipeline.wrapAndCopyInto
+  [25] ReduceOps$ReduceOp.evaluateSequential
+  [26] AbstractPipeline.evaluate
+  [27] IntPipeline.reduce
+  [28] IntPipeline.sum
+  [29] Cell.calculateNextState
+  [30] Cell.run
+  [31] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [32] ThreadPoolExecutor.runWorker
+  [33] ThreadPoolExecutor$Worker.run
+  [34] Thread.run
+
+--- 7421978 total (0.14%), 7461 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] ___pthread_cond_signal
+  [ 4] Unsafe.unpark
+  [ 5] LockSupport.unpark
+  [ 6] LinkedTransferQueue$Node.tryMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.put
+  [ 9] BlockingTransfer.put
+  [10] Channel.put
+  [11] TickPerCell.lambda$tick$0
+  [12] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [13] ChannelsGrid.lambda$forEachChannel$0
+  [14] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [15] Dimensions.forEachRowCol
+  [16] ChannelsGrid.forEachChannel
+  [17] TickPerCell.tick
+  [18] GameOfLife.calculateFrame
+  [19] GameOfLife.lambda$calculateFrameBlocking$4
+  [20] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 7391206 total (0.14%), 7444 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __lll_lock_wake
+  [ 4] Unsafe_Park
+  [ 5] Unsafe.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$61.0x0000000801037448.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 7314402 total (0.13%), 7323 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] TickPerCell.waitTick
+  [ 5] Cell.notifyLiveness
+  [ 6] Cell.run
+  [ 7] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 7312147 total (0.13%), 7366 samples
+  [ 0] sched_yield
+  [ 1] Thread.yield0
+  [ 2] Thread.yield
+  [ 3] LinkedTransferQueue.awaitMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.take
+  [ 6] BlockingTransfer.take
+  [ 7] Channel.take
+  [ 8] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 9] ReferencePipeline$3$1.accept
+  [10] ArrayList$ArrayListSpliterator.forEachRemaining
+  [11] AbstractPipeline.copyInto
+  [12] AbstractPipeline.wrapAndCopyInto
+  [13] ReduceOps$ReduceOp.evaluateSequential
+  [14] AbstractPipeline.evaluate
+  [15] IntPipeline.reduce
+  [16] IntPipeline.sum
+  [17] Cell.calculateNextState
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 7273016 total (0.13%), 7323 samples
+  [ 0] __pthread_mutex_unlock_usercnt
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 7134923 total (0.13%), 7180 samples
+  [ 0] psi_task_switch_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] __x64_sys_sched_yield_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 7083253 total (0.13%), 7108 samples
+  [ 0] _raw_spin_lock_[k]
+  [ 1] futex_wake_[k]
+  [ 2] do_futex_[k]
+  [ 3] __x64_sys_futex_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] ___pthread_cond_signal
+  [ 7] Unsafe.unpark
+  [ 8] LockSupport.unpark
+  [ 9] LinkedTransferQueue$Node.tryMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.put
+  [12] BlockingTransfer.put
+  [13] Channel.put
+  [14] TickPerCell.lambda$tick$0
+  [15] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [16] ChannelsGrid.lambda$forEachChannel$0
+  [17] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [18] Dimensions.forEachRowCol
+  [19] ChannelsGrid.forEachChannel
+  [20] TickPerCell.tick
+  [21] GameOfLife.calculateFrame
+  [22] GameOfLife.lambda$calculateFrameBlocking$4
+  [23] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 7046016 total (0.13%), 7057 samples
+  [ 0] __update_load_avg_blocked_se_[k]
+  [ 1] remove_entity_load_avg_[k]
+  [ 2] migrate_task_rq_fair_[k]
+  [ 3] set_task_cpu_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] TickPerCell.lambda$tick$0
+  [20] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [21] ChannelsGrid.lambda$forEachChannel$0
+  [22] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [23] Dimensions.forEachRowCol
+  [24] ChannelsGrid.forEachChannel
+  [25] TickPerCell.tick
+  [26] GameOfLife.calculateFrame
+  [27] GameOfLife.lambda$calculateFrameBlocking$4
+  [28] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 6960235 total (0.13%), 6976 samples
+  [ 0] __perf_event_task_sched_out_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] TickPerCell.waitTick
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 6892923 total (0.13%), 6946 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 6869319 total (0.13%), 6892 samples
+  [ 0] enqueue_entity_[k]
+  [ 1] enqueue_task_fair_[k]
+  [ 2] enqueue_task_[k]
+  [ 3] ttwu_do_activate_[k]
+  [ 4] try_to_wake_up_[k]
+  [ 5] wake_up_q_[k]
+  [ 6] futex_wake_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] ___pthread_cond_signal
+  [12] Unsafe.unpark
+  [13] LockSupport.unpark
+  [14] LinkedTransferQueue$Node.tryMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.put
+  [17] BlockingTransfer.put
+  [18] Channel.put
+  [19] Cell.lambda$notifyLiveness$0
+  [20] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [21] ArrayList.forEach
+  [22] Cell.notifyLiveness
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 6821520 total (0.13%), 6850 samples
+  [ 0] __pthread_mutex_unlock_usercnt
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] TickPerCell.waitTick
+  [13] Cell.notifyLiveness
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 6662785 total (0.12%), 6694 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] ___pthread_cond_signal
+  [ 4] Unsafe.unpark
+  [ 5] LockSupport.unpark
+  [ 6] LinkedTransferQueue$Node.tryMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.put
+  [ 9] BlockingTransfer.put
+  [10] Channel.put
+  [11] Cell.lambda$notifyLiveness$0
+  [12] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [13] ArrayList.forEach
+  [14] Cell.notifyLiveness
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 6433833 total (0.12%), 6455 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$StatelessOp.<init>
+  [ 3] ReferencePipeline$3.<init>
+  [ 4] ReferencePipeline.map
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 6334160 total (0.12%), 6373 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 6328327 total (0.12%), 6348 samples
+  [ 0] LinkedTransferQueue$Node.tryMatch
+  [ 1] LinkedTransferQueue.xfer
+  [ 2] LinkedTransferQueue.put
+  [ 3] BlockingTransfer.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 6327553 total (0.12%), 6346 samples
+  [ 0] set_task_cpu_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] TickPerCell.lambda$tick$0
+  [17] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [18] ChannelsGrid.lambda$forEachChannel$0
+  [19] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [20] Dimensions.forEachRowCol
+  [21] ChannelsGrid.forEachChannel
+  [22] TickPerCell.tick
+  [23] GameOfLife.calculateFrame
+  [24] GameOfLife.lambda$calculateFrameBlocking$4
+  [25] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 6250733 total (0.12%), 6259 samples
+  [ 0] __futex_abstimed_wait_common
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 6236086 total (0.11%), 6271 samples
+  [ 0] __calc_delta_[k]
+  [ 1] update_curr_[k]
+  [ 2] pick_next_task_fair_[k]
+  [ 3] __schedule_[k]
+  [ 4] schedule_[k]
+  [ 5] __x64_sys_sched_yield_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] sched_yield
+  [ 9] Thread.yield0
+  [10] Thread.yield
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] TickPerCell.waitTick
+  [17] Cell.notifyLiveness
+  [18] Cell.run
+  [19] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [20] ThreadPoolExecutor.runWorker
+  [21] ThreadPoolExecutor$Worker.run
+  [22] Thread.run
+
+--- 6231886 total (0.11%), 6265 samples
+  [ 0] dequeue_task_fair_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] Cell$$Lambda$61.0x0000000801037448.apply
+  [21] ReferencePipeline$3$1.accept
+  [22] ArrayList$ArrayListSpliterator.forEachRemaining
+  [23] AbstractPipeline.copyInto
+  [24] AbstractPipeline.wrapAndCopyInto
+  [25] ReduceOps$ReduceOp.evaluateSequential
+  [26] AbstractPipeline.evaluate
+  [27] IntPipeline.reduce
+  [28] IntPipeline.sum
+  [29] Cell.calculateNextState
+  [30] Cell.run
+  [31] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [32] ThreadPoolExecutor.runWorker
+  [33] ThreadPoolExecutor$Worker.run
+  [34] Thread.run
+
+--- 6214276 total (0.11%), 6293 samples
+  [ 0] native_write_msr_[k]
+  [ 1] intel_pmu_disable_all_[k]
+  [ 2] __perf_event_task_sched_out_[k]
+  [ 3] __schedule_[k]
+  [ 4] schedule_[k]
+  [ 5] __x64_sys_sched_yield_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] sched_yield
+  [ 9] Thread.yield0
+  [10] Thread.yield
+  [11] LinkedTransferQueue.awaitMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.take
+  [14] BlockingTransfer.take
+  [15] Channel.take
+  [16] Cell$$Lambda$61.0x0000000801037448.apply
+  [17] ReferencePipeline$3$1.accept
+  [18] ArrayList$ArrayListSpliterator.forEachRemaining
+  [19] AbstractPipeline.copyInto
+  [20] AbstractPipeline.wrapAndCopyInto
+  [21] ReduceOps$ReduceOp.evaluateSequential
+  [22] AbstractPipeline.evaluate
+  [23] IntPipeline.reduce
+  [24] IntPipeline.sum
+  [25] Cell.calculateNextState
+  [26] Cell.run
+  [27] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 6211583 total (0.11%), 6230 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+--- 6180134 total (0.11%), 6190 samples
+  [ 0] futex_wake_[k]
+  [ 1] do_futex_[k]
+  [ 2] __x64_sys_futex_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __lll_lock_wake
+  [ 6] Unsafe_Park
+  [ 7] Unsafe.park
+  [ 8] LockSupport.park
+  [ 9] LinkedTransferQueue$Node.block
+  [10] ForkJoinPool.unmanagedBlock
+  [11] ForkJoinPool.managedBlock
+  [12] LinkedTransferQueue.awaitMatch
+  [13] LinkedTransferQueue.xfer
+  [14] LinkedTransferQueue.take
+  [15] BlockingTransfer.take
+  [16] Channel.take
+  [17] Cell$$Lambda$61.0x0000000801037448.apply
+  [18] ReferencePipeline$3$1.accept
+  [19] ArrayList$ArrayListSpliterator.forEachRemaining
+  [20] AbstractPipeline.copyInto
+  [21] AbstractPipeline.wrapAndCopyInto
+  [22] ReduceOps$ReduceOp.evaluateSequential
+  [23] AbstractPipeline.evaluate
+  [24] IntPipeline.reduce
+  [25] IntPipeline.sum
+  [26] Cell.calculateNextState
+  [27] Cell.run
+  [28] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [29] ThreadPoolExecutor.runWorker
+  [30] ThreadPoolExecutor$Worker.run
+  [31] Thread.run
+
+--- 6138284 total (0.11%), 6171 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark
+  [ 2] Unsafe.unpark
+  [ 3] LockSupport.unpark
+  [ 4] LinkedTransferQueue$Node.tryMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.put
+  [ 7] BlockingTransfer.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 6120294 total (0.11%), 6148 samples
+  [ 0] __rseq_handle_notify_resume_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] Cell$$Lambda$61.0x0000000801037448.apply
+  [14] ReferencePipeline$3$1.accept
+  [15] ArrayList$ArrayListSpliterator.forEachRemaining
+  [16] AbstractPipeline.copyInto
+  [17] AbstractPipeline.wrapAndCopyInto
+  [18] ReduceOps$ReduceOp.evaluateSequential
+  [19] AbstractPipeline.evaluate
+  [20] IntPipeline.reduce
+  [21] IntPipeline.sum
+  [22] Cell.calculateNextState
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 6084085 total (0.11%), 6104 samples
+  [ 0] ___pthread_cond_signal
+  [ 1] Unsafe.unpark
+  [ 2] LockSupport.unpark
+  [ 3] LinkedTransferQueue$Node.tryMatch
+  [ 4] LinkedTransferQueue.xfer
+  [ 5] LinkedTransferQueue.put
+  [ 6] BlockingTransfer.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 6080482 total (0.11%), 6119 samples
+  [ 0] syscall_exit_to_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __lll_lock_wake
+  [ 4] Unsafe_Park
+  [ 5] Unsafe.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] TickPerCell.waitTick
+  [16] Cell.notifyLiveness
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 6044109 total (0.11%), 6043 samples
+  [ 0] check_preemption_disabled_[k]
+  [ 1] fpregs_restore_userregs_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 6030769 total (0.11%), 6062 samples
+  [ 0] __condvar_confirm_wakeup
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] Cell$$Lambda$61.0x0000000801037448.apply
+  [12] ReferencePipeline$3$1.accept
+  [13] ArrayList$ArrayListSpliterator.forEachRemaining
+  [14] AbstractPipeline.copyInto
+  [15] AbstractPipeline.wrapAndCopyInto
+  [16] ReduceOps$ReduceOp.evaluateSequential
+  [17] AbstractPipeline.evaluate
+  [18] IntPipeline.reduce
+  [19] IntPipeline.sum
+  [20] Cell.calculateNextState
+  [21] Cell.run
+  [22] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [23] ThreadPoolExecutor.runWorker
+  [24] ThreadPoolExecutor$Worker.run
+  [25] Thread.run
+
+--- 6027956 total (0.11%), 6047 samples
+  [ 0] pthread_mutex_trylock@@GLIBC_2.34
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 5973921 total (0.11%), 5995 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 5965116 total (0.11%), 6044 samples
+  [ 0] native_write_msr_[k]
+  [ 1] intel_pmu_disable_all_[k]
+  [ 2] __perf_event_task_sched_out_[k]
+  [ 3] __schedule_[k]
+  [ 4] schedule_[k]
+  [ 5] futex_wait_queue_[k]
+  [ 6] futex_wait_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] __futex_abstimed_wait_common
+  [12] Unsafe.park
+  [13] LockSupport.park
+  [14] LinkedTransferQueue$Node.block
+  [15] ForkJoinPool.unmanagedBlock
+  [16] ForkJoinPool.managedBlock
+  [17] LinkedTransferQueue.awaitMatch
+  [18] LinkedTransferQueue.xfer
+  [19] LinkedTransferQueue.take
+  [20] BlockingTransfer.take
+  [21] Channel.take
+  [22] Cell$$Lambda$61.0x0000000801037448.apply
+  [23] ReferencePipeline$3$1.accept
+  [24] ArrayList$ArrayListSpliterator.forEachRemaining
+  [25] AbstractPipeline.copyInto
+  [26] AbstractPipeline.wrapAndCopyInto
+  [27] ReduceOps$ReduceOp.evaluateSequential
+  [28] AbstractPipeline.evaluate
+  [29] IntPipeline.reduce
+  [30] IntPipeline.sum
+  [31] Cell.calculateNextState
+  [32] Cell.run
+  [33] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [34] ThreadPoolExecutor.runWorker
+  [35] ThreadPoolExecutor$Worker.run
+  [36] Thread.run
+
+--- 5849039 total (0.11%), 5880 samples
+  [ 0] update_curr_[k]
+  [ 1] enqueue_entity_[k]
+  [ 2] enqueue_task_fair_[k]
+  [ 3] enqueue_task_[k]
+  [ 4] ttwu_do_activate_[k]
+  [ 5] try_to_wake_up_[k]
+  [ 6] wake_up_q_[k]
+  [ 7] futex_wake_[k]
+  [ 8] do_futex_[k]
+  [ 9] __x64_sys_futex_[k]
+  [10] do_syscall_64_[k]
+  [11] entry_SYSCALL_64_after_hwframe_[k]
+  [12] ___pthread_cond_signal
+  [13] Unsafe.unpark
+  [14] LockSupport.unpark
+  [15] LinkedTransferQueue$Node.tryMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.put
+  [18] BlockingTransfer.put
+  [19] Channel.put
+  [20] TickPerCell.lambda$tick$0
+  [21] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [22] ChannelsGrid.lambda$forEachChannel$0
+  [23] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [24] Dimensions.forEachRowCol
+  [25] ChannelsGrid.forEachChannel
+  [26] TickPerCell.tick
+  [27] GameOfLife.calculateFrame
+  [28] GameOfLife.lambda$calculateFrameBlocking$4
+  [29] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [30] ThreadPoolExecutor.runWorker
+  [31] ThreadPoolExecutor$Worker.run
+  [32] Thread.run
+
+--- 5791972 total (0.11%), 5831 samples
+  [ 0] yield_task_fair_[k]
+  [ 1] do_sched_yield_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] Cell$$Lambda$61.0x0000000801037448.apply
+  [14] ReferencePipeline$3$1.accept
+  [15] ArrayList$ArrayListSpliterator.forEachRemaining
+  [16] AbstractPipeline.copyInto
+  [17] AbstractPipeline.wrapAndCopyInto
+  [18] ReduceOps$ReduceOp.evaluateSequential
+  [19] AbstractPipeline.evaluate
+  [20] IntPipeline.reduce
+  [21] IntPipeline.sum
+  [22] Cell.calculateNextState
+  [23] Cell.run
+  [24] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [25] ThreadPoolExecutor.runWorker
+  [26] ThreadPoolExecutor$Worker.run
+  [27] Thread.run
+
+--- 5779581 total (0.11%), 5802 samples
+  [ 0] futex_q_lock_[k]
+  [ 1] futex_wait_setup_[k]
+  [ 2] futex_wait_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __futex_abstimed_wait_common
+  [ 8] Unsafe.park
+  [ 9] LockSupport.park
+  [10] LinkedTransferQueue$Node.block
+  [11] ForkJoinPool.unmanagedBlock
+  [12] ForkJoinPool.managedBlock
+  [13] LinkedTransferQueue.awaitMatch
+  [14] LinkedTransferQueue.xfer
+  [15] LinkedTransferQueue.take
+  [16] BlockingTransfer.take
+  [17] Channel.take
+  [18] TickPerCell.waitTick
+  [19] Cell.notifyLiveness
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 5602238 total (0.10%), 5622 samples
+  [ 0] AbstractPipeline.<init>
+  [ 1] ReferencePipeline.<init>
+  [ 2] ReferencePipeline$Head.<init>
+  [ 3] StreamSupport.stream
+  [ 4] Collection.stream
+  [ 5] Cell.calculateNextState
+  [ 6] Cell.run
+  [ 7] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [ 8] ThreadPoolExecutor.runWorker
+  [ 9] ThreadPoolExecutor$Worker.run
+  [10] Thread.run
+
+--- 5596224 total (0.10%), 5634 samples
+  [ 0] LockSupport.setCurrentBlocker
+  [ 1] LinkedTransferQueue.awaitMatch
+  [ 2] LinkedTransferQueue.xfer
+  [ 3] LinkedTransferQueue.take
+  [ 4] BlockingTransfer.take
+  [ 5] Channel.take
+  [ 6] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 7] ReferencePipeline$3$1.accept
+  [ 8] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 9] AbstractPipeline.copyInto
+  [10] AbstractPipeline.wrapAndCopyInto
+  [11] ReduceOps$ReduceOp.evaluateSequential
+  [12] AbstractPipeline.evaluate
+  [13] IntPipeline.reduce
+  [14] IntPipeline.sum
+  [15] Cell.calculateNextState
+  [16] Cell.run
+  [17] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+
+--- 5585902 total (0.10%), 5592 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+
+--- 5579417 total (0.10%), 5614 samples
+  [ 0] update_curr_[k]
+  [ 1] pick_next_task_fair_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] __x64_sys_sched_yield_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] sched_yield
+  [ 8] Thread.yield0
+  [ 9] Thread.yield
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$61.0x0000000801037448.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 5463048 total (0.10%), 5461 samples
+  [ 0] __get_user_8_[k]
+  [ 1] __rseq_handle_notify_resume_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] sched_yield
+  [ 7] Thread.yield0
+  [ 8] Thread.yield
+  [ 9] LinkedTransferQueue.awaitMatch
+  [10] LinkedTransferQueue.xfer
+  [11] LinkedTransferQueue.take
+  [12] BlockingTransfer.take
+  [13] Channel.take
+  [14] Cell$$Lambda$61.0x0000000801037448.apply
+  [15] ReferencePipeline$3$1.accept
+  [16] ArrayList$ArrayListSpliterator.forEachRemaining
+  [17] AbstractPipeline.copyInto
+  [18] AbstractPipeline.wrapAndCopyInto
+  [19] ReduceOps$ReduceOp.evaluateSequential
+  [20] AbstractPipeline.evaluate
+  [21] IntPipeline.reduce
+  [22] IntPipeline.sum
+  [23] Cell.calculateNextState
+  [24] Cell.run
+  [25] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 5344147 total (0.10%), 5372 samples
+  [ 0] plist_add_[k]
+  [ 1] __futex_queue_[k]
+  [ 2] futex_wait_queue_[k]
+  [ 3] futex_wait_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __futex_abstimed_wait_common
+  [ 9] Unsafe.park
+  [10] LockSupport.park
+  [11] LinkedTransferQueue$Node.block
+  [12] ForkJoinPool.unmanagedBlock
+  [13] ForkJoinPool.managedBlock
+  [14] LinkedTransferQueue.awaitMatch
+  [15] LinkedTransferQueue.xfer
+  [16] LinkedTransferQueue.take
+  [17] BlockingTransfer.take
+  [18] Channel.take
+  [19] Cell$$Lambda$61.0x0000000801037448.apply
+  [20] ReferencePipeline$3$1.accept
+  [21] ArrayList$ArrayListSpliterator.forEachRemaining
+  [22] AbstractPipeline.copyInto
+  [23] AbstractPipeline.wrapAndCopyInto
+  [24] ReduceOps$ReduceOp.evaluateSequential
+  [25] AbstractPipeline.evaluate
+  [26] IntPipeline.reduce
+  [27] IntPipeline.sum
+  [28] Cell.calculateNextState
+  [29] Cell.run
+  [30] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [31] ThreadPoolExecutor.runWorker
+  [32] ThreadPoolExecutor$Worker.run
+  [33] Thread.run
+
+--- 5180271 total (0.10%), 5198 samples
+  [ 0] set_task_cpu_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] LinkedTransferQueue$Node.tryMatch
+  [12] LinkedTransferQueue.xfer
+  [13] LinkedTransferQueue.put
+  [14] BlockingTransfer.put
+  [15] Channel.put
+  [16] Cell.lambda$notifyLiveness$0
+  [17] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [18] ArrayList.forEach
+  [19] Cell.notifyLiveness
+  [20] Cell.run
+  [21] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [22] ThreadPoolExecutor.runWorker
+  [23] ThreadPoolExecutor$Worker.run
+  [24] Thread.run
+
+--- 5127373 total (0.09%), 5163 samples
+  [ 0] __update_load_avg_se_[k]
+  [ 1] update_load_avg_[k]
+  [ 2] enqueue_entity_[k]
+  [ 3] enqueue_task_fair_[k]
+  [ 4] enqueue_task_[k]
+  [ 5] ttwu_do_activate_[k]
+  [ 6] try_to_wake_up_[k]
+  [ 7] wake_up_q_[k]
+  [ 8] futex_wake_[k]
+  [ 9] do_futex_[k]
+  [10] __x64_sys_futex_[k]
+  [11] do_syscall_64_[k]
+  [12] entry_SYSCALL_64_after_hwframe_[k]
+  [13] ___pthread_cond_signal
+  [14] Unsafe.unpark
+  [15] LockSupport.unpark
+  [16] LinkedTransferQueue$Node.tryMatch
+  [17] LinkedTransferQueue.xfer
+  [18] LinkedTransferQueue.put
+  [19] BlockingTransfer.put
+  [20] Channel.put
+  [21] TickPerCell.lambda$tick$0
+  [22] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [23] ChannelsGrid.lambda$forEachChannel$0
+  [24] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [25] Dimensions.forEachRowCol
+  [26] ChannelsGrid.forEachChannel
+  [27] TickPerCell.tick
+  [28] GameOfLife.calculateFrame
+  [29] GameOfLife.lambda$calculateFrameBlocking$4
+  [30] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [31] ThreadPoolExecutor.runWorker
+  [32] ThreadPoolExecutor$Worker.run
+  [33] Thread.run
+
+--- 5091291 total (0.09%), 5121 samples
+  [ 0] update_rq_clock_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] Cell$$Lambda$61.0x0000000801037448.apply
+  [21] ReferencePipeline$3$1.accept
+  [22] ArrayList$ArrayListSpliterator.forEachRemaining
+  [23] AbstractPipeline.copyInto
+  [24] AbstractPipeline.wrapAndCopyInto
+  [25] ReduceOps$ReduceOp.evaluateSequential
+  [26] AbstractPipeline.evaluate
+  [27] IntPipeline.reduce
+  [28] IntPipeline.sum
+  [29] Cell.calculateNextState
+  [30] Cell.run
+  [31] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [32] ThreadPoolExecutor.runWorker
+  [33] ThreadPoolExecutor$Worker.run
+  [34] Thread.run
+
+--- 5025105 total (0.09%), 5043 samples
+  [ 0] __condvar_confirm_wakeup
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] LinkedTransferQueue$Node.block
+  [ 4] ForkJoinPool.unmanagedBlock
+  [ 5] ForkJoinPool.managedBlock
+  [ 6] LinkedTransferQueue.awaitMatch
+  [ 7] LinkedTransferQueue.xfer
+  [ 8] LinkedTransferQueue.take
+  [ 9] BlockingTransfer.take
+  [10] Channel.take
+  [11] TickPerCell.waitTick
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 5020551 total (0.09%), 5034 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.put
+  [ 2] BlockingTransfer.put
+  [ 3] Channel.put
+  [ 4] Cell.lambda$notifyLiveness$0
+  [ 5] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [ 6] ArrayList.forEach
+  [ 7] Cell.notifyLiveness
+  [ 8] Cell.run
+  [ 9] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 4991387 total (0.09%), 4996 samples
+  [ 0] psi_task_switch_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __futex_abstimed_wait_common
+  [10] Unsafe.park
+  [11] LockSupport.park
+  [12] LinkedTransferQueue$Node.block
+  [13] ForkJoinPool.unmanagedBlock
+  [14] ForkJoinPool.managedBlock
+  [15] LinkedTransferQueue.awaitMatch
+  [16] LinkedTransferQueue.xfer
+  [17] LinkedTransferQueue.take
+  [18] BlockingTransfer.take
+  [19] Channel.take
+  [20] TickPerCell.waitTick
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 4984855 total (0.09%), 5007 samples
+  [ 0] __tls_get_addr
+  [ 1] Unsafe_Park
+  [ 2] Unsafe.park
+  [ 3] LockSupport.park
+  [ 4] LinkedTransferQueue$Node.block
+  [ 5] ForkJoinPool.unmanagedBlock
+  [ 6] ForkJoinPool.managedBlock
+  [ 7] LinkedTransferQueue.awaitMatch
+  [ 8] LinkedTransferQueue.xfer
+  [ 9] LinkedTransferQueue.take
+  [10] BlockingTransfer.take
+  [11] Channel.take
+  [12] Cell$$Lambda$61.0x0000000801037448.apply
+  [13] ReferencePipeline$3$1.accept
+  [14] ArrayList$ArrayListSpliterator.forEachRemaining
+  [15] AbstractPipeline.copyInto
+  [16] AbstractPipeline.wrapAndCopyInto
+  [17] ReduceOps$ReduceOp.evaluateSequential
+  [18] AbstractPipeline.evaluate
+  [19] IntPipeline.reduce
+  [20] IntPipeline.sum
+  [21] Cell.calculateNextState
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+
+--- 4857698 total (0.09%), 4875 samples
+  [ 0] check_preemption_disabled_[k]
+  [ 1] rcu_note_context_switch_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] __x64_sys_sched_yield_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] sched_yield
+  [ 8] Thread.yield0
+  [ 9] Thread.yield
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$61.0x0000000801037448.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 4810384 total (0.09%), 4845 samples
+  [ 0] __entry_text_start_[k]
+  [ 1] sched_yield
+  [ 2] Thread.yield0
+  [ 3] Thread.yield
+  [ 4] LinkedTransferQueue.awaitMatch
+  [ 5] LinkedTransferQueue.xfer
+  [ 6] LinkedTransferQueue.take
+  [ 7] BlockingTransfer.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$61.0x0000000801037448.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 4768013 total (0.09%), 4748 samples
+  [ 0] exit_to_user_mode_prepare_[k]
+  [ 1] syscall_exit_to_user_mode_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __futex_abstimed_wait_common
+  [ 5] Unsafe.park
+  [ 6] LockSupport.park
+  [ 7] LinkedTransferQueue$Node.block
+  [ 8] ForkJoinPool.unmanagedBlock
+  [ 9] ForkJoinPool.managedBlock
+  [10] LinkedTransferQueue.awaitMatch
+  [11] LinkedTransferQueue.xfer
+  [12] LinkedTransferQueue.take
+  [13] BlockingTransfer.take
+  [14] Channel.take
+  [15] Cell$$Lambda$61.0x0000000801037448.apply
+  [16] ReferencePipeline$3$1.accept
+  [17] ArrayList$ArrayListSpliterator.forEachRemaining
+  [18] AbstractPipeline.copyInto
+  [19] AbstractPipeline.wrapAndCopyInto
+  [20] ReduceOps$ReduceOp.evaluateSequential
+  [21] AbstractPipeline.evaluate
+  [22] IntPipeline.reduce
+  [23] IntPipeline.sum
+  [24] Cell.calculateNextState
+  [25] Cell.run
+  [26] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [27] ThreadPoolExecutor.runWorker
+  [28] ThreadPoolExecutor$Worker.run
+  [29] Thread.run
+
+--- 4763691 total (0.09%), 4778 samples
+  [ 0] iterate_groups_[k]
+  [ 1] psi_task_switch_[k]
+  [ 2] __schedule_[k]
+  [ 3] schedule_[k]
+  [ 4] futex_wait_queue_[k]
+  [ 5] futex_wait_[k]
+  [ 6] do_futex_[k]
+  [ 7] __x64_sys_futex_[k]
+  [ 8] do_syscall_64_[k]
+  [ 9] entry_SYSCALL_64_after_hwframe_[k]
+  [10] __futex_abstimed_wait_common
+  [11] Unsafe.park
+  [12] LockSupport.park
+  [13] LinkedTransferQueue$Node.block
+  [14] ForkJoinPool.unmanagedBlock
+  [15] ForkJoinPool.managedBlock
+  [16] LinkedTransferQueue.awaitMatch
+  [17] LinkedTransferQueue.xfer
+  [18] LinkedTransferQueue.take
+  [19] BlockingTransfer.take
+  [20] Channel.take
+  [21] Cell$$Lambda$61.0x0000000801037448.apply
+  [22] ReferencePipeline$3$1.accept
+  [23] ArrayList$ArrayListSpliterator.forEachRemaining
+  [24] AbstractPipeline.copyInto
+  [25] AbstractPipeline.wrapAndCopyInto
+  [26] ReduceOps$ReduceOp.evaluateSequential
+  [27] AbstractPipeline.evaluate
+  [28] IntPipeline.reduce
+  [29] IntPipeline.sum
+  [30] Cell.calculateNextState
+  [31] Cell.run
+  [32] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [33] ThreadPoolExecutor.runWorker
+  [34] ThreadPoolExecutor$Worker.run
+  [35] Thread.run
+
+--- 4704786 total (0.09%), 4705 samples
+  [ 0] fpregs_restore_userregs_[k]
+  [ 1] exit_to_user_mode_prepare_[k]
+  [ 2] syscall_exit_to_user_mode_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] sched_yield
+  [ 6] Thread.yield0
+  [ 7] Thread.yield
+  [ 8] LinkedTransferQueue.awaitMatch
+  [ 9] LinkedTransferQueue.xfer
+  [10] LinkedTransferQueue.take
+  [11] BlockingTransfer.take
+  [12] Channel.take
+  [13] TickPerCell.waitTick
+  [14] Cell.notifyLiveness
+  [15] Cell.run
+  [16] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+
+--- 4702584 total (0.09%), 4729 samples
+  [ 0] native_sched_clock_[k]
+  [ 1] sched_clock_cpu_[k]
+  [ 2] update_rq_clock_[k]
+  [ 3] __schedule_[k]
+  [ 4] schedule_[k]
+  [ 5] futex_wait_queue_[k]
+  [ 6] futex_wait_[k]
+  [ 7] do_futex_[k]
+  [ 8] __x64_sys_futex_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] __futex_abstimed_wait_common
+  [12] Unsafe.park
+  [13] LockSupport.park
+  [14] LinkedTransferQueue$Node.block
+  [15] ForkJoinPool.unmanagedBlock
+  [16] ForkJoinPool.managedBlock
+  [17] LinkedTransferQueue.awaitMatch
+  [18] LinkedTransferQueue.xfer
+  [19] LinkedTransferQueue.take
+  [20] BlockingTransfer.take
+  [21] Channel.take
+  [22] Cell$$Lambda$61.0x0000000801037448.apply
+  [23] ReferencePipeline$3$1.accept
+  [24] ArrayList$ArrayListSpliterator.forEachRemaining
+  [25] AbstractPipeline.copyInto
+  [26] AbstractPipeline.wrapAndCopyInto
+  [27] ReduceOps$ReduceOp.evaluateSequential
+  [28] AbstractPipeline.evaluate
+  [29] IntPipeline.reduce
+  [30] IntPipeline.sum
+  [31] Cell.calculateNextState
+  [32] Cell.run
+  [33] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [34] ThreadPoolExecutor.runWorker
+  [35] ThreadPoolExecutor$Worker.run
+  [36] Thread.run
+
+--- 4701737 total (0.09%), 4718 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$620.0x000000080109f1c0.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$634.0x000000080109fc18.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+--- 4597475 total (0.08%), 4631 samples
+  [ 0] vtable stub
+  [ 1] AbstractPipeline.wrapSink
+  [ 2] AbstractPipeline.wrapAndCopyInto
+  [ 3] ReduceOps$ReduceOp.evaluateSequential
+  [ 4] AbstractPipeline.evaluate
+  [ 5] IntPipeline.reduce
+  [ 6] IntPipeline.sum
+  [ 7] Cell.calculateNextState
+  [ 8] Cell.run
+  [ 9] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [10] ThreadPoolExecutor.runWorker
+  [11] ThreadPoolExecutor$Worker.run
+  [12] Thread.run
+
+--- 4587665 total (0.08%), 4616 samples
+  [ 0] LinkedTransferQueue.xfer
+  [ 1] LinkedTransferQueue.take
+  [ 2] BlockingTransfer.take
+  [ 3] Channel.take
+  [ 4] Cell$$Lambda$61.0x0000000801037448.apply
+  [ 5] ReferencePipeline$3$1.accept
+  [ 6] ArrayList$ArrayListSpliterator.forEachRemaining
+  [ 7] AbstractPipeline.copyInto
+  [ 8] AbstractPipeline.wrapAndCopyInto
+  [ 9] ReduceOps$ReduceOp.evaluateSequential
+  [10] AbstractPipeline.evaluate
+  [11] IntPipeline.reduce
+  [12] IntPipeline.sum
+  [13] Cell.calculateNextState
+  [14] Cell.run
+  [15] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+
+       total  percent  samples  top
+  ----------  -------  -------  ---
+   304255754    5.60%   302810  Unsafe_Park
+   299827704    5.52%   300536  Cell.lambda$notifyLiveness$0
+   272062309    5.01%   269053  restore_fpregs_from_fpstate_[k]
+   268162575    4.94%   268599  LinkedTransferQueue.xfer
+   197102130    3.63%   196605  Parker::park(bool, long)
+   189934212    3.50%   191036  __entry_text_start_[k]
+   164056391    3.02%   164611  syscall_exit_to_user_mode_[k]
+   162169245    2.98%   162856  VarHandleReferences$FieldInstanceReadWrite.compareAndSet
+   148581943    2.73%   148122  Unsafe.park
+   135131782    2.49%   134727  __condvar_dec_grefs
+   107922614    1.99%   106884  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+   105741604    1.95%   105284  __get_user_8_[k]
+   103952561    1.91%   104342  ReduceOps$5ReducingSink.get
+    90491103    1.67%    90861  ___pthread_cond_wait
+    87474133    1.61%    87000  try_to_wake_up_[k]
+    77336712    1.42%    77143  futex_wake_mark_[k]
+    75661961    1.39%    76068  psi_group_change_[k]
+    69811145    1.28%    69091  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+    63854125    1.18%    64058  select_task_rq_fair_[k]
+    63715142    1.17%    63808  futex_wake_[k]
+    60755494    1.12%    60830  check_preemption_disabled_[k]
+    60578264    1.12%    60557  LinkedTransferQueue.skipDeadNodesNearHead
+    57766654    1.06%    57760  fpregs_restore_userregs_[k]
+    56396707    1.04%    56537  LinkedTransferQueue.awaitMatch
+    56322062    1.04%    56499  __rseq_handle_notify_resume_[k]
+    55953999    1.03%    55653  Cell.notifyLiveness
+    54942357    1.01%    54977  psi_task_change_[k]
+    54311397    1.00%    54535  Unsafe_Unpark
+    53183557    0.98%    53414  __schedule_[k]
+    50279685    0.93%    50019  __GI___pthread_disable_asynccancel
+    50150738    0.92%    50421  _raw_spin_lock_[k]
+    44641957    0.82%    44463  ArrayList.forEach
+    43123231    0.79%    42881  Cell$$Lambda$50.0x0000000801035ab0.accept
+    39455873    0.73%    39659  __pthread_mutex_unlock_usercnt
+    36284824    0.67%    36023  JavaThread::threadObj() const
+    35247167    0.65%    34839  clear_page_erms_[k]
+    35242932    0.65%    35286  ReferencePipeline$4$1.accept
+    34900297    0.64%    34964  ReferencePipeline$3$1.accept
+    31660213    0.58%    31866  ___pthread_cond_signal
+    31558706    0.58%    31659  native_sched_clock_[k]
+    30917217    0.57%    31052  Cell$$Lambda$61.0x0000000801037448.apply
+    30904329    0.57%    31014  __perf_event_task_sched_out_[k]
+    30639994    0.56%    30686  __GI___pthread_mutex_lock
+    30040253    0.55%    30177  enqueue_entity_[k]
+    29883511    0.55%    29827  LinkedTransferQueue$Node.isReleasable
+    29443807    0.54%    29596  update_curr_[k]
+    26494968    0.49%    26462  psi_flags_change_[k]
+    25502842    0.47%    25528  __put_user_nocheck_8_[k]
+    24750842    0.46%    24809  Dimensions.forEachRowCol
+    24122802    0.44%    24148  update_rq_clock_[k]
+    23351692    0.43%    23416  update_load_avg_[k]
+    23195437    0.43%    23121  exit_to_user_mode_prepare_[k]
+    23113470    0.43%    23203  psi_task_switch_[k]
+    22018202    0.41%    22032  __GI___pthread_getspecific
+    21209137    0.39%    21292  __pthread_mutex_cond_lock
+    21180036    0.39%    21260  AbstractPipeline.<init>
+    20943839    0.39%    21010  __tls_get_addr
+    20925647    0.39%    20841  java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+    20377851    0.38%    20330  __futex_abstimed_wait_common
+    20337319    0.37%    20443  __calc_delta_[k]
+    19703586    0.36%    19802  futex_q_lock_[k]
+    19404138    0.36%    19463  rcu_note_context_switch_[k]
+    19207170    0.35%    19442  native_write_msr_[k]
+    18446124    0.34%    18542  __update_load_avg_se_[k]
+    18426409    0.34%    18509  pthread_mutex_trylock@@GLIBC_2.34
+    17723275    0.33%    17862  ThreadsListHandle::ThreadsListHandle(Thread*)
+    17083321    0.31%    17160  __futex_unqueue_[k]
+    17073968    0.31%    17175  Channel.take
+    16165936    0.30%    16239  preempt_count_add_[k]
+    16123218    0.30%    16215  preempt_count_sub_[k]
+    15845917    0.29%    15824  blkcg_maybe_throttle_current_[k]
+    15693243    0.29%    15713  __list_del_entry_valid_[k]
+    15267258    0.28%    15195  Thread.yield0
+    15195894    0.28%    15225  enqueue_task_fair_[k]
+    15149636    0.28%    15261  schedule_[k]
+    14132604    0.26%    14214  cpuacct_charge_[k]
+    14002759    0.26%    14105  ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+    13749039    0.25%    13709  mem_cgroup_handle_over_high_[k]
+    13736901    0.25%    13629  ttwu_do_activate_[k]
+    12910420    0.24%    12937  __update_load_avg_cfs_rq_[k]
+    12797960    0.24%    12866  JVM_Yield
+    11734579    0.22%    11681  _pthread_cleanup_pop@@GLIBC_2.34
+    11673885    0.21%    11710  set_task_cpu_[k]
+    11403621    0.21%    11437  iterate_groups_[k]
+    11067576    0.20%    11117  __condvar_confirm_wakeup
+    10980418    0.20%    11055  sched_yield
+    10677255    0.20%    10728  update_min_vruntime_[k]
+    10436356    0.19%    10488  wake_q_add_safe_[k]
+    10210383    0.19%    10258  dequeue_task_fair_[k]
+     9911749    0.18%     9944  Cell.run
+     9566802    0.18%     9614  ReferencePipeline$Head.<init>
+     9412610    0.17%     9445  task_h_load_[k]
+     9061713    0.17%     9122  yield_task_fair_[k]
+     8993777    0.17%     9014  __update_load_avg_blocked_se_[k]
+     8980147    0.17%     9025  pick_next_task_fair_[k]
+     7788064    0.14%     7776  _raw_spin_lock_irqsave_[k]
+     7660914    0.14%     7687  LinkedTransferQueue$Node.tryMatch
+     7564051    0.14%     7599  plist_add_[k]
+     7241241    0.13%     7273  __rcu_read_lock_[k]
+     7062145    0.13%     7101  __cgroup_account_cputime_[k]
+     6959610    0.13%     6974  update_cfs_group_[k]
+     6941619    0.13%     6987  LockSupport.setCurrentBlocker
+     6894020    0.13%     6902  JavaFrameAnchor::make_walkable()
+     6853949    0.13%     6885  available_idle_cpu_[k]
+     6809599    0.13%     6794  update_blocked_averages_[k]
+     6773523    0.12%     6796  java_lang_Thread::get_thread_status(oopDesc*)
+     6694135    0.12%     6744  JavaThread::is_interrupted(bool)
+     6618436    0.12%     6648  wake_up_q_[k]
+     6302668    0.12%     6311  Unsafe.unpark
+     5707420    0.11%     5723  get_mem_cgroup_from_mm_[k]
+     5538601    0.10%     5583  __get_user_nocheck_4_[k]
+     5332755    0.10%     5367  cgroup_rstat_updated_[k]
+     5262880    0.10%     5268  LinkedTransferQueue.take
+     5160636    0.09%     5126  DirectMethodHandle.allocateInstance
+     5099925    0.09%     4990  syscall_return_via_sysret_[k]
+     5076548    0.09%     5111  pick_next_entity_[k]
+     5063499    0.09%     5048  enqueue_task_[k]
+     5001165    0.09%     5038  entry_SYSCALL_64_safe_stack_[k]
+     4839079    0.09%     4840  __this_cpu_preempt_check_[k]
+     4726617    0.09%     4757  ChannelsGrid.getChannel
+     4640880    0.09%     4648  reweight_entity_[k]
+     4621128    0.09%     4655  vtable stub
+     4560682    0.08%     4590  sched_yield@plt
+     4384192    0.08%     4400  rb_erase_[k]
+     4252201    0.08%     4286  x86_pmu_disable_[k]
+     4225719    0.08%     4249  native_queued_spin_lock_slowpath_[k]
+     4209879    0.08%     4230  debug_smp_processor_id_[k]
+     4045421    0.07%     4040  __x64_sys_futex_[k]
+     4041031    0.07%     4042  migrate_task_rq_fair_[k]
+     4033089    0.07%     4060  os::dont_yield()
+     4021269    0.07%     4038  place_entity_[k]
+     3966432    0.07%     3990  dequeue_entity_[k]
+     3740760    0.07%     3755  Cell.calculateNextState
+     3734187    0.07%     3719  get_page_from_freelist_[k]
+     3732754    0.07%     3744  sched_clock_cpu_[k]
+     3714468    0.07%     3741  __GI___pthread_enable_asynccancel
+     3649383    0.07%     3664  plist_del_[k]
+     3612179    0.07%     3628  __list_add_valid_[k]
+     3515939    0.06%     3528  futex_hash_[k]
+     3503832    0.06%     3513  get_futex_key_[k]
+     3484491    0.06%     3480  __handle_mm_fault_[k]
+     3434147    0.06%     3458  futex_wait_queue_[k]
+     3431820    0.06%     3440  update_irq_load_avg_[k]
+     3406319    0.06%     3415  asm_exc_page_fault_[k]
+     3384088    0.06%     3385  ThreadLocalStorage::is_initialized()
+     3252438    0.06%     3270  _raw_spin_unlock_[k]
+     3155693    0.06%     3160  LockSupport.unpark
+     3110288    0.06%     3098  vmacache_find_[k]
+     3065678    0.06%     3085  Sink$ChainedReference.end
+     3018754    0.06%     3020  check_preempt_wakeup_[k]
+     3017235    0.06%     3042  java_lang_Thread::interrupted(oopDesc*)
+     2994191    0.06%     3008  _raw_read_lock_irqsave_[k]
+     2909830    0.05%     2925  ReduceOps$5ReducingSink.accept
+     2908135    0.05%     2925  GameOfLifeBenchmark_benchmark_jmhTest.benchmark_thrpt_jmhStub
+     2893627    0.05%     2891  __GI___pthread_mutex_unlock
+     2879444    0.05%     2895  set_next_buddy_[k]
+     2861626    0.05%     2884  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<544868ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 544868ul>::oop_access_barrier(void*)
+     2836211    0.05%     2857  ReferencePipeline$4.opWrapSink
+     2828568    0.05%     2826  TickPerCell.waitTick
+     2816267    0.05%     2815  ArrayList.elementAt
+     2749935    0.05%     2767  __rcu_read_unlock_[k]
+     2745172    0.05%     2752  do_syscall_64_[k]
+     2685442    0.05%     2674  AbstractQueuedSynchronizer$ConditionObject.signal
+     2636482    0.05%     2629  rb_next_[k]
+     2571850    0.05%     2587  rb_insert_color_[k]
+     2549569    0.05%     2555  LinkedTransferQueue$Node.block
+     2504195    0.05%     2522  ReferencePipeline$3.opWrapSink
+     2431193    0.04%     2442  raw_spin_rq_lock_nested_[k]
+     2234467    0.04%     2234  __mem_cgroup_charge_[k]
+     2210713    0.04%     2218  __cgroup_throttle_swaprate_[k]
+     2185568    0.04%     2187  I2C/C2I adapters
+     2121806    0.04%     2115  alloc_pages_vma_[k]
+     2114680    0.04%     2114  syscall_exit_to_user_mode_prepare_[k]
+     2092293    0.04%     2101  _raw_spin_unlock_irqrestore_[k]
+     2082090    0.04%     2073  futex_wait_[k]
+     2049865    0.04%     2058  _find_next_bit_[k]
+     1969755    0.04%     1981  pid_task_[k]
+     1957936    0.04%     1958  check_preempt_curr_[k]
+     1941508    0.04%     1953  ttwu_queue_wakelist_[k]
+     1911482    0.04%     1919  __x86_indirect_thunk_rax_[k]
+     1909012    0.04%     1909  rcu_sched_clock_irq_[k]
+     1887774    0.03%     1892  ThreadLocalStorage::thread()
+     1841890    0.03%     1835  G1CardSet::occupied() const
+     1825596    0.03%     1830  resched_curr_[k]
+     1780210    0.03%     1792  Sink$ChainedReference.<init>
+     1760371    0.03%     1772  BlockingTransfer.take
+     1738791    0.03%     1748  put_prev_entity_[k]
+     1735876    0.03%     1740  pthread_getspecific@plt
+     1730635    0.03%     1738  StreamOpFlag.getMask
+     1713244    0.03%     1713  VarHandleReferences$FieldInstanceReadWrite.set
+     1668847    0.03%     1679  check_spread.isra.0_[k]
+     1649758    0.03%     1659  in_lock_functions_[k]
+     1632350    0.03%     1644  __x64_sys_sched_yield_[k]
+     1631701    0.03%     1626  do_futex_[k]
+     1599584    0.03%     1599  entry_SYSCALL_64_after_hwframe_[k]
+     1594032    0.03%     1604  set_next_entity_[k]
+     1492229    0.03%     1490  __hrtimer_run_queues_[k]
+     1464688    0.03%     1458  __alloc_pages_[k]
+     1453460    0.03%     1466  send_sigio_to_task_[k]
+     1371728    0.03%     1385  Sink$ChainedReference.begin

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<style>
+	body {margin: 0; padding: 10px; background-color: #ffffff}
+	h1 {margin: 5px 0 0 0; font-size: 18px; font-weight: normal; text-align: center}
+	header {margin: -24px 0 5px 0; line-height: 24px}
+	button {font: 12px sans-serif; cursor: pointer}
+	p {margin: 5px 0 5px 0}
+	a {color: #0366d6}
+	#hl {position: absolute; display: none; overflow: hidden; white-space: nowrap; pointer-events: none; background-color: #ffffe0; outline: 1px solid #ffc000; height: 15px}
+	#hl span {padding: 0 3px 0 3px}
+	#status {overflow: hidden; white-space: nowrap}
+	#match {overflow: hidden; white-space: nowrap; display: none; float: right; text-align: right}
+	#reset {cursor: pointer}
+	#canvas {width: 100%; height: 480px}
+</style>
+</head>
+<body style='font: 12px Verdana, sans-serif'>
+<h1>Lock profile</h1>
+<header style='text-align: left'><button id='reverse' title='Reverse'>&#x1f53b;</button>&nbsp;&nbsp;<button id='search' title='Search'>&#x1f50d;</button></header>
+<header style='text-align: right'>Produced by <a href='https://github.com/jvm-profiling-tools/async-profiler'>async-profiler</a></header>
+<canvas id='canvas'></canvas>
+<div id='hl'><span></span></div>
+<p id='match'>Matched: <span id='matchval'></span> <span id='reset' title='Clear'>&#x274c;</span></p>
+<p id='status'>&nbsp;</p>
+<script>
+	// Copyright 2020 Andrei Pangin
+	// Licensed under the Apache License, Version 2.0.
+	'use strict';
+	var root, rootLevel, px, pattern;
+	var reverse = false;
+	const levels = Array(30);
+	for (let h = 0; h < levels.length; h++) {
+		levels[h] = [];
+	}
+
+	const canvas = document.getElementById('canvas');
+	const c = canvas.getContext('2d');
+	const hl = document.getElementById('hl');
+	const status = document.getElementById('status');
+
+	const canvasWidth = canvas.offsetWidth;
+	const canvasHeight = canvas.offsetHeight;
+	canvas.style.width = canvasWidth + 'px';
+	canvas.width = canvasWidth * (devicePixelRatio || 1);
+	canvas.height = canvasHeight * (devicePixelRatio || 1);
+	if (devicePixelRatio) c.scale(devicePixelRatio, devicePixelRatio);
+	c.font = document.body.style.font;
+
+	const palette = [
+		[0xb2e1b2, 20, 20, 20],
+		[0x50e150, 30, 30, 30],
+		[0x50cccc, 30, 30, 30],
+		[0xe15a5a, 30, 40, 40],
+		[0xc8c83c, 30, 30, 10],
+		[0xe17d00, 30, 30,  0],
+		[0xcce880, 20, 20, 20],
+	];
+
+	function getColor(p) {
+		const v = Math.random();
+		return '#' + (p[0] + ((p[1] * v) << 16 | (p[2] * v) << 8 | (p[3] * v))).toString(16);
+	}
+
+	function f(level, left, width, type, title, inln, c1, int) {
+		levels[level].push({left: left, width: width, color: getColor(palette[type]), title: title,
+			details: (int ? ', int=' + int : '') + (c1 ? ', c1=' + c1 : '') + (inln ? ', inln=' + inln : '')
+		});
+	}
+
+	function samples(n) {
+		return n === 1 ? '1 sample' : n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' samples';
+	}
+
+	function pct(a, b) {
+		return a >= b ? '100' : (100 * a / b).toFixed(2);
+	}
+
+	function findFrame(frames, x) {
+		let left = 0;
+		let right = frames.length - 1;
+
+		while (left <= right) {
+			const mid = (left + right) >>> 1;
+			const f = frames[mid];
+
+			if (f.left > x) {
+				right = mid - 1;
+			} else if (f.left + f.width <= x) {
+				left = mid + 1;
+			} else {
+				return f;
+			}
+		}
+
+		if (frames[left] && (frames[left].left - x) * px < 0.5) return frames[left];
+		if (frames[right] && (x - (frames[right].left + frames[right].width)) * px < 0.5) return frames[right];
+
+		return null;
+	}
+
+	function search(r) {
+		if (r === true && (r = prompt('Enter regexp to search:', '')) === null) {
+			return;
+		}
+
+		pattern = r ? RegExp(r) : undefined;
+		const matched = render(root, rootLevel);
+		document.getElementById('matchval').textContent = pct(matched, root.width) + '%';
+		document.getElementById('match').style.display = r ? 'inherit' : 'none';
+	}
+
+	function render(newRoot, newLevel) {
+		if (root) {
+			c.fillStyle = '#ffffff';
+			c.fillRect(0, 0, canvasWidth, canvasHeight);
+		}
+
+		root = newRoot || levels[0][0];
+		rootLevel = newLevel || 0;
+		px = canvasWidth / root.width;
+
+		const x0 = root.left;
+		const x1 = x0 + root.width;
+		const marked = [];
+
+		function mark(f) {
+			return marked[f.left] >= f.width || (marked[f.left] = f.width);
+		}
+
+		function totalMarked() {
+			let total = 0;
+			let left = 0;
+			Object.keys(marked).sort(function(a, b) { return a - b; }).forEach(function(x) {
+				if (+x >= left) {
+					total += marked[x];
+					left = +x + marked[x];
+				}
+			});
+			return total;
+		}
+
+		function drawFrame(f, y, alpha) {
+			if (f.left < x1 && f.left + f.width > x0) {
+				c.fillStyle = pattern && f.title.match(pattern) && mark(f) ? '#ee00ee' : f.color;
+				c.fillRect((f.left - x0) * px, y, f.width * px, 15);
+
+				if (f.width * px >= 21) {
+					const chars = Math.floor(f.width * px / 7);
+					const title = f.title.length <= chars ? f.title : f.title.substring(0, chars - 2) + '..';
+					c.fillStyle = '#000000';
+					c.fillText(title, Math.max(f.left - x0, 0) * px + 3, y + 12, f.width * px - 6);
+				}
+
+				if (alpha) {
+					c.fillStyle = 'rgba(255, 255, 255, 0.5)';
+					c.fillRect((f.left - x0) * px, y, f.width * px, 15);
+				}
+			}
+		}
+
+		for (let h = 0; h < levels.length; h++) {
+			const y = reverse ? h * 16 : canvasHeight - (h + 1) * 16;
+			const frames = levels[h];
+			for (let i = 0; i < frames.length; i++) {
+				drawFrame(frames[i], y, h < rootLevel);
+			}
+		}
+
+		return totalMarked();
+	}
+
+	canvas.onmousemove = function() {
+		const h = Math.floor((reverse ? event.offsetY : (canvasHeight - event.offsetY)) / 16);
+		if (h >= 0 && h < levels.length) {
+			const f = findFrame(levels[h], event.offsetX / px + root.left);
+			if (f) {
+				if (f != root) getSelection().removeAllRanges();
+				hl.style.left = (Math.max(f.left - root.left, 0) * px + canvas.offsetLeft) + 'px';
+				hl.style.width = (Math.min(f.width, root.width) * px) + 'px';
+				hl.style.top = ((reverse ? h * 16 : canvasHeight - (h + 1) * 16) + canvas.offsetTop) + 'px';
+				hl.firstChild.textContent = f.title;
+				hl.style.display = 'block';
+				canvas.title = f.title + '\n(' + samples(f.width) + f.details + ', ' + pct(f.width, levels[0][0].width) + '%)';
+				canvas.style.cursor = 'pointer';
+				canvas.onclick = function() {
+					if (f != root) {
+						render(f, h);
+						canvas.onmousemove();
+					}
+				};
+				status.textContent = 'Function: ' + canvas.title;
+				return;
+			}
+		}
+		canvas.onmouseout();
+	}
+
+	canvas.onmouseout = function() {
+		hl.style.display = 'none';
+		status.textContent = '\xa0';
+		canvas.title = '';
+		canvas.style.cursor = '';
+		canvas.onclick = '';
+	}
+
+	canvas.ondblclick = function() {
+		getSelection().selectAllChildren(hl);
+	}
+
+	document.getElementById('reverse').onclick = function() {
+		reverse = !reverse;
+		render();
+	}
+
+	document.getElementById('search').onclick = function() {
+		search(true);
+	}
+
+	document.getElementById('reset').onclick = function() {
+		search(false);
+	}
+
+	window.onkeydown = function() {
+		if (event.ctrlKey && event.keyCode === 70) {
+			event.preventDefault();
+			search(true);
+		} else if (event.keyCode === 27) {
+			search(false);
+		}
+	}
+
+f(0,0,12252,3,'all')
+f(1,0,12252,1,'Thread.run')
+f(2,0,12252,1,'ThreadPoolExecutor$Worker.run')
+f(3,0,12252,1,'ThreadPoolExecutor.runWorker')
+f(4,0,1,1,'FutureTask.run')
+f(5,0,1,1,'Executors$RunnableAdapter.call')
+f(6,0,1,1,'FutureTask.run')
+f(7,0,1,1,'BenchmarkHandler$BenchmarkTask.call')
+f(8,0,1,1,'BenchmarkHandler$BenchmarkTask.call')
+f(9,0,1,1,'Method.invoke')
+f(10,0,1,1,'DirectMethodHandleAccessor.invoke')
+f(11,0,1,1,'DirectMethodHandleAccessor.invokeImpl')
+f(12,0,1,1,'LambdaForm$MH.0x000000080102e400.invokeExact_MT')
+f(13,0,1,1,'LambdaForm$MH.0x000000080102e000.invoke')
+f(14,0,1,1,'DirectMethodHandle$Holder.invokeSpecial')
+f(15,0,1,1,'GameOfLifeBenchmark_benchmark_jmhTest.benchmark_Throughput')
+f(16,0,1,1,'GameOfLifeBenchmark_benchmark_jmhTest.benchmark_thrpt_jmhStub')
+f(17,0,1,1,'GameOfLifeBenchmark.benchmark')
+f(18,0,1,1,'GameOfLife.calculateFrameBlocking')
+f(19,0,1,1,'GameOfLife$$Lambda$43.0x0000000801034c28.accept')
+f(20,0,1,1,'ThreadPoolExecutor.execute')
+f(21,0,1,1,'LinkedBlockingQueue.offer')
+f(22,0,1,1,'LinkedBlockingQueue.signalNotEmpty')
+f(23,0,1,1,'ReentrantLock.lock')
+f(24,0,1,1,'ReentrantLock$Sync.lock')
+f(25,0,1,1,'AbstractQueuedSynchronizer.acquire')
+f(26,0,1,1,'AbstractQueuedSynchronizer.acquire')
+f(27,0,1,1,'LockSupport.park')
+f(28,0,1,1,'Unsafe.park')
+f(29,0,1,2,'ReentrantLock$NonfairSync')
+f(4,1,1178,1,'GameOfLife$$Lambda$49.0x0000000801035ac0.run')
+f(5,1,1178,1,'GameOfLife.lambda$calculateFrameBlocking$4')
+f(6,1,1178,1,'GameOfLife.calculateFrame')
+f(7,1,1177,1,'ChannelsGrid.forEachChannel')
+f(8,1,1177,1,'Dimensions.forEachRowCol')
+f(9,1,1177,1,'ChannelsGrid$$Lambda$60.0x0000000801037410.accept')
+f(10,1,1177,1,'ChannelsGrid.lambda$forEachChannel$1')
+f(11,1,1177,1,'GameOfLife$$Lambda$57.0x0000000801036d88.test')
+f(12,1,1177,1,'Channel.take')
+f(13,1,1177,1,'LockedSingleValue.take')
+f(14,1,813,1,'AbstractQueuedSynchronizer$ConditionObject.await')
+f(15,1,813,1,'AbstractQueuedSynchronizer.acquire')
+f(16,1,813,1,'LockSupport.park')
+f(17,1,813,1,'Unsafe.park')
+f(18,1,813,2,'ReentrantLock$NonfairSync')
+f(14,814,364,1,'ReentrantLock.lock')
+f(15,814,364,1,'ReentrantLock$Sync.lock')
+f(16,814,364,1,'AbstractQueuedSynchronizer.acquire')
+f(17,814,364,1,'AbstractQueuedSynchronizer.acquire')
+f(18,814,364,1,'LockSupport.park')
+f(19,814,364,1,'Unsafe.park')
+f(20,814,364,2,'ReentrantLock$NonfairSync')
+f(7,1178,1,1,'TickPerCell.tick')
+f(8,1178,1,1,'ChannelsGrid.forEachChannel')
+f(9,1178,1,1,'Dimensions.forEachRowCol')
+f(10,1178,1,1,'ChannelsGrid$$Lambda$51.0x00000008010360d8.accept')
+f(11,1178,1,1,'ChannelsGrid.lambda$forEachChannel$0')
+f(12,1178,1,1,'TickPerCell$$Lambda$50.0x0000000801035ec0.accept')
+f(13,1178,1,1,'TickPerCell.lambda$tick$0')
+f(14,1178,1,1,'Channel.put')
+f(15,1178,1,1,'LockedSingleValue.put')
+f(16,1178,1,1,'ReentrantLock.lock')
+f(17,1178,1,1,'ReentrantLock$Sync.lock')
+f(18,1178,1,1,'AbstractQueuedSynchronizer.acquire')
+f(19,1178,1,1,'AbstractQueuedSynchronizer.acquire')
+f(20,1178,1,1,'LockSupport.park')
+f(21,1178,1,1,'Unsafe.park')
+f(22,1178,1,2,'ReentrantLock$NonfairSync')
+f(4,1179,11073,1,'ThreadPerCoreGameOfLife$$Lambda$45.0x0000000801035268.run')
+f(5,1179,11073,1,'CellsGroup.run')
+f(6,1179,11073,1,'Iterable.forEach')
+f(7,1179,94,1,'CellsGroup$$Lambda$46.0x0000000801035478.accept')
+f(8,1179,94,1,'Cell.notifyLiveness')
+f(9,1179,72,1,'ArrayList.forEach')
+f(10,1179,72,1,'Cell$$Lambda$52.0x00000008010362f8.accept')
+f(11,1179,72,1,'Cell.lambda$notifyLiveness$0')
+f(12,1179,72,1,'Channel.put')
+f(13,1179,72,1,'LockedSingleValue.put')
+f(14,1179,72,1,'ReentrantLock.lock')
+f(15,1179,72,1,'ReentrantLock$Sync.lock')
+f(16,1179,72,1,'AbstractQueuedSynchronizer.acquire')
+f(17,1179,72,1,'AbstractQueuedSynchronizer.acquire')
+f(18,1179,72,1,'LockSupport.park')
+f(19,1179,72,1,'Unsafe.park')
+f(20,1179,72,2,'ReentrantLock$NonfairSync')
+f(9,1251,22,1,'TickPerCell.waitTick')
+f(10,1251,22,1,'Channel.take')
+f(11,1251,22,1,'LockedSingleValue.take')
+f(12,1251,22,1,'ReentrantLock.lock')
+f(13,1251,22,1,'ReentrantLock$Sync.lock')
+f(14,1251,22,1,'AbstractQueuedSynchronizer.acquire')
+f(15,1251,22,1,'AbstractQueuedSynchronizer.acquire')
+f(16,1251,22,1,'LockSupport.park')
+f(17,1251,22,1,'Unsafe.park')
+f(18,1251,22,2,'ReentrantLock$NonfairSync')
+f(7,1273,10979,1,'CellsGroup$$Lambda$55.0x0000000801036958.accept')
+f(8,1273,10979,1,'Cell.calculateNextState')
+f(9,1273,10954,1,'Channel.put')
+f(10,1273,10954,1,'LockedSingleValue.put')
+f(11,1273,10954,1,'ReentrantLock.lock')
+f(12,1273,10954,1,'ReentrantLock$Sync.lock')
+f(13,1273,10954,1,'AbstractQueuedSynchronizer.acquire')
+f(14,1273,10954,1,'AbstractQueuedSynchronizer.acquire')
+f(15,1273,10954,1,'LockSupport.park')
+f(16,1273,10954,1,'Unsafe.park')
+f(17,1273,10954,2,'ReentrantLock$NonfairSync')
+f(9,12227,25,1,'IntPipeline.sum')
+f(10,12227,25,1,'IntPipeline.reduce')
+f(11,12227,25,1,'AbstractPipeline.evaluate')
+f(12,12227,25,1,'ReduceOps$ReduceOp.evaluateSequential')
+f(13,12227,25,1,'AbstractPipeline.wrapAndCopyInto')
+f(14,12227,25,1,'AbstractPipeline.copyInto')
+f(15,12227,25,1,'ArrayList$ArrayListSpliterator.forEachRemaining')
+f(16,12227,25,1,'ReferencePipeline$3$1.accept')
+f(17,12227,25,1,'Cell$$Lambda$58.0x0000000801036fc0.apply')
+f(18,12227,25,1,'Channel.take')
+f(19,12227,25,1,'LockedSingleValue.take')
+f(20,12227,8,1,'AbstractQueuedSynchronizer$ConditionObject.await')
+f(21,12227,8,1,'AbstractQueuedSynchronizer.acquire')
+f(22,12227,8,1,'LockSupport.park')
+f(23,12227,8,1,'Unsafe.park')
+f(24,12227,8,2,'ReentrantLock$NonfairSync')
+f(20,12235,17,1,'ReentrantLock.lock')
+f(21,12235,17,1,'ReentrantLock$Sync.lock')
+f(22,12235,17,1,'AbstractQueuedSynchronizer.acquire')
+f(23,12235,17,1,'AbstractQueuedSynchronizer.acquire')
+f(24,12235,17,1,'LockSupport.park')
+f(25,12235,17,1,'Unsafe.park')
+f(26,12235,17,2,'ReentrantLock$NonfairSync')
+
+search();
+</script></body></html>

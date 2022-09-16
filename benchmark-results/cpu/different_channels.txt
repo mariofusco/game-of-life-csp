@@ -1,0 +1,27 @@
+Benchmark                                 (channelType)  (padding)  (threadPerCell)  (useVirtualThreads)   Mode  Cnt           Score          Error  Units
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                 true  thrpt   20         118.315 ±        4.583  ops/s
+GameOfLifeBenchmark.benchmark          BlockingTransfer         25             true                 true  thrpt   20         154.734 ±        6.313  ops/s
+GameOfLifeBenchmark.benchmark         LockedSingleValue         25             true                 true  thrpt   20         161.351 ±        7.030  ops/s
+GameOfLifeBenchmark.benchmark           OneToOneParking         25             true                 true  thrpt   20         284.477 ±       12.121  ops/s
+
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                false  thrpt   20          17.654 ±        0.579  ops/s
+GameOfLifeBenchmark.benchmark          BlockingTransfer         25             true                false  thrpt   20          16.652 ±        0.650  ops/s
+GameOfLifeBenchmark.benchmark         LockedSingleValue         25             true                false  thrpt   20          17.428 ±        0.683  ops/s
+GameOfLifeBenchmark.benchmark           OneToOneParking         25             true                false  thrpt   20          18.440 ±        0.893  ops/s
+
+
+
+
+Benchmark                                 (channelType)  (padding)  (threadPerCell)  (useVirtualThreads)   Mode  Cnt           Score          Error  Units
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                 true  thrpt   20         118.315 ±        4.583  ops/s
+GameOfLifeBenchmark:context-switces       BlockingQueue         25             true                 true  thrpt   20          10.923                 #/op
+GameOfLifeBenchmark.benchmark             BlockingQueue         25             true                false  thrpt   20          17.654 ±        0.579  ops/s
+GameOfLifeBenchmark:context-switces       BlockingQueue         25             true                false  thrpt   20       15741.886                 #/op
+
+
+
+Benchmark                                 (padding)   (useVirtualThreads)   Mode  Cnt           Score          Error  Units
+GameOfLifeBenchmark.benchmark                     25                 true  thrpt   20         118.315 ±        4.583  ops/s
+GameOfLifeBenchmark:context-switches              25                 true  thrpt   20          10.923                 #/op
+GameOfLifeBenchmark.benchmark                     25                false  thrpt   20          17.654 ±        0.579  ops/s
+GameOfLifeBenchmark:context-switches              25                false  thrpt   20       15741.886                 #/op

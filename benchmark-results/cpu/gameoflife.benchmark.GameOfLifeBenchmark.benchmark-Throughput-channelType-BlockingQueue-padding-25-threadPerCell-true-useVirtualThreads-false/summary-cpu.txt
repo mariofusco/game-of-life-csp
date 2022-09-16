@@ -1,0 +1,4439 @@
+--- Execution profile ---
+Total samples       : 44926
+unknown_Java        : 61 (0.14%)
+deoptimization      : 2 (0.00%)
+
+--- 67174488879 ns (14.70%), 6713 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+  [22] [Thread-5076 tid=56991]
+
+--- 1419995204 ns (0.31%), 142 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+  [17] [Thread-5076 tid=56991]
+
+--- 1370470175 ns (0.30%), 137 samples
+  [ 0] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+  [19] [Thread-5076 tid=56991]
+
+--- 900320101 ns (0.20%), 90 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] TickPerCell.tick
+  [ 3] GameOfLife.calculateFrame
+  [ 4] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 5] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 6] ThreadPoolExecutor.runWorker
+  [ 7] ThreadPoolExecutor$Worker.run
+  [ 8] Thread.run
+  [ 9] [Thread-5076 tid=56991]
+
+--- 640193515 ns (0.14%), 64 samples
+  [ 0] Thread.getAndClearInterrupt
+  [ 1] Thread.interrupted
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-5076 tid=56991]
+
+--- 490094956 ns (0.11%), 49 samples
+  [ 0] AbstractQueuedSynchronizer.enqueue
+  [ 1] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 2] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 3] LinkedBlockingQueue.signalNotEmpty
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-5076 tid=56991]
+
+--- 250094504 ns (0.05%), 25 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-5076 tid=56991]
+
+--- 230053377 ns (0.05%), 23 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.put
+  [ 5] BlockingQueue.put
+  [ 6] Channel.put
+  [ 7] TickPerCell.lambda$tick$0
+  [ 8] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 9] ChannelsGrid.lambda$forEachChannel$0
+  [10] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] TickPerCell.tick
+  [14] GameOfLife.calculateFrame
+  [15] GameOfLife.lambda$calculateFrameBlocking$4
+  [16] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [17] ThreadPoolExecutor.runWorker
+  [18] ThreadPoolExecutor$Worker.run
+  [19] Thread.run
+  [20] [Thread-5076 tid=56991]
+
+--- 220079945 ns (0.05%), 22 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-5076 tid=56991]
+
+--- 190034856 ns (0.04%), 19 samples
+  [ 0] Unsafe.getAndBitwiseAndInt
+  [ 1] AbstractQueuedSynchronizer$Node.getAndUnsetStatus
+  [ 2] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 3] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+  [21] [Thread-5076 tid=56991]
+
+--- 180010417 ns (0.04%), 18 samples
+  [ 0] Dimensions.forEachRowCol
+  [ 1] ChannelsGrid.forEachChannel
+  [ 2] GameOfLife.calculateFrame
+  [ 3] GameOfLife.lambda$calculateFrameBlocking$4
+  [ 4] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [ 5] ThreadPoolExecutor.runWorker
+  [ 6] ThreadPoolExecutor$Worker.run
+  [ 7] Thread.run
+  [ 8] [Thread-5076 tid=56991]
+
+--- 170081041 ns (0.04%), 17 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+  [21] [Thread-5076 tid=56991]
+
+--- 169995120 ns (0.04%), 17 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lockInterruptibly
+  [ 3] ReentrantLock.lockInterruptibly
+  [ 4] LinkedBlockingQueue.take
+  [ 5] BlockingQueue.take
+  [ 6] Channel.take
+  [ 7] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 8] ChannelsGrid.lambda$forEachChannel$1
+  [ 9] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-5076 tid=56991]
+
+--- 140004936 ns (0.03%), 14 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 4] ChannelsGrid.lambda$forEachChannel$1
+  [ 5] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 6] Dimensions.forEachRowCol
+  [ 7] ChannelsGrid.forEachChannel
+  [ 8] GameOfLife.calculateFrame
+  [ 9] GameOfLife.lambda$calculateFrameBlocking$4
+  [10] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+  [14] [Thread-5076 tid=56991]
+
+--- 119992424 ns (0.03%), 12 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotFull
+  [ 3] LinkedBlockingQueue.take
+  [ 4] BlockingQueue.take
+  [ 5] Channel.take
+  [ 6] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 7] ChannelsGrid.lambda$forEachChannel$1
+  [ 8] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] GameOfLife.calculateFrame
+  [12] GameOfLife.lambda$calculateFrameBlocking$4
+  [13] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [14] ThreadPoolExecutor.runWorker
+  [15] ThreadPoolExecutor$Worker.run
+  [16] Thread.run
+  [17] [Thread-5076 tid=56991]
+
+--- 109996068 ns (0.02%), 11 samples
+  [ 0] AbstractQueuedSynchronizer.compareAndSetState
+  [ 1] ReentrantLock$NonfairSync.initialTryLock
+  [ 2] ReentrantLock$Sync.lock
+  [ 3] ReentrantLock.lock
+  [ 4] LinkedBlockingQueue.signalNotFull
+  [ 5] LinkedBlockingQueue.take
+  [ 6] BlockingQueue.take
+  [ 7] Channel.take
+  [ 8] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 9] ChannelsGrid.lambda$forEachChannel$1
+  [10] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [11] Dimensions.forEachRowCol
+  [12] ChannelsGrid.forEachChannel
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+  [19] [Thread-5076 tid=56991]
+
+--- 90081360 ns (0.02%), 9 samples
+  [ 0] LinkedBlockingQueue.put
+  [ 1] BlockingQueue.put
+  [ 2] Channel.put
+  [ 3] TickPerCell.lambda$tick$0
+  [ 4] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 5] ChannelsGrid.lambda$forEachChannel$0
+  [ 6] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] TickPerCell.tick
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-5076 tid=56991]
+
+--- 89978606 ns (0.02%), 9 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.take
+  [ 3] BlockingQueue.take
+  [ 4] Channel.take
+  [ 5] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 6] ChannelsGrid.lambda$forEachChannel$1
+  [ 7] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 8] Dimensions.forEachRowCol
+  [ 9] ChannelsGrid.forEachChannel
+  [10] GameOfLife.calculateFrame
+  [11] GameOfLife.lambda$calculateFrameBlocking$4
+  [12] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [13] ThreadPoolExecutor.runWorker
+  [14] ThreadPoolExecutor$Worker.run
+  [15] Thread.run
+  [16] [Thread-5076 tid=56991]
+
+--- 81633618 ns (0.02%), 8 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4557 tid=56472]
+
+--- 81589619 ns (0.02%), 8 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4307 tid=56222]
+
+--- 81485233 ns (0.02%), 8 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3760 tid=55675]
+
+--- 80051997 ns (0.02%), 8 samples
+  [ 0] Thread.interrupted
+  [ 1] ReentrantLock$Sync.lockInterruptibly
+  [ 2] ReentrantLock.lockInterruptibly
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+  [19] [Thread-5076 tid=56991]
+
+--- 80015726 ns (0.02%), 8 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.signalNotEmpty
+  [ 3] LinkedBlockingQueue.put
+  [ 4] BlockingQueue.put
+  [ 5] Channel.put
+  [ 6] TickPerCell.lambda$tick$0
+  [ 7] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 8] ChannelsGrid.lambda$forEachChannel$0
+  [ 9] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [10] Dimensions.forEachRowCol
+  [11] ChannelsGrid.forEachChannel
+  [12] TickPerCell.tick
+  [13] GameOfLife.calculateFrame
+  [14] GameOfLife.lambda$calculateFrameBlocking$4
+  [15] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [16] ThreadPoolExecutor.runWorker
+  [17] ThreadPoolExecutor$Worker.run
+  [18] Thread.run
+  [19] [Thread-5076 tid=56991]
+
+--- 71526702 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2636 tid=54551]
+
+--- 71467881 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4534 tid=56449]
+
+--- 71464744 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4820 tid=56735]
+
+--- 71448295 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3353 tid=55268]
+
+--- 71432427 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3547 tid=55462]
+
+--- 71431532 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2742 tid=54657]
+
+--- 71420702 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3236 tid=55151]
+
+--- 71411615 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3452 tid=55367]
+
+--- 71409061 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2568 tid=54483]
+
+--- 71407941 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4533 tid=56448]
+
+--- 71407750 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2253 tid=54168]
+
+--- 71401607 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3964 tid=55879]
+
+--- 71394693 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4097 tid=56012]
+
+--- 71391988 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3372 tid=55287]
+
+--- 71386357 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2908 tid=54823]
+
+--- 71384987 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3478 tid=55393]
+
+--- 71384783 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3768 tid=55683]
+
+--- 71380743 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4523 tid=56438]
+
+--- 71379869 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3879 tid=55794]
+
+--- 71379535 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4629 tid=56544]
+
+--- 71377777 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3683 tid=55598]
+
+--- 71370764 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4260 tid=56175]
+
+--- 71369346 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3811 tid=55726]
+
+--- 71363670 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3991 tid=55906]
+
+--- 71360226 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4642 tid=56557]
+
+--- 71348541 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4015 tid=55930]
+
+--- 71345007 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4680 tid=56595]
+
+--- 71305241 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4752 tid=56667]
+
+--- 71301047 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4571 tid=56486]
+
+--- 71300319 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2697 tid=54612]
+
+--- 71195156 ns (0.02%), 7 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4214 tid=56129]
+
+--- 70056319 ns (0.02%), 7 samples
+  [ 0] AbstractQueuedSynchronizer.release
+  [ 1] ReentrantLock.unlock
+  [ 2] LinkedBlockingQueue.put
+  [ 3] BlockingQueue.put
+  [ 4] Channel.put
+  [ 5] TickPerCell.lambda$tick$0
+  [ 6] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [ 7] ChannelsGrid.lambda$forEachChannel$0
+  [ 8] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [ 9] Dimensions.forEachRowCol
+  [10] ChannelsGrid.forEachChannel
+  [11] TickPerCell.tick
+  [12] GameOfLife.calculateFrame
+  [13] GameOfLife.lambda$calculateFrameBlocking$4
+  [14] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-5076 tid=56991]
+
+--- 70034416 ns (0.02%), 7 samples
+  [ 0] LinkedBlockingQueue.dequeue
+  [ 1] LinkedBlockingQueue.take
+  [ 2] BlockingQueue.take
+  [ 3] Channel.take
+  [ 4] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 5] ChannelsGrid.lambda$forEachChannel$1
+  [ 6] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 7] Dimensions.forEachRowCol
+  [ 8] ChannelsGrid.forEachChannel
+  [ 9] GameOfLife.calculateFrame
+  [10] GameOfLife.lambda$calculateFrameBlocking$4
+  [11] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+  [15] [Thread-5076 tid=56991]
+
+--- 70020824 ns (0.02%), 7 samples
+  [ 0] Unsafe.getAndBitwiseAndInt
+  [ 1] AbstractQueuedSynchronizer$Node.getAndUnsetStatus
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] TickPerCell.lambda$tick$0
+  [10] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [11] ChannelsGrid.lambda$forEachChannel$0
+  [12] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [13] Dimensions.forEachRowCol
+  [14] ChannelsGrid.forEachChannel
+  [15] TickPerCell.tick
+  [16] GameOfLife.calculateFrame
+  [17] GameOfLife.lambda$calculateFrameBlocking$4
+  [18] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+  [22] [Thread-5076 tid=56991]
+
+--- 69991993 ns (0.02%), 7 samples
+  [ 0] LinkedBlockingQueue.take
+  [ 1] BlockingQueue.take
+  [ 2] Channel.take
+  [ 3] GameOfLife$$Lambda$109.0x0000000801082cc8.test
+  [ 4] ChannelsGrid.lambda$forEachChannel$1
+  [ 5] ChannelsGrid$$Lambda$110.0x0000000801082f00.accept
+  [ 6] Dimensions.forEachRowCol
+  [ 7] ChannelsGrid.forEachChannel
+  [ 8] GameOfLife.calculateFrame
+  [ 9] GameOfLife.lambda$calculateFrameBlocking$4
+  [10] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [11] ThreadPoolExecutor.runWorker
+  [12] ThreadPoolExecutor$Worker.run
+  [13] Thread.run
+  [14] [Thread-5076 tid=56991]
+
+--- 69977967 ns (0.02%), 7 samples
+  [ 0] AbstractQueuedSynchronizer.casTail
+  [ 1] AbstractQueuedSynchronizer.enqueue
+  [ 2] AbstractQueuedSynchronizer$ConditionObject.doSignal
+  [ 3] AbstractQueuedSynchronizer$ConditionObject.signal
+  [ 4] LinkedBlockingQueue.signalNotEmpty
+  [ 5] LinkedBlockingQueue.put
+  [ 6] BlockingQueue.put
+  [ 7] Channel.put
+  [ 8] TickPerCell.lambda$tick$0
+  [ 9] TickPerCell$$Lambda$47.0x0000000801035678.accept
+  [10] ChannelsGrid.lambda$forEachChannel$0
+  [11] ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+  [12] Dimensions.forEachRowCol
+  [13] ChannelsGrid.forEachChannel
+  [14] TickPerCell.tick
+  [15] GameOfLife.calculateFrame
+  [16] GameOfLife.lambda$calculateFrameBlocking$4
+  [17] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [18] ThreadPoolExecutor.runWorker
+  [19] ThreadPoolExecutor$Worker.run
+  [20] Thread.run
+  [21] [Thread-5076 tid=56991]
+
+--- 61374654 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1751 tid=53666]
+
+--- 61323996 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4971 tid=56886]
+
+--- 61308837 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4316 tid=56231]
+
+--- 61308118 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1927 tid=53842]
+
+--- 61303274 ns (0.01%), 6 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-1047 tid=52962]
+
+--- 61292224 ns (0.01%), 6 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-140 tid=52048]
+
+--- 61291994 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2646 tid=54561]
+
+--- 61291263 ns (0.01%), 6 samples
+  [ 0] Unsafe.park
+  [ 1] LockSupport.park
+  [ 2] AbstractQueuedSynchronizer$ConditionNode.block
+  [ 3] ForkJoinPool.unmanagedBlock
+  [ 4] ForkJoinPool.managedBlock
+  [ 5] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 6] LinkedBlockingQueue.take
+  [ 7] BlockingQueue.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$63.0x0000000801036de0.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-2078 tid=53993]
+
+--- 61277768 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2567 tid=54482]
+
+--- 61274892 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2167 tid=54082]
+
+--- 61268381 ns (0.01%), 6 samples
+  [ 0] Unsafe.park
+  [ 1] LockSupport.park
+  [ 2] AbstractQueuedSynchronizer$ConditionNode.block
+  [ 3] ForkJoinPool.unmanagedBlock
+  [ 4] ForkJoinPool.managedBlock
+  [ 5] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 6] LinkedBlockingQueue.take
+  [ 7] BlockingQueue.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$63.0x0000000801036de0.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-1830 tid=53745]
+
+--- 61262423 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1853 tid=53768]
+
+--- 61261287 ns (0.01%), 6 samples
+  [ 0] _raw_spin_unlock_irqrestore_[k]
+  [ 1] try_to_wake_up_[k]
+  [ 2] wake_up_q_[k]
+  [ 3] futex_wake_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] ___pthread_cond_signal
+  [ 9] Unsafe.unpark
+  [10] LockSupport.unpark
+  [11] AbstractQueuedSynchronizer.signalNext
+  [12] AbstractQueuedSynchronizer.release
+  [13] ReentrantLock.unlock
+  [14] LinkedBlockingQueue.signalNotEmpty
+  [15] LinkedBlockingQueue.put
+  [16] BlockingQueue.put
+  [17] Channel.put
+  [18] Cell.lambda$notifyLiveness$0
+  [19] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [20] ArrayList.forEach
+  [21] Cell.notifyLiveness
+  [22] Cell.run
+  [23] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [24] ThreadPoolExecutor.runWorker
+  [25] ThreadPoolExecutor$Worker.run
+  [26] Thread.run
+  [27] [Thread-382 tid=52297]
+
+--- 61260275 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4020 tid=55935]
+
+--- 61259703 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3200 tid=55115]
+
+--- 61259429 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2472 tid=54387]
+
+--- 61258634 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4648 tid=56563]
+
+--- 61258031 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4755 tid=56670]
+
+--- 61257670 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2938 tid=54853]
+
+--- 61254998 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3017 tid=54932]
+
+--- 61253570 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3052 tid=54967]
+
+--- 61251331 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2052 tid=53967]
+
+--- 61249015 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2653 tid=54568]
+
+--- 61246906 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1694 tid=53609]
+
+--- 61246727 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2993 tid=54908]
+
+--- 61242031 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1527 tid=53442]
+
+--- 61241732 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2692 tid=54607]
+
+--- 61240963 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3179 tid=55094]
+
+--- 61239376 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3836 tid=55751]
+
+--- 61237930 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3193 tid=55108]
+
+--- 61236075 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2645 tid=54560]
+
+--- 61235325 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4880 tid=56795]
+
+--- 61233516 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3483 tid=55398]
+
+--- 61231192 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1835 tid=53750]
+
+--- 61230275 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3156 tid=55071]
+
+--- 61229743 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3366 tid=55281]
+
+--- 61229049 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3141 tid=55056]
+
+--- 61226882 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2003 tid=53918]
+
+--- 61225053 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4019 tid=55934]
+
+--- 61225017 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2085 tid=54000]
+
+--- 61224371 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3350 tid=55265]
+
+--- 61224277 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3946 tid=55861]
+
+--- 61224054 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3874 tid=55789]
+
+--- 61223925 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3342 tid=55257]
+
+--- 61223441 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3930 tid=55845]
+
+--- 61222485 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3752 tid=55667]
+
+--- 61222332 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4290 tid=56205]
+
+--- 61221584 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4934 tid=56849]
+
+--- 61220870 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-1947 tid=53862]
+
+--- 61220189 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3579 tid=55494]
+
+--- 61219464 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4721 tid=56636]
+
+--- 61218771 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3802 tid=55717]
+
+--- 61218377 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3612 tid=55527]
+
+--- 61218092 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4412 tid=56327]
+
+--- 61217870 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4375 tid=56290]
+
+--- 61217387 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2686 tid=54601]
+
+--- 61214401 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3962 tid=55877]
+
+--- 61213893 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4258 tid=56173]
+
+--- 61212618 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3501 tid=55416]
+
+--- 61209581 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4614 tid=56529]
+
+--- 61209510 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3889 tid=55804]
+
+--- 61209282 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4887 tid=56802]
+
+--- 61209226 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3462 tid=55377]
+
+--- 61208494 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2374 tid=54289]
+
+--- 61208352 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3224 tid=55139]
+
+--- 61207703 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3532 tid=55447]
+
+--- 61207231 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4976 tid=56891]
+
+--- 61207220 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4942 tid=56857]
+
+--- 61207138 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3460 tid=55375]
+
+--- 61205762 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3883 tid=55798]
+
+--- 61205174 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4745 tid=56660]
+
+--- 61205091 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4165 tid=56080]
+
+--- 61203068 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3970 tid=55885]
+
+--- 61202843 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3390 tid=55305]
+
+--- 61202807 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4401 tid=56316]
+
+--- 61200542 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4773 tid=56688]
+
+--- 61200161 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4385 tid=56300]
+
+--- 61199747 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4588 tid=56503]
+
+--- 61198768 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4708 tid=56623]
+
+--- 61198387 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4131 tid=56046]
+
+--- 61198337 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4668 tid=56583]
+
+--- 61197716 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2988 tid=54903]
+
+--- 61197565 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3706 tid=55621]
+
+--- 61196321 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4264 tid=56179]
+
+--- 61196091 ns (0.01%), 6 samples
+  [ 0] Unsafe.park
+  [ 1] LockSupport.park
+  [ 2] AbstractQueuedSynchronizer$ConditionNode.block
+  [ 3] ForkJoinPool.unmanagedBlock
+  [ 4] ForkJoinPool.managedBlock
+  [ 5] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 6] LinkedBlockingQueue.take
+  [ 7] BlockingQueue.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$63.0x0000000801036de0.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+  [24] [Thread-3938 tid=55853]
+
+--- 61195260 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4697 tid=56612]
+
+--- 61194741 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2074 tid=53989]
+
+--- 61194149 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3284 tid=55199]
+
+--- 61193726 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3517 tid=55432]
+
+--- 61192754 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3852 tid=55767]
+
+--- 61192676 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4325 tid=56240]
+
+--- 61192637 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3812 tid=55727]
+
+--- 61191744 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2618 tid=54533]
+
+--- 61191274 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4692 tid=56607]
+
+--- 61188058 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4159 tid=56074]
+
+--- 61186951 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4348 tid=56263]
+
+--- 61185718 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4111 tid=56026]
+
+--- 61185675 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4455 tid=56370]
+
+--- 61185298 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3264 tid=55179]
+
+--- 61185228 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3627 tid=55542]
+
+--- 61182238 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4304 tid=56219]
+
+--- 61180691 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3409 tid=55324]
+
+--- 61180603 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2883 tid=54798]
+
+--- 61180189 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3985 tid=55900]
+
+--- 61179817 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3484 tid=55399]
+
+--- 61179588 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4862 tid=56777]
+
+--- 61177785 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3990 tid=55905]
+
+--- 61176412 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4144 tid=56059]
+
+--- 61176057 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4247 tid=56162]
+
+--- 61175435 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3025 tid=54940]
+
+--- 61175326 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3408 tid=55323]
+
+--- 61175145 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4605 tid=56520]
+
+--- 61174999 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3143 tid=55058]
+
+--- 61174440 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3810 tid=55725]
+
+--- 61173602 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3585 tid=55500]
+
+--- 61173017 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3953 tid=55868]
+
+--- 61171800 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3029 tid=54944]
+
+--- 61171392 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4753 tid=56668]
+
+--- 61171192 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4848 tid=56763]
+
+--- 61169743 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4716 tid=56631]
+
+--- 61169485 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4844 tid=56759]
+
+--- 61168141 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4812 tid=56727]
+
+--- 61167589 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3091 tid=55006]
+
+--- 61166249 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3008 tid=54923]
+
+--- 61165580 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4090 tid=56005]
+
+--- 61165549 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3950 tid=55865]
+
+--- 61164350 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4354 tid=56269]
+
+--- 61163084 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4580 tid=56495]
+
+--- 61160880 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3467 tid=55382]
+
+--- 61160629 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3165 tid=55080]
+
+--- 61160594 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4347 tid=56262]
+
+--- 61159898 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4677 tid=56592]
+
+--- 61159284 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2784 tid=54699]
+
+--- 61158771 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3563 tid=55478]
+
+--- 61158463 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-4270 tid=56185]
+
+--- 61157904 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3413 tid=55328]
+
+--- 61157390 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3432 tid=55347]
+
+--- 61156989 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-2517 tid=54432]
+
+--- 61156902 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3823 tid=55738]
+
+--- 61155382 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3713 tid=55628]
+
+--- 61154651 ns (0.01%), 6 samples
+  [ 0] Unsafe.unpark
+  [ 1] LockSupport.unpark
+  [ 2] AbstractQueuedSynchronizer.signalNext
+  [ 3] AbstractQueuedSynchronizer.release
+  [ 4] ReentrantLock.unlock
+  [ 5] LinkedBlockingQueue.signalNotEmpty
+  [ 6] LinkedBlockingQueue.put
+  [ 7] BlockingQueue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$50.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+  [18] [Thread-3925 tid=55840]
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+188655312336   41.29%    18623  Unsafe.unpark
+103659032710   22.69%    10161  Unsafe.park
+ 26330080949    5.76%     2578  _raw_spin_unlock_irqrestore_[k]
+ 12839300781    2.81%     1257  __futex_abstimed_wait_common
+  9800799801    2.14%      962  AbstractQueuedSynchronizer.compareAndSetState
+  7741915372    1.69%      759  AbstractQueuedSynchronizer.signalNext
+  6825367781    1.49%      672  Thread.interrupted
+  5894399182    1.29%      577  futex_wake_[k]
+  5876829252    1.29%      576  Cell.lambda$notifyLiveness$0
+  4564199005    1.00%      448  AbstractQueuedSynchronizer.release
+  4497341739    0.98%      442  LinkedBlockingQueue.put
+  4484801368    0.98%      440  LinkedBlockingQueue.take
+  4372899614    0.96%      428  __lll_lock_wake
+  4117464354    0.90%      403  syscall_enter_from_user_mode_[k]
+  3683688676    0.81%      361  AbstractQueuedSynchronizer.acquire
+  3359173829    0.74%      329  ___pthread_cond_signal
+  3255661723    0.71%      319  ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  2932867973    0.64%      287  __get_user_8_[k]
+  2450923438    0.54%      243  AbstractQueuedSynchronizer$ConditionObject.doSignal
+  2384225741    0.52%      235  Thread.getAndClearInterrupt
+  2080897723    0.46%      204  Cell.calculateNextState
+  1971399715    0.43%      193  Unsafe_Park
+  1713631898    0.38%      168  Cell$$Lambda$63.0x0000000801036de0.apply
+  1645242647    0.36%      161  Parker::park(bool, long)
+  1468999101    0.32%      144  AbstractQueuedSynchronizer$ConditionObject.enableWait
+  1447874146    0.32%      143  AbstractQueuedSynchronizer.enqueue
+  1110359843    0.24%      111  Dimensions.forEachRowCol
+  1060944274    0.23%      104  Cell.run
+  1011263773    0.22%       99  plist_add_[k]
+   989682433    0.22%       97  AbstractQueuedSynchronizer$ConditionObject.await
+   981431158    0.21%       96  finish_task_switch.isra.0_[k]
+   887707913    0.19%       87  AbstractOwnableSynchronizer.setExclusiveOwnerThread
+   857320755    0.19%       84  AbstractQueuedSynchronizer$ConditionObject.canReacquire
+   851171270    0.19%       84  Unsafe.getAndBitwiseAndInt
+   848336771    0.19%       83  exit_to_user_mode_prepare_[k]
+   817183560    0.18%       80  __schedule_[k]
+   815970146    0.18%       80  vtable chunks
+   806784401    0.18%       79  ___pthread_cond_wait
+   785942647    0.17%       77  ReduceOps$ReduceOp.evaluateSequential
+   774947453    0.17%       76  ReentrantLock.lockInterruptibly
+   766518201    0.17%       75  __condvar_dec_grefs
+   714965813    0.16%       70  __GI___pthread_disable_asynccancel
+   714419498    0.16%       70  ReferencePipeline$3$1.accept
+   664127409    0.15%       65  __rseq_handle_notify_resume_[k]
+   663947897    0.15%       65  futex_q_lock_[k]
+   654093890    0.14%       64  __x64_sys_futex_[k]
+   592667131    0.13%       58  _raw_spin_lock_[k]
+   581764331    0.13%       57  ReferencePipeline$4$1.accept
+   581451374    0.13%       57  AbstractPipeline.wrapAndCopyInto
+   572468997    0.13%       56  futex_wait_[k]
+   569662941    0.12%       56  LinkedBlockingQueue.dequeue
+   550656429    0.12%       54  AbstractQueuedSynchronizer$ConditionNode.isReleasable
+   541543680    0.12%       53  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<286822ul, G1BarrierSet>, (AccessInternal::BarrierType)3, 286822ul>::oop_access_barrier(oopDesc*, long)
+   521161060    0.11%       51  futex_hash_[k]
+   520429887    0.11%       51  ArrayList$ArrayListSpliterator.forEachRemaining
+   490090239    0.11%       48  Sink$ChainedReference.end
+   438570114    0.10%       43  ArrayList$ArrayListSpliterator.<init>
+   438106517    0.10%       43  LockSupport.unpark
+   408049436    0.09%       40  Channel.take
+   407531201    0.09%       40  AbstractQueuedSynchronizer$ConditionObject.signal
+   388163483    0.08%       38  __get_user_nocheck_4_[k]
+   388109101    0.08%       38  __pthread_mutex_unlock_usercnt
+   367745366    0.08%       36  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ul>::oop_access_barrier(void*)
+   346978635    0.08%       34  __GI___pthread_mutex_lock
+   336691523    0.07%       33  __tls_get_addr
+   326531399    0.07%       32  Unsafe_Unpark
+   324998559    0.07%       32  ReentrantLock$Sync.lockInterruptibly
+   316667949    0.07%       31  do_futex_[k]
+   306475059    0.07%       30  get_futex_key_[k]
+   285540430    0.06%       28  AbstractOwnableSynchronizer.getExclusiveOwnerThread
+   285197872    0.06%       28  ReentrantLock$Sync.tryRelease
+   284129481    0.06%       28  AbstractQueuedSynchronizer.casTail
+   265732054    0.06%       26  futex_wait_queue_[k]
+   265532776    0.06%       26  JavaThread::threadObj() const
+   265525505    0.06%       26  __list_add_valid_[k]
+   255387547    0.06%       25  pthread_mutex_trylock@@GLIBC_2.34
+   244986301    0.05%       24  SafeThreadsListPtr::release_stable_list()
+   244772625    0.05%       24  AbstractPipeline.<init>
+   243849433    0.05%       24  ReentrantLock$Sync.lock
+   235189820    0.05%       23  mem_cgroup_handle_over_high_[k]
+   234480643    0.05%       23  ReferencePipeline$4.opWrapSink
+   224804105    0.05%       22  __put_user_nocheck_8_[k]
+   214638053    0.05%       21  __GI___pthread_getspecific
+   214142382    0.05%       21  Sink$ChainedReference.begin
+   204382500    0.04%       20  wake_up_q_[k]
+   204340427    0.04%       20  java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+   203885222    0.04%       20  ReentrantLock.unlock
+   194153800    0.04%       19  __pthread_mutex_cond_lock
+   193797934    0.04%       19  ReduceOps$5ReducingSink.get
+   183718569    0.04%       18  futex_wake_mark_[k]
+   173751774    0.04%       17  preempt_count_sub_[k]
+   173457860    0.04%       17  ArrayList.forEach
+   162904332    0.04%       16  AbstractQueuedSynchronizer.setState
+   153091095    0.03%       15  ThreadsListHandle::ThreadsListHandle(Thread*)
+   143037062    0.03%       14  itable stub
+   142737439    0.03%       14  Sink$ChainedReference.<init>
+   142405688    0.03%       14  AtomicInteger.getAndIncrement
+   132431802    0.03%       13  LinkedBlockingQueue.signalNotEmpty
+   132407307    0.03%       13  AtomicInteger.getAndDecrement
+   132377951    0.03%       13  ReentrantLock$Sync.isHeldExclusively
+   122561022    0.03%       12  update_blocked_averages_[k]
+   122478642    0.03%       12  wake_q_add_safe_[k]
+   122458335    0.03%       12  __futex_unqueue_[k]
+   122445564    0.03%       12  Cell.notifyLiveness
+   122345203    0.03%       12  BlockingQueue.take
+   122283891    0.03%       12  ReferencePipeline$3.opWrapSink
+   112317066    0.02%       11  AbstractQueuedSynchronizer$Node.setStatusRelaxed
+   112176770    0.02%       11  AbstractPipeline.wrapSink
+   102224326    0.02%       10  ThreadsListHandle::~ThreadsListHandle()
+   102207924    0.02%       10  vtable stub
+   102207799    0.02%       10  ThreadLocalStorage::is_initialized()
+   102040214    0.02%       10  do_user_addr_fault_[k]
+    92011219    0.02%        9  blkcg_maybe_throttle_current_[k]
+    91958222    0.02%        9  _pthread_cleanup_pop@@GLIBC_2.34
+    91909172    0.02%        9  do_syscall_64_[k]
+    91890158    0.02%        9  AbstractQueuedSynchronizer$ConditionNode.block
+    91867391    0.02%        9  AbstractQueuedSynchronizer$Node.clearStatus
+    91737282    0.02%        9  I2C/C2I adapters
+    91622099    0.02%        9  LinkedBlockingQueue.signalNotFull
+    91575850    0.02%        9  AbstractQueuedSynchronizer.getState
+    81841354    0.02%        8  __condvar_confirm_wakeup
+    81764723    0.02%        8  java_lang_Thread::get_thread_status(oopDesc*)
+    81701913    0.02%        8  futex_wait_setup_[k]
+    81669136    0.02%        8  StreamOpFlag.fromCharacteristics
+    81632001    0.02%        8  ArrayList$ArrayListSpliterator.getFence
+    81598959    0.02%        8  ReentrantLock$NonfairSync.initialTryLock
+    81598609    0.02%        8  LockSupport.setCurrentBlocker
+    71639149    0.02%        7  syscall_exit_to_user_mode_prepare_[k]
+    71537711    0.02%        7  JavaThread::is_interrupted(bool)
+    71389827    0.02%        7  ReentrantLock.lock
+    71353568    0.02%        7  ReduceOps$6.makeSink
+    70798021    0.02%        7  AbstractQueuedSynchronizer$Node.getAndUnsetStatus
+    61321411    0.01%        6  schedule_[k]
+    61235925    0.01%        6  __handle_mm_fault_[k]
+    61215435    0.01%        6  ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+    61172103    0.01%        6  ArrayList.spliterator
+    51188004    0.01%        5  clear_page_erms_[k]
+    51060555    0.01%        5  StreamOpFlag.isKnown
+    51035397    0.01%        5  in_lock_functions_[k]
+    50820954    0.01%        5  AbstractQueuedSynchronizer$Node.setPrevRelaxed
+    40960252    0.01%        4  _raw_spin_unlock_[k]
+    40903858    0.01%        4  Parker::unpark()
+    40867920    0.01%        4  ReduceOps$5ReducingSink.accept
+    40864110    0.01%        4  preempt_count_add_[k]
+    40832806    0.01%        4  vmacache_find_[k]
+    30737311    0.01%        3  MemAllocator::allocate() const
+    30688411    0.01%        3  ReferencePipeline.<init>
+    30681166    0.01%        3  count_memcg_events.constprop.0_[k]
+    30664261    0.01%        3  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<544868ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 544868ul>::oop_access_barrier(void*)
+    30644466    0.01%        3  try_to_wake_up_[k]
+    30642335    0.01%        3  check_preemption_disabled_[k]
+    30641823    0.01%        3  __GI___pthread_mutex_unlock
+    30633475    0.01%        3  futex_unqueue_[k]
+    30631382    0.01%        3  __cgroup_throttle_swaprate_[k]
+    30624432    0.01%        3  Cell$$Lambda$74.0x0000000801033448.applyAsInt
+    30620436    0.01%        3  AbstractPipeline.copyInto
+    30612349    0.01%        3  handle_mm_fault_[k]
+    30608602    0.01%        3  debug_smp_processor_id_[k]
+    30600756    0.01%        3  ObjAllocator::initialize(HeapWordImpl**) const
+    30379398    0.01%        3  ChannelsGrid.getChannel
+    30192987    0.01%        3  AtomicInteger.get
+    30078592    0.01%        3  G1YoungRemSetSamplingClosure::do_heap_region(HeapRegion*)
+    30013325    0.01%        3  ChannelsGrid$$Lambda$48.0x0000000801035890.accept
+    29988229    0.01%        3  GameOfLife.calculateFrame
+    20450229    0.00%        2  ObjectSampler::is_created()
+    20436696    0.00%        2  _raw_spin_unlock_irq_[k]
+    20432591    0.00%        2  __futex_queue_[k]
+    20429018    0.00%        2  ObjArrayAllocator::initialize(HeapWordImpl**) const
+    20427839    0.00%        2  rcu_core_[k]
+    20426417    0.00%        2  __put_user_8_[k]
+    20425414    0.00%        2  _raw_spin_lock_irqsave_[k]
+    20425375    0.00%        2  mem_cgroup_from_task_[k]
+    20425063    0.00%        2  ThreadLocalStorage::thread()
+    20421987    0.00%        2  JavaFrameAnchor::make_walkable()
+    20421352    0.00%        2  ForkJoinPool.unmanagedBlock
+    20415037    0.00%        2  pthread_getspecific@plt
+    20409035    0.00%        2  _find_first_bit_[k]
+    20408356    0.00%        2  alloc_pages_vma_[k]
+    20405948    0.00%        2  AbstractPipeline.evaluate
+    20401452    0.00%        2  __alloc_pages_[k]
+    20398342    0.00%        2  [deoptimization]
+    20397808    0.00%        2  Thread.isInterrupted
+    20394880    0.00%        2  OptoRuntime::new_instance_C(Klass*, JavaThread*)
+    20394203    0.00%        2  charge_memcg_[k]
+    20388410    0.00%        2  get_page_from_freelist_[k]
+    20383795    0.00%        2  oopDesc::address_field(int) const
+    20361469    0.00%        2  Integer.valueOf
+    20205428    0.00%        2  folio_add_lru_[k]
+    20051625    0.00%        2  AbsSeq::dsd() const
+    20028965    0.00%        2  smp_call_function_single_[k]
+    19995950    0.00%        2  mmap
+    19994457    0.00%        2  g1_post_barrier_slow
+    10260241    0.00%        1  policy_node_[k]
+    10247455    0.00%        1  StatSamplerTask::task()
+    10245001    0.00%        1  SharedRuntime::on_slowpath_allocation_exit(JavaThread*)
+    10232840    0.00%        1  __vdso_clock_gettime
+    10227978    0.00%        1  page_add_new_anon_rmap_[k]
+    10220493    0.00%        1  Mutex::lock_without_safepoint_check()
+    10218681    0.00%        1  GameOfLifeBenchmark_benchmark_jmhTest.benchmark_thrpt_jmhStub
+    10218024    0.00%        1  ThreadLocalAllocBuffer::end_reserve()

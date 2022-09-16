@@ -1,0 +1,140 @@
+--- Execution profile ---
+Total samples       : 10460
+
+--- 413183382 ns (90.20%), 10281 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LockedSingleValue.put
+  [ 8] Channel.put
+  [ 9] Cell.lambda$notifyLiveness$0
+  [10] Cell$$Lambda$54.0x0000000801035ab0.accept
+  [11] ArrayList.forEach
+  [12] Cell.notifyLiveness
+  [13] Cell.run
+  [14] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [15] ThreadPoolExecutor.runWorker
+  [16] ThreadPoolExecutor$Worker.run
+  [17] Thread.run
+
+--- 43593136 ns (9.52%), 73 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LockedSingleValue.take
+  [ 8] Channel.take
+  [ 9] Cell$$Lambda$63.0x0000000801036998.apply
+  [10] ReferencePipeline$3$1.accept
+  [11] ArrayList$ArrayListSpliterator.forEachRemaining
+  [12] AbstractPipeline.copyInto
+  [13] AbstractPipeline.wrapAndCopyInto
+  [14] ReduceOps$ReduceOp.evaluateSequential
+  [15] AbstractPipeline.evaluate
+  [16] IntPipeline.reduce
+  [17] IntPipeline.sum
+  [18] Cell.calculateNextState
+  [19] Cell.run
+  [20] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [21] ThreadPoolExecutor.runWorker
+  [22] ThreadPoolExecutor$Worker.run
+  [23] Thread.run
+
+--- 1133998 ns (0.25%), 103 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 5] LockedSingleValue.take
+  [ 6] Channel.take
+  [ 7] Cell$$Lambda$63.0x0000000801036998.apply
+  [ 8] ReferencePipeline$3$1.accept
+  [ 9] ArrayList$ArrayListSpliterator.forEachRemaining
+  [10] AbstractPipeline.copyInto
+  [11] AbstractPipeline.wrapAndCopyInto
+  [12] ReduceOps$ReduceOp.evaluateSequential
+  [13] AbstractPipeline.evaluate
+  [14] IntPipeline.reduce
+  [15] IntPipeline.sum
+  [16] Cell.calculateNextState
+  [17] Cell.run
+  [18] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [19] ThreadPoolExecutor.runWorker
+  [20] ThreadPoolExecutor$Worker.run
+  [21] Thread.run
+
+--- 99985 ns (0.02%), 1 sample
+  [ 0] Object
+  [ 1] BinaryLinkClient.pushFrame
+  [ 2] BinaryLinkClient.access$000
+  [ 3] BinaryLinkClient$ForwardingPrintStream$1.write
+  [ 4] PrintStream.implWrite
+  [ 5] PrintStream.write
+  [ 6] StreamEncoder.writeBytes
+  [ 7] StreamEncoder.implFlushBuffer
+  [ 8] StreamEncoder.lockedFlushBuffer
+  [ 9] StreamEncoder.flushBuffer
+  [10] OutputStreamWriter.flushBuffer
+  [11] PrintStream.implWrite
+  [12] PrintStream.write
+  [13] PrintStream.print
+  [14] PrintStream.append
+  [15] PrintStream.append
+  [16] Formatter$FormatSpecifier.appendJustified
+  [17] Formatter$FormatSpecifier.print
+  [18] Formatter$FormatSpecifier.printInteger
+  [19] Formatter$FormatSpecifier.print
+  [20] Formatter.format
+  [21] PrintStream.implFormat
+  [22] PrintStream.format
+  [23] PrintStream.printf
+  [24] GameOfLife.endOfFrame
+  [25] GameOfLife.calculateFrame
+  [26] GameOfLife.lambda$calculateFrameBlocking$4
+  [27] GameOfLife$$Lambda$46.0x0000000801035468.run
+  [28] ThreadPoolExecutor.runWorker
+  [29] ThreadPoolExecutor$Worker.run
+  [30] Thread.run
+
+--- 62530 ns (0.01%), 1 sample
+  [ 0] Object
+  [ 1] BinaryLinkClient.pushFrame
+  [ 2] BinaryLinkClient.access$000
+  [ 3] BinaryLinkClient$1.invoke
+  [ 4] $Proxy0.iterationResult
+  [ 5] BaseRunner.runBenchmark
+  [ 6] BaseRunner.runBenchmark
+  [ 7] BaseRunner.doSingle
+  [ 8] BaseRunner.runBenchmarksForked
+  [ 9] ForkedRunner.run
+  [10] ForkedMain.main
+
+--- 11590 ns (0.00%), 1 sample
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LockedSingleValue.put
+  [ 8] Channel.put
+  [ 9] Cell.calculateNextState
+  [10] Cell.run
+  [11] ThreadPerCellGameOfLife$$Lambda$45.0x0000000801035068.run
+  [12] ThreadPoolExecutor.runWorker
+  [13] ThreadPoolExecutor$Worker.run
+  [14] Thread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+   457922106   99.96%    10458  ReentrantLock$NonfairSync
+      162515    0.04%        2  Object

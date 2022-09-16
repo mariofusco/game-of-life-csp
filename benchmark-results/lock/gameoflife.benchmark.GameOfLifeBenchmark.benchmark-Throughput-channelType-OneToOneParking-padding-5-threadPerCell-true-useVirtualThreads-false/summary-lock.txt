@@ -1,0 +1,76 @@
+--- Execution profile ---
+Total samples       : 25
+
+--- 2080736 ns (84.59%), 7 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] ReferenceQueue.enqueue
+  [ 8] Reference.enqueueFromPending
+  [ 9] Reference.processPendingReferences
+  [10] Reference$ReferenceHandler.run
+
+--- 377036 ns (15.33%), 13 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] ReferenceQueue.remove
+  [ 8] CleanerImpl.run
+  [ 9] Thread.run
+  [10] InnocuousThread.run
+
+--- 1257 ns (0.05%), 3 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer.acquire
+  [ 5] ReentrantLock$Sync.lock
+  [ 6] ReentrantLock.lock
+  [ 7] LinkedBlockingQueue.signalNotEmpty
+  [ 8] LinkedBlockingQueue.offer
+  [ 9] ThreadPoolExecutor.execute
+  [10] GameOfLife$$Lambda$43.0x0000000801034c28.accept
+  [11] GameOfLife.calculateFrameBlocking
+  [12] GameOfLifeBenchmark.benchmark
+  [13] GameOfLifeBenchmark_benchmark_jmhTest.benchmark_thrpt_jmhStub
+  [14] GameOfLifeBenchmark_benchmark_jmhTest.benchmark_Throughput
+  [15] DirectMethodHandle$Holder.invokeSpecial
+  [16] LambdaForm$MH.0x000000080102e000.invoke
+  [17] LambdaForm$MH.0x000000080102e400.invokeExact_MT
+  [18] DirectMethodHandleAccessor.invokeImpl
+  [19] DirectMethodHandleAccessor.invoke
+  [20] Method.invoke
+  [21] BenchmarkHandler$BenchmarkTask.call
+  [22] BenchmarkHandler$BenchmarkTask.call
+  [23] FutureTask.run
+  [24] Executors$RunnableAdapter.call
+  [25] FutureTask.run
+  [26] ThreadPoolExecutor.runWorker
+  [27] ThreadPoolExecutor$Worker.run
+  [28] Thread.run
+
+--- 872 ns (0.04%), 2 samples
+  [ 0] ReentrantLock$NonfairSync
+  [ 1] Unsafe.park
+  [ 2] LockSupport.park
+  [ 3] AbstractQueuedSynchronizer.acquire
+  [ 4] AbstractQueuedSynchronizer$ConditionObject.await
+  [ 5] ReferenceQueue.await
+  [ 6] ReferenceQueue.remove0
+  [ 7] ReferenceQueue.remove
+  [ 8] CleanerImpl.run
+  [ 9] Thread.run
+  [10] InnocuousThread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+     2459901  100.00%       25  ReentrantLock$NonfairSync
