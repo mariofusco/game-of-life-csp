@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.function.Consumer;
 
 import gameoflife.domain.Dimensions;
+import gameoflife.ui.UiRunner;
 import gameoflife.ui.WindowOutput;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
 
     public static void execute(ExecutionArgs args) throws IOException {
         GameOfLife gameOfLife = createGameOfLife(args);
-        WindowOutput.runUI(args, gameOfLife);
+        UiRunner.runUI(args, gameOfLife, true);
     }
 
     public static void executeHeadless(ExecutionArgs args) throws IOException {

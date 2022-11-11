@@ -10,7 +10,7 @@ import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
 import gameoflife.domain.Dimensions;
 
-public class WindowOutput {
+public class WindowOutput implements Consumer<boolean[][]> {
 
     private final GameOfLife gameOfLife;
     private final int width;
@@ -18,7 +18,7 @@ public class WindowOutput {
     private final Canvas canvas;
     private volatile boolean[][] cells;
 
-    private WindowOutput(GameOfLife gameOfLife, ExecutionArgs args) {
+    WindowOutput(ExecutionArgs args, GameOfLife gameOfLife) {
         this.gameOfLife = gameOfLife;
         Dimensions dimensions = gameOfLife.getDimensions();
         double scale = calculateScale(dimensions.rows(), dimensions.cols(), args.maxWindowWidth(), args.maxWindowHeight());
@@ -32,12 +32,10 @@ public class WindowOutput {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static void runUI(ExecutionArgs args, GameOfLife gameOfLife) {
-        WindowOutput windowOutput = new WindowOutput(gameOfLife, args);
-        while (true) {
-            windowOutput.cells = gameOfLife.getGridChannel().take();
-            windowOutput.canvas.repaint();
-        }
+    @Override
+    public void accept(boolean[][] cells) {
+        this.cells = cells;
+        this.canvas.repaint();
     }
 
     class Canvas extends JPanel {
