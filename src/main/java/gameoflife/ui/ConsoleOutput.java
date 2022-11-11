@@ -6,7 +6,7 @@ import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
 import gameoflife.domain.Dimensions;
 
-import static gameoflife.ui.UiRunner.IS_NATIVE_IMAGE;
+import static gameoflife.ExecutionArgs.IS_NATIVE_IMAGE;
 
 public class ConsoleOutput implements Consumer<boolean[][]> {
 
@@ -19,7 +19,7 @@ public class ConsoleOutput implements Consumer<boolean[][]> {
     ConsoleOutput(ExecutionArgs args, GameOfLife gameOfLife) {
         String mode = IS_NATIVE_IMAGE ? "AOT" : "JIT";
         Dimensions dimensions = gameOfLife.getDimensions();
-        statusBarTemplate = String.format("%n GraalVM %s mode | %d cols and %d rows | %%d ticks/s%%n%n", mode, dimensions.cols(), dimensions.rows());
+        statusBarTemplate = String.format("%n GraalVM %s mode | %d cols and %d rows | %%d frames/second%%n%n", mode, dimensions.cols(), dimensions.rows());
         ANSI.hideCursor();
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             ANSI.showCursor();
@@ -46,14 +46,14 @@ public class ConsoleOutput implements Consumer<boolean[][]> {
     }
 
     static class RateCounter {
-        long timeSeconds;
+        long lastStatsDump;
         int counter;
         int ticksPerSecond;
 
         int tick() {
-            long now = System.currentTimeMillis() / 1_000;
-            if (now != timeSeconds) {
-                timeSeconds = now;
+            long now = System.nanoTime();
+            if (now - lastStatsDump >= 1_000_000_000) {
+                lastStatsDump = now;
                 ticksPerSecond = counter;
                 counter = 1;
             } else {

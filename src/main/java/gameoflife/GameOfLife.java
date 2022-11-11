@@ -87,15 +87,15 @@ public abstract class GameOfLife {
         boolean[][] rotated = args.rotate() ? PatternParser.rotate(original) : original;
         boolean[][] pattern = PatternParser.pad(rotated, args.leftPadding(), args.topPadding(), args.rightPadding(), args.bottomPadding());
 
-        Channel<boolean[][]> gridChannel = new Channel<>(args.type()); // channel carries aggregated liveness matrices
+        Channel<boolean[][]> gridChannel = new Channel<>(args.rendezVousType()); // channel carries aggregated liveness matrices
         Dimensions dimensions = new Dimensions(pattern.length, pattern[0].length, args.toroidal());
         return GameOfLife.create(args, dimensions, pattern, gridChannel);
     }
 
     private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<boolean[][]> gridChannel) {
         return args.threadPerCell() ?
-                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.type()) :
-                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.type());
+                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.rendezVousType()) :
+                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.rendezVousType());
     }
 
     public Channel<boolean[][]> getGridChannel() {

@@ -15,7 +15,7 @@ public class Main {
 
     public static void execute(ExecutionArgs args) throws IOException {
         GameOfLife gameOfLife = createGameOfLife(args);
-        UiRunner.runUI(args, gameOfLife, true);
+        UiRunner.runUI(args, gameOfLife);
     }
 
     public static void executeHeadless(ExecutionArgs args) throws IOException {

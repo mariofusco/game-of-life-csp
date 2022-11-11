@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
 import gameoflife.concurrent.BlockingRendezVous;
+import gameoflife.ui.UiRunner;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -46,7 +47,7 @@ public class GameOfLifeBenchmark {
         }
 
         ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell,
-                BlockingRendezVous.Type.valueOf(channelType));
+                BlockingRendezVous.Type.valueOf(channelType), UiRunner.Type.Textual);
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();
     }

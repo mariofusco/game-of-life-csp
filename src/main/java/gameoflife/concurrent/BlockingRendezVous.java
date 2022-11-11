@@ -22,7 +22,7 @@ public sealed interface BlockingRendezVous<T> permits BlockingQueue, BlockingTra
             case LockedSingleValue -> new LockedSingleValue<>();
             case OneToOneParking -> new OneToOneParkingSingleValue<>();
             case OneToOneYielding -> new OneToOneYieldingSingleValue<>();
-            default -> throw new AssertionError("unknown type: " + type);
+            default -> throw new AssertionError("unknown rendezVousType: " + type);
         };
     }
 }
