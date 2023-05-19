@@ -13,6 +13,7 @@ import gameoflife.domain.ChannelsGrid;
 import gameoflife.domain.Dimensions;
 import gameoflife.domain.Tick;
 import gameoflife.domain.TickPerCell;
+import gameoflife.execution.ExecutionStrategy;
 import gameoflife.ui.PatternParser;
 
 import static gameoflife.domain.ChannelsGrid.makeGrid;
@@ -35,7 +36,7 @@ public abstract class GameOfLife {
     protected final Consumer<Runnable> runner;
 
     public GameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
-                      boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type channelType) {
+                      boolean logRate, ExecutionStrategy executionStrategy, BlockingRendezVous.Type channelType) {
         this.dimensions = dimensions;
         this.gridChannel = gridChannel;
         this.period = period;
@@ -66,15 +67,7 @@ public abstract class GameOfLife {
             })
         );
 
-        if (useVirtualThreads) {
-            this.runner = Thread::startVirtualThread;
-        } else {
-            this.runner = Executors.newFixedThreadPool(getThreadPoolSize(), r -> {
-                Thread t = new Thread(r);
-                t.setDaemon(true);
-                return t;
-            })::execute;
-        }
+        this.runner = executionStrategy.getTaskExecutor(getThreadPoolSize());
     }
 
     public static GameOfLife create(ExecutionArgs args) {
@@ -94,8 +87,8 @@ public abstract class GameOfLife {
 
     private static GameOfLife create(ExecutionArgs args, Dimensions dimensions, boolean[][] seed, Channel<boolean[][]> gridChannel) {
         return args.threadPerCell() ?
-                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.rendezVousType()) :
-                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.useVirtualThreads(), args.rendezVousType());
+                new ThreadPerCellGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.executionStrategy(), args.rendezVousType()) :
+                new ThreadPerCoreGameOfLife(dimensions, seed, args.periodMilliseconds(), gridChannel, args.logRate(), args.executionStrategy(), args.rendezVousType());
     }
 
     public Channel<boolean[][]> getGridChannel() {

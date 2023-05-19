@@ -1,17 +1,19 @@
 package gameoflife;
 
 import gameoflife.concurrent.BlockingRendezVous;
+import gameoflife.execution.ExecutionStrategy;
 import gameoflife.ui.UiRunner;
 
 public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindowHeight,
                             int periodMilliseconds,
                             int leftPadding, int topPadding, int rightPadding, int bottomPadding,
-                            boolean rotate, boolean toroidal, boolean logRate, boolean useVirtualThreads, boolean threadPerCell,
+                            boolean rotate, boolean toroidal, boolean logRate, ExecutionStrategy executionStrategy, boolean threadPerCell,
                             BlockingRendezVous.Type rendezVousType, UiRunner.Type uiType) {
 
     public static final boolean IS_NATIVE_IMAGE = System.getProperty("org.graalvm.nativeimage.imagecode") != null;
 
-    private static final boolean USE_VIRTUAL_THREADS = true;
+    private static final ExecutionStrategy DEFAULT_EXECUTION_STRATEGY = ExecutionStrategy.ForkJoinVirtual;
+
     private static final boolean THREAD_PER_CELL = true; //USE_VIRTUAL_THREADS;
 
     private static final String DEFAULT_PATTERN = "patterns/gosper_glider_gun.txt";
@@ -40,7 +42,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 args.length > 8 ? Boolean.parseBoolean(args[8]) : DEFAULT_ROTATE,
                 args.length > 8 ? Boolean.parseBoolean(args[9]) : DEFAULT_TOROIDAL,
                 args.length > 9 ? Boolean.parseBoolean(args[10]) : DEFAULT_LOG_RATE,
-                args.length > 9 ? Boolean.parseBoolean(args[11]) : USE_VIRTUAL_THREADS,
+                DEFAULT_EXECUTION_STRATEGY,
                 args.length > 9 ? Boolean.parseBoolean(args[12]) : THREAD_PER_CELL,
                 DEFAULT_RENDEZ_VOUS_TYPE,
                 getUiType(args));
@@ -61,7 +63,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
         return DEFAULT_UI_TYPE;
     }
 
-    public static ExecutionArgs create(int padding, boolean useVirtualThreads, boolean threadPerCell, BlockingRendezVous.Type rendezVousType, UiRunner.Type uiType) {
+    public static ExecutionArgs create(int padding, ExecutionStrategy executionStrategy, boolean threadPerCell, BlockingRendezVous.Type rendezVousType, UiRunner.Type uiType) {
         return new ExecutionArgs(
                 DEFAULT_PATTERN,
                 DEFAULT_MAX_WINDOW_WIDTH,
@@ -74,7 +76,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 DEFAULT_ROTATE,
                 DEFAULT_TOROIDAL,
                 DEFAULT_LOG_RATE,
-                useVirtualThreads,
+                executionStrategy,
                 threadPerCell,
                 rendezVousType,
                 uiType);
@@ -88,7 +90,7 @@ public record ExecutionArgs(String patternFile, int maxWindowWidth, int maxWindo
                 ", rotate=" + rotate +
                 ", toroidal=" + toroidal +
                 ", logRate=" + logRate +
-                ", useVirtualThreads=" + useVirtualThreads +
+                ", executionStrategy=" + executionStrategy +
                 ", threadPerCell=" + threadPerCell +
                 '}';
     }

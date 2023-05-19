@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import gameoflife.ExecutionArgs;
 import gameoflife.GameOfLife;
 import gameoflife.concurrent.BlockingRendezVous;
+import gameoflife.execution.ExecutionStrategy;
 import gameoflife.ui.UiRunner;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -25,8 +26,8 @@ import org.openjdk.jmh.annotations.Warmup;
 @Fork(2)
 public class GameOfLifeBenchmark {
 
-    @Param({"true", "false"})
-    private boolean useVirtualThreads;
+    @Param({"Native", "ForkJoinVirtual", "FixedCarrierPoolVirtual"})
+    private String executionStrategy;
 
     @Param({"true", "false"})
     private boolean threadPerCell;
@@ -41,12 +42,14 @@ public class GameOfLifeBenchmark {
 
     @Setup
     public void setup() {
-        if (!useVirtualThreads && threadPerCell && padding > 50) {
+        ExecutionStrategy exec = ExecutionStrategy.valueOf(executionStrategy);
+
+        if (exec == ExecutionStrategy.Native && threadPerCell && padding > 50) {
             // This condition causes a OOM, skip it
             return;
         }
 
-        ExecutionArgs args = ExecutionArgs.create(padding, useVirtualThreads, threadPerCell,
+        ExecutionArgs args = ExecutionArgs.create(padding, exec, threadPerCell,
                 BlockingRendezVous.Type.valueOf(channelType), UiRunner.Type.Textual);
         gameOfLife = GameOfLife.create(args);
         gameOfLife.startCells();

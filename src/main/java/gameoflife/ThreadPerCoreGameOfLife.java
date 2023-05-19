@@ -7,14 +7,15 @@ import gameoflife.concurrent.BlockingRendezVous;
 import gameoflife.domain.CellsGroup;
 import gameoflife.domain.Channel;
 import gameoflife.domain.Dimensions;
+import gameoflife.execution.ExecutionStrategy;
 
 public class ThreadPerCoreGameOfLife extends GameOfLife {
 
     private final List<CellsGroup> cellsGroups;
 
     public ThreadPerCoreGameOfLife(Dimensions dimensions, boolean[][] seed, int period, Channel<boolean[][]> gridChannel,
-                                   boolean logRate, boolean useVirtualThreads, BlockingRendezVous.Type type) {
-        super(dimensions, seed, period, gridChannel, logRate, useVirtualThreads, type);
+                                   boolean logRate, ExecutionStrategy executionStrategy, BlockingRendezVous.Type type) {
+        super(dimensions, seed, period, gridChannel, logRate, executionStrategy, type);
         cellsGroups = createCellGroups();
     }
 
