@@ -20,13 +20,13 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 
 @State(Scope.Benchmark)
-@Warmup(iterations = 5)
-@Measurement(iterations = 10)
+@Warmup(iterations = 10)
+@Measurement(iterations = 20)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Fork(2)
 public class GameOfLifeBenchmark {
 
-    @Param({"Native", "ForkJoinVirtual", "FixedCarrierPoolVirtual"})
+    @Param({"Native", "ForkJoinVirtual", "FixedCarrierPoolVirtual", "PinnedCarrierVirtual"})
     private String executionStrategy;
 
     @Param({"true", "false"})
