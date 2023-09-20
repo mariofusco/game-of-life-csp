@@ -29,13 +29,13 @@ public class GameOfLifeBenchmark {
     @Param({"Native", "ForkJoinVirtual", "FixedCarrierPoolVirtual", "PinnedCarrierVirtual"})
     private String executionStrategy;
 
-    @Param({"true", "false"})
+    @Param({"true"})
     private boolean threadPerCell;
 
-    @Param({"5", "25", "100"}) // 874, 5074, 49324 cells
+    @Param({"25"}) // 874, 5074, 49324 cells
     private int padding;
 
-    @Param({"BlockingQueue", "BlockingTransfer", "LockedSingleValue", "OneToOneParking"})
+    @Param({"OneToOneParking"})
     private String channelType;
 
     private GameOfLife gameOfLife;
