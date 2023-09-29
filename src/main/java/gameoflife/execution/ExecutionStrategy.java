@@ -10,14 +10,6 @@ import static gameoflife.execution.VirtualThreadUtil.createVirtualThreadFactory;
 public enum ExecutionStrategy {
     Native, ForkJoinVirtual, FixedCarrierPoolVirtual, PinnedCarrierVirtual;
 
-/*
-BBenchmark                        (channelType)      (executionStrategy)  (padding)  (threadPerCell)   Mode  Cnt    Score   Error  Units
-GameOfLifeBenchmark.benchmark  OneToOneParking                   Native         25             true  thrpt   40   40.317 ± 0.353  ops/s
-GameOfLifeBenchmark.benchmark  OneToOneParking          ForkJoinVirtual         25             true  thrpt   40  244.639 ± 1.419  ops/s
-GameOfLifeBenchmark.benchmark  OneToOneParking  FixedCarrierPoolVirtual         25             true  thrpt   40  129.525 ± 5.346  ops/s
-GameOfLifeBenchmark.benchmark  OneToOneParking     PinnedCarrierVirtual         25             true  thrpt   40   59.071 ± 1.532  ops/s
-*/
-
     public Consumer<Runnable> getTaskExecutor(int threadPoolSize) {
         return switch (this) {
             case Native -> createFixedThreadPool(threadPoolSize)::execute;
